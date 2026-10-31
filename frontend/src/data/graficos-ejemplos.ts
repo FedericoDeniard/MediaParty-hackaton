@@ -1,5 +1,6 @@
 /* Datos reales de ejemplo, generados por el verificador sobre las notas 01, 02 y 14 del corpus
-   (`armar_graficos` con las series guardadas al 2026-10-31). No se editan a mano: se regeneran. */
+   (`armar_graficos` con las series guardadas al 2026-10-31). No se editan a mano: se regeneran con
+   `verificador/scripts/generar_ejemplos_ui.py`. */
 import type { GraficosNota } from '../components/graficos/types.ts'
 
 export interface EjemploDeNota {
