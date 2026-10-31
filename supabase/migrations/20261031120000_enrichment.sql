@@ -1,4 +1,4 @@
--- Run in Supabase SQL editor.
+-- Article enrichment tables. Applied by `supabase db reset`.
 
 create table if not exists articles (
   id uuid primary key default gen_random_uuid(),

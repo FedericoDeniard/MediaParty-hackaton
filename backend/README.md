@@ -4,7 +4,7 @@ Article in, four parallel Claude agents out (entities graph, claims, timeline, e
 
 ```sh
 cp .env.example .env            # fill in keys
-# run ../db/schema.sql in the Supabase SQL editor
+# local DB: cd ../supabase && pnpm install && pnpm run start  (applies migrations)
 uv sync
 uv run uvicorn app.main:app --reload
 curl -X POST localhost:8000/articles -H 'content-type: application/json' \
