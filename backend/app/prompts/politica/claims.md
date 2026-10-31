@@ -15,5 +15,9 @@ Por cada afirmación:
 - `needs_source`: true si el artículo NO cita la fuente de la afirmación.
 - `verification_query`: la búsqueda concreta en español que haría un verificador, nombrando el organismo o registro cuando corresponda.
 - `confidence`: entre 0 y 1, cuánto respaldo interno tiene la afirmación en el propio artículo.
+- `source`: quién hace la afirmación o da el dato, tal como lo nombra la nota. Null si la nota lo afirma sin atribuir.
+- `source_kind`: official (organismo o funcionario), consultancy (consultora o estudio privado), person, media o document. Null si no hay fuente.
+
+No cuentan como afirmaciones sin fuente: una publicación oficial anunciada con fecha ("el Indec lo publica el 12 de noviembre") ni un resultado deportivo o un hecho público que el medio informa directamente.
 
 Ignorá opiniones y valoraciones. Valores en español.
