@@ -44,6 +44,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 - Las reglas dividen zonas o datos, no bloques: filetes de tabla, baselines de gráficos, estados activos y bordes de control. `1px` para filetes, `2px` para foco y énfasis funcional.
 - Sin sombras, sin gradientes, sin glass, `border-radius: 0`.
 - Color plano: fondo hueso `#F2F0EB`, tinta `#171717`, texto secundario `#5B5A55`, hairline `#C9C7C0`, borde de control `#6A6862`.
+- **Tres superficies y no cambian entre páginas:** `--bg` (fondo de la app, el tono de la sección "01 — Flujo de trabajo"), `--surface-contrast` (tono de contraste, el de la sección "02 — Producto": bandas alternas, sidebars, paneles laterales) y `--surface-inverse` (banda invertida, sólo el CTA de cierre). No inventes un segundo tono de fondo: para separar más usá espacio y reglas.
 - Un solo plano de acento por viewport. El acento de marca **todavía no está definido**: vive en `--accent` / `--accent-ink`, que hoy resuelven a tinta y hueso. Elegirlo es cambiar esos dos tokens.
 - Todo se controla por tokens semánticos en el `:root` de `frontend/src/index.css`. No hardcodees hex en componentes.
 - Accesibilidad: WCAG 2.2 AA. Foco visible de `2px`, contraste de texto `>= 4.5:1` y de bordes `>= 3:1`, targets de `44px`, `prefers-reduced-motion` respetado, reflow a `320px`.

@@ -25,10 +25,19 @@
   --accent: var(--ink);
   --accent-ink: var(--bone);
 
-  /* ---- Color · roles semánticos ---- */
+  /* ---- Color · superficies ----
+     --bg               Fondo de la app. Es el tono de las secciones
+                        de contenido principal (ej. "01 — Flujo").
+     --surface-contrast Tono de contraste para bandas alternas y
+                        sidebars (ej. "02 — Producto"). Se mantiene en
+                        la misma familia que el fondo, un paso más denso.
+     --surface          Hueso elevado para capas que se superponen al
+                        fondo: menús, popovers, tablas dentro de un panel.
+     --surface-inverse  Banda invertida, reservada para el cierre. */
   --bg: var(--bone);
   --surface: var(--bone-raised);
-  --surface-sunken: var(--bone-sunken);
+  --surface-contrast: var(--bone-sunken);
+  --surface-inverse: var(--ink);
   --text: var(--ink);
   --text-muted: var(--ink-soft);
   --text-inverted: var(--bone);
@@ -505,16 +514,24 @@ button {
   padding: var(--space-8) 0;
 }
 
+/* Fondo de la app: el tono base de las secciones de contenido. */
+.section--base {
+  background: var(--bg);
+}
+
+/* Banda de contraste: mismo familia, un paso más denso.
+   Pensada para bloques alternos, sidebars y paneles laterales. */
+.section--contrast {
+  background: var(--surface-contrast);
+  color: var(--text);
+}
+
 .section--raised {
   background: var(--surface);
 }
 
-.section--sunken {
-  background: var(--surface-sunken);
-}
-
 .section--inverted {
-  background: var(--ink);
+  background: var(--surface-inverse);
   color: var(--bone);
 }
 .section--inverted .section__title {
@@ -571,6 +588,53 @@ button {
   max-width: 58ch;
   font-size: var(--text-md);
   line-height: 1.55;
+}
+
+/* ============================================================
+   Layout con panel lateral
+   El panel usa el tono de contraste (--surface-contrast) y se
+   separa del contenido por una regla, no por un marco.
+   ============================================================ */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.panel {
+  background: var(--surface-contrast);
+  padding: var(--space-5);
+}
+
+.panel__title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.panel__list {
+  margin-top: var(--space-4);
+}
+
+.panel__list li {
+  border-top: var(--border-width) solid var(--rule);
+  padding: var(--space-3) 0;
+  font-size: var(--text-sm);
+}
+
+.panel__list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.panel__note {
+  margin-top: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
 }
 
 /* ============================================================
@@ -948,6 +1012,10 @@ button {
 
   .features {
     row-gap: var(--space-7);
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
   }
 }
 

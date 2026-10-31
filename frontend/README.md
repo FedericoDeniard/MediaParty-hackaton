@@ -46,6 +46,14 @@ Todo el sistema vive en los custom properties del bloque `:root` de
 `src/index.css`. Cambiar `--bone`, `--ink`, `--rule`, `--accent` o
 `--font-stretch-condensed` reestiliza la página completa sin tocar componentes.
 
+Hay tres superficies, y no cambian entre páginas:
+
+| Token | Uso |
+|---|---|
+| `--bg` | Fondo de la app. Es el tono de las secciones de contenido principal ("01 — Flujo de trabajo"). |
+| `--surface-contrast` | Tono de contraste para bandas alternas, sidebars y paneles laterales ("02 — Producto"). |
+| `--surface-inverse` | Banda invertida, reservada para el CTA de cierre. |
+
 El acento de marca todavía no está definido: `--accent` y `--accent-ink`
 resuelven a tinta y hueso, así que el sitio funciona completo en monocromo.
 Cuando se elija el color, alcanza con cambiar esos dos tokens.

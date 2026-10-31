@@ -2,7 +2,7 @@ import { features } from '../data/content.ts'
 
 export default function Features() {
   return (
-    <section className="section" id="producto">
+    <section className="section section--contrast" id="producto">
       <div className="section__inner">
         <header className="section__head">
           <p className="section__index">02 — Producto</p>

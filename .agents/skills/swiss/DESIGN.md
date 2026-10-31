@@ -10,6 +10,11 @@ colors:
   control: "#6A6862"
   accent: "#171717"
   accentInk: "#F2F0EB"
+surfaces:
+  bg: "#F2F0EB"
+  contrast: "#E7E5DC"
+  raised: "#FAF9F6"
+  inverse: "#171717"
 typography:
   h1:
     fontFamily: "Archivo Variable"
@@ -69,13 +74,24 @@ Swiss / International Typographic Style, applied to a product landing page. One 
 ## Colors
 
 - **Bone (`#F2F0EB`):** page background. Warm off-white, not gray.
-- **Bone Raised (`#FAF9F6`):** secondary surface, one step above the page.
-- **Bone Sunken (`#E7E5DC`):** recessed surface, previews and wells.
+- **Bone Raised (`#FAF9F6`):** raised planes on top of the background, one step above the page.
+- **Bone Sunken (`#E7E5DC`):** the contrast tone, one step denser than the background.
 - **Ink (`#171717`):** primary text, icon strokes, and inverted bands.
 - **Ink Soft (`#5B5A55`):** secondary text, `6.07:1` on bone.
 - **Rule (`#C9C7C0`):** decorative hairline only, `1.49:1`. Never the sole indicator of a control.
 - **Control (`#6A6862`):** borders that must be perceived as interactive, `4.89:1`.
 - **Accent / Accent Ink:** pending brand decision. Currently resolves to ink/bone so the system is complete in monochrome.
+
+### Surfaces
+
+| Token | Value | Role |
+|---|---|---|
+| `--bg` | `#F2F0EB` | App background. Tone of every primary content section ("01 — Flujo de trabajo" is the reference). |
+| `--surface-contrast` | `#E7E5DC` | Contrast tone: alternating bands, sidebars, lateral panels ("02 — Producto" is the reference). |
+| `--surface` | `#FAF9F6` | Raised planes sitting on the background: menus, popovers, tables inside a panel. |
+| `--surface-inverse` | `#171717` | Inverted band, reserved for the closing CTA. |
+
+The set does not change between pages. Do not introduce a second background hue: when a page needs more separation, use whitespace and rules.
 
 ### Contrast ratios (measured)
 
@@ -86,6 +102,9 @@ Swiss / International Typographic Style, applied to a product landing page. One 
 | Control / Bone | 4.89:1 | Interactive borders |
 | Rule / Bone | 1.49:1 | Decorative hairlines only |
 | Bone / Ink | 15.74:1 | Inverted sections |
+| Ink / Bone Sunken | 14.20:1 | Text on the contrast tone |
+| Ink Soft / Bone Sunken | 5.48:1 | Secondary text on the contrast tone |
+| Control / Bone Sunken | 4.41:1 | Control borders on the contrast tone |
 
 ## Typography
 

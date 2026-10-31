@@ -2,7 +2,7 @@ import { networks } from '../data/content.ts'
 
 export default function Networks() {
   return (
-    <section className="section section--raised" id="redes">
+    <section className="section section--base" id="redes">
       <div className="section__inner">
         <header className="section__head">
           <p className="section__index">03 — Destinos</p>

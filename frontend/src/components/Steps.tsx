@@ -2,7 +2,7 @@ import { steps } from '../data/content.ts'
 
 export default function Steps() {
   return (
-    <section className="section" id="como-funciona">
+    <section className="section section--base" id="como-funciona">
       <div className="section__inner">
         <header className="section__head">
           <p className="section__index">01 — Flujo de trabajo</p>

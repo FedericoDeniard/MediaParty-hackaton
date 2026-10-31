@@ -24,6 +24,25 @@ Order before decoration: content, then hierarchy, then grid, then color — and 
 - **Flat color.** No shadows, no gradients, no glass, no offset blocks. `border-radius: 0` everywhere.
 - **One accent plane.** At most one block of accent color per viewport. It anchors the page; it does not decorate it.
 
+## Surfaces
+
+Three surfaces, and they do not change between pages:
+
+| Token | Value | Role |
+|---|---|---|
+| `--bg` | `#F2F0EB` | The app background. The tone of every primary content section. |
+| `--surface-contrast` | `#E7E5DC` | The contrast tone: alternating bands, sidebars, lateral panels. Same family as the background, one step denser. |
+| `--surface` | `#FAF9F6` | Raised planes that sit on top of the background: menus, popovers, tables inside a panel. |
+| `--surface-inverse` | `#171717` | Inverted band, reserved for the closing call to action. |
+
+Rules:
+
+- The app background is `--bg`. Section "01 — Flujo de trabajo" is the reference for that tone: a content section sitting on the app background.
+- A section that needs to read differently from its neighbours takes `--surface-contrast`, not a border and not a different hue. Section "02 — Producto" is the reference.
+- `--surface-contrast` is the tone for sidebars and lateral panels. A panel uses it as a solid field with no border; the rule that separates it from the content is a hairline, not a frame.
+- Do not introduce a second background hue. If a page needs more separation than `--bg` vs `--surface-contrast`, use whitespace and rules instead.
+- Keep contrast on every surface: ink on `--surface-contrast` is `14.20:1`, muted text `5.48:1`, control borders `4.41:1`.
+
 ## Rules: Do
 
 - Use the semantic tokens in `frontend/src/index.css` (`:root`). Never hardcode a hex value in a component.
@@ -80,6 +99,10 @@ Name left, value right, hairline rule between rows, tabular numerals on the valu
 ### Labels and badges
 
 A label is type: uppercase, tracked, muted, no border, no background. A badge is a label with meaning, not a chip. If a piece of information needs a shape, it needs a reason to be a control.
+
+### Sidebar and lateral panel
+
+A panel is a solid field of `--surface-contrast`, with no border. Separate it from the content with a hairline, not a frame. Inside it, use the same type scale as the main column and the same `--rule` hairlines for lists. The `.layout` and `.panel` classes in `frontend/src/index.css` already implement this pattern.
 
 ### Charts
 
