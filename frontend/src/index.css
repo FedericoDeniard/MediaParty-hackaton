@@ -23,7 +23,7 @@
      relleno —botones, tab activo, cuadrado del acceso— con la
      tinta encima: nunca como texto. Los gráficos mantienen su
      verde propio (`--chart`), que es un color de datos. */
-  --accent: #e6dfd1;
+  --accent: #d8c7a9;
   --accent-ink: var(--ink);
 
   /* ---- Color · gráficos ----
@@ -1549,13 +1549,13 @@ button {
   color: var(--text);
 }
 
-/* El estado activo se marca con el verde del sistema y la tinta
-   encima, más el peso de la etiqueta: el color por sí solo no lo
-   distinguiría. */
+/* El estado activo se marca con el acento de marca (arena) y la
+   tinta encima, más el peso de la etiqueta: el color por sí solo no
+   lo distinguiría. */
 .side__link--active,
 .side__link--active:hover {
-  background: var(--chart);
-  color: var(--ink);
+  background: var(--accent);
+  color: var(--accent-ink);
   font-weight: 600;
 }
 

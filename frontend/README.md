@@ -140,7 +140,7 @@ Hay tres superficies, y no cambian entre páginas:
 | `--surface-contrast` | Tono de contraste para bandas alternas, sidebars y paneles laterales ("02 — Producto"). |
 | `--surface-inverse` | Banda invertida, reservada para el CTA de cierre. |
 
-El acento de marca es el arena `#E6DFD1` (`--accent`) con tinta encima
+El acento de marca es el arena `#D8C7A9` (`--accent`) con tinta encima
 (`--accent-ink`). Va en los planos de relleno: botones, tab activo y el
 cuadrado de las pantallas de acceso. Los gráficos mantienen su verde propio
 (`--chart`, `#C7DE58`), que es un color de datos y no el acento. Para

@@ -63,7 +63,7 @@ Es el área autenticada. La landing en `/` no se toca.
 | `/app/publicadas` | Lista filtrada por `status = 'published'` |
 
 - **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación, declaración editorial y sesión son áreas de una grilla de cinco: en mobile pasa a una banda de tres filas y se ocultan lema, declaración, ayuda y conteos.
-- **La navegación marca el estado activo con el verde del sistema** (`--chart`) y tinta encima, más peso y color de la etiqueta: el color no es el único indicador. La acción primaria es una fila más, no un botón relleno, y los conteos van en numerales tabulares.
+- **La navegación marca el estado activo con el acento de marca** (`--accent`) y tinta encima, más peso y color de la etiqueta: el color no es el único indicador. La acción primaria es una fila más, no un botón relleno, y los conteos van en numerales tabulares.
 - **Las notas son filas de datos**, no cards: nombre a la izquierda, valor a la derecha, filete entre filas, numerales tabulares.
 - **El editor es el cuerpo de la nota**, no una caja: el texto va sobre `--bg` y la toolbar se apoya con un filete.
 - **El panel de enriquecimientos** es `--surface-contrast`, como el `.panel` que ya existía.
@@ -120,7 +120,7 @@ Reglas que más se incumplen:
 - **Ningún bloque de contenido lleva marco.** Sin cards, sin celdas con borde, sin chips delineados, sin badges enmarcados. Una etiqueta es tipografía, no un objeto.
 - **La grilla alinea, no encuadra.** Nada de grillas de celdas iguales con borde: eso es bento grid. Usá spans desiguales, escalonamiento vertical y espacio.
 - **Las reglas dividen zonas o datos.** Filetes de tabla, baselines de gráficos, tab activo, bordes de control. `1px` para filetes, `2px` para foco y énfasis funcional.
-- **Un solo plano de acento por viewport.** El acento de marca es el arena `#E6DFD1` (`--accent`) con tinta encima (`--accent-ink`). Sólo como plano de relleno, nunca como texto. Los gráficos van con su verde de datos (`--chart`), que es independiente. Para cambiarlo, tocá esos dos tokens y verificá el contraste de lo que va encima.
+- **Un solo plano de acento por viewport.** El acento de marca es el arena `#D8C7A9` (`--accent`) con tinta encima (`--accent-ink`). Sólo como plano de relleno, nunca como texto. Los gráficos van con su verde de datos (`--chart`), que es independiente. Para cambiarlo, tocá esos dos tokens y verificá el contraste de lo que va encima.
 - **Tres superficies, fijas entre páginas:** `--bg` es el fondo de la app (el tono de "01 — Flujo de trabajo"); `--surface-contrast` es el tono de contraste (el de "02 — Producto"), para bandas alternas, sidebars y paneles laterales; `--surface-inverse` es la banda invertida, reservada al CTA de cierre. No sumes un segundo tono de fondo: separá con espacio y reglas. Para un sidebar, `.layout` y `.panel` ya están implementados en `src/index.css`.
 - **Motion mínimo.** `120ms` para feedback, `180ms` estándar, easing `cubic-bezier(0.2, 0, 0, 1)`. Se anima estado y opacidad, no la lectura.
 
