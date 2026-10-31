@@ -7,6 +7,14 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    /* El backend de enriquecimiento (FastAPI, `backend/`). El proxy evita
+       CORS en desarrollo: el navegador sólo habla con Vite. */
+    proxy: {
+      '/api': {
+        target: process.env.NEXO_API ?? 'http://127.0.0.1:8000',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   build: {
     rolldownOptions: {

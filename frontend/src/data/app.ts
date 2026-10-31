@@ -67,6 +67,25 @@ export const enrichmentPanel = {
   citation: 'Aparece en la nota',
   unanswered: 'La nota no responde esta pregunta.',
   foot: 'Tu voz tiene la última palabra. Ningún cambio se publica automáticamente.',
+  analyze: 'Analizar nota',
+  reanalyze: 'Volver a analizar',
+  analyzing: 'Analizando…',
+  analyzeError: 'No se pudo analizar la nota',
+  /** Qué hace cada agente del backend, para el estado en vivo. */
+  steps: {
+    entities: 'Actores y vínculos',
+    claims: 'Afirmaciones',
+    timeline: 'Línea de tiempo',
+    editorial: 'Mirada editorial',
+    figures: 'Cifras',
+    validation: 'Cruce con datos oficiales',
+  } as Record<string, string>,
+  stepStatus: {
+    pending: 'en espera',
+    running: 'en curso',
+    done: 'listo',
+    error: 'falló',
+  } as Record<string, string>,
 }
 
 export const notesPageTitles: Record<string, string> = {
