@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F2F0EB" />
 <title>MediaParty · Hackaton</title>
 <style>
   :root {
-    --seashell: #EAE4DA;
-    --black: #1D1D1B;
-    --lavender: #808BC5;
-    --pink: #EAA7C7;
-    --sky: #9ED6DF;
+    --bone: #f2f0eb;
+    --bone-raised: #faf9f6;
+    --ink: #171717;
+    --ink-soft: #5b5a55;
+    --rule: #c9c7c0;
+    --control: #6a6862;
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   * { box-sizing: border-box; }
@@ -21,73 +24,71 @@
     display: grid;
     place-items: center;
     padding: 24px;
-    background: var(--lavender);
-    color: var(--black);
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
   .card {
     width: min(680px, 100%);
-    background: var(--seashell);
-    border: 3px solid var(--black);
-    border-radius: 4px;
-    box-shadow: 8px 8px 0 var(--black);
-    padding: 32px;
+    background: var(--bone-raised);
+    border: 1px solid var(--ink);
+    padding: 40px;
   }
 
   .label {
     display: inline-block;
-    background: var(--sky);
-    border: 2px solid var(--black);
-    border-radius: 4px;
+    border: 1px solid var(--ink);
     padding: 4px 12px;
-    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
   h1 {
-    margin: 16px 0 8px;
-    font-size: clamp(35px, 8vw, 56px);
-    line-height: 1.05;
+    margin: 24px 0 8px;
+    font-size: clamp(44px, 8vw, 96px);
+    font-weight: 700;
     letter-spacing: -0.02em;
+    line-height: 0.92;
+    text-transform: uppercase;
   }
 
   p {
     margin: 0 0 24px;
-    font-size: 17px;
-    line-height: 1.55;
+    font-size: 18px;
+    color: var(--ink-soft);
   }
 
   .link {
     display: inline-block;
-    background: var(--pink);
-    border: 3px solid var(--black);
-    border-radius: 4px;
-    box-shadow: 4px 4px 0 var(--black);
+    border: 1px solid var(--ink);
     padding: 12px 20px;
-    color: var(--black);
-    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 15px;
-    font-weight: 700;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-decoration: none;
+    text-transform: uppercase;
     word-break: break-all;
-    transition: transform 120ms ease, box-shadow 120ms ease;
+    transition: background-color 120ms cubic-bezier(0.2, 0, 0, 1), color 120ms cubic-bezier(0.2, 0, 0, 1);
   }
 
-  .link:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--black); }
-  .link:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
-  .link:focus-visible { outline: 3px solid var(--black); outline-offset: 4px; }
+  .link:hover { background: var(--ink); color: var(--bone); }
+  .link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
   footer {
-    margin-top: 24px;
+    margin-top: 32px;
     padding-top: 16px;
-    border-top: 2px solid var(--black);
-    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 13px;
-    opacity: 0.75;
+    border-top: 1px solid var(--rule);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
   }
 
   @media (prefers-reduced-motion: reduce) {

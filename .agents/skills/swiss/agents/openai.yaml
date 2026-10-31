@@ -1,0 +1,3 @@
+interface:
+  display_name: "Swiss"
+  short_description: "Swiss design system for the Nexo frontend"
