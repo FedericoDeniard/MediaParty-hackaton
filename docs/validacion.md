@@ -66,6 +66,20 @@ uv run --env-file ../backend/.env uvicorn verificador.api:crear_app --factory --
 
 `POST /validar` con `{"cuerpo": "...", "enriquecimientos": {...}, "usar_modelo": true}`; también `GET /salud` y `GET /catalogo` (los indicadores y fuentes que valida el sistema). Sirve si el backend no puede agregar la dependencia.
 
+## Gráficos
+
+`POST /graficos` recibe el mismo cuerpo que `/validar` y devuelve `{"graficos": [...], "avisos": [...]}` (código en `verificador/src/verificador/graficos.py`; también se puede llamar `armar_graficos(informe, enriquecimientos, cliente)` desde el backend). Cada gráfico trae `id`, `tipo`, `titulo`, `puntos` y `avisos`:
+
+| `tipo` | Qué es | Puntos (`x`, `y`) | Marcas |
+| --- | --- | --- | --- |
+| `serie` | Serie oficial verificada (BCRA, datos.gob.ar, Banco Mundial) | fecha ISO y valor. `y: null` es un hueco: la fuente todavía no publicó ese período | La cifra de la nota ubicada sobre la serie, con `resultado`, `valor_serie`, `diferencia`, `enlace` y `cita` |
+| `linea_tiempo` | Eventos del grafo que la nota sostiene | fecha ISO (parcial) y `y: null`; el título va en `etiqueta` | Ninguna |
+| `ranking` | Entidades más mencionadas (hasta 10) | nombre y menciones contadas por código, no las del modelo | Ninguna |
+
+Cada punto y cada marca trae `cita` (`parrafo_id`, `inicio`, `fin`, `cita`) para resaltar el pasaje en la nota. Sin cita no hay punto. Se omiten, con un aviso, la línea de tiempo con menos de 3 eventos sostenidos y el ranking con menos de 3 entidades verificadas. Solo se grafican series de nivel; las derivadas (variación calculada) quedan afuera con un aviso. Hoy solo las notas 01 y 02 del corpus tienen una serie para graficar.
+
+Límites a tener presentes: en la línea de tiempo solo entran eventos cuya fecha figura escrita en la nota (estado `ok`) y se grafican con la precisión que la nota respalda (sin `precision` declarada, solo el año). La cita prueba la fecha, no el título del evento. Por eso notas con muchas fechas inferidas (la 16, por ejemplo) quedan sin línea de tiempo. Si un nombre figura en la nota de otra forma (solo el apellido), las menciones se cuentan con esa forma y el punto lo avisa en `alertas`.
+
 ## Cómo extenderlo
 
 - **Un indicador nuevo:** una entrada en `series/catalogo.py` (clave, fuente, id, unidad, palabras clave, exclusiones) y su copia con `scripts/guardar_series.py`.
