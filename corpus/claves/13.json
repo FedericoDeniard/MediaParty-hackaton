@@ -1,0 +1,47 @@
+{
+  "nota": "13",
+  "archivo": "13-visita-del-papa-leon-xiv-como-quedan-los-feriados.md",
+  "parrafos_total": 19,
+  "cifras": [
+    { "texto": "tres feriados", "parrafo": 4, "indicador": "cantidad de feriados fijados por el decreto por la visita papal", "periodo": "9, 10 y 11 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato normativo del decreto; no hay serie." },
+    { "texto": "12 meses", "parrafo": 8, "indicador": "vigencia máxima de la Unidad Ejecutora Especial Temporaria", "periodo": "desde la entrada en vigencia del decreto, 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo administrativo; sin serie." },
+    { "texto": "75% de los servicios de transporte público", "parrafo": 12, "indicador": "porcentaje de servicios de transporte público garantizado", "periodo": "10 y 11 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Compromiso informado por fuentes del Gobierno; no está en el catálogo." },
+    { "texto": "cuatro días", "parrafo": 14, "indicador": "duración de la visita papal", "periodo": "8 al 11 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Duración de la agenda; sin serie." }
+  ],
+  "puntos_clave": [
+    { "texto": "El Gobierno declaró de interés nacional la visita de León XIV, prevista del 8 al 11 de noviembre, y fijó feriados por decreto.", "parrafos": [2, 3, 4] },
+    { "texto": "El lunes 9 es feriado en todo el país; el martes 10 rige en Córdoba y Ciudad, y el miércoles 11 en provincia de Buenos Aires.", "parrafos": [6, 7] },
+    { "texto": "Los feriados territoriales dependen del lugar de trabajo y no del domicilio; se promete mantener tres cuartas partes del transporte público.", "parrafos": [11, 12] },
+    { "texto": "El decreto creó dentro de Jefatura de Gabinete una unidad temporaria para organizar la visita, con vigencia de hasta un año.", "parrafos": [8] },
+    { "texto": "La gira pasa por Ciudad, Claypole, Córdoba y Luján, con calles cortadas y una zona estéril alrededor del Papa en Palermo.", "parrafos": [14, 15, 16, 17, 18, 19] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Qué días son feriado y en qué jurisdicciones?", "tipo": "con_respuesta", "parrafos": [6, 7], "ancla": "el Ejecutivo decretó feriado nacional pero con alcance territorial limitado" },
+    { "pregunta": "Si vivo en la Ciudad y trabajo en el conurbano, ¿qué día tengo feriado?", "tipo": "con_respuesta", "parrafos": [12], "ancla": "los feriados se rigen según el domicilio en el que" },
+    { "pregunta": "¿Qué organismo se creó para planificar la visita?", "tipo": "con_respuesta", "parrafos": [8], "ancla": "El decreto también creó, dentro de la Jefatura de Gabinete" },
+    { "pregunta": "¿Qué días estará cortada la avenida del Libertador?", "tipo": "con_respuesta", "parrafos": [19], "ancla": "La avenida del Libertador estará cortada el lunes 9" },
+    { "pregunta": "¿Cuánto gastará el Estado en la organización de la visita?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "León XIV", "rol": "papa que visita la Argentina", "parrafo": 2 },
+    { "nombre": "Poder Ejecutivo", "rol": "declaró la visita de interés nacional y fijó los feriados mediante el Decreto 1103/2026", "parrafo": 4 },
+    { "nombre": "Jefatura de Gabinete de Ministros", "rol": "aloja la Unidad Ejecutora Especial Temporaria de la visita", "parrafo": 8 },
+    { "nombre": "Javier Milei", "rol": "presidente que se reunirá con el Papa", "parrafo": 15 },
+    { "nombre": "Gobierno porteño", "rol": "informó cortes de calles y zona estéril", "parrafo": 19 }
+  ],
+  "fechas": [
+    { "texto": "hace dos semanas: cirugía por cáncer de pulmón del Papa", "parrafo": 3 },
+    { "texto": "8 al 11 de noviembre: duración de la visita a la Argentina", "parrafo": 3 },
+    { "texto": "lunes 9 de noviembre: feriado nacional en todo el país", "parrafo": 6 },
+    { "texto": "martes 10: feriado en Córdoba y Ciudad de Buenos Aires", "parrafo": 7 },
+    { "texto": "miércoles 11: feriado en la provincia de Buenos Aires", "parrafo": 7 },
+    { "texto": "lunes 23 de noviembre: feriado por el Día de la Soberanía Nacional", "parrafo": 9 },
+    { "texto": "domingo 8 de noviembre: llegada del Papa, Monumento San Martín, Casa Rosada y Palacio Libertad", "parrafo": 15 },
+    { "texto": "lunes 9: visita a Claypole, misa en Palermo y reuniones con sindicalistas y líderes religiosos", "parrafo": 16 },
+    { "texto": "martes 10: viaje a Córdoba y regreso a Buenos Aires para la vigilia con jóvenes", "parrafo": 17 },
+    { "texto": "miércoles 11: Complejo Penitenciario, misa en Luján y partida hacia Lima", "parrafo": 18 },
+    { "texto": "lunes 9 y martes 10: avenida del Libertador cortada por la misa y la vigilia", "parrafo": 19 }
+  ],
+  "no_enriquecer": false,
+  "motivo_no_enriquecer": ""
+}

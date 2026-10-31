@@ -1,0 +1,56 @@
+{
+  "nota": "03",
+  "archivo": "03-con-un-dolar-mas-demandado-el-banco-central-pausa.md",
+  "parrafos_total": 16,
+  "cifras": [
+    {"texto": "alza cercana al 1%", "parrafo": 3, "indicador": "apertura del dólar el lunes", "periodo": "lunes (día posterior a la elección en Brasil)", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Hay serie del mayorista, pero el valor de ese día no está en el catálogo."},
+    {"texto": "US$100 millones", "parrafo": 4, "indicador": "venta de dólares del Tesoro", "periodo": "lunes", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Operaciones del Tesoro; sin serie en el catálogo."},
+    {"texto": "$1536", "parrafo": 6, "indicador": "piso intradiario del dólar", "periodo": "jornada de la nota (no precisa fecha)", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Hay serie, pero no el valor intradiario ni la fecha exacta."},
+    {"texto": "US$44 millones", "parrafo": 6, "indicador": "compra de dólares del Tesoro", "periodo": "jornada de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Operación del Tesoro; sin serie."},
+    {"texto": "$1541", "parrafo": 6, "indicador": "precio de compra del Tesoro", "periodo": "jornada de la nota", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Precio de operación, no cierre; el catálogo no trae el día."},
+    {"texto": "US$877 millones", "parrafo": 7, "indicador": "pago de intereses al FMI", "periodo": "en una semana (principios de noviembre 2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Deuda; sin serie en el catálogo."},
+    {"texto": "US$60 millones", "parrafo": 7, "indicador": "pagos a organismos internacionales", "periodo": "en una semana", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Deuda; sin serie."},
+    {"texto": "US$869 millones", "parrafo": 7, "indicador": "depósitos del Tesoro en el BCRA", "periodo": "al momento de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Depósitos del Tesoro; no son las reservas del BCRA."},
+    {"texto": "$1535", "parrafo": 8, "indicador": "dólar mayorista vendedor a la apertura", "periodo": "jornada de la nota", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Hay serie del mayorista, pero el valor de ese día no está en el catálogo."},
+    {"texto": "$1540 y $1542", "parrafo": 9, "indicador": "dólar mayorista, rango de cierre", "periodo": "jornada de la nota", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "El catálogo solo trae 1537,3487 al 30/10; el día de la nota no está."},
+    {"texto": "suba de $4 (+0,26%)", "parrafo": 9, "indicador": "variación diaria del dólar mayorista", "periodo": "jornada de la nota", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Hay serie, falta el valor de los dos días."},
+    {"texto": "46%", "parrafo": 10, "indicador": "aumento del monto operado al contado", "periodo": "jornada de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Volumen de mercado; sin serie."},
+    {"texto": "US$628 millones", "parrafo": 10, "indicador": "monto operado al contado", "periodo": "jornada de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Volumen de mercado; sin serie."},
+    {"texto": "12% o 13% anual", "parrafo": 14, "indicador": "tasa del Bonar 2029", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Tasa de bono; sin serie."},
+    {"texto": "US$800 millones", "parrafo": 14, "indicador": "monto del Bonar 2029 pendiente de colocar", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Deuda; sin serie."},
+    {"texto": "US$1252 millones este mes", "parrafo": 14, "indicador": "compras de reservas del BCRA en el mes", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Compras del BCRA; el catálogo trae reservas totales, no compras."},
+    {"texto": "US$15820 millones en el año", "parrafo": 14, "indicador": "compras acumuladas de reservas del BCRA", "periodo": "enero a octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Compras acumuladas; no es la serie de reservas."},
+    {"texto": "US$1800 millones", "parrafo": 15, "indicador": "depósitos en moneda extranjera del Tesoro en el BCRA proyectados", "periodo": "cierre del año (proyección PPI)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección de PPI."},
+    {"texto": "US$3700 millones", "parrafo": 15, "indicador": "depósitos previstos en el programa financiero", "periodo": "mitad de año 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Previsión oficial."}
+  ],
+  "puntos_clave": [
+    {"texto": "El BCRA no compró dólares por tercer día seguido, algo que no ocurría desde que arrancó su plan de acumulación en enero.", "parrafos": [1, 2, 3]},
+    {"texto": "El Tesoro vendió y luego recompró parte de los dólares, lo que explicaría que el Banco Central se mantuviera al margen.", "parrafos": [4, 6, 7]},
+    {"texto": "El dólar mayorista cerró al alza con más demanda y mayor volumen operado en el mercado de contado.", "parrafos": [8, 9, 10]},
+    {"texto": "Con vencimientos al FMI próximos y la emisión del Bonar 2029 frenada, la pausa en las compras preocupa al mercado.", "parrafos": [7, 12, 14]},
+    {"texto": "PPI proyecta depósitos del Tesoro en el BCRA muy por debajo de lo previsto en el programa financiero.", "parrafos": [15, 16]}
+  ],
+  "preguntas": [
+    {"pregunta": "¿Cuántos días seguidos el BCRA no compró reservas y por qué es inédito?", "tipo": "con_respuesta", "parrafos": [1, 2], "ancla": "se abstuvo de comprar reservas en el mercado cambiario local"},
+    {"pregunta": "¿Cuánto debe pagar el Gobierno al FMI la semana próxima?", "tipo": "con_respuesta", "parrafos": [7], "ancla": "en una semana debe pagar US$877 millones en concepto de"},
+    {"pregunta": "¿Cuánto compró el BCRA en el mes y en el año?", "tipo": "con_respuesta", "parrafos": [14], "ancla": "haya acumulado por esa vía US$1252 millones este mes"},
+    {"pregunta": "¿A qué precio abrió el dólar mayorista?", "tipo": "con_respuesta", "parrafos": [8], "ancla": "cuando el dólar mayorista vendedor cotizaba a $1535"},
+    {"pregunta": "¿A cuánto ascienden hoy las reservas internacionales totales del BCRA?", "tipo": "sin_respuesta", "parrafos": [], "ancla": ""}
+  ],
+  "actores": [
+    {"nombre": "Santiago Bausili", "rol": "presidente del Banco Central", "parrafo": 2},
+    {"nombre": "BCRA", "rol": "Banco Central de la República Argentina", "parrafo": 2},
+    {"nombre": "Tesoro Nacional", "rol": "vendió y compró dólares en el mercado", "parrafo": 4},
+    {"nombre": "Luiz Inácio Lula da Silva", "rol": "presidente de Brasil reelecto", "parrafo": 3},
+    {"nombre": "PPI", "rol": "Portfolio Personal Inversiones, firma que emitió el informe", "parrafo": 7},
+    {"nombre": "Francisco Díaz Mayer", "rol": "operador de ABC Mercado de Cambios", "parrafo": 9},
+    {"nombre": "FMI", "rol": "Fondo Monetario Internacional, acreedor", "parrafo": 7}
+  ],
+  "fechas": [
+    {"texto": "3 de enero pasado", "parrafo": 2},
+    {"texto": "el lunes", "parrafo": 3},
+    {"texto": "ayer", "parrafo": 5},
+    {"texto": "fin de mes", "parrafo": 5},
+    {"texto": "2027 electoral", "parrafo": 13}
+  ]
+}
