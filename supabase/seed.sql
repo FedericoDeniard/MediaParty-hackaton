@@ -1,0 +1,2 @@
+-- Seed data loaded after migrations on `supabase db reset`.
+-- Keep this file idempotent: it runs on every reset.
