@@ -272,28 +272,31 @@ export default function ContextoCard({ grafico }: { grafico: GraficoContexto }) 
 
       {grafico.visual === 'barras' ? <Barras grafico={grafico} /> : <Lineas grafico={grafico} />}
 
-      <p className="ctx__leer">
-        <strong>Cómo leerlo.</strong> {grafico.como_leerlo}
-      </p>
-      <Tabla grafico={grafico} />
-      <ul className="ctx__fuentes">
-        {grafico.fuentes.map((f) => (
-          <li key={f.id}>
-            <a href={f.enlace} target="_blank" rel="noopener noreferrer">
-              {f.nombre}
-            </a>
-            {` · ${f.institucion} · último dato ${f.ultimo_dato}`}
-            {f.rezago_meses > 0 ? ` (hace ${plural(f.rezago_meses, 'mes', 'meses')})` : ''}
-          </li>
-        ))}
-      </ul>
-      {grafico.advertencias.length > 0 ? (
-        <ul className="ctx__avisos">
-          {grafico.advertencias.map((a) => (
-            <li key={a}>{a}</li>
+      <details className="ctx__detalle">
+        <summary>Fuentes y detalle</summary>
+        <p className="ctx__leer">
+          <strong>Cómo leerlo.</strong> {grafico.como_leerlo}
+        </p>
+        <Tabla grafico={grafico} />
+        <ul className="ctx__fuentes">
+          {grafico.fuentes.map((f) => (
+            <li key={f.id}>
+              <a href={f.enlace} target="_blank" rel="noopener noreferrer">
+                {f.nombre}
+              </a>
+              {` · ${f.institucion} · último dato ${f.ultimo_dato}`}
+              {f.rezago_meses > 0 ? ` (hace ${plural(f.rezago_meses, 'mes', 'meses')})` : ''}
+            </li>
           ))}
         </ul>
-      ) : null}
+        {grafico.advertencias.length > 0 ? (
+          <ul className="ctx__avisos">
+            {grafico.advertencias.map((a) => (
+              <li key={a}>{a}</li>
+            ))}
+          </ul>
+        ) : null}
+      </details>
     </article>
   )
 }

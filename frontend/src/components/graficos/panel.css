@@ -14,8 +14,9 @@
   align-self: start;
   max-height: calc(100vh - var(--space-5, 16px) * 2);
   overflow: auto;
-  overscroll-behavior: contain;
+  /* Sin `overscroll-behavior: contain`: al llegar al final del panel, la rueda sigue con la página. */
   scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
 
 .pg {
@@ -143,10 +144,9 @@
 }
 
 .flujo__resumen {
-  min-height: 28px;
+  margin: 0;
   font-size: 14px;
   font-weight: 700;
-  cursor: pointer;
 }
 
 .flujo__pasos {

@@ -10,8 +10,8 @@ import './panel.css'
 /* ============================================================
    Panel de gráficos recomendados.
 
-   Muestra lo que el motor pensó (el recorrido) y los gráficos que
-   propone. Agregar uno lo inserta en la nota como una sección y lleva
+   Muestra lo que el motor piensa (el recorrido) mientras analiza y,
+   al terminar, solo los gráficos que propone. Agregar uno lo inserta en la nota como una sección y lleva
    a ella; la autora puede verlo, quitarlo o descartarlo. Nada entra a
    la nota sin que ella lo decida.
 
@@ -136,7 +136,7 @@ export default function PanelGraficos({ editor, filas, cuerpo, trabajando, onAna
         </button>
       ) : null}
 
-      <FlujoMotor pasos={pasos} trabajando={trabajando} />
+      {trabajando ? <FlujoMotor pasos={pasos} /> : null}
 
       {!trabajando && filas.graficos && recomendaciones.length === 0 ? (
         <p className="pg__vacio">Ningún dato de contexto aporta a esta nota, y está bien: no se arma un gráfico de relleno.</p>
