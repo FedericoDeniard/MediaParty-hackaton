@@ -1,0 +1,43 @@
+{
+  "nota": "15",
+  "archivo": "15-distinguieron-a-dos-proyectos-del-conicet-un-softw.md",
+  "parrafos_total": 23,
+  "cifras": [
+    { "texto": "84 iniciativas", "parrafo": 2, "indicador": "proyectos presentados a la sexta edición del Premio Merck-CONICET", "periodo": "sexta edición del premio, 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de la organización del premio; sin serie oficial." },
+    { "texto": "Diez equipos", "parrafo": 3, "indicador": "equipos que llegaron a la instancia final", "periodo": "sexta edición del premio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato del certamen." },
+    { "texto": "cerca de 400 postulaciones", "parrafo": 21, "indicador": "postulaciones acumuladas desde el lanzamiento del premio", "periodo": "desde 2021", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad aproximada acumulada en seis ediciones." },
+    { "texto": "$13.000.000", "parrafo": 23, "indicador": "monto adjudicado al proyecto NViES (primer puesto)", "periodo": "sexta edición del premio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Monto en pesos del premio; el catálogo no tiene serie comparable." },
+    { "texto": "$9.100.000", "parrafo": 23, "indicador": "monto adjudicado al proyecto de lesiones medulares (segundo puesto)", "periodo": "sexta edición del premio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Monto en pesos del premio; sin serie comparable." }
+  ],
+  "puntos_clave": [
+    { "texto": "En la sexta edición del Premio Merck-CONICET, entre 84 postulaciones, ganó un software que ayuda a planificar la estimulación cerebral en epilepsia resistente a fármacos.", "parrafos": [1, 2] },
+    { "texto": "NViES crea un modelo 3D del cerebro con imágenes clínicas y simula cómo responden las regiones según los electrodos, para preparar cirugías.", "parrafos": [9, 10, 11] },
+    { "texto": "El segundo puesto fue para una molécula sintética que busca estimular la reparación de conexiones nerviosas tras lesiones medulares graves.", "parrafos": [14, 15, 16] },
+    { "texto": "CONICET y Merck anunciaron un foro que reunirá a participantes de todas las ediciones para intercambiar experiencias y capacitarse.", "parrafos": [19, 22] },
+    { "texto": "Los fondos entregados fueron de 13 millones de pesos para el primero y 9,1 millones para el segundo.", "parrafos": [23] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Qué proyecto ganó el primer puesto y quién lo encabeza?", "tipo": "con_respuesta", "parrafos": [2, 9], "ancla": "El proyecto ganador, denominado NeuroVisualizer for Electrical Stimulation (NViES)," },
+    { "pregunta": "¿Cuánta plata recibió el proyecto ganador?", "tipo": "con_respuesta", "parrafos": [23], "ancla": "el proyecto de NViES recibió $13.000.000 y la iniciativa" },
+    { "pregunta": "¿Qué busca desarrollar el equipo que quedó en segundo lugar?", "tipo": "con_respuesta", "parrafos": [14, 15], "ancla": "Su equipo propone desarrollar un agonista sintético del receptor DCC," },
+    { "pregunta": "¿Cuántos proyectos se presentaron en esta edición?", "tipo": "con_respuesta", "parrafos": [2], "ancla": "La convocatoria reunió 84 iniciativas científicas y tecnológicas" },
+    { "pregunta": "¿Cuándo empezarán las pruebas en pacientes de la molécula para lesiones medulares?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Mariano Fernández Corazza", "rol": "investigador del CONICET (LEICI); encabeza el proyecto NViES, primer puesto", "parrafo": 2 },
+    { "nombre": "Héctor Ramiro Quintá", "rol": "investigador del CONICET en el Hospital Alemán; segundo puesto", "parrafo": 14 },
+    { "nombre": "Daniel Salamone", "rol": "presidente del CONICET", "parrafo": 5 },
+    { "nombre": "Catalina Cullas", "rol": "embajadora de Alemania en Argentina", "parrafo": 6 },
+    { "nombre": "Adriana Baravalle", "rol": "secretaria de Innovación, Ciencia y Tecnología", "parrafo": 7 },
+    { "nombre": "Marcelo Ponte", "rol": "director general del Grupo Merck en Argentina", "parrafo": 20 },
+    { "nombre": "Ricardo Allegri", "rol": "investigador del INEU (CONICET-FLENI); jurado", "parrafo": 3 },
+    { "nombre": "Marcela Michaut", "rol": "investigadora del IHEM (CONICET-UNCU); jurado", "parrafo": 3 },
+    { "nombre": "Natalia García", "rol": "directora médica de Merck Argentina; jurado", "parrafo": 4 },
+    { "nombre": "Mauricio Valiere", "rol": "neurólogo y neurorradiólogo del Hospital Italiano; jurado", "parrafo": 4 }
+  ],
+  "fechas": [
+    { "texto": "2021: lanzamiento del Premio Merck-CONICET", "parrafo": 21 }
+  ],
+  "no_enriquecer": false,
+  "motivo_no_enriquecer": ""
+}

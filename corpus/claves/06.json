@@ -1,0 +1,52 @@
+{
+  "nota": "06",
+  "archivo": "06-el-maiz-lleva-vendido-el-65-de-la-produccion-y-la.md",
+  "parrafos_total": 6,
+  "cifras": [
+    {"texto": "39,8%", "parrafo": 2, "indicador": "avance de la siembra temprana de maíz", "periodo": "campaña actual, octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato agropecuario; sin serie."},
+    {"texto": "8,4 millones de hectáreas", "parrafo": 2, "indicador": "superficie prevista de maíz", "periodo": "campaña actual", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato agropecuario."},
+    {"texto": "cinco puntos porcentuales", "parrafo": 2, "indicador": "avance semanal de la siembra de maíz", "periodo": "semana de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato agropecuario."},
+    {"texto": "seis puntos por encima", "parrafo": 2, "indicador": "avance de siembra de maíz frente a la campaña anterior", "periodo": "campaña actual vs anterior", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparación interanual."},
+    {"texto": "65% de la producción", "parrafo": 2, "indicador": "maíz con precio fijado sobre la producción", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial; sin serie."},
+    {"texto": "75%", "parrafo": 2, "indicador": "originación de maíz", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial."},
+    {"texto": "nueve y ocho puntos", "parrafo": 2, "indicador": "diferencia del maíz con los promedios históricos (precio y originación)", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparación con promedio histórico."},
+    {"texto": "211.000 toneladas semanales", "parrafo": 3, "indicador": "operaciones de soja con precio", "periodo": "semana al 14 de octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial."},
+    {"texto": "350.000 toneladas", "parrafo": 3, "indicador": "promedio histórico semanal de operaciones de soja", "periodo": "mismas fechas de años anteriores", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Promedio histórico."},
+    {"texto": "50% de la producción", "parrafo": 3, "indicador": "soja con precio sobre la producción", "periodo": "14 de octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial."},
+    {"texto": "62%", "parrafo": 3, "indicador": "originación de soja", "periodo": "14 de octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial."},
+    {"texto": "tres puntos porcentuales por debajo", "parrafo": 3, "indicador": "diferencia de la soja con los registros históricos", "periodo": "14 de octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparación con promedio histórico."},
+    {"texto": "76% del área prevista", "parrafo": 3, "indicador": "siembra de soja en Mato Grosso, Brasil", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de Brasil."},
+    {"texto": "entre 22 y 23,8 millones de toneladas", "parrafo": 4, "indicador": "producción estimada de trigo", "periodo": "próxima cosecha 2026/27", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación privada."},
+    {"texto": "61,7%", "parrafo": 4, "indicador": "cultivos de trigo en condición buena o excelente", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de cultivos."},
+    {"texto": "88%", "parrafo": 4, "indicador": "cultivos de trigo en condición buena o excelente", "periodo": "un año atrás (octubre 2025)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparación interanual."},
+    {"texto": "entre cuatro y cinco millones de toneladas", "parrafo": 5, "indicador": "trigo de la campaña anterior sin vender", "periodo": "unos 15 días antes de la nueva cosecha", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comercial."},
+    {"texto": "21% de la cosecha estimada", "parrafo": 5, "indicador": "espacio disponible para recibir la nueva cosecha de trigo", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato logístico."},
+    {"texto": "28%", "parrafo": 5, "indicador": "promedio histórico de espacio disponible para trigo", "periodo": "promedio histórico", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Promedio histórico."}
+  ],
+  "puntos_clave": [
+    {"texto": "El mercado internacional de granos está bajista y los productores argentinos postergan ventas esperando mejores precios.", "parrafos": [1, 6]},
+    {"texto": "El maíz va adelantado en comercialización: 65% con precio, por encima del promedio histórico.", "parrafos": [2]},
+    {"texto": "La soja muestra ventas más lentas, con 50% de la producción con precio, por debajo de lo habitual.", "parrafos": [3]},
+    {"texto": "El trigo enfrenta oferta global abundante, daño por heladas en el estado de los cultivos y mercadería vieja sin vender.", "parrafos": [4, 5]},
+    {"texto": "Cosecha estadounidense, demanda china y siembra brasileña condicionan el rumbo de los precios en las próximas semanas.", "parrafos": [3, 6]}
+  ],
+  "preguntas": [
+    {"pregunta": "¿Qué porcentaje del maíz ya tiene precio fijado?", "tipo": "con_respuesta", "parrafos": [2], "ancla": "los negocios con precio representan el 65% de la producción"},
+    {"pregunta": "¿Cómo van las ventas de soja frente a lo normal?", "tipo": "con_respuesta", "parrafos": [3], "ancla": "las ventas con precio cubren el 50% de la producción"},
+    {"pregunta": "¿Cómo afectaron las heladas al trigo?", "tipo": "con_respuesta", "parrafos": [4], "ancla": "cultivos en condición buena o excelente cayó al 61,7%"},
+    {"pregunta": "¿Cuánto trigo viejo queda sin vender?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "quedan entre cuatro y cinco millones de toneladas pendientes"},
+    {"pregunta": "¿A qué precio se cotizan hoy la soja, el maíz y el trigo?", "tipo": "sin_respuesta", "parrafos": [], "ancla": ""}
+  ],
+  "actores": [
+    {"nombre": "Dante Romano", "rol": "profesor e investigador del Centro de Agronegocios y Alimentos de la Universidad Austral", "parrafo": 1},
+    {"nombre": "Universidad Austral", "rol": "institución de la fuente consultada", "parrafo": 1},
+    {"nombre": "China", "rol": "comprador que sostiene la demanda de soja", "parrafo": 3},
+    {"nombre": "Brasil", "rol": "competidor con avance de siembra de soja y comprador de trigo", "parrafo": 3},
+    {"nombre": "Rusia y Ucrania", "rol": "oferentes de trigo con posibles negociaciones", "parrafo": 4}
+  ],
+  "fechas": [
+    {"texto": "14 de octubre", "parrafo": 3},
+    {"texto": "campaña 2025/26", "parrafo": 3},
+    {"texto": "unos 15 días del ingreso de la nueva cosecha", "parrafo": 5}
+  ]
+}
