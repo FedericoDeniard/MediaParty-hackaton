@@ -1,0 +1,19 @@
+[project]
+name = "verificador"
+version = "0.1.0"
+description = "Verificación por código y cruce con series oficiales para las notas enriquecidas"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=2.3.0",
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.2",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

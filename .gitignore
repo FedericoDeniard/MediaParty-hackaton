@@ -1,6 +1,12 @@
 # Descargas en bruto y archivos intermedios de las notas (los limpios van en corpus/notas)
 corpus/bruto/
 
+# Salidas de modelos de las evaluaciones (se regeneran)
+verificador/eval/salidas/
+
+# Base local del backend
+backend/data/
+
 # Claves
 .env
 .env.local

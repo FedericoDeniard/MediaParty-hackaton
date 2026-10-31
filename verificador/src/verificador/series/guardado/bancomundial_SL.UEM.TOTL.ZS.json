@@ -1,0 +1,51 @@
+{
+ "fuente": "bancomundial",
+ "id": "SL.UEM.TOTL.ZS",
+ "guardado_el": "2026-10-31T16:41:39+00:00",
+ "puntos": [
+  {
+   "fecha": "2015",
+   "valor": 7.577
+  },
+  {
+   "fecha": "2016",
+   "valor": 8.088
+  },
+  {
+   "fecha": "2017",
+   "valor": 8.347
+  },
+  {
+   "fecha": "2018",
+   "valor": 9.22
+  },
+  {
+   "fecha": "2019",
+   "valor": 9.843
+  },
+  {
+   "fecha": "2020",
+   "valor": 11.461
+  },
+  {
+   "fecha": "2021",
+   "valor": 8.736
+  },
+  {
+   "fecha": "2022",
+   "valor": 6.805
+  },
+  {
+   "fecha": "2023",
+   "valor": 6.139
+  },
+  {
+   "fecha": "2024",
+   "valor": 7.15
+  },
+  {
+   "fecha": "2025",
+   "valor": 7.145
+  }
+ ]
+}
