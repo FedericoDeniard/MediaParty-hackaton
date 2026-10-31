@@ -1,0 +1,1009 @@
+{
+  "niche": "deportes",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026-10-23",
+            "title": "Gimnasia vence 2-0 a Sarmiento y abre la fecha",
+            "precision": "day",
+            "description": "Gimnasia y Esgrima La Plata derrotó 2-0 a Sarmiento de Junín, se acercó a los puestos de copas internacionales y se consolidó en zona de playoffs.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-10-23",
+            "title": "Platense gana en Mendoza y corta mala racha",
+            "precision": "day",
+            "description": "Platense derrotó 2-1 a Independiente Rivadavia en Mendoza y puso fin a una serie de siete partidos sin ganar.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-10-23",
+            "title": "Atlético Tucumán vence a Tigre; se va Dabove",
+            "precision": "day",
+            "description": "Atlético Tucumán ganó 1-0 a Tigre en Victoria y la derrota provocó la salida del entrenador Diego Dabove.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-10-24",
+            "title": "Banfield y Lanús empatan en el Clásico del Sur",
+            "precision": "day",
+            "description": "Banfield y Lanús igualaron 1-1; el Granate quedó quinto en la Zona A y en posiciones de Copa Sudamericana.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-10-24",
+            "title": "Defensa y Justicia vence a Talleres en Córdoba",
+            "precision": "day",
+            "description": "Defensa y Justicia ganó 2-1 a Talleres y se ubicó cuarto en el grupo que lidera Instituto.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-10-24",
+            "title": "San Lorenzo-Newell's sin goles; Central vence a Huracán",
+            "precision": "day",
+            "description": "San Lorenzo y Newell's empataron 0-0 en el Nuevo Gasómetro, y Rosario Central superó 2-0 a Huracán en Rosario.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-10-25",
+            "title": "Aldosivi vence a Belgrano y sigue soñando",
+            "precision": "day",
+            "description": "Aldosivi derrotó 1-0 a Belgrano y sostuvo sus opciones de permanencia.",
+            "paragraph_index": 4
+          },
+          {
+            "date": "2026-10-25",
+            "title": "Boca vence a Independiente y se clasifica a playoffs",
+            "precision": "day",
+            "description": "Boca Juniors ganó 1-0 en Avellaneda, se clasificó a los playoffs y se mantuvo líder de la Tabla Anual.",
+            "paragraph_index": 4
+          },
+          {
+            "date": "2026-10-25",
+            "title": "River le gana 1-0 a Racing",
+            "precision": "day",
+            "description": "River Plate venció a Racing, se afianzó cuarto en la Zona B y quedó a tres puntos de la zona de Copa Libertadores.",
+            "paragraph_index": 5
+          },
+          {
+            "date": "2026-10-25",
+            "title": "Vélez golea 5-0 a Central Córdoba",
+            "precision": "day",
+            "description": "Vélez Sarsfield goleó en Santiago del Estero, se subió al podio de la Tabla Anual y es escolta en el Grupo A.",
+            "paragraph_index": 6
+          },
+          {
+            "date": "2026-10-25",
+            "title": "Barracas Central vence a Estudiantes de Río Cuarto",
+            "precision": "day",
+            "description": "Barracas Central se impuso 2-1 ante el descendido Estudiantes de Río Cuarto y quedó en zona de playoffs.",
+            "paragraph_index": 6
+          },
+          {
+            "date": "2026-10-26",
+            "title": "Unión vence 3-1 a Estudiantes de La Plata",
+            "precision": "day",
+            "description": "Unión de Santa Fe derrotó a Estudiantes, que quedó fuera de zona de copas internacionales a tres puntos de Lanús.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2026-10-26",
+            "title": "Instituto vence a Riestra y asegura la Sudamericana",
+            "precision": "day",
+            "description": "Instituto de Córdoba ganó 1-0 a Deportivo Riestra, se afirmó como líder de su zona y se clasificó a la Copa Sudamericana.",
+            "paragraph_index": 8
+          },
+          {
+            "date": "2026-10-27",
+            "title": "Argentinos alcanza a Boca en la Tabla Anual",
+            "precision": "day",
+            "description": "Argentinos Juniors venció 1-0 a Independiente Rivadavia en La Paternal, igualó a Boca en la cima de la Tabla Anual y aseguró los playoffs.",
+            "paragraph_index": 9
+          },
+          {
+            "date": "2026-10-30",
+            "title": "Comienza la fecha 15 de la Liga Profesional",
+            "precision": "day",
+            "description": "La fecha 15 arranca con Estudiantes de Río Cuarto-Gimnasia, Huracán-Tigre, Sarmiento-Rosario Central y Racing-Aldosivi.",
+            "paragraph_index": 34
+          },
+          {
+            "date": "2026-10-31",
+            "title": "Vélez-San Lorenzo y Estudiantes-Instituto en el sábado",
+            "precision": "day",
+            "description": "El sábado se juegan Deportivo Riestra-Talleres, Vélez-San Lorenzo y Estudiantes-Instituto.",
+            "paragraph_index": 62
+          },
+          {
+            "date": "2026-11-01",
+            "title": "Superclásico Boca-River por el interzonal",
+            "precision": "day",
+            "description": "Boca y River se enfrentan a las 15 con arbitraje de Nicolás Ramírez y Silvio Trucco en el VAR.",
+            "paragraph_index": 84
+          },
+          {
+            "date": "2026-11-02",
+            "title": "Cierre de la fecha 15",
+            "precision": "day",
+            "description": "El lunes cierran la fecha Platense-Central Córdoba, Defensa y Justicia-Independiente, Atlético Tucumán-Argentinos e Independiente Rivadavia-Banfield.",
+            "paragraph_index": 113
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Gimnasia y Esgrima La Plata venció 2-0 a Sarmiento de Junín en la fecha 14 del Torneo Clausura.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Gimnasia La Plata 2-0 Sarmiento fecha 14 Torneo Clausura"
+          },
+          {
+            "text": "Platense derrotó 2-1 a Independiente Rivadavia en Mendoza y cortó una racha de siete partidos sin ganar.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Platense 2-1 Mendoza fecha 14 Clausura racha siete partidos sin ganar"
+          },
+          {
+            "text": "Atlético Tucumán venció 1-0 a Tigre en Victoria y la derrota provocó la salida de Diego Dabove como entrenador de Tigre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Diego Dabove deja Tigre tras derrota 0-1 con Atlético Tucumán"
+          },
+          {
+            "text": "Banfield y Lanús empataron 1-1 en el Clásico del Sur y Lanús quedó quinto en la Zona A.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Banfield 1-1 Lanús Clásico del Sur Torneo Clausura fecha 14"
+          },
+          {
+            "text": "Defensa y Justicia venció 2-1 a Talleres en Córdoba y se ubicó cuarto en el grupo que lidera Instituto.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Talleres 1-2 Defensa y Justicia fecha 14 Clausura"
+          },
+          {
+            "text": "San Lorenzo y Newell's empataron 0-0 en el Nuevo Gasómetro.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "San Lorenzo 0-0 Newell's Nuevo Gasómetro Clausura"
+          },
+          {
+            "text": "Rosario Central venció 2-0 a Huracán en Rosario.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Rosario Central 2-0 Huracán fecha 14 Clausura"
+          },
+          {
+            "text": "Aldosivi derrotó 1-0 a Belgrano y mantiene chances de permanencia.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Aldosivi 1-0 Belgrano descenso Clausura"
+          },
+          {
+            "text": "Boca Juniors venció 1-0 a Independiente en Avellaneda y se clasificó a los playoffs del Clausura.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Independiente 0-1 Boca Avellaneda clasificado playoffs Clausura"
+          },
+          {
+            "text": "River Plate venció 1-0 a Racing, quedó cuarto en la Zona B y sexto en la Tabla Anual, a tres puntos de zona de Copa Libertadores.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "River 1-0 Racing Tabla Anual River sexto a tres puntos Libertadores"
+          },
+          {
+            "text": "Vélez Sarsfield goleó 5-0 a Central Córdoba en Santiago del Estero.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Central Córdoba 0-5 Vélez Santiago del Estero"
+          },
+          {
+            "text": "Vélez es escolta del Grupo A con 27 puntos, a dos del líder Instituto.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "tabla Zona A Torneo Clausura Vélez 27 puntos Instituto"
+          },
+          {
+            "text": "Barracas Central venció 2-1 a Estudiantes de Río Cuarto, equipo ya descendido.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Barracas Central 2-1 Estudiantes de Río Cuarto descendido"
+          },
+          {
+            "text": "Unión de Santa Fe venció 3-1 a Estudiantes de La Plata, que quedó a 3 puntos de Lanús, último en zona de Copa Sudamericana.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Unión 3-1 Estudiantes de La Plata Tabla Anual Sudamericana"
+          },
+          {
+            "text": "Instituto de Córdoba venció 1-0 a Deportivo Riestra y se clasificó a la Copa Sudamericana.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Instituto 1-0 Deportivo Riestra clasificado Copa Sudamericana"
+          },
+          {
+            "text": "Argentinos Juniors venció 1-0 a Independiente Rivadavia en La Paternal e igualó a Boca en la cima de la Tabla Anual con peor diferencia de gol.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "Argentinos Juniors 1-0 Independiente Rivadavia La Paternal Tabla Anual Boca"
+          },
+          {
+            "text": "Argentinos Juniors aseguró su lugar en los playoffs e igualó a Rosario Central en la punta de la Zona B.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "Argentinos Juniors Rosario Central líderes Zona B Clausura playoffs"
+          },
+          {
+            "text": "Belgrano de Córdoba ya aseguró su lugar en la Copa Libertadores como campeón del Torneo Apertura.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "Belgrano campeón Torneo Apertura clasificado Copa Libertadores"
+          },
+          {
+            "text": "Boca Juniors jugará la final de la Copa Sudamericana ante Atlético Mineiro.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "final Copa Sudamericana Boca Juniors Atlético Mineiro"
+          },
+          {
+            "text": "Estudiantes de La Plata jugará una final ante Palmeiras que le daría acceso a la Copa Libertadores.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "Estudiantes de La Plata final Palmeiras"
+          },
+          {
+            "text": "Hasta ocho equipos argentinos podrían jugar la Copa Libertadores según la combinación de resultados.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "cupos argentinos Copa Libertadores ocho equipos"
+          },
+          {
+            "text": "En la Tabla Anual, Boca y Argentinos Juniors suman 57 puntos y Rosario Central 56.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Tabla Anual Liga Profesional Boca 57 Argentinos 57 Rosario Central 56"
+          },
+          {
+            "text": "En la Tabla Anual, Vélez tiene 55 puntos, Instituto 53, Independiente Rivadavia 53, River 52, Gimnasia La Plata 51 y Lanús 48.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Tabla Anual Vélez 55 Instituto 53 River 52 Gimnasia 51 Lanús 48"
+          },
+          {
+            "text": "Estudiantes de Río Cuarto perdió la categoría tras caer ante River Plate en el Monumental.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Estudiantes de Río Cuarto descendió River Monumental"
+          },
+          {
+            "text": "Aldosivi y Deportivo Riestra definirán el segundo descenso a la Primera Nacional.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "descenso Primera Nacional Aldosivi Deportivo Riestra"
+          },
+          {
+            "text": "Los tres primeros de la Tabla Anual clasifican a la Libertadores y del cuarto al noveno a la Sudamericana.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 13,
+            "verification_query": "reglamento Tabla Anual clasificación Libertadores Sudamericana Liga Profesional"
+          },
+          {
+            "text": "El partido entre Gimnasia de Mendoza y Platense terminó 1-2.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "Gimnasia de Mendoza 1-2 Platense"
+          },
+          {
+            "text": "El superclásico Boca-River de la fecha 15 se juega el domingo 1 de noviembre a las 15.00.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 85,
+            "verification_query": "Boca River fecha 15 horario 1 de noviembre"
+          },
+          {
+            "text": "Nicolás Ramírez será el árbitro de Boca-River, con Silvio Trucco en el VAR.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 86,
+            "verification_query": "árbitro superclásico Nicolás Ramírez VAR Silvio Trucco"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo, resumen deportivo",
+        "framing": "Repasa la fecha 14 del Clausura desde las tablas: clasificación a playoffs, cupos para copas internacionales y descenso. Boca y Argentinos son los protagonistas en la cima de la Tabla Anual, River aparece como perseguidor y Estudiantes de Río Cuarto, Aldosivi y Riestra como los relegados. No hay antagonistas marcados.",
+        "sentiment": 0.1,
+        "sources_cited": [
+          "Tablas de posiciones de los Grupos A y B del Torneo Clausura y Tabla Anual (gráficos incluidos, sin atribución explícita)",
+          "Programación y designación arbitral de la fecha 15 de la Liga Profesional (sin atribución explícita a la LPF ni a la AFA)"
+        ],
+        "missing_angles": [
+          "El título promete 'todos los goles', pero el texto no nombra a ningún goleador ni describe una sola jugada. Faltan autores de los goles, minutos y momentos clave.",
+          "El título dice que Argentinos 'complicó a River', pero el cuerpo nunca explica cómo lo afecta. Hay que justificarlo o cambiar el título.",
+          "Contradicción grave con Independiente Rivadavia. El texto dice que Platense le ganó 2-1 en Mendoza y que luego perdió con Argentinos. La agenda indica que el rival de Platense fue Gimnasia de Mendoza. Hay que corregir el cuerpo.",
+          "Contradicción de fechas. El cuerpo ubica Argentinos-Independiente Rivadavia el martes y la agenda lo pone bajo 'Lunes 26'.",
+          "La agenda omite Instituto 1-0 Deportivo Riestra, que sí figura en el cuerpo. Solo lista 14 partidos y faltaría uno.",
+          "Vélez: el texto dice que 'se subió al podio' de la Tabla Anual y que ocupa el puesto de Libertadores. Pero la tabla publicada lo ubica cuarto (55 pts), detrás de Boca, Argentinos y Central (56), en zona de Sudamericana.",
+          "River: se dice que es sexto y está a tres puntos de la Libertadores. Según la tabla, con 52 puntos es séptimo y está a cuatro del tercero (Central, 56).",
+          "Estudiantes de Río Cuarto: se afirma que descendió 'tras caer ante River en el Monumental', pero en esta fecha perdió con Barracas. Hay que aclarar en qué fecha se consumó el descenso.",
+          "Boca 'depende de sí mismo para ganar el título': no se aclara qué título. La Tabla Anual define cupos, no un campeonato.",
+          "Instituto 'se clasificó a la Sudamericana' a dos fechas del final. Falta la cuenta que lo sustente.",
+          "La salida de Diego Dabove se menciona al pasar, sin confirmación oficial, contexto de su ciclo ni posible reemplazante.",
+          "La tabla de descenso (promedios o tabla anual) no aparece con cifras. Solo se nombra a Aldosivi y Riestra, sin puntos ni diferencia.",
+          "No se da contexto sobre el formato de los playoffs: cuántos clasifican por zona, cruces previstos y criterio de desempate.",
+          "Faltan voces de protagonistas (DT o jugadores) tras los partidos clave.",
+          "La composición de los cupos de Libertadores no contempla qué pasa si hay superposiciones (por ejemplo, el campeón del Clausura ya clasificado por tabla).",
+          "En la programación de la fecha 15 hay nombres repetidos que conviene verificar. Juan Pafundi figura como VAR el viernes y cuarto árbitro el domingo. Daniel Zamora figura como árbitro y como asistente.",
+          "Errores de formato: 'Nicolás LamolinaAVAR' aparece pegado y las mayúsculas son inconsistentes en la agenda (UNIÓN, ARGENTINOS)."
+        ],
+        "follow_up_questions": [
+          "¿Qué necesita exactamente cada uno de los tres primeros de la Tabla Anual (Boca, Argentinos, Central) para asegurar la Libertadores en las dos fechas restantes?",
+          "¿Cómo impacta el Superclásico Boca-River de la fecha 15 en la Tabla Anual y en las chances de River de entrar a la Libertadores?",
+          "¿Cómo se redistribuyen los cupos si Boca o Estudiantes ganan la Sudamericana o la Libertadores, o si el campeón de la Copa Argentina ya estaba clasificado?",
+          "¿Cuál es la situación numérica exacta entre Aldosivi y Deportivo Riestra en la pelea por no descender y qué combinaciones definen al segundo descendido?",
+          "¿Se confirmó oficialmente la salida de Diego Dabove de Tigre? ¿Quién asumirá y cuál fue el balance de su ciclo?",
+          "¿Cuáles son los cruces probables de octavos de final del Clausura según las posiciones actuales de las zonas A y B?",
+          "¿Qué explica la caída de Estudiantes de La Plata en la tabla mientras compite por la final continental ante Palmeiras? ¿Hay rotación de plantel?",
+          "¿Qué representa para Argentinos Juniors igualar en la cima a Boca, en términos históricos y de presupuesto?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "argentinos-juniors",
+            "target": "independiente-rivadavia",
+            "evidence": "el triunfo de Argentinos Juniors 1-0 ante Independiente Rivadavia, en La Paternal",
+            "relation": "venció a"
+          },
+          {
+            "source": "argentinos-juniors",
+            "target": "boca-juniors",
+            "evidence": "el Bicho alcanzó a Boca Juniors en la cima de la Tabla Anual",
+            "relation": "alcanzó en la Tabla Anual a"
+          },
+          {
+            "source": "argentinos-juniors",
+            "target": "rosario-central",
+            "evidence": "al alcanzar también en la punta de la Zona B a Rosario Central",
+            "relation": "alcanzó en la punta de la Zona B a"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "independiente",
+            "evidence": "el triunfo de Boca Juniors ante Independiente por 1-0 en Avellaneda",
+            "relation": "venció a"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "tabla-anual",
+            "evidence": "el Xeneize se mantiene como líder de la Tabla Anual",
+            "relation": "lidera"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "atletico-mineiro",
+            "evidence": "si vence a Atlético Mineiro en la final de la Copa Sudamericana",
+            "relation": "enfrentará en la final de la Copa Sudamericana"
+          },
+          {
+            "source": "river-plate",
+            "target": "racing-club",
+            "evidence": "River Plate le ganó 1-0 a Racing Club",
+            "relation": "venció a"
+          },
+          {
+            "source": "river-plate",
+            "target": "estudiantes-rio-cuarto",
+            "evidence": "Estudiantes de Río Cuarto perdió la categoría tras caer ante River Plate en el Monumental",
+            "relation": "venció y mandó al descenso a"
+          },
+          {
+            "source": "gimnasia-la-plata",
+            "target": "sarmiento",
+            "evidence": "la victoria de Gimnasia y Esgrima La Plata por 2-0 ante Sarmiento de Junín",
+            "relation": "venció a"
+          },
+          {
+            "source": "platense",
+            "target": "independiente-rivadavia",
+            "evidence": "Platense, a su vez, derrotó 2-1 a Independiente Rivadavia en Mendoza",
+            "relation": "venció a"
+          },
+          {
+            "source": "atletico-tucuman",
+            "target": "tigre",
+            "evidence": "el triunfo de Atlético Tucumán por 1-0 frente a Tigre en Victoria",
+            "relation": "venció a"
+          },
+          {
+            "source": "diego-dabove",
+            "target": "tigre",
+            "evidence": "La caída provocó la salida de Diego Dabove del conjunto local.",
+            "relation": "dejó el cargo en"
+          },
+          {
+            "source": "banfield",
+            "target": "lanus",
+            "evidence": "Banfield y Lanús igualaron 1-1 en el Clásico del Sur",
+            "relation": "empató con"
+          },
+          {
+            "source": "defensa-y-justicia",
+            "target": "talleres",
+            "evidence": "En Córdoba, Defensa y Justicia venció 2-1 a Talleres",
+            "relation": "venció a"
+          },
+          {
+            "source": "san-lorenzo",
+            "target": "newells",
+            "evidence": "San Lorenzo y Newell’s empataron sin goles en el Nuevo Gasómetro",
+            "relation": "empató con"
+          },
+          {
+            "source": "rosario-central",
+            "target": "huracan",
+            "evidence": "Rosario Central superó 2-0 a Huracán en Rosario",
+            "relation": "venció a"
+          },
+          {
+            "source": "aldosivi",
+            "target": "belgrano",
+            "evidence": "Aldosivi derrotó 1-0 a Belgrano",
+            "relation": "venció a"
+          },
+          {
+            "source": "velez-sarsfield",
+            "target": "central-cordoba",
+            "evidence": "Vélez Sarsfield, que goleó 5-0 a Central Córdoba en Santiago del Estero",
+            "relation": "goleó a"
+          },
+          {
+            "source": "barracas-central",
+            "target": "estudiantes-rio-cuarto",
+            "evidence": "Barracas Central se impuso 2-1 ante el descendido Estudiantes de Río Cuarto",
+            "relation": "venció a"
+          },
+          {
+            "source": "union-santa-fe",
+            "target": "estudiantes-la-plata",
+            "evidence": "Unión de Santa Fe le ganó 3-1 a Estudiantes de La Plata",
+            "relation": "venció a"
+          },
+          {
+            "source": "instituto",
+            "target": "deportivo-riestra",
+            "evidence": "Instituto de Córdoba venció 1-0 a Deportivo Riestra",
+            "relation": "venció a"
+          },
+          {
+            "source": "instituto",
+            "target": "copa-sudamericana",
+            "evidence": "se clasificó a la Copa Sudamericana",
+            "relation": "se clasificó a"
+          },
+          {
+            "source": "belgrano",
+            "target": "torneo-apertura",
+            "evidence": "como campeón del Torneo Apertura",
+            "relation": "campeón de"
+          },
+          {
+            "source": "belgrano",
+            "target": "copa-libertadores",
+            "evidence": "Belgrano de Córdoba ya aseguró su presencia en el máximo torneo de clubes del continente",
+            "relation": "clasificado a"
+          },
+          {
+            "source": "estudiantes-la-plata",
+            "target": "palmeiras",
+            "evidence": "si se consagra ante Palmeiras",
+            "relation": "enfrentará en una final a"
+          },
+          {
+            "source": "lanus",
+            "target": "copa-sudamericana",
+            "evidence": "dejó al Granate en el quinto lugar de la Zona A y en posiciones de Copa Sudamericana",
+            "relation": "ocupa puesto de clasificación a"
+          },
+          {
+            "source": "clasico-del-sur",
+            "target": "banfield",
+            "evidence": "Banfield y Lanús igualaron 1-1 en el Clásico del Sur",
+            "relation": "disputado por"
+          },
+          {
+            "source": "copa-libertadores",
+            "target": "conmebol",
+            "evidence": "la cantidad de equipos argentinos en el torneo de Conmebol",
+            "relation": "organizado por"
+          },
+          {
+            "source": "nicolas-ramirez",
+            "target": "boca-juniors",
+            "evidence": "15.00 Boca – River (Interzonal) Árbitro: Nicolás Ramírez",
+            "relation": "arbitrará el partido de"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "argentinos-juniors",
+            "name": "Argentinos Juniors",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club que venció 1-0 a Independiente Rivadavia y alcanzó a Boca en la cima de la Tabla Anual."
+          },
+          {
+            "id": "boca-juniors",
+            "name": "Boca Juniors",
+            "type": "org",
+            "mentions": 8,
+            "description": "Club líder de la Tabla Anual que venció a Independiente y se clasificó a los playoffs."
+          },
+          {
+            "id": "river-plate",
+            "name": "River Plate",
+            "type": "org",
+            "mentions": 7,
+            "description": "Club que venció 1-0 a Racing y se afianzó en el cuarto lugar de la Zona B."
+          },
+          {
+            "id": "torneo-clausura",
+            "name": "Torneo Clausura",
+            "type": "event",
+            "mentions": 4,
+            "description": "Certamen cuya fecha 14 se completó."
+          },
+          {
+            "id": "tabla-anual",
+            "name": "Tabla Anual",
+            "type": "event",
+            "mentions": 7,
+            "description": "Clasificación anual que define los cupos a copas internacionales."
+          },
+          {
+            "id": "gimnasia-la-plata",
+            "name": "Gimnasia y Esgrima La Plata",
+            "type": "org",
+            "mentions": 4,
+            "description": "Club que venció 2-0 a Sarmiento y se acercó a los puestos de copas."
+          },
+          {
+            "id": "sarmiento",
+            "name": "Sarmiento de Junín",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club derrotado 2-0 por Gimnasia y Esgrima La Plata."
+          },
+          {
+            "id": "platense",
+            "name": "Platense",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que derrotó 2-1 a Independiente Rivadavia y cortó una racha de siete partidos sin ganar."
+          },
+          {
+            "id": "independiente-rivadavia",
+            "name": "Independiente Rivadavia",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club mendocino que perdió ante Platense y ante Argentinos Juniors."
+          },
+          {
+            "id": "mendoza",
+            "name": "Mendoza",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Platense venció a Independiente Rivadavia."
+          },
+          {
+            "id": "atletico-tucuman",
+            "name": "Atlético Tucumán",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que venció 1-0 a Tigre en Victoria."
+          },
+          {
+            "id": "tigre",
+            "name": "Tigre",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que perdió ante Atlético Tucumán, derrota que provocó la salida de su entrenador."
+          },
+          {
+            "id": "victoria",
+            "name": "Victoria",
+            "type": "place",
+            "mentions": 1,
+            "description": "Localidad donde Tigre perdió ante Atlético Tucumán."
+          },
+          {
+            "id": "diego-dabove",
+            "name": "Diego Dabove",
+            "type": "person",
+            "mentions": 1,
+            "description": "Entrenador que dejó Tigre tras la derrota ante Atlético Tucumán."
+          },
+          {
+            "id": "banfield",
+            "name": "Banfield",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que empató 1-1 con Lanús en el Clásico del Sur."
+          },
+          {
+            "id": "lanus",
+            "name": "Lanús",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club que empató con Banfield y ocupa el último puesto de Copa Sudamericana."
+          },
+          {
+            "id": "clasico-del-sur",
+            "name": "Clásico del Sur",
+            "type": "event",
+            "mentions": 1,
+            "description": "Clásico entre Banfield y Lanús que terminó 1-1."
+          },
+          {
+            "id": "cordoba",
+            "name": "Córdoba",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Defensa y Justicia venció a Talleres."
+          },
+          {
+            "id": "defensa-y-justicia",
+            "name": "Defensa y Justicia",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que venció 2-1 a Talleres y se ubicó cuarto en su grupo."
+          },
+          {
+            "id": "talleres",
+            "name": "Talleres",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club cordobés derrotado por Defensa y Justicia."
+          },
+          {
+            "id": "instituto",
+            "name": "Instituto de Córdoba",
+            "type": "org",
+            "mentions": 6,
+            "description": "Líder de la Zona A que venció a Deportivo Riestra y se clasificó a la Copa Sudamericana."
+          },
+          {
+            "id": "san-lorenzo",
+            "name": "San Lorenzo",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que empató 0-0 con Newell's en el Nuevo Gasómetro."
+          },
+          {
+            "id": "newells",
+            "name": "Newell's Old Boys",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que empató sin goles con San Lorenzo."
+          },
+          {
+            "id": "nuevo-gasometro",
+            "name": "Nuevo Gasómetro",
+            "type": "place",
+            "mentions": 1,
+            "description": "Estadio donde San Lorenzo y Newell's empataron."
+          },
+          {
+            "id": "rosario-central",
+            "name": "Rosario Central",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club que venció 2-0 a Huracán y comparte la punta de la Zona B."
+          },
+          {
+            "id": "huracan",
+            "name": "Huracán",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club derrotado 2-0 por Rosario Central."
+          },
+          {
+            "id": "rosario",
+            "name": "Rosario",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Rosario Central venció a Huracán."
+          },
+          {
+            "id": "aldosivi",
+            "name": "Aldosivi",
+            "type": "org",
+            "mentions": 4,
+            "description": "Club que venció 1-0 a Belgrano y pelea por la permanencia."
+          },
+          {
+            "id": "belgrano",
+            "name": "Belgrano de Córdoba",
+            "type": "org",
+            "mentions": 5,
+            "description": "Campeón del Torneo Apertura, ya clasificado a la Libertadores, que perdió ante Aldosivi."
+          },
+          {
+            "id": "racing-club",
+            "name": "Racing Club",
+            "type": "org",
+            "mentions": 4,
+            "description": "Club que perdió 1-0 ante River Plate."
+          },
+          {
+            "id": "mar-del-plata",
+            "name": "Mar del Plata",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Aldosivi recibirá a River Plate."
+          },
+          {
+            "id": "independiente",
+            "name": "Independiente",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que perdió 1-0 ante Boca Juniors en Avellaneda."
+          },
+          {
+            "id": "avellaneda",
+            "name": "Avellaneda",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Boca venció a Independiente."
+          },
+          {
+            "id": "velez-sarsfield",
+            "name": "Vélez Sarsfield",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club que goleó 5-0 a Central Córdoba y subió al podio de la Tabla Anual."
+          },
+          {
+            "id": "central-cordoba",
+            "name": "Central Córdoba",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club goleado 5-0 por Vélez en Santiago del Estero."
+          },
+          {
+            "id": "santiago-del-estero",
+            "name": "Santiago del Estero",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Vélez goleó a Central Córdoba."
+          },
+          {
+            "id": "barracas-central",
+            "name": "Barracas Central",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que venció 2-1 a Estudiantes de Río Cuarto y sueña con la Sudamericana."
+          },
+          {
+            "id": "estudiantes-rio-cuarto",
+            "name": "Estudiantes de Río Cuarto",
+            "type": "org",
+            "mentions": 4,
+            "description": "Club descendido que perdió ante Barracas Central."
+          },
+          {
+            "id": "union-santa-fe",
+            "name": "Unión de Santa Fe",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que venció 3-1 a Estudiantes de La Plata."
+          },
+          {
+            "id": "estudiantes-la-plata",
+            "name": "Estudiantes de La Plata",
+            "type": "org",
+            "mentions": 5,
+            "description": "Club que perdió ante Unión y jugará la final de la Sudamericana ante Palmeiras."
+          },
+          {
+            "id": "deportivo-riestra",
+            "name": "Deportivo Riestra",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que perdió ante Instituto y pelea por no descender."
+          },
+          {
+            "id": "la-paternal",
+            "name": "La Paternal",
+            "type": "place",
+            "mentions": 1,
+            "description": "Barrio donde Argentinos Juniors venció a Independiente Rivadavia."
+          },
+          {
+            "id": "copa-sudamericana",
+            "name": "Copa Sudamericana",
+            "type": "event",
+            "mentions": 8,
+            "description": "Torneo continental cuyos cupos se disputan y cuya final juegan Boca y Estudiantes."
+          },
+          {
+            "id": "copa-libertadores",
+            "name": "Copa Libertadores",
+            "type": "event",
+            "mentions": 5,
+            "description": "Máximo torneo de clubes del continente al que aspiran los equipos."
+          },
+          {
+            "id": "torneo-apertura",
+            "name": "Torneo Apertura",
+            "type": "event",
+            "mentions": 2,
+            "description": "Torneo ganado por Belgrano que le dio el cupo a la Libertadores."
+          },
+          {
+            "id": "copa-argentina",
+            "name": "Copa Argentina",
+            "type": "event",
+            "mentions": 1,
+            "description": "Torneo cuyo ganador obtiene cupo a la Libertadores."
+          },
+          {
+            "id": "atletico-mineiro",
+            "name": "Atlético Mineiro",
+            "type": "org",
+            "mentions": 1,
+            "description": "Rival de Boca en la final de la Copa Sudamericana según el artículo."
+          },
+          {
+            "id": "palmeiras",
+            "name": "Palmeiras",
+            "type": "org",
+            "mentions": 1,
+            "description": "Rival de Estudiantes de La Plata en una final según el artículo."
+          },
+          {
+            "id": "conmebol",
+            "name": "Conmebol",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organizadora del torneo continental."
+          },
+          {
+            "id": "monumental",
+            "name": "Estadio Monumental",
+            "type": "place",
+            "mentions": 1,
+            "description": "Estadio donde Estudiantes de Río Cuarto perdió ante River y descendió."
+          },
+          {
+            "id": "primera-nacional",
+            "name": "Primera Nacional",
+            "type": "org",
+            "mentions": 1,
+            "description": "Categoría a la que bajarán los equipos descendidos."
+          },
+          {
+            "id": "liga-profesional",
+            "name": "Liga Profesional",
+            "type": "org",
+            "mentions": 1,
+            "description": "Liga cuya fecha 15 se programó."
+          },
+          {
+            "id": "nicolas-ramirez",
+            "name": "Nicolás Ramírez",
+            "type": "person",
+            "mentions": 1,
+            "description": "Árbitro designado para el Boca-River de la fecha 15."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "niche": "sociedad",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "1987",
+            "title": "Última visita de Juan Pablo II a la Argentina",
+            "precision": "year",
+            "description": "Pizarro recordó que la última de las visitas de Juan Pablo II al país fue en 1987 y que los preparativos actuales no admiten comparación.",
+            "paragraph_index": 18
+          },
+          {
+            "date": "2026-11-08",
+            "title": "León XIV llega a Aeroparque y visita Plaza San Martín",
+            "precision": "day",
+            "description": "El Papa llegará a Aeroparque el domingo 8 de noviembre y visitará el Monumento a San Martín en Plaza San Martín.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2026-11-08",
+            "title": "Milei recibe al Papa en la Casa Rosada",
+            "precision": "day",
+            "description": "El presidente Javier Milei recibirá al pontífice en una audiencia protocolar en la Casa Rosada.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2026-11-08",
+            "title": "Discursos ante autoridades en el Palacio Libertad",
+            "precision": "day",
+            "description": "El Presidente y el Papa pronunciarán discursos ante autoridades, gobernadores, legisladores, intendentes y el cuerpo diplomático en el Palacio Libertad.",
+            "paragraph_index": 15
+          },
+          {
+            "date": "2026-11-09",
+            "title": "Visita al Pequeño Cottolengo Don Orione de Claypole",
+            "precision": "day",
+            "description": "Por la mañana del lunes 9 de noviembre, el pontífice visitará el Pequeño Cottolengo Don Orione de Claypole.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-11-09",
+            "title": "Misa en el Monumento de los Españoles en Palermo",
+            "precision": "day",
+            "description": "El Papa recorrerá la avenida del Libertador en papamóvil y celebrará una misa a las 11.30 en el Monumento de los Españoles, la jornada de mayor convocatoria.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-11-09",
+            "title": "Encuentros en la UCA y vísperas en la Catedral",
+            "precision": "day",
+            "description": "El lunes, León XIV tendrá un encuentro con el mundo del trabajo en la UCA, se reunirá con referentes religiosos y celebrará vísperas con los obispos en la Catedral Metropolitana.",
+            "paragraph_index": 16
+          },
+          {
+            "date": "2026-11-10",
+            "title": "Vigilia con jóvenes en Palermo",
+            "precision": "day",
+            "description": "Tras regresar de Córdoba, el Papa presidirá a las 20.15 una vigilia con jóvenes en el Monumento de los Españoles, con prioridad para acreditados de 15 a 35 años.",
+            "paragraph_index": 10
+          },
+          {
+            "date": "2026-11-11",
+            "title": "Visita a Devoto y misa en la Basílica de Luján",
+            "precision": "day",
+            "description": "El miércoles 11, tras visitar el Complejo Penitenciario Federal de Devoto, el Papa viajará a Luján para celebrar una misa en la basílica.",
+            "paragraph_index": 21
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo",
+        "framing": "La nota se cuenta desde la perspectiva de la organización eclesial, con el obispo Raúl Pizarro como única voz y protagonista que explica la logística de la visita. No hay antagonistas: el Estado, la Santa Sede y los equipos de seguridad aparecen como socios cooperativos, y los fieles como destinatarios pasivos del operativo.",
+        "sentiment": 0.4,
+        "sources_cited": [
+          "Raúl Pizarro, obispo auxiliar de San Isidro y secretario general de la Conferencia Episcopal Argentina",
+          "Radio Mitre (entrevista a Pizarro)",
+          "Programa oficial publicado por la Santa Sede",
+          "Delegaciones de la Santa Sede (citadas indirectamente por Pizarro)",
+          "Organizadores de viajes papales en Chile y España (mencionados indirectamente por Pizarro)"
+        ],
+        "missing_angles": [
+          "Voces oficiales del Gobierno nacional, del Gobierno porteño y de la Provincia de Buenos Aires sobre el operativo de seguridad, tránsito y cortes: el título promete 'operativo de seguridad', pero solo habla la Iglesia.",
+          "Cifras estimadas de asistencia para la misa del lunes, la vigilia y Luján, y la cantidad de efectivos de seguridad, voluntarios y personal sanitario.",
+          "Costo del operativo y cómo se reparte entre el Estado, la Iglesia y el Vaticano, con su eventual debate público.",
+          "Impacto en vecinos, comercios, transporte público, escuelas y actividad laboral de Palermo, el microcentro y Luján: si habrá asueto o día no laborable.",
+          "Detalle de los actos en provincia (Claypole, Luján) y de la escala en Córdoba, que el título anuncia pero apenas se mencionan.",
+          "Contexto histórico más profundo: comparación concreta con las visitas de Juan Pablo II en 1982 y 1987, como asistencia, recorridos y lugares.",
+          "Dimensión política de la visita: relación de Milei con la Iglesia y con el papado, y agenda social que podría plantear el Papa ante el 'mundo del trabajo'.",
+          "Información práctica para el lector: cómo y dónde acreditarse para la vigilia, plazos, requisitos y canales oficiales concretos (sitio web, redes).",
+          "Medidas de accesibilidad para personas mayores o con discapacidad, especialmente en la caminata de cinco kilómetros en Luján.",
+          "Precisión sobre el 'segundo' recorrido en papamóvil: la nota anuncia dos recorridos por Libertador pero no detalla el trayecto del martes."
+        ],
+        "follow_up_questions": [
+          "¿Cuántos efectivos de fuerzas federales y locales participarán y qué organismo coordina el operativo de seguridad?",
+          "¿Qué calles y líneas de transporte se cortarán o desviarán el 8, 9, 10 y 11 de noviembre?",
+          "¿Cuál es el presupuesto estatal destinado a la visita y qué gastos asume la Conferencia Episcopal?",
+          "¿Cuántos jóvenes se acreditaron ya para la vigilia y hasta cuándo hay plazo?",
+          "¿Qué contenido tendrán los discursos en el Palacio Libertad y se espera alguna referencia a la situación social o económica del país?",
+          "¿Quiénes participarán del encuentro con el mundo del trabajo en la UCA? ¿Habrá sindicatos y movimientos sociales?",
+          "¿Qué representantes de otras tradiciones religiosas asistirán al encuentro interreligioso?",
+          "¿Qué actividades se prevén en la visita a Devoto y en el Cottolengo de Claypole, y por qué se eligieron esos lugares?",
+          "¿Cómo será la logística en Luján: dónde estarán los estacionamientos, cuántos buses habrá y qué capacidad tendrá el predio?",
+          "¿Qué lecciones concretas aportaron los organizadores de las visitas papales en Chile y España?",
+          "¿Habrá pantallas, atención sanitaria y puntos de hidratación en los sectores vallados?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Raúl Pizarro es obispo auxiliar de San Isidro y secretario general de la Conferencia Episcopal Argentina.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 0,
+            "verification_query": "Raúl Pizarro obispo auxiliar San Isidro secretario general Conferencia Episcopal Argentina"
+          },
+          {
+            "text": "El papa León XIV tendrá dos recorridos en papamóvil por la avenida del Libertador durante su visita a Buenos Aires, según Raúl Pizarro.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 0,
+            "verification_query": "León XIV papamóvil avenida del Libertador dos recorridos Pizarro"
+          },
+          {
+            "text": "Pizarro declaró en Radio Mitre que la jornada de mayor convocatoria será el lunes 9 de noviembre.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "Pizarro Radio Mitre visita papa León XIV lunes 9 de noviembre"
+          },
+          {
+            "text": "El lunes 9 de noviembre el Papa visitará por la mañana el Pequeño Cottolengo Don Orione de Claypole y luego celebrará una misa en el Monumento de los Españoles, en Palermo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "programa visita León XIV Argentina Cottolengo Claypole misa Monumento de los Españoles"
+          },
+          {
+            "text": "El Papa cambiará de vehículo en el túnel de la avenida del Libertador y recorrerá en papamóvil poco más de dos kilómetros hasta el escenario.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "León XIV túnel avenida del Libertador papamóvil dos kilómetros"
+          },
+          {
+            "text": "Pizarro dijo sobre el túnel: \"Ahí abajo hay un lugar más seguro\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "Pizarro \"Ahí abajo hay un lugar más seguro\" papa"
+          },
+          {
+            "text": "Pizarro afirmó: \"La gente va a estar con corralitos. Entonces el Papa va a poder ir pasando más tranquilo y sin apuro para que todos lo vean, todos lo puedan saludar\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Pizarro \"La gente va a estar con corralitos\" papa León XIV"
+          },
+          {
+            "text": "Habrá cuatro accesos principales a la misa de Palermo, con ingreso desde la zona de Olleros y del lado del río.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "misa papa Palermo cuatro accesos Olleros"
+          },
+          {
+            "text": "La misa del lunes en Palermo está prevista para las 11.30, según el programa publicado por la Santa Sede.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "programa Santa Sede viaje León XIV Argentina misa Palermo 11.30"
+          },
+          {
+            "text": "El martes 10 por la noche, tras regresar de Córdoba, León XIV presidirá una vigilia con jóvenes en el Monumento de los Españoles que comenzará a las 20.15; el predio abrirá al mediodía y habrá propuestas artísticas desde las 16.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "vigilia jóvenes León XIV Monumento de los Españoles martes 10 20.15"
+          },
+          {
+            "text": "En la vigilia tendrán prioridad los jóvenes de 15 a 35 años acreditados previamente.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "vigilia papa acreditación jóvenes 15 a 35 años"
+          },
+          {
+            "text": "Pizarro señaló: \"Es un evento abierto a todo el mundo, pero se les da prioridad a los que tienen entre 15 y 35 años que se hayan acreditado previamente\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "Pizarro \"se les da prioridad a los que tienen entre 15 y 35 años\""
+          },
+          {
+            "text": "Los jóvenes acreditados para la vigilia serán decenas de miles, según Pizarro.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "cantidad jóvenes acreditados vigilia papa León XIV Buenos Aires"
+          },
+          {
+            "text": "León XIV llegará a Aeroparque el domingo 8 de noviembre, visitará el Monumento a San Martín en Plaza San Martín y será recibido por Javier Milei en la Casa Rosada.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "León XIV llegada Aeroparque 8 de noviembre Milei Casa Rosada Plaza San Martín"
+          },
+          {
+            "text": "El Presidente y el Papa pronunciarán discursos ante autoridades y cuerpo diplomático en el Palacio Libertad.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "León XIV Milei discursos Palacio Libertad cuerpo diplomático"
+          },
+          {
+            "text": "El lunes León XIV tendrá un encuentro con el mundo del trabajo en la Universidad Católica Argentina, se reunirá con referentes religiosos y celebrará vísperas con los obispos en la Catedral Metropolitana.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "León XIV Universidad Católica Argentina mundo del trabajo vísperas Catedral Metropolitana"
+          },
+          {
+            "text": "La última visita de Juan Pablo II a la Argentina fue en 1987.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 15,
+            "verification_query": "Juan Pablo II visita Argentina 1987"
+          },
+          {
+            "text": "La Conferencia Episcopal Argentina consultó a organizadores de viajes papales recientes en Chile y España.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 15,
+            "verification_query": "Conferencia Episcopal Argentina organizadores viajes papales Chile España"
+          },
+          {
+            "text": "Pizarro afirmó: \"Los que mandan son los de seguridad, porque te dicen: 'Esto se puede, esto no se puede'\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 16,
+            "verification_query": "Pizarro \"Los que mandan son los de seguridad\""
+          },
+          {
+            "text": "La visita contará con dos papamóviles.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "dos papamóviles visita León XIV Argentina"
+          },
+          {
+            "text": "El miércoles 11, tras visitar el Complejo Penitenciario Federal de Devoto, el Papa celebrará una misa en la basílica de Luján.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 18,
+            "verification_query": "León XIV miércoles 11 cárcel de Devoto misa basílica de Luján"
+          },
+          {
+            "text": "Los fieles que vayan a Luján deberán estacionar a unos cinco kilómetros del santuario y caminar, según Pizarro.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 18,
+            "verification_query": "misa papa Luján estacionamiento cinco kilómetros buses"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "raul-pizarro",
+            "target": "conferencia-episcopal-argentina",
+            "evidence": "secretario general de la Conferencia Episcopal Argentina, Raúl Pizarro",
+            "relation": "es secretario general de"
+          },
+          {
+            "source": "raul-pizarro",
+            "target": "san-isidro",
+            "evidence": "El obispo auxiliar de San Isidro",
+            "relation": "es obispo auxiliar de"
+          },
+          {
+            "source": "raul-pizarro",
+            "target": "radio-mitre",
+            "evidence": "explicó en Radio Mitre",
+            "relation": "declaró en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "avenida-del-libertador",
+            "evidence": "tendrá dos recorridos en papamóvil por la avenida del Libertador",
+            "relation": "recorrerá en papamóvil"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "pequeno-cottolengo-don-orione",
+            "evidence": "Después de visitar el Pequeño Cottolengo Don Orione de Claypole por la mañana",
+            "relation": "visitará"
+          },
+          {
+            "source": "pequeno-cottolengo-don-orione",
+            "target": "claypole",
+            "evidence": "Pequeño Cottolengo Don Orione de Claypole",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "monumento-de-los-espanoles",
+            "evidence": "celebrar una misa en el Monumento de los Españoles, en Palermo",
+            "relation": "celebrará misa y vigilia en"
+          },
+          {
+            "source": "monumento-de-los-espanoles",
+            "target": "palermo",
+            "evidence": "Monumento de los Españoles, en Palermo",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "santa-sede",
+            "target": "leon-xiv",
+            "evidence": "de acuerdo con el programa publicado por la Santa Sede",
+            "relation": "publicó el programa de la visita de"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "cordoba",
+            "evidence": "cuando León XIV regrese de Córdoba",
+            "relation": "visitará"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "aeroparque",
+            "evidence": "León XIV llegará a Aeroparque el domingo 8 de noviembre",
+            "relation": "llegará a"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "monumento-a-san-martin",
+            "evidence": "visitará el Monumento a San Martín en Plaza San Martín",
+            "relation": "visitará"
+          },
+          {
+            "source": "monumento-a-san-martin",
+            "target": "plaza-san-martin",
+            "evidence": "Monumento a San Martín en Plaza San Martín",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "javier-milei",
+            "target": "leon-xiv",
+            "evidence": "será recibido por el presidente Javier Milei en la Casa Rosada",
+            "relation": "recibirá a"
+          },
+          {
+            "source": "javier-milei",
+            "target": "casa-rosada",
+            "evidence": "recibido por el presidente Javier Milei en la Casa Rosada",
+            "relation": "recibirá al Papa en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "ciudad-del-vaticano",
+            "evidence": "condición del pontífice como jefe de Estado de la Ciudad del Vaticano",
+            "relation": "es jefe de Estado de"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "palacio-libertad",
+            "evidence": "el Presidente y el Papa pronunciarán discursos ante autoridades... en el Palacio Libertad",
+            "relation": "pronunciará discurso en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "universidad-catolica-argentina",
+            "evidence": "encuentro con el mundo del trabajo en la Universidad Católica Argentina",
+            "relation": "tendrá un encuentro en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "catedral-metropolitana",
+            "evidence": "celebrará vísperas con los obispos argentinos en la Catedral Metropolitana",
+            "relation": "celebrará vísperas en"
+          },
+          {
+            "source": "conferencia-episcopal-argentina",
+            "target": "chile",
+            "evidence": "tomó contacto con organizadores de viajes papales recientes en Chile y España",
+            "relation": "consultó organizadores de viajes papales en"
+          },
+          {
+            "source": "conferencia-episcopal-argentina",
+            "target": "espana",
+            "evidence": "tomó contacto con organizadores de viajes papales recientes en Chile y España",
+            "relation": "consultó organizadores de viajes papales en"
+          },
+          {
+            "source": "gobierno-nacional",
+            "target": "leon-xiv",
+            "evidence": "la coordinación involucra al Gobierno nacional, la Iglesia, la Nunciatura Apostólica y equipos del Vaticano",
+            "relation": "coordina la visita de"
+          },
+          {
+            "source": "nunciatura-apostolica",
+            "target": "leon-xiv",
+            "evidence": "la coordinación involucra al Gobierno nacional, la Iglesia, la Nunciatura Apostólica y equipos del Vaticano",
+            "relation": "coordina la visita de"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "complejo-penitenciario-federal-de-devoto",
+            "evidence": "tras una visita al Complejo Penitenciario Federal de Devoto",
+            "relation": "visitará"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "lujan",
+            "evidence": "el Papa viajará a Luján para celebrar una misa en la basílica",
+            "relation": "celebrará misa en"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "ciudad-de-buenos-aires",
+            "evidence": "durante su visita a la Ciudad de Buenos Aires",
+            "relation": "visitará"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "leon-xiv",
+            "name": "Papa León XIV",
+            "type": "person",
+            "mentions": 24,
+            "description": "Pontífice cuya visita a la Argentina incluye misas, vigilia y encuentros institucionales."
+          },
+          {
+            "id": "raul-pizarro",
+            "name": "Raúl Pizarro",
+            "type": "person",
+            "mentions": 12,
+            "description": "Obispo auxiliar de San Isidro y secretario general de la Conferencia Episcopal Argentina que coordina la preparación eclesial del viaje."
+          },
+          {
+            "id": "conferencia-episcopal-argentina",
+            "name": "Conferencia Episcopal Argentina",
+            "type": "org",
+            "mentions": 2,
+            "description": "Organismo episcopal que participa en la organización de la visita papal."
+          },
+          {
+            "id": "san-isidro",
+            "name": "San Isidro",
+            "type": "place",
+            "mentions": 1,
+            "description": "Diócesis de la que Pizarro es obispo auxiliar."
+          },
+          {
+            "id": "avenida-del-libertador",
+            "name": "Avenida del Libertador",
+            "type": "place",
+            "mentions": 4,
+            "description": "Avenida por donde el Papa recorrerá en papamóvil."
+          },
+          {
+            "id": "ciudad-de-buenos-aires",
+            "name": "Ciudad de Buenos Aires",
+            "type": "place",
+            "mentions": 4,
+            "description": "Ciudad donde se realizarán los principales actos masivos de la visita."
+          },
+          {
+            "id": "radio-mitre",
+            "name": "Radio Mitre",
+            "type": "org",
+            "mentions": 1,
+            "description": "Emisora donde Pizarro dio las explicaciones sobre la visita."
+          },
+          {
+            "id": "pequeno-cottolengo-don-orione",
+            "name": "Pequeño Cottolengo Don Orione",
+            "type": "place",
+            "mentions": 1,
+            "description": "Institución de Claypole que el Papa visitará el lunes por la mañana."
+          },
+          {
+            "id": "claypole",
+            "name": "Claypole",
+            "type": "place",
+            "mentions": 2,
+            "description": "Localidad donde se encuentra el Pequeño Cottolengo Don Orione."
+          },
+          {
+            "id": "monumento-de-los-espanoles",
+            "name": "Monumento de los Españoles",
+            "type": "place",
+            "mentions": 2,
+            "description": "Sitio de la misa del lunes y la vigilia con jóvenes del martes."
+          },
+          {
+            "id": "palermo",
+            "name": "Palermo",
+            "type": "place",
+            "mentions": 3,
+            "description": "Barrio donde se ubica el Monumento de los Españoles."
+          },
+          {
+            "id": "santa-sede",
+            "name": "Santa Sede",
+            "type": "org",
+            "mentions": 3,
+            "description": "Publicó el programa de la visita y envió delegaciones que anticiparon criterios de seguridad."
+          },
+          {
+            "id": "cordoba",
+            "name": "Córdoba",
+            "type": "place",
+            "mentions": 1,
+            "description": "Destino del que el Papa regresará el martes 10."
+          },
+          {
+            "id": "aeroparque",
+            "name": "Aeroparque",
+            "type": "place",
+            "mentions": 1,
+            "description": "Aeropuerto al que llegará el Papa el domingo 8 de noviembre."
+          },
+          {
+            "id": "monumento-a-san-martin",
+            "name": "Monumento a San Martín",
+            "type": "place",
+            "mentions": 1,
+            "description": "Monumento que visitará el Papa en Plaza San Martín."
+          },
+          {
+            "id": "plaza-san-martin",
+            "name": "Plaza San Martín",
+            "type": "place",
+            "mentions": 1,
+            "description": "Plaza donde se encuentra el Monumento a San Martín."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 4,
+            "description": "Presidente argentino que recibirá al Papa en la Casa Rosada."
+          },
+          {
+            "id": "casa-rosada",
+            "name": "Casa Rosada",
+            "type": "place",
+            "mentions": 1,
+            "description": "Sede del gobierno donde Milei recibirá al Papa."
+          },
+          {
+            "id": "ciudad-del-vaticano",
+            "name": "Ciudad del Vaticano",
+            "type": "place",
+            "mentions": 4,
+            "description": "Estado del que el Papa es jefe; sus equipos participan del operativo."
+          },
+          {
+            "id": "palacio-libertad",
+            "name": "Palacio Libertad",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar donde el Presidente y el Papa pronunciarán discursos."
+          },
+          {
+            "id": "universidad-catolica-argentina",
+            "name": "Universidad Católica Argentina",
+            "type": "org",
+            "mentions": 1,
+            "description": "Sede del encuentro del Papa con el mundo del trabajo."
+          },
+          {
+            "id": "catedral-metropolitana",
+            "name": "Catedral Metropolitana",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar donde el Papa celebrará vísperas con los obispos argentinos."
+          },
+          {
+            "id": "juan-pablo-ii",
+            "name": "Juan Pablo II",
+            "type": "person",
+            "mentions": 1,
+            "description": "Papa cuyas visitas a la Argentina, la última en 1987, sirven de referencia."
+          },
+          {
+            "id": "chile",
+            "name": "Chile",
+            "type": "place",
+            "mentions": 1,
+            "description": "País de viajes papales recientes consultados por la Conferencia Episcopal."
+          },
+          {
+            "id": "espana",
+            "name": "España",
+            "type": "place",
+            "mentions": 1,
+            "description": "País de viajes papales recientes consultados por la Conferencia Episcopal."
+          },
+          {
+            "id": "gobierno-nacional",
+            "name": "Gobierno nacional",
+            "type": "org",
+            "mentions": 1,
+            "description": "Participa de la coordinación del operativo."
+          },
+          {
+            "id": "nunciatura-apostolica",
+            "name": "Nunciatura Apostólica",
+            "type": "org",
+            "mentions": 1,
+            "description": "Participa de la coordinación de la visita."
+          },
+          {
+            "id": "complejo-penitenciario-federal-de-devoto",
+            "name": "Complejo Penitenciario Federal de Devoto",
+            "type": "place",
+            "mentions": 1,
+            "description": "Penal que el Papa visitará el miércoles 11."
+          },
+          {
+            "id": "lujan",
+            "name": "Luján",
+            "type": "place",
+            "mentions": 2,
+            "description": "Ciudad donde el Papa celebrará una misa en la basílica."
+          }
+        ]
+      }
+    }
+  ]
+}

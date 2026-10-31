@@ -1,0 +1,545 @@
+{
+  "niche": "economía",
+  "enrichments": [
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo-analítico",
+        "framing": "La nota encuadra la inflación como un problema técnico de desaceleración estancada, contado casi exclusivamente desde la mirada de consultoras privadas. Los economistas son los protagonistas y el Gobierno aparece como actor implícito con margen limitado, mientras que la estacionalidad, la energía, el dólar y la incertidumbre electoral funcionan como antagonistas.",
+        "sentiment": -0.3,
+        "sources_cited": [
+          "Indec (fecha de publicación del dato de octubre)",
+          "Lorenzo Sigaut Gravina, economista de Equilibra",
+          "Equilibra (centro de estudios)",
+          "Claudio Caprarulo, economista de Analytica",
+          "Analytica (consultora)",
+          "Eco Go (consultora, relevamiento semanal de precios)",
+          "Sebastián Menescaldi, economista de Eco Go (declaraciones a Infobae)",
+          "Gabriel Caamaño, economista",
+          "Infobae (medio ante el que declaró Menescaldi)"
+        ],
+        "missing_angles": [
+          "La voz oficial: no hay declaraciones del Ministerio de Economía, el BCRA ni el Indec sobre las metas o la lectura del Gobierno.",
+          "Impacto en los hogares: salarios reales, jubilaciones, poder adquisitivo y canasta básica frente a una inflación del 1,7%-2% mensual.",
+          "Contexto histórico comparable: trayectoria de 2024-2025, inflación interanual actual y cómo se compara con 2026 respecto de lo prometido o presupuestado.",
+          "Comparación regional e internacional: con una inflación anual del 30%, la Argentina sigue muy por encima de sus vecinos.",
+          "Detalle de la banda cambiaria: niveles actuales del dólar, distancia al techo y política de compra de reservas del BCRA.",
+          "Inflación núcleo frente a regulados y estacionales: el dato desagregado del Indec de septiembre ayudaría a entender la inercia.",
+          "Expectativas oficiales relevadas (REM del BCRA) y la meta del Presupuesto 2027, para contrastar con las consultoras.",
+          "Diversidad de miradas: todos los consultados comparten un enfoque similar; falta un economista heterodoxo, sindicatos o cámaras empresarias (comercio, frigoríficos) sobre costos y demanda.",
+          "Evidencia sobre la debilidad de la demanda: datos de consumo masivo, ventas minoristas o actividad que respalden la afirmación.",
+          "Calendario concreto de aumentos de tarifas y combustibles previstos para noviembre-diciembre."
+        ],
+        "follow_up_questions": [
+          "¿Qué meta de inflación fija el Presupuesto 2027 y qué tan realista resulta frente a las proyecciones privadas del 20%-35%?",
+          "¿Cuánto se trasladó efectivamente el dólar a los precios después de las elecciones de 2025 y qué se puede esperar en 2027?",
+          "¿Qué aumentos de tarifas de luz, gas, transporte y combustibles ya están programados hasta diciembre y cuánto aportan al IPC?",
+          "¿Cómo evolucionaron los salarios registrados e informales frente a la inflación en 2026?",
+          "¿Por qué los precios mayoristas de la carne subieron 3,6% en tres semanas y cuándo llegaría ese aumento al mostrador?",
+          "¿Qué cambios en el régimen monetario reclaman los economistas y qué dice el BCRA al respecto?",
+          "¿Qué peso tiene el precio del petróleo por encima de USD 110 en los costos locales y cómo se fijan hoy los precios de YPF?",
+          "¿Por qué Menescaldi proyecta más del 35% en un escenario de ballotage y qué supuestos usa?",
+          "¿Qué muestran los datos de consumo y ventas minoristas sobre la debilidad de la demanda?",
+          "¿Cuál fue la inflación núcleo de septiembre y está bajando o se mantiene estable?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "lorenzo-sigaut-gravina",
+            "target": "equilibra",
+            "evidence": "Lorenzo Sigaut Gravina, economista del centro de estudios Equilibra",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "claudio-caprarulo",
+            "target": "analytica",
+            "evidence": "Desde Analytica, el economista Claudio Caprarulo",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "sebastian-menescaldi",
+            "target": "eco-go",
+            "evidence": "Sebastián Menescaldi, economista de Eco Go",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "sebastian-menescaldi",
+            "target": "infobae",
+            "evidence": "dijo a Infobae que la consultora espera una inflación de entre 1,8% y 1,9%",
+            "relation": "declaró a"
+          },
+          {
+            "source": "javier-milei",
+            "target": "elecciones-2027",
+            "evidence": "De ganar en primera vuelta el presidente Javier Milei, podría cerrar más cerca de 25%",
+            "relation": "posible candidato en"
+          },
+          {
+            "source": "lorenzo-sigaut-gravina",
+            "target": "elecciones-2027",
+            "evidence": "la compra de divisas por parte de los particulares podría intensificarse ante la incertidumbre electoral",
+            "relation": "analizó el impacto de"
+          },
+          {
+            "source": "gabriel-caamano",
+            "target": "medio-oriente",
+            "evidence": "puso especial atención en los precios internacionales de la energía y la evolución del conflicto en Medio Oriente",
+            "relation": "analizó el conflicto en"
+          },
+          {
+            "source": "lorenzo-sigaut-gravina",
+            "target": "elecciones-2025",
+            "evidence": "el dólar retroceda, como ocurrió después de las elecciones de 2025",
+            "relation": "citó como antecedente"
+          },
+          {
+            "source": "elecciones-2027",
+            "target": "argentina",
+            "evidence": "las elecciones de 2027 y su posible impacto sobre la demanda de dólares",
+            "relation": "ocurre en"
+          },
+          {
+            "source": "javier-milei",
+            "target": "argentina",
+            "evidence": "el presidente Javier Milei",
+            "relation": "es presidente de"
+          },
+          {
+            "source": "indec",
+            "target": "argentina",
+            "evidence": "cuando el Indec publique la inflación correspondiente a octubre",
+            "relation": "mide la inflación de"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "indec",
+            "name": "Instituto Nacional de Estadística y Censos (Indec)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organismo oficial que publicará el 12 de noviembre la inflación de octubre."
+          },
+          {
+            "id": "lorenzo-sigaut-gravina",
+            "name": "Lorenzo Sigaut Gravina",
+            "type": "person",
+            "mentions": 9,
+            "description": "Economista de Equilibra que proyecta una inflación de octubre cercana al 1,9% y analiza escenarios para 2027."
+          },
+          {
+            "id": "equilibra",
+            "name": "Equilibra",
+            "type": "org",
+            "mentions": 4,
+            "description": "Centro de estudios que proyecta una inflación anual 2026 de entre 30% y 31%."
+          },
+          {
+            "id": "claudio-caprarulo",
+            "name": "Claudio Caprarulo",
+            "type": "person",
+            "mentions": 5,
+            "description": "Economista de Analytica que proyecta inflación cercana al 2% y alrededor del 25% para 2027."
+          },
+          {
+            "id": "analytica",
+            "name": "Analytica",
+            "type": "org",
+            "mentions": 2,
+            "description": "Consultora económica donde trabaja Claudio Caprarulo."
+          },
+          {
+            "id": "eco-go",
+            "name": "Eco Go",
+            "type": "org",
+            "mentions": 6,
+            "description": "Consultora que proyectó una inflación de 1,8% para octubre y releva precios semanales."
+          },
+          {
+            "id": "sebastian-menescaldi",
+            "name": "Sebastián Menescaldi",
+            "type": "person",
+            "mentions": 6,
+            "description": "Economista de Eco Go que espera inflación de entre 1,8% y 1,9% en octubre y analiza escenarios electorales."
+          },
+          {
+            "id": "infobae",
+            "name": "Infobae",
+            "type": "org",
+            "mentions": 1,
+            "description": "Medio al que Menescaldi brindó declaraciones."
+          },
+          {
+            "id": "gabriel-caamano",
+            "name": "Gabriel Caamaño",
+            "type": "person",
+            "mentions": 4,
+            "description": "Economista que estima inflación entre 1,7% y 2% mensual y destaca el impacto de la energía y Medio Oriente."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 1,
+            "description": "Presidente argentino cuyo eventual triunfo electoral en primera vuelta influiría en la inflación de 2027."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 3,
+            "description": "País cuya inflación es analizada en el artículo."
+          },
+          {
+            "id": "medio-oriente",
+            "name": "Medio Oriente",
+            "type": "place",
+            "mentions": 1,
+            "description": "Región cuyo conflicto afecta los precios internacionales de la energía."
+          },
+          {
+            "id": "elecciones-2027",
+            "name": "Elecciones de 2027",
+            "type": "event",
+            "mentions": 4,
+            "description": "Elecciones que generan incertidumbre sobre la demanda de dólares y la inflación."
+          },
+          {
+            "id": "elecciones-2025",
+            "name": "Elecciones de 2025",
+            "type": "event",
+            "mentions": 1,
+            "description": "Elecciones tras las cuales el dólar retrocedió, citadas como antecedente."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El índice de precios al consumidor de Argentina registró una inflación mensual del 1,7% en agosto.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "Indec inflación agosto 1,7% mensual"
+          },
+          {
+            "text": "La inflación mensual de Argentina fue del 1,9% en septiembre.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "Indec inflación septiembre 1,9%"
+          },
+          {
+            "text": "El Indec publicará la inflación de octubre el 12 de noviembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "calendario Indec publicación IPC octubre 12 de noviembre"
+          },
+          {
+            "text": "Los relevamientos de consultoras privadas ubican la inflación de octubre entre 1,8% y 2% mensual.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "consultoras privadas estimación inflación octubre 1,8% 2%"
+          },
+          {
+            "text": "Según Lorenzo Sigaut Gravina, de Equilibra, la inflación de octubre se ubicaría en torno al 1,9%.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "Sigaut Gravina Equilibra inflación octubre 1,9%"
+          },
+          {
+            "text": "El relevamiento semanal de Equilibra registró una variación de precios del 0,4% en la tercera semana de octubre, frente al 0,3% esperado, por aumentos en verduras e indumentaria.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "Equilibra relevamiento semanal tercera semana octubre 0,4%"
+          },
+          {
+            "text": "Claudio Caprarulo, de Analytica, proyectó una inflación cercana al 2% para octubre.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "Caprarulo Analytica inflación octubre 2%"
+          },
+          {
+            "text": "La categoría de precios regulados registra un promedio de aumento de 2,3% mensual, según Analytica.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "precios regulados promedio 2,3% mensual Indec"
+          },
+          {
+            "text": "Eco Go proyectó una inflación mensual del 1,8% para octubre, suponiendo aumentos del 0,5% en cada semana restante.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 12,
+            "verification_query": "Eco Go proyección inflación octubre 1,8%"
+          },
+          {
+            "text": "Los alimentos y bebidas no alcohólicas aumentaron 0,59% en la tercera semana de octubre, casi cinco veces más que el nivel general, según Eco Go.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "Eco Go alimentos tercera semana octubre 0,59%"
+          },
+          {
+            "text": "En la tercera semana de octubre, panificados y cereales subieron 2,1%, frutas 1,7%, azúcar y dulces 1,2% y verduras 0,8%, mientras lácteos y huevos bajaron 0,5%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "Eco Go relevamiento semanal panificados 2,1% frutas 1,7% lácteos -0,5%"
+          },
+          {
+            "text": "El rubro prendas de vestir y calzado bajó 1,75% en la semana, con caídas del 7,1% en pantalones y del 4,2% en calzado.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 14,
+            "verification_query": "Eco Go prendas de vestir calzado -1,75% pantalones -7,1%"
+          },
+          {
+            "text": "Los pasajes aéreos subieron 6,4%, el alojamiento 5,3% y las naftas y peajes 2,7%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 15,
+            "verification_query": "Eco Go pasajes aéreos 6,4% alojamiento 5,3% naftas 2,7% octubre"
+          },
+          {
+            "text": "Eco Go estimó para octubre incrementos del 3% en restaurantes y hoteles, 2,6% en prendas de vestir y calzado y 2,4% en alimentos y bebidas no alcohólicas.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 15,
+            "verification_query": "Eco Go octubre restaurantes hoteles 3% prendas 2,6% alimentos 2,4%"
+          },
+          {
+            "text": "Sebastián Menescaldi, de Eco Go, dijo a Infobae que espera una inflación de entre 1,8% y 1,9% para octubre.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 17,
+            "verification_query": "Menescaldi Infobae inflación octubre 1,8% 1,9%"
+          },
+          {
+            "text": "Los precios mayoristas de la carne acumularon tres semanas consecutivas de aumentos, con una suba del 3,6%, según Eco Go.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 19,
+            "verification_query": "Eco Go carne mayorista tres semanas suba 3,6%"
+          },
+          {
+            "text": "El índice de precios mayoristas se aceleró al 3,2% en septiembre, impulsado por combustibles y energía.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 21,
+            "verification_query": "Indec índice precios mayoristas septiembre 3,2%"
+          },
+          {
+            "text": "Caprarulo afirmó: \"Para noviembre y diciembre esperamos que la inflación oscile entre 1,7% y 2%\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 21,
+            "verification_query": "Caprarulo \"Para noviembre y diciembre esperamos que la inflación oscile entre 1,7% y 2%\""
+          },
+          {
+            "text": "Equilibra proyecta una inflación anual de entre 30% y 31% para 2026, y Eco Go una cercana pero ligeramente inferior al 30%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 22,
+            "verification_query": "Equilibra Eco Go proyección inflación anual 2026 30%"
+          },
+          {
+            "text": "Gabriel Caamaño afirmó: \"La ventana para bajar la inflación este año ya se cerró; intervenir precios sería contraproducente\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 25,
+            "verification_query": "Caamaño \"La ventana para bajar la inflación este año ya se cerró\""
+          },
+          {
+            "text": "Sigaut Gravina estima que la inflación de 2027 podría ubicarse entre 25% y 30% con presiones cambiarias y energía cara, o cerca del 20% en un escenario favorable.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 31,
+            "verification_query": "Sigaut Gravina inflación 2027 25% 30% 20%"
+          },
+          {
+            "text": "El barril de petróleo se encuentra por encima de los USD 110.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 32,
+            "verification_query": "precio barril petróleo Brent hoy USD 110"
+          },
+          {
+            "text": "Según Caprarulo, si se contienen las presiones cambiarias, la inflación acumulada de 2027 podría rondar el 25%.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 33,
+            "verification_query": "Caprarulo Analytica inflación 2027 25%"
+          },
+          {
+            "text": "Menescaldi sostuvo que si Javier Milei gana en primera vuelta la inflación podría cerrar cerca del 25%, pero con un ballotage ante un candidato opuesto podría superar el 35%.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 34,
+            "verification_query": "Menescaldi Milei primera vuelta inflación 25% ballotage 35%"
+          },
+          {
+            "text": "El dólar retrocedió después de las elecciones de 2025 una vez superada la incertidumbre electoral.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 38,
+            "verification_query": "dólar baja después elecciones 2025 Argentina"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2025",
+            "title": "Elecciones de 2025 y posterior retroceso del dólar",
+            "precision": "year",
+            "description": "Tras las elecciones de 2025, superada la incertidumbre electoral, el dólar retrocedió, según recordó Sigaut Gravina.",
+            "paragraph_index": 38
+          },
+          {
+            "date": "2026-08",
+            "title": "Inflación de agosto llega al 1,7%",
+            "precision": "month",
+            "description": "El índice de precios al consumidor alcanzó el 1,7% mensual en agosto, su registro más bajo reciente.",
+            "paragraph_index": 1
+          },
+          {
+            "date": "2026-09",
+            "title": "La inflación sube al 1,9% en septiembre",
+            "precision": "month",
+            "description": "El índice de precios al consumidor volvió a subir en septiembre y se ubicó en 1,9% mensual.",
+            "paragraph_index": 1
+          },
+          {
+            "date": "2026-09",
+            "title": "Índice mayorista se acelera al 3,2%",
+            "precision": "month",
+            "description": "El índice de precios mayoristas se aceleró hasta el 3,2% en septiembre, impulsado por combustibles y energía.",
+            "paragraph_index": 22
+          },
+          {
+            "date": "2026-10",
+            "title": "Consultoras estiman inflación de octubre entre 1,8% y 2%",
+            "precision": "month",
+            "description": "Los relevamientos privados ubican la inflación de octubre entre 1,8% y 2%, en línea con septiembre. Equilibra la estima en 1,9% y Eco Go en 1,8%.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-10",
+            "title": "Tercera semana de octubre muestra suba del 0,4%",
+            "precision": "month",
+            "description": "El relevamiento semanal de Equilibra registró una variación del 0,4% frente al 0,3% esperado, por aumentos en verduras e indumentaria.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2026-10",
+            "title": "Precios mayoristas de la carne suben 3,6% en tres semanas",
+            "precision": "month",
+            "description": "Según Eco Go, los precios mayoristas de la carne acumularon tres semanas consecutivas de aumentos hasta la tercera semana de octubre.",
+            "paragraph_index": 20
+          },
+          {
+            "date": "2026-11-12",
+            "title": "Indec publicará la inflación de octubre",
+            "precision": "day",
+            "description": "El Indec dará a conocer el dato oficial de inflación correspondiente a octubre.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-11",
+            "title": "Proyección de inflación para noviembre y diciembre",
+            "precision": "month",
+            "description": "Los economistas esperan que la inflación oscile entre 1,7% y 2% mensual en noviembre y diciembre, con presiones estacionales en la carne y posibles ajustes de combustibles.",
+            "paragraph_index": 22
+          },
+          {
+            "date": "2026-12",
+            "title": "Cierre de 2026 con inflación anual cercana al 30%",
+            "precision": "month",
+            "description": "Equilibra proyecta una inflación anual de 30% a 31% para 2026 y Eco Go un resultado ligeramente inferior al 30%.",
+            "paragraph_index": 23
+          },
+          {
+            "date": "2027",
+            "title": "Elecciones de 2027 y proyecciones de inflación",
+            "precision": "year",
+            "description": "Las elecciones de 2027 podrían presionar la demanda de dólares; las proyecciones de inflación anual van del 20% a más del 35% según el escenario político y cambiario.",
+            "paragraph_index": 27
+          }
+        ]
+      }
+    }
+  ]
+}

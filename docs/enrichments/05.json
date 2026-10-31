@@ -1,0 +1,469 @@
+{
+  "niche": "economía",
+  "enrichments": [
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo",
+        "framing": "La nota se construye casi íntegramente desde el estudio de la Universidad de San Andrés, presentado como fuente autorizada que diagnostica y prescribe. La IA aparece como oportunidad económica condicionada, el Estado queda implícitamente como actor que falla en implementar sus estrategias y las empresas, en especial las pymes, como protagonistas que deben acelerar la adopción.",
+        "sentiment": 0.3,
+        "sources_cited": [
+          "Universidad de San Andrés (UdeSA), estudio sobre impacto económico de la IA en Argentina",
+          "Entrevistas del estudio con ejecutivos de 30 compañías",
+          "Encuesta del estudio a empresas (porcentajes sobre estrategia de IA y caso de negocio)",
+          "Trabajo de campo de UdeSA con pymes",
+          "Autores del informe (citas textuales sin identificar por nombre)"
+        ],
+        "missing_angles": [
+          "Quién financió o encargó el estudio: el título lo llama 'privado' pero el cuerpo no aclara patrocinadores ni posibles conflictos de interés (por ejemplo, empresas tecnológicas o hiperescaladores).",
+          "Metodología del modelo: cómo se calcula el 'efecto derrame' sobre la productividad, qué supuestos macroeconómicos usa (PBI proyectado, tipo de cambio) y cuál es el margen de error.",
+          "Representatividad de la muestra cualitativa: entrevistas con solo 30 ejecutivos y una encuesta cuyo tamaño no se informa (el 42,5% y el 17,6% no indican la base).",
+          "Voces externas: economistas, especialistas en mercado laboral o en IA que validen o discutan las cifras, y comparación con otras estimaciones (McKinsey, PwC, BID, CEPAL).",
+          "Respuesta del Gobierno nacional o de los organismos responsables del plan y del observatorio de IA a la afirmación de que no tienen funcionamiento operativo.",
+          "Voz de sindicatos y trabajadores frente a la estimación de 212.000 a 416.000 puestos en riesgo, y qué sectores u ocupaciones concentran esa exposición.",
+          "Contexto regulatorio y de privacidad: riesgos de la 'shadow AI' (fuga de datos, seguridad), marco legal argentino de protección de datos y debates sobre regulación de la IA.",
+          "Contexto macro: cómo inciden restricciones cambiarias, costo de importación de servicios en la nube y acceso al crédito en el gasto en IA.",
+          "Contradicción posible entre el 0,6% del PBI que ya aportaría la IA y un gasto de apenas 0,12%: falta explicar ese multiplicador.",
+          "Inconsistencia de cifras de talento: 94.000 especialistas en 2029 frente a 160.000 en 2030; conviene aclarar si se trata de oferta, demanda u otras definiciones.",
+          "El año base del gasto: la nota habla de USD 798 millones 'en 2026', aclarar si es dato o proyección.",
+          "Consumo energético e hídrico asociado a la IA y a los centros de datos, y la dependencia de infraestructura extranjera que el estudio considera aceptable."
+        ],
+        "follow_up_questions": [
+          "¿Quién financió el estudio de UdeSA y qué rol tuvieron empresas del sector tecnológico en su elaboración?",
+          "¿Qué responde la Secretaría de Innovación o el área competente del Gobierno sobre el estado real del Plan Nacional de IA y del observatorio lanzado desde 2017?",
+          "¿Por qué Argentina tiene 42 empresas de IA financiadas desde 2022 frente a 350 en Brasil? ¿Qué dicen los fondos de capital de riesgo locales?",
+          "¿Cuáles son los casos concretos de empresas de rubros tradicionales que avanzaron por la formación de sus directivos?",
+          "¿Qué ocupaciones y regiones concentran los 212.000 a 416.000 puestos expuestos, y qué opinan los gremios?",
+          "¿Hay evidencia cuantitativa de la 'contratación evitada' en datos de empleo registrado (SIPA) de sectores con alta adopción?",
+          "¿Qué riesgos de seguridad y privacidad implica la 'shadow AI' para las empresas argentinas y hay incidentes documentados?",
+          "¿Por qué la ventana para atraer data centers estaría cerrada? ¿Qué dicen los hiperescaladores y el Gobierno sobre inversiones bajo el RIGI?",
+          "¿Qué hizo Uruguay para alcanzar 16,5% de adopción empresarial y qué políticas son replicables?",
+          "¿Por qué hay solo 3.883 egresados de informática sobre 177.525 inscriptos y qué proponen las universidades para reducir la deserción?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Según un estudio de la Universidad de San Andrés, la IA podría generar un impacto económico de USD 17.714 millones en la Argentina en 2030, equivalente al 2,13% del PBI proyectado.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "estudio Universidad de San Andrés inteligencia artificial impacto económico Argentina 2030 USD 17.714 millones"
+          },
+          {
+            "text": "Sin aplicar las recomendaciones del informe, el impacto de la IA en Argentina llegaría a USD 12.708 millones en 2030, un 1,5% del PBI.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "UdeSA IA escenario base USD 12.708 millones 2030 1,5% PBI"
+          },
+          {
+            "text": "La diferencia de USD 5.006 millones entre escenarios es atribuida por los autores a una estrategia de competitividad.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "UdeSA inteligencia artificial estrategia de competitividad USD 5.006 millones"
+          },
+          {
+            "text": "El modelo supone que la adopción empresarial de IA en Argentina pasa del 11,2% en 2025 al 16,5% en 2030.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "adopción empresarial IA Argentina 11,2% 2025 16,5% 2030 UdeSA"
+          },
+          {
+            "text": "Uruguay es el líder de América Latina en adopción empresarial de IA, con un nivel de 16,5%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Uruguay líder América Latina adopción empresarial inteligencia artificial 16,5%"
+          },
+          {
+            "text": "El gasto anual en IA de Argentina sería de USD 3.539 millones en 2030 en el escenario acelerado, frente a USD 2.763 millones en el escenario sin cambios.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "gasto en inteligencia artificial Argentina 2030 USD 3.539 millones UdeSA"
+          },
+          {
+            "text": "Según el estudio, la IA ya aporta USD 4.316 millones a la economía argentina, un 0,6% del PBI.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "IA aporta USD 4.316 millones economía argentina 0,6% PBI"
+          },
+          {
+            "text": "El gasto en IA en Argentina es de USD 798 millones en 2026, el 0,12% del PBI, por debajo del promedio latinoamericano de 0,22%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "gasto IA Argentina USD 798 millones 2026 0,12% PBI promedio América Latina 0,22%"
+          },
+          {
+            "text": "El 34,7% de las aproximadamente 4.000 grandes empresas de Argentina adoptó alguna aplicación de IA.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "34,7% grandes empresas Argentina adoptó inteligencia artificial UdeSA"
+          },
+          {
+            "text": "El estudio incluyó entrevistas con ejecutivos de 30 compañías.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "UdeSA estudio IA entrevistas ejecutivos 30 compañías"
+          },
+          {
+            "text": "El 42,5% de los encuestados dijo contar con una estrategia de IA estructurada y comunicada, y apenas el 17,6% exige un caso de negocio con retorno financiero para aprobar proyectos.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "encuesta UdeSA estrategia IA 42,5% caso de negocio 17,6%"
+          },
+          {
+            "text": "La adopción de IA se estima en 16% entre las pymes medianas y 8,5% entre las pequeñas en Argentina.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "adopción inteligencia artificial pymes medianas 16% pequeñas 8,5% Argentina"
+          },
+          {
+            "text": "El estudio afirma: \"El principal recurso escaso para implementar inteligencia artificial en las PyMEs es el tiempo de quien decide\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "\"El principal recurso escaso para implementar inteligencia artificial en las PyMEs es el tiempo de quien decide\""
+          },
+          {
+            "text": "Entre las pymes, el 85,4% de las empresas de software y tecnologías de la información usa IA, seguidas por finanzas y seguros con 30,5%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 11,
+            "verification_query": "pymes software IA 85,4% finanzas seguros 30,5% UdeSA"
+          },
+          {
+            "text": "En gasto en IA, los servicios financieros encabezan con USD 171 millones en 2026, seguidos por salud con USD 75 millones.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 12,
+            "verification_query": "gasto IA servicios financieros USD 171 millones salud USD 75 millones 2026 Argentina"
+          },
+          {
+            "text": "Los servicios financieros explican el 3,9% del PBI argentino.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "INDEC participación intermediación financiera PBI Argentina 3,9%"
+          },
+          {
+            "text": "Desde 2017 Argentina lanzó un observatorio, un plan nacional y varios programas de IA, pero el informe no encontró evidencia de funcionamiento operativo en la mayoría.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 14,
+            "verification_query": "Argentina plan nacional inteligencia artificial 2017 observatorio programas implementación"
+          },
+          {
+            "text": "El informe afirma: \"La principal dificultad de Argentina radica en la falta de acople entre formulación de la estrategia y su implementación\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 14,
+            "verification_query": "\"falta de acople entre formulación de la estrategia y su implementación\" Argentina IA"
+          },
+          {
+            "text": "Desde 2022, 42 empresas argentinas de IA recibieron financiamiento, contra 350 en Brasil.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 16,
+            "verification_query": "empresas IA financiadas desde 2022 Argentina 42 Brasil 350"
+          },
+          {
+            "text": "Argentina cuenta con cuatro centros de datos de hiperescaladores, frente a 29 de Brasil.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 17,
+            "verification_query": "centros de datos hiperescaladores Argentina cuatro Brasil 29"
+          },
+          {
+            "text": "Los autores consideran que \"la ventana de oportunidad para la atracción de inversiones en data centers locales (hiperescaladores, neoclouds) en el corto plazo está cerrada\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 17,
+            "verification_query": "\"ventana de oportunidad para la atracción de inversiones en data centers locales\" UdeSA"
+          },
+          {
+            "text": "El estudio estima 36.000 trabajadores especializados en IA en Argentina en 2026 y 94.000 en 2029.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 18,
+            "verification_query": "trabajadores especializados IA Argentina 36.000 2026 94.000 2029"
+          },
+          {
+            "text": "En 2023 había una matrícula de 177.525 estudiantes de informática en Argentina y solo 3.883 egresados.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 18,
+            "verification_query": "matrícula estudiantes informática Argentina 2023 177.525 egresados 3.883 Secretaría de Educación"
+          },
+          {
+            "text": "El escenario más restrictivo anticipa una brecha de unos 25.000 puestos de talento en IA en 2029.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 18,
+            "verification_query": "brecha talento IA Argentina 25.000 puestos 2029"
+          },
+          {
+            "text": "En las empresas que adopten IA podrían desaparecer entre 212.000 y 416.000 puestos de trabajo en 2030.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 20,
+            "verification_query": "IA empleo Argentina 2030 212.000 416.000 puestos UdeSA"
+          },
+          {
+            "text": "La demanda de trabajadores especializados en IA en Argentina llegaría a 160.000 en 2030.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 20,
+            "verification_query": "demanda trabajadores especializados IA Argentina 160.000 2030"
+          },
+          {
+            "text": "En las entrevistas del informe, ninguna empresa dijo haber despedido personal por la IA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 21,
+            "verification_query": "UdeSA informe IA empresas no despidieron personal contratación evitada"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "universidad-de-san-andres",
+            "target": "argentina",
+            "evidence": "La estimación forma parte de un estudio de la Universidad de San Andrés (UdeSA)",
+            "relation": "estudió el impacto de la IA en"
+          },
+          {
+            "source": "uruguay",
+            "target": "america-latina",
+            "evidence": "el nivel que hoy tiene Uruguay, el líder de América Latina en este indicador",
+            "relation": "lidera la adopción empresarial de IA en"
+          },
+          {
+            "source": "argentina",
+            "target": "brasil",
+            "evidence": "Desde 2022, 42 empresas argentinas de IA recibieron fondos, contra 350 en Brasil.",
+            "relation": "es comparada en financiamiento e infraestructura con"
+          },
+          {
+            "source": "argentina",
+            "target": "america-latina",
+            "evidence": "el 0,12% del producto, por debajo del 0,22% que registra en promedio América Latina",
+            "relation": "tiene un gasto en IA inferior al promedio de"
+          },
+          {
+            "source": "argentina",
+            "target": "uruguay",
+            "evidence": "la adopción empresarial pasa del 11,2% de 2025 al 16,5% en 2030, el nivel que hoy tiene Uruguay",
+            "relation": "toma como meta de adopción el nivel de"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "universidad-de-san-andres",
+            "name": "Universidad de San Andrés (UdeSA)",
+            "type": "org",
+            "mentions": 4,
+            "description": "Institución autora del estudio sobre el impacto económico de la inteligencia artificial en la Argentina."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 9,
+            "description": "País cuyo potencial económico vinculado a la IA analiza el estudio."
+          },
+          {
+            "id": "uruguay",
+            "name": "Uruguay",
+            "type": "place",
+            "mentions": 1,
+            "description": "País líder de América Latina en adopción empresarial de IA, tomado como referencia para el escenario de 2030."
+          },
+          {
+            "id": "america-latina",
+            "name": "América Latina",
+            "type": "place",
+            "mentions": 2,
+            "description": "Región usada como parámetro de comparación del gasto y la adopción de IA."
+          },
+          {
+            "id": "brasil",
+            "name": "Brasil",
+            "type": "place",
+            "mentions": 2,
+            "description": "País comparado con Argentina en financiamiento de empresas de IA y centros de datos."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2017",
+            "title": "Argentina comienza a lanzar iniciativas públicas de IA",
+            "precision": "year",
+            "description": "Desde 2017 el país lanzó un observatorio, un plan nacional y varios programas de IA, aunque el informe no halló evidencia de funcionamiento operativo en la mayoría.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2022",
+            "title": "Inicio del período de financiamiento a empresas de IA",
+            "precision": "year",
+            "description": "Desde 2022, 42 empresas argentinas de IA recibieron fondos, frente a 350 en Brasil.",
+            "paragraph_index": 16
+          },
+          {
+            "date": "2023",
+            "title": "Solo 3.883 egresados de informática",
+            "precision": "year",
+            "description": "Con una matrícula de 177.525 estudiantes de informática, en 2023 egresaron solo 3.883.",
+            "paragraph_index": 18
+          },
+          {
+            "date": "2025",
+            "title": "Adopción empresarial de IA del 11,2%",
+            "precision": "year",
+            "description": "El modelo parte de una adopción empresarial de IA del 11,2% en 2025.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026",
+            "title": "Gasto en IA de USD 798 millones",
+            "precision": "year",
+            "description": "El gasto en IA en Argentina es de USD 798 millones en 2026, el 0,12% del PBI, por debajo del promedio latinoamericano del 0,22%.",
+            "paragraph_index": 4
+          },
+          {
+            "date": "2026",
+            "title": "Servicios financieros lideran el gasto en IA",
+            "precision": "year",
+            "description": "Los servicios financieros encabezan el gasto en IA con USD 171 millones en 2026, seguidos por salud con USD 75 millones.",
+            "paragraph_index": 12
+          },
+          {
+            "date": "2026",
+            "title": "36.000 trabajadores especializados en IA",
+            "precision": "year",
+            "description": "El estudio estima que en 2026 habrá 36.000 trabajadores especializados en IA en el país.",
+            "paragraph_index": 18
+          },
+          {
+            "date": "2029",
+            "title": "Proyectada brecha de 25.000 puestos de talento IA",
+            "precision": "year",
+            "description": "Se estiman 94.000 trabajadores especializados en IA en 2029, y el escenario más restrictivo anticipa una brecha de unos 25.000 puestos.",
+            "paragraph_index": 18
+          },
+          {
+            "date": "2030",
+            "title": "IA podría aportar USD 17.714 millones a la economía",
+            "precision": "year",
+            "description": "Con una adopción acelerada, la IA generaría un impacto de USD 17.714 millones en 2030, el 2,13% del PBI proyectado.",
+            "paragraph_index": 1
+          },
+          {
+            "date": "2030",
+            "title": "Escenario sin cambios: impacto de USD 12.708 millones",
+            "precision": "year",
+            "description": "Si la difusión sigue su curso actual, el impacto llegaría a USD 12.708 millones en 2030, un 1,5% del PBI.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2030",
+            "title": "Adopción empresarial proyectada del 16,5%",
+            "precision": "year",
+            "description": "El modelo supone que la adopción empresarial alcanza el 16,5% en 2030, nivel actual de Uruguay, con un gasto anual en IA de USD 3.539 millones.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2030",
+            "title": "Hasta 416.000 puestos podrían desaparecer por la IA",
+            "precision": "year",
+            "description": "En empresas que adopten IA podrían desaparecer entre 212.000 y 416.000 puestos en 2030, mientras la demanda de especialistas en IA llegaría a 160.000.",
+            "paragraph_index": 20
+          }
+        ]
+      }
+    }
+  ]
+}

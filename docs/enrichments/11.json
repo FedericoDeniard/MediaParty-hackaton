@@ -1,0 +1,877 @@
+{
+  "niche": "política",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "1997-05",
+            "title": "Salmain ingresa al Juzgado Federal de la Seguridad Social N° 8",
+            "precision": "month",
+            "description": "Salmain comenzó a trabajar como empleado del Juzgado Federal de la Seguridad Social N° 8.",
+            "paragraph_index": 33
+          },
+          {
+            "date": "1999",
+            "title": "Inicio del registro de destituciones de jueces",
+            "precision": "year",
+            "description": "Desde 1999 se registran 22 destituciones de magistrados, cuatro de ellas durante la presidencia de Rosatti en el Consejo.",
+            "paragraph_index": 55
+          },
+          {
+            "date": "2002-06-11",
+            "title": "La Corte Suprema dispone la cesantía de Salmain",
+            "precision": "day",
+            "description": "Mediante la resolución 39/02, la Corte Suprema le impuso la cesantía por intentar manipular el sorteo de expedientes previsionales.",
+            "paragraph_index": 33
+          },
+          {
+            "date": "2016",
+            "title": "Salmain comienza a concursar ocultando antecedentes",
+            "precision": "year",
+            "description": "Desde 2016 participó en concursos ante el Consejo de la Magistratura sin declarar su paso por el Poder Judicial ni la cesantía.",
+            "paragraph_index": 36
+          },
+          {
+            "date": "2024",
+            "title": "Último de los 33 concursos con omisión",
+            "precision": "year",
+            "description": "Hasta 2024 Salmain participó en 33 concursos, incluido el que lo llevó al Juzgado Federal N° 1 de Rosario, omitiendo sus antecedentes.",
+            "paragraph_index": 36
+          },
+          {
+            "date": "2025-12",
+            "title": "Procesamiento de Salmain en la causa Attila",
+            "precision": "month",
+            "description": "Se dictó el procesamiento de Salmain por presunto cohecho pasivo agravado, prevaricato e incumplimiento de deberes en la causa Attila.",
+            "paragraph_index": 17
+          },
+          {
+            "date": "2026-03",
+            "title": "Cámara Federal de Rosario confirma parcialmente el procesamiento",
+            "precision": "month",
+            "description": "La Cámara Federal de Rosario confirmó parcialmente el procesamiento dictado contra Salmain.",
+            "paragraph_index": 17
+          },
+          {
+            "date": "2026-10-29",
+            "title": "El Jurado de Enjuiciamiento destituye a Salmain",
+            "precision": "day",
+            "description": "El Jurado removió por unanimidad a Salmain por ocultar su cesantía en 33 concursos y desestimó el cargo vinculado a la causa Attila.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026-10",
+            "title": "Ordenan la detención domiciliaria de Salmain",
+            "precision": "month",
+            "description": "Tras perder la inmunidad de arresto, el juez federal Carlos Vera Barros ordenó su detención inmediata bajo prisión domiciliaria.",
+            "paragraph_index": 3
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo-institucional",
+        "framing": "La historia se cuenta exclusivamente desde la perspectiva de los tres consejeros acusadores (Juez, Barroetaveña y De la Torre), que quedan como protagonistas de un sistema que 'funciona', mientras Salmain es el antagonista; el Consejo aparece a la vez como víctima del engaño y como institución que se autoevalúa con balances favorables, con escasa crítica externa.",
+        "sentiment": 0.3,
+        "sources_cited": [
+          "Luis Juez, senador nacional y consejero de la Magistratura",
+          "Diego Barroetaveña, camarista y presidente de la Cámara Federal de Casación Penal, consejero",
+          "Jimena de la Torre, consejera por los abogados de la matrícula federal",
+          "Sentencia del Jurado de Enjuiciamiento de Magistrados de la Nación (considerando 2° y fundamentos)",
+          "Juez federal Carlos Vera Barros (orden de detención)",
+          "Fernando Elías Whpei, imputado colaborador (declaración en la causa)",
+          "Auto de procesamiento de diciembre de 2025 y resolución de la Cámara Federal de Rosario",
+          "Resolución 39/02 de la Corte Suprema de Justicia",
+          "Reglamento de Concursos del Consejo de la Magistratura",
+          "Defensa de Gastón Salmain (argumentos resumidos, sin cita directa)",
+          "Infobae (medio que realizó las entrevistas)"
+        ],
+        "missing_angles": [
+          "Voz de Salmain o de su defensa: solo se resumen sus argumentos en dos párrafos, sin citas directas ni reacción a la destitución y a la detención domiciliaria.",
+          "Voz de los miembros del Jurado o de alguna fuente que explique por qué se desestimó el cargo de coimas, más allá de las citas que eligen los acusadores.",
+          "Responsabilidad concreta de las áreas del Consejo, los jurados de concursos, el Poder Ejecutivo que lo propuso y el Senado que dio el acuerdo: quién lo designó, en qué año y con qué apoyos políticos.",
+          "Fecha de designación de Salmain y tiempo que estuvo en funciones; cuántas causas resolvió y si hay revisión de otras decisiones suyas.",
+          "Contexto de la causa Attila: qué empresa, quiénes eran sus responsables, situación procesal de Whpei y de otros imputados, destino de los 10 millones de dólares.",
+          "Inconsistencia temporal: el artículo dice que los concursos fueron entre 2016 y 2024 y De la Torre habla de '14 años después' de 2002; conviene verificar fechas y la fecha del fallo (jueves 29 de octubre) frente al procesamiento de 'diciembre de 2025'.",
+          "Contraste de las cifras de Juez (22 destituciones desde 1999, 4 bajo Rosatti) y de De la Torre (6 juicios políticos en 3 años, 'cantidad inédita') con datos oficiales y comparaciones con otras gestiones.",
+          "Voces críticas externas: especialistas en derecho constitucional, ONG de transparencia judicial (ACIJ, Poder Ciudadano), asociaciones de magistrados.",
+          "Mención de que los consultados tienen interés institucional y político (De la Torre menciona su agrupación y a Claudia Sarmiento), lo que convierte parte de la nota en promoción de gestión sin contrapeso.",
+          "Estado de las 7 propuestas de reforma de concursos, de la propuesta de la Corte y del Código de Ética Judicial: quién los frena y desde cuándo.",
+          "Consecuencias prácticas: quién queda a cargo del Juzgado Federal N° 1 de Rosario y qué pasa con las causas en trámite."
+        ],
+        "follow_up_questions": [
+          "¿Qué controles concretos de antecedentes aplicaba el Consejo entre 2016 y 2024 y por qué ninguno detectó la cesantía en 33 concursos?",
+          "¿Existe hoy un convenio de intercambio de datos entre la Corte Suprema y el Consejo sobre sanciones al personal judicial? ¿Desde cuándo y con qué alcance?",
+          "¿Hay otros magistrados en ejercicio que hayan omitido antecedentes laborales o disciplinarios en sus postulaciones? ¿Se hará una auditoría retroactiva?",
+          "¿Quién firmó la terna y el pliego de Salmain, y qué votos obtuvo en el Senado?",
+          "¿Cuál es el estado de la causa penal por cohecho tras la confirmación parcial de la Cámara de Rosario y cuándo podría llegar a juicio oral?",
+          "¿Qué otras resoluciones de Salmain están bajo sospecha o en revisión, más allá de Attila?",
+          "¿Qué pasó con los 10 millones de dólares y qué hizo el BCRA tras la revocación de la medida?",
+          "¿Por qué el Jurado considera que el acuerdo no fue 'suficientemente debatido' en el juicio político? ¿Fue una falla de la acusación en la producción de prueba?",
+          "¿En qué estado están las propuestas de reforma de concursos y el Código de Ética Judicial, y qué consejeros se oponen?",
+          "¿Cómo se comparan los plazos y la cantidad de destituciones de la gestión Rosatti con las de gestiones anteriores, según datos oficiales?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "jurado-de-enjuiciamiento",
+            "target": "gaston-salmain",
+            "evidence": "resolvió este jueves 29 de octubre, por unanimidad, remover a Salmain",
+            "relation": "destituyó a"
+          },
+          {
+            "source": "carlos-vera-barros",
+            "target": "gaston-salmain",
+            "evidence": "el juez federal Carlos Vera Barros ordenó su detención inmediata, bajo la modalidad de prisión domiciliaria",
+            "relation": "ordenó la detención de"
+          },
+          {
+            "source": "luis-juez",
+            "target": "gaston-salmain",
+            "evidence": "Los tres integrantes del Consejo de la Magistratura que sostuvieron la acusación durante el juicio político -Luis Juez",
+            "relation": "acusó a"
+          },
+          {
+            "source": "diego-barroetavena",
+            "target": "gaston-salmain",
+            "evidence": "Diego Barroetaveña, quien también integró la representación acusadora",
+            "relation": "acusó a"
+          },
+          {
+            "source": "jimena-de-la-torre",
+            "target": "gaston-salmain",
+            "evidence": "Nosotros entendimos que la actuación de Salmain en la causa Attila exhibía un mal desempeño",
+            "relation": "acusó a"
+          },
+          {
+            "source": "luis-juez",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "representante del Senado en el Consejo de la Magistratura",
+            "relation": "integra"
+          },
+          {
+            "source": "luis-juez",
+            "target": "senado",
+            "evidence": "representante del Senado en el Consejo de la Magistratura",
+            "relation": "representa a"
+          },
+          {
+            "source": "luis-juez",
+            "target": "cordoba",
+            "evidence": "el senador nacional por Córdoba Luis Juez",
+            "relation": "es senador por"
+          },
+          {
+            "source": "diego-barroetavena",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "Los tres integrantes del Consejo de la Magistratura ... Diego Barroetaveña",
+            "relation": "integra"
+          },
+          {
+            "source": "diego-barroetavena",
+            "target": "camara-federal-casacion-penal",
+            "evidence": "el presidente de la Casación Federal propuso",
+            "relation": "preside"
+          },
+          {
+            "source": "jimena-de-la-torre",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "La consejera Jimena de la Torre, representante de los abogados de la matrícula federal",
+            "relation": "integra"
+          },
+          {
+            "source": "consejo-de-la-magistratura",
+            "target": "gaston-salmain",
+            "evidence": "El Consejo de la Magistratura investigó los hechos y formuló la acusación",
+            "relation": "acusó a"
+          },
+          {
+            "source": "marcelo-bartumeu-romero",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "el tribunal presidido por el juez de cámara Marcelo Bartumeu Romero",
+            "relation": "preside"
+          },
+          {
+            "source": "nestor-barral",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "e integrado también por su colega Néstor Barral",
+            "relation": "integra"
+          },
+          {
+            "source": "maria-monte-de-oca",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "las senadoras nacionales María Monte de Oca y María Florencia López",
+            "relation": "integra"
+          },
+          {
+            "source": "maria-florencia-lopez",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "las senadoras nacionales María Monte de Oca y María Florencia López",
+            "relation": "integra"
+          },
+          {
+            "source": "nicolas-mayoraz",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "los diputados Nicolás Mayoraz y Christian Zulli",
+            "relation": "integra"
+          },
+          {
+            "source": "christian-zulli",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "los diputados Nicolás Mayoraz y Christian Zulli",
+            "relation": "integra"
+          },
+          {
+            "source": "ana-fernandez",
+            "target": "jurado-de-enjuiciamiento",
+            "evidence": "y Ana Fernández, en representación de los abogados de la matrícula federal",
+            "relation": "integra"
+          },
+          {
+            "source": "gaston-salmain",
+            "target": "juzgado-federal-1-rosario",
+            "evidence": "fue designado titular del Juzgado Federal N° 1 de Rosario",
+            "relation": "fue titular de"
+          },
+          {
+            "source": "juzgado-federal-1-rosario",
+            "target": "rosario",
+            "evidence": "Juzgado Federal N° 1 de Rosario",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "gaston-salmain",
+            "target": "causa-attila",
+            "evidence": "procesado por presuntos pedidos de coimas vinculados con su actuación en la causa Attila",
+            "relation": "procesado en"
+          },
+          {
+            "source": "gaston-salmain",
+            "target": "attila-fideicomisos",
+            "evidence": "habría favorecido al fideicomiso Attila mediante resoluciones que permitieron acceder a 10 millones de dólares",
+            "relation": "presuntamente favoreció a"
+          },
+          {
+            "source": "fernando-elias-whpei",
+            "target": "gaston-salmain",
+            "evidence": "se presentó como imputado colaborador y vinculó al exmagistrado con el supuesto acuerdo ilícito",
+            "relation": "vinculó con el acuerdo ilícito a"
+          },
+          {
+            "source": "fernando-elias-whpei",
+            "target": "causa-attila",
+            "evidence": "En ese expediente declaró el financista Fernando Elías Whpei",
+            "relation": "declaró en"
+          },
+          {
+            "source": "camara-federal-rosario",
+            "target": "gaston-salmain",
+            "evidence": "fue confirmado parcialmente por la Cámara Federal de Rosario en marzo de este año",
+            "relation": "confirmó parcialmente el procesamiento de"
+          },
+          {
+            "source": "bcra",
+            "target": "gaston-salmain",
+            "evidence": "pese a la oposición del BCRA ... Salmain ordenó que se entregaran 10 millones de dólares",
+            "relation": "se opuso a la decisión de"
+          },
+          {
+            "source": "corte-suprema",
+            "target": "gaston-salmain",
+            "evidence": "la Corte Suprema le impuso una sanción de cesantía mediante la resolución 39/02",
+            "relation": "sancionó con cesantía a"
+          },
+          {
+            "source": "gaston-salmain",
+            "target": "juzgado-seguridad-social-8",
+            "evidence": "Salmain trabajó como empleado del Juzgado Federal de la Seguridad Social N° 8",
+            "relation": "trabajó en"
+          },
+          {
+            "source": "gaston-salmain",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "participó en 33 concursos ante el Consejo de la Magistratura sin declarar ese antecedente",
+            "relation": "concursó ante"
+          },
+          {
+            "source": "horacio-rosatti",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "Desde que Horacio Rosatti asumió la presidencia del Consejo",
+            "relation": "preside"
+          },
+          {
+            "source": "jimena-de-la-torre",
+            "target": "claudia-sarmiento",
+            "evidence": "vamos a mantener con Claudia Sarmiento desde la vocalía de Abogados en Acción",
+            "relation": "trabaja con"
+          },
+          {
+            "source": "jimena-de-la-torre",
+            "target": "abogados-en-accion",
+            "evidence": "desde la vocalía de Abogados en Acción",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "claudia-sarmiento",
+            "target": "abogados-en-accion",
+            "evidence": "con Claudia Sarmiento desde la vocalía de Abogados en Acción",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "luis-juez",
+            "target": "infobae",
+            "evidence": "analizaron en diálogo con Infobae los fundamentos de la sentencia",
+            "relation": "declaró a"
+          },
+          {
+            "source": "causa-attila",
+            "target": "rosario",
+            "evidence": "la causa judicial que tramita ante la Justicia Federal de Rosario",
+            "relation": "tramita en"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "gaston-salmain",
+            "name": "Gastón Salmain",
+            "type": "person",
+            "mentions": 40,
+            "description": "Exjuez federal de Rosario destituido por ocultar una cesantía en 33 concursos y procesado por presuntas coimas en la causa Attila."
+          },
+          {
+            "id": "luis-juez",
+            "name": "Luis Juez",
+            "type": "person",
+            "mentions": 9,
+            "description": "Senador nacional por Córdoba y consejero que sostuvo la acusación contra Salmain en el juicio político."
+          },
+          {
+            "id": "diego-barroetavena",
+            "name": "Diego Barroetaveña",
+            "type": "person",
+            "mentions": 9,
+            "description": "Camarista federal de Casación Penal, presidente de la Casación Federal y consejero acusador en el juicio político."
+          },
+          {
+            "id": "jimena-de-la-torre",
+            "name": "Jimena de la Torre",
+            "type": "person",
+            "mentions": 9,
+            "description": "Consejera representante de los abogados de la matrícula federal que integró la acusación contra Salmain."
+          },
+          {
+            "id": "consejo-de-la-magistratura",
+            "name": "Consejo de la Magistratura",
+            "type": "org",
+            "mentions": 17,
+            "description": "Organismo que investigó los hechos, formuló la acusación y ante el cual Salmain concursó sin declarar antecedentes."
+          },
+          {
+            "id": "jurado-de-enjuiciamiento",
+            "name": "Jurado de Enjuiciamiento de Magistrados de la Nación",
+            "type": "org",
+            "mentions": 20,
+            "description": "Tribunal que resolvió por unanimidad remover a Salmain por mal desempeño."
+          },
+          {
+            "id": "infobae",
+            "name": "Infobae",
+            "type": "org",
+            "mentions": 2,
+            "description": "Medio ante el cual los acusadores analizaron el fallo."
+          },
+          {
+            "id": "causa-attila",
+            "name": "Causa Attila",
+            "type": "event",
+            "mentions": 8,
+            "description": "Investigación penal por un presunto acuerdo para favorecer al fideicomiso Attila a cambio de una coima."
+          },
+          {
+            "id": "attila-fideicomisos",
+            "name": "Attila Fideicomisos SRL",
+            "type": "org",
+            "mentions": 3,
+            "description": "Empresa presuntamente favorecida por resoluciones de Salmain para acceder a 10 millones de dólares a tipo oficial."
+          },
+          {
+            "id": "corte-suprema",
+            "name": "Corte Suprema de Justicia de la Nación",
+            "type": "org",
+            "mentions": 11,
+            "description": "Máximo tribunal que impuso la cesantía a Salmain en 2002 y conserva la superintendencia sobre el personal judicial."
+          },
+          {
+            "id": "juzgado-federal-1-rosario",
+            "name": "Juzgado Federal N° 1 de Rosario",
+            "type": "org",
+            "mentions": 3,
+            "description": "Juzgado del que Salmain fue titular."
+          },
+          {
+            "id": "rosario",
+            "name": "Rosario",
+            "type": "place",
+            "mentions": 8,
+            "description": "Ciudad donde Salmain fue juez y donde tramita la investigación penal."
+          },
+          {
+            "id": "carlos-vera-barros",
+            "name": "Carlos Vera Barros",
+            "type": "person",
+            "mentions": 1,
+            "description": "Juez federal que ordenó la detención domiciliaria de Salmain."
+          },
+          {
+            "id": "marcelo-bartumeu-romero",
+            "name": "Marcelo Bartumeu Romero",
+            "type": "person",
+            "mentions": 1,
+            "description": "Juez de cámara que presidió el Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "nestor-barral",
+            "name": "Néstor Barral",
+            "type": "person",
+            "mentions": 1,
+            "description": "Juez integrante del Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "maria-monte-de-oca",
+            "name": "María Monte de Oca",
+            "type": "person",
+            "mentions": 1,
+            "description": "Senadora nacional integrante del Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "maria-florencia-lopez",
+            "name": "María Florencia López",
+            "type": "person",
+            "mentions": 1,
+            "description": "Senadora nacional integrante del Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "nicolas-mayoraz",
+            "name": "Nicolás Mayoraz",
+            "type": "person",
+            "mentions": 1,
+            "description": "Diputado integrante del Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "christian-zulli",
+            "name": "Christian Zulli",
+            "type": "person",
+            "mentions": 1,
+            "description": "Diputado integrante del Jurado de Enjuiciamiento."
+          },
+          {
+            "id": "ana-fernandez",
+            "name": "Ana Fernández",
+            "type": "person",
+            "mentions": 1,
+            "description": "Integrante del Jurado en representación de los abogados de la matrícula federal."
+          },
+          {
+            "id": "senado",
+            "name": "Senado de la Nación",
+            "type": "org",
+            "mentions": 3,
+            "description": "Cámara representada por Luis Juez en el Consejo y que no conoció los antecedentes de Salmain."
+          },
+          {
+            "id": "cordoba",
+            "name": "Córdoba",
+            "type": "place",
+            "mentions": 1,
+            "description": "Provincia por la que Luis Juez es senador."
+          },
+          {
+            "id": "fernando-elias-whpei",
+            "name": "Fernando Elías Whpei",
+            "type": "person",
+            "mentions": 3,
+            "description": "Financista imputado colaborador que vinculó a Salmain con el supuesto acuerdo ilícito."
+          },
+          {
+            "id": "camara-federal-rosario",
+            "name": "Cámara Federal de Rosario",
+            "type": "org",
+            "mentions": 2,
+            "description": "Tribunal que confirmó parcialmente el procesamiento de Salmain y revocó su decisión en Attila."
+          },
+          {
+            "id": "bcra",
+            "name": "Banco Central de la República Argentina",
+            "type": "org",
+            "mentions": 2,
+            "description": "Entidad que se opuso a la autorización cambiaria otorgada por Salmain."
+          },
+          {
+            "id": "juzgado-seguridad-social-8",
+            "name": "Juzgado Federal de la Seguridad Social N° 8",
+            "type": "org",
+            "mentions": 1,
+            "description": "Juzgado donde Salmain trabajó como empleado hasta su cesantía."
+          },
+          {
+            "id": "horacio-rosatti",
+            "name": "Horacio Rosatti",
+            "type": "person",
+            "mentions": 2,
+            "description": "Presidente del Consejo de la Magistratura durante cuya gestión se destituyeron cuatro jueces."
+          },
+          {
+            "id": "claudia-sarmiento",
+            "name": "Claudia Sarmiento",
+            "type": "person",
+            "mentions": 1,
+            "description": "Consejera con quien De la Torre impulsa la agenda de la vocalía de Abogados en Acción."
+          },
+          {
+            "id": "abogados-en-accion",
+            "name": "Abogados en Acción",
+            "type": "org",
+            "mentions": 1,
+            "description": "Vocalía de los abogados desde la que De la Torre y Sarmiento impulsan reformas."
+          },
+          {
+            "id": "camara-federal-casacion-penal",
+            "name": "Cámara Federal de Casación Penal",
+            "type": "org",
+            "mentions": 2,
+            "description": "Tribunal que integra y preside Diego Barroetaveña."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El Jurado de Enjuiciamiento de Magistrados de la Nación resolvió el jueves 29 de octubre, por unanimidad, remover al juez federal de Rosario Gastón Salmain.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "Jurado de Enjuiciamiento de Magistrados de la Nación sentencia remoción Gastón Salmain 29 de octubre unanimidad"
+          },
+          {
+            "text": "Salmain fue removido por haber ocultado su paso por el Poder Judicial y una sanción de cesantía impuesta por la Corte Suprema en 2002.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "fallo Jurado de Enjuiciamiento Salmain cargo ocultamiento cesantía Corte Suprema 2002"
+          },
+          {
+            "text": "Salmain omitió su antecedente judicial y la cesantía en 33 concursos judiciales, incluido el concurso por el que fue designado titular del Juzgado Federal N° 1 de Rosario.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "Consejo de la Magistratura concursos Gastón Salmain 33 concursos Juzgado Federal N° 1 Rosario"
+          },
+          {
+            "text": "El Jurado de Enjuiciamiento desestimó el cargo contra Salmain relacionado con su actuación en el expediente Attila Fideicomisos SRL.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "Jurado de Enjuiciamiento Salmain desestima cargo causa Attila Fideicomisos SRL"
+          },
+          {
+            "text": "Tras la pérdida de inmunidad de arresto, el juez federal Carlos Vera Barros ordenó la detención inmediata de Salmain bajo la modalidad de prisión domiciliaria.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "juez federal Carlos Vera Barros ordena detención prisión domiciliaria Gastón Salmain"
+          },
+          {
+            "text": "El tribunal del jury fue presidido por el juez de cámara Marcelo Bartumeu Romero e integrado por Néstor Barral, las senadoras María Monte de Oca y María Florencia López, los diputados Nicolás Mayoraz y Christian Zulli, y Ana Fernández en representación de los abogados.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "integración Jurado de Enjuiciamiento de Magistrados de la Nación Bartumeu Romero Barral Mayoraz Zulli Ana Fernández"
+          },
+          {
+            "text": "Luis Juez declaró que ocultar deliberadamente una cesantía del Poder Judicial en 33 concursos no es un error administrativo sino engañar al sistema para acceder a la magistratura.",
+            "type": "quote",
+            "checkable": false,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Luis Juez Infobae Salmain \"no podía seguir siendo juez\" 33 concursos"
+          },
+          {
+            "text": "El considerando 2° de la sentencia establece que el proceso penal busca establecer la existencia del delito y la responsabilidad del autor, mientras que el enjuiciamiento determina si el magistrado conserva las condiciones constitucionales para permanecer en el cargo.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "sentencia Jurado de Enjuiciamiento Salmain considerando 2° \"El proceso penal tiene por objeto establecer la existencia del delito\""
+          },
+          {
+            "text": "El considerando 2° del fallo señala que unos mismos hechos pueden ser juzgados en sede penal y en el enjuiciamiento con finalidades diversas, sin que lo resuelto en una condicione a la otra.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "sentencia Salmain Jurado \"Unos mismos hechos pueden, por tanto, ser juzgados en ambas sedes\""
+          },
+          {
+            "text": "Diego Barroetaveña afirmó que la omisión de Salmain se reiteró en 33 concursos y continuó después de su designación como juez.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "Barroetaveña Salmain omisión 33 concursos continuó después de su designación"
+          },
+          {
+            "text": "Barroetaveña sostuvo que el Jurado reafirmó, en línea con sus precedentes, que las conductas anteriores a la designación pueden valorarse cuando no fueron conocidas por el Senado.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "Jurado de Enjuiciamiento precedentes conductas anteriores a la designación desconocidas por el Senado mal desempeño"
+          },
+          {
+            "text": "Salmain está procesado por presunto cohecho pasivo agravado, prevaricato e incumplimiento de los deberes de funcionario público.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 16,
+            "verification_query": "procesamiento Gastón Salmain cohecho pasivo agravado prevaricato incumplimiento deberes funcionario público"
+          },
+          {
+            "text": "Según la hipótesis de los investigadores, Salmain habría favorecido al fideicomiso Attila con resoluciones que permitieron acceder a 10 millones de dólares al tipo de cambio oficial a cambio de una presunta coima de 200.000 dólares.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 16,
+            "verification_query": "causa Attila Salmain 10 millones de dólares tipo de cambio oficial coima 200.000 dólares"
+          },
+          {
+            "text": "El financista Fernando Elías Whpei declaró como imputado colaborador en la causa Attila y vinculó a Salmain con el supuesto acuerdo ilícito.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "Fernando Elías Whpei imputado colaborador arrepentido Salmain causa Attila"
+          },
+          {
+            "text": "El procesamiento de Salmain fue dictado en diciembre de 2025 y confirmado parcialmente por la Cámara Federal de Rosario en marzo de este año.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "Cámara Federal de Rosario confirma parcialmente procesamiento Salmain marzo"
+          },
+          {
+            "text": "La sentencia del Jurado estableció que un auto de procesamiento es una valoración provisoria dictada en otro proceso y no suple la convicción requerida en el enjuiciamiento.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 19,
+            "verification_query": "sentencia Salmain \"Un auto de procesamiento no suple esa convicción\""
+          },
+          {
+            "text": "El fallo indica que la desestimación del cargo Attila no implica pronunciamiento sobre la existencia del acuerdo, la regularidad de las decisiones ni la responsabilidad del magistrado.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 21,
+            "verification_query": "sentencia Salmain \"La desestimación tiene, por lo mismo, un alcance preciso\""
+          },
+          {
+            "text": "Jimena de la Torre afirmó que durante el cepo la gente solo podía comprar 200 dólares a precio oficial y cualquier excepción requería autorización del BCRA.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 27,
+            "verification_query": "cepo cambiario límite 200 dólares mensuales comunicación BCRA"
+          },
+          {
+            "text": "De la Torre afirmó que Salmain ordenó, pese a la oposición del BCRA y sin intervención del fiscal, entregar 10 millones de dólares a valor oficial, que salieron del país antes de que la Cámara revocara la decisión por infundada.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 28,
+            "verification_query": "Salmain resolución Attila oposición BCRA Cámara Federal Rosario revocó 10 millones de dólares"
+          },
+          {
+            "text": "Salmain ingresó en mayo de 1997 como empleado del Juzgado Federal de la Seguridad Social N° 8.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 33,
+            "verification_query": "Gastón Salmain empleado Juzgado Federal de la Seguridad Social N° 8 1997"
+          },
+          {
+            "text": "La Corte Suprema impuso a Salmain una sanción de cesantía mediante la resolución 39/02 del 11 de junio de 2002.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 33,
+            "verification_query": "Corte Suprema resolución 39/02 11 de junio de 2002 cesantía Salmain"
+          },
+          {
+            "text": "La Corte Suprema consideró probado que Salmain intentó inducir a una empleada a alterar el sistema informático de distribución de expedientes para dirigir ejecuciones previsionales a su juzgado.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 34,
+            "verification_query": "Corte Suprema cesantía empleado sistema informático distribución expedientes ejecuciones previsionales 2002 Salmain"
+          },
+          {
+            "text": "Aunque Salmain había renunciado meses antes, la Corte mantuvo la sanción y luego rechazó su recurso.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": true,
+            "paragraph_index": 35,
+            "verification_query": "Corte Suprema rechaza recurso Salmain cesantía 2002 renuncia"
+          },
+          {
+            "text": "Entre 2016 y 2024 Salmain participó en 33 concursos ante el Consejo de la Magistratura sin declarar su antecedente laboral ni la cesantía, afirmando dedicarse al ejercicio libre de la abogacía.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 36,
+            "verification_query": "Consejo de la Magistratura inscripciones concursos Gastón Salmain 2016-2024"
+          },
+          {
+            "text": "Salmain argumentó en el juicio político que el reglamento exigía declarar sanciones de los últimos diez años y que la de 2002 quedaba fuera de ese plazo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 37,
+            "verification_query": "defensa Salmain juicio político reglamento concursos sanciones últimos diez años"
+          },
+          {
+            "text": "El fallo afirmó que la omisión fue voluntaria y que el plazo decenal solo alcanzaba al inventario de sanciones, no al empleo ni a su egreso.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 39,
+            "verification_query": "sentencia Salmain \"La omisión fue voluntaria y la lectura del plazo decenal\""
+          },
+          {
+            "text": "Diego Barroetaveña es presidente de la Cámara Federal de Casación Penal.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 45,
+            "verification_query": "presidente Cámara Federal de Casación Penal Diego Barroetaveña"
+          },
+          {
+            "text": "El Consejo de la Magistratura aprobó recientemente el Expediente Digital Administrativo, que se implementa progresivamente en distintas áreas.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 50,
+            "verification_query": "Consejo de la Magistratura resolución aprobación Expediente Digital Administrativo"
+          },
+          {
+            "text": "Desde que Horacio Rosatti asumió la presidencia del Consejo de la Magistratura fueron destituidos cuatro jueces: Bento, Poderti, López y Salmain, y Bailaque renunció antes del juicio de remoción.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 54,
+            "verification_query": "Jurado de Enjuiciamiento destituciones Bento Poderti López Salmain renuncia Bailaque presidencia Rosatti"
+          },
+          {
+            "text": "De las 22 destituciones registradas desde 1999, cuatro se produjeron durante la presidencia de Rosatti en el Consejo, casi el 20% del total.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 55,
+            "verification_query": "Jurado de Enjuiciamiento total destituciones de jueces desde 1999 estadística"
+          },
+          {
+            "text": "Los procesos de remoción de Poderti, López y Salmain se resolvieron en menos de un año.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 55,
+            "verification_query": "duración juicio político Poderti López Salmain Jurado de Enjuiciamiento fechas acusación sentencia"
+          },
+          {
+            "text": "Según Jimena de la Torre, en los últimos 3 años el Consejo inició juicios políticos contra 6 magistrados, una cantidad inédita en la historia del Poder Judicial.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 58,
+            "verification_query": "Consejo de la Magistratura acusaciones juicio político magistrados últimos tres años cantidad"
+          },
+          {
+            "text": "De la Torre afirmó haber presentado 7 propuestas concretas de mejora a los concursos y que la Corte Suprema realizó una propuesta que espera tratamiento del Consejo.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 59,
+            "verification_query": "Jimena de la Torre 7 propuestas reforma concursos Consejo de la Magistratura propuesta Corte Suprema"
+          },
+          {
+            "text": "De la Torre afirmó que impulsaron junto a colegios de abogados un proyecto de Código de Ética Judicial listo para ser aprobado.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 61,
+            "verification_query": "proyecto Código de Ética Judicial Consejo de la Magistratura colegios de abogados"
+          }
+        ]
+      }
+    }
+  ]
+}

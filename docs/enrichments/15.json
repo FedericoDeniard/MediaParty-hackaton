@@ -1,0 +1,595 @@
+{
+  "niche": "ciencia",
+  "enrichments": [
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "premio-merck-conicet",
+            "target": "buenos-aires",
+            "evidence": "entregado en Buenos Aires",
+            "relation": "se entregó en"
+          },
+          {
+            "source": "nvies",
+            "target": "premio-merck-conicet",
+            "evidence": "obtuvo el primer puesto de la sexta edición del Premio Merck-CONICET",
+            "relation": "ganó primer puesto de"
+          },
+          {
+            "source": "mariano-fernandez-corazza",
+            "target": "nvies",
+            "evidence": "el proyecto NViES, encabezado por el investigador Mariano Fernández Corazza",
+            "relation": "encabeza"
+          },
+          {
+            "source": "mariano-fernandez-corazza",
+            "target": "conicet",
+            "evidence": "Fernández Corazza es investigador del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)",
+            "relation": "es investigador de"
+          },
+          {
+            "source": "mariano-fernandez-corazza",
+            "target": "leici",
+            "evidence": "en el Instituto de Investigaciones en Electrónica, Control y Procesamiento de Señales (LEICI, CONICET-UNLP)",
+            "relation": "trabaja en"
+          },
+          {
+            "source": "ricardo-allegri",
+            "target": "ineu",
+            "evidence": "Ricardo Allegri, investigador del Instituto de Neurociencias (INEU, CONICET-FLENI)",
+            "relation": "es investigador de"
+          },
+          {
+            "source": "ricardo-allegri",
+            "target": "conicet",
+            "evidence": "en representación del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), por Ricardo Allegri",
+            "relation": "representó en el jurado a"
+          },
+          {
+            "source": "marcela-michaut",
+            "target": "ihem",
+            "evidence": "Marcela Michaut, investigadora del Instituto de Histología y Embriología de Mendoza",
+            "relation": "es investigadora de"
+          },
+          {
+            "source": "marcela-michaut",
+            "target": "conicet",
+            "evidence": "en representación del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)... y Marcela Michaut",
+            "relation": "representó en el jurado a"
+          },
+          {
+            "source": "natalia-garcia",
+            "target": "merck-argentina",
+            "evidence": "Natalia García, directora médica de la compañía en Argentina",
+            "relation": "es directora médica de"
+          },
+          {
+            "source": "mauricio-valiere",
+            "target": "merck-argentina",
+            "evidence": "Por Merck Argentina... participaron Natalia García... y Mauricio Valiere",
+            "relation": "participó en el jurado por"
+          },
+          {
+            "source": "mauricio-valiere",
+            "target": "hospital-italiano",
+            "evidence": "coordinador de la Unidad de Neurofibromatosis del Hospital Italiano de Buenos Aires",
+            "relation": "coordina unidad en"
+          },
+          {
+            "source": "daniel-salamone",
+            "target": "conicet",
+            "evidence": "El presidente del CONICET, Daniel Salamone",
+            "relation": "preside"
+          },
+          {
+            "source": "catalina-cullas",
+            "target": "embajada-alemania",
+            "evidence": "La embajadora de Alemania en Argentina, Catalina Cullas",
+            "relation": "es embajadora en"
+          },
+          {
+            "source": "adriana-baravalle",
+            "target": "secretaria-innovacion",
+            "evidence": "la secretaria de Innovación, Ciencia y Tecnología, Adriana Baravalle",
+            "relation": "es secretaria de"
+          },
+          {
+            "source": "hector-ramiro-quinta",
+            "target": "premio-merck-conicet",
+            "evidence": "El segundo lugar fue para Héctor Ramiro Quintá",
+            "relation": "obtuvo segundo lugar en"
+          },
+          {
+            "source": "hector-ramiro-quinta",
+            "target": "conicet",
+            "evidence": "investigador del CONICET en el Hospital Alemán",
+            "relation": "es investigador de"
+          },
+          {
+            "source": "hector-ramiro-quinta",
+            "target": "hospital-aleman",
+            "evidence": "investigador del CONICET en el Hospital Alemán",
+            "relation": "trabaja en"
+          },
+          {
+            "source": "premio-merck-conicet",
+            "target": "centro-cultural-ciencia",
+            "evidence": "Durante el acto, realizado en el Centro Cultural de la Ciencia de Buenos Aires",
+            "relation": "acto realizado en"
+          },
+          {
+            "source": "marcelo-ponte",
+            "target": "merck-argentina",
+            "evidence": "El director general del Grupo Merck en Argentina, Marcelo Ponte",
+            "relation": "es director general de"
+          },
+          {
+            "source": "embajada-alemania",
+            "target": "premio-merck-conicet",
+            "evidence": "el Premio Merck-CONICET, que cuenta con el apoyo de la Embajada de Alemania en Argentina",
+            "relation": "apoya"
+          },
+          {
+            "source": "conicet",
+            "target": "premio-merck-conicet",
+            "evidence": "el CONICET y Merck anunciaron la creación de un foro para quienes participaron en las distintas ediciones del certamen",
+            "relation": "organiza"
+          },
+          {
+            "source": "merck-argentina",
+            "target": "premio-merck-conicet",
+            "evidence": "el CONICET y Merck anunciaron la creación de un foro",
+            "relation": "organiza"
+          },
+          {
+            "source": "alemania",
+            "target": "argentina",
+            "evidence": "la iniciativa se consolidó como una actividad anual de la cooperación entre ambos países",
+            "relation": "coopera con"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "conicet",
+            "name": "Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)",
+            "type": "org",
+            "mentions": 14,
+            "description": "Organismo científico argentino coorganizador del Premio Merck-CONICET y al que pertenecen los investigadores premiados."
+          },
+          {
+            "id": "premio-merck-conicet",
+            "name": "Premio Merck-CONICET de Innovación en Ciencias de la Salud",
+            "type": "event",
+            "mentions": 6,
+            "description": "Certamen cuya sexta edición premió proyectos de software para epilepsia y una molécula para lesiones medulares."
+          },
+          {
+            "id": "buenos-aires",
+            "name": "Buenos Aires",
+            "type": "place",
+            "mentions": 2,
+            "description": "Ciudad donde se entregó el premio."
+          },
+          {
+            "id": "nvies",
+            "name": "NeuroVisualizer for Electrical Stimulation (NViES)",
+            "type": "org",
+            "mentions": 4,
+            "description": "Proyecto de software ganador del primer puesto para planificar la estimulación cerebral en epilepsia."
+          },
+          {
+            "id": "mariano-fernandez-corazza",
+            "name": "Mariano Fernández Corazza",
+            "type": "person",
+            "mentions": 5,
+            "description": "Investigador del CONICET en el LEICI que encabeza el proyecto ganador NViES."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 5,
+            "description": "País de origen de las iniciativas postuladas al premio."
+          },
+          {
+            "id": "ricardo-allegri",
+            "name": "Ricardo Allegri",
+            "type": "person",
+            "mentions": 1,
+            "description": "Investigador del INEU que integró el jurado en representación del CONICET."
+          },
+          {
+            "id": "ineu",
+            "name": "Instituto de Neurociencias (INEU, CONICET-FLENI)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Instituto al que pertenece Ricardo Allegri."
+          },
+          {
+            "id": "marcela-michaut",
+            "name": "Marcela Michaut",
+            "type": "person",
+            "mentions": 1,
+            "description": "Investigadora del IHEM que integró el jurado en representación del CONICET."
+          },
+          {
+            "id": "ihem",
+            "name": "Instituto de Histología y Embriología de Mendoza “Dr. Mario H. Burgos” (IHEM, CONICET-UNCU)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Instituto al que pertenece Marcela Michaut."
+          },
+          {
+            "id": "merck-argentina",
+            "name": "Merck Argentina",
+            "type": "org",
+            "mentions": 6,
+            "description": "Empresa alemana de ciencia y tecnología coorganizadora del premio."
+          },
+          {
+            "id": "natalia-garcia",
+            "name": "Natalia García",
+            "type": "person",
+            "mentions": 1,
+            "description": "Directora médica de Merck en Argentina, integrante del jurado."
+          },
+          {
+            "id": "mauricio-valiere",
+            "name": "Mauricio Valiere",
+            "type": "person",
+            "mentions": 1,
+            "description": "Neurólogo coordinador de la Unidad de Neurofibromatosis del Hospital Italiano que integró el jurado por Merck."
+          },
+          {
+            "id": "hospital-italiano",
+            "name": "Hospital Italiano de Buenos Aires",
+            "type": "org",
+            "mentions": 1,
+            "description": "Hospital donde trabaja Mauricio Valiere."
+          },
+          {
+            "id": "daniel-salamone",
+            "name": "Daniel Salamone",
+            "type": "person",
+            "mentions": 1,
+            "description": "Presidente del CONICET que destacó el alcance de la convocatoria."
+          },
+          {
+            "id": "catalina-cullas",
+            "name": "Catalina Cullas",
+            "type": "person",
+            "mentions": 1,
+            "description": "Embajadora de Alemania en Argentina que resaltó la cooperación bilateral."
+          },
+          {
+            "id": "embajada-alemania",
+            "name": "Embajada de Alemania en Argentina",
+            "type": "org",
+            "mentions": 2,
+            "description": "Representación diplomática que apoya el premio y acompañará el nuevo foro."
+          },
+          {
+            "id": "alemania",
+            "name": "Alemania",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cooperante con Argentina en el premio."
+          },
+          {
+            "id": "adriana-baravalle",
+            "name": "Adriana Baravalle",
+            "type": "person",
+            "mentions": 1,
+            "description": "Secretaria de Innovación, Ciencia y Tecnología que habló en la ceremonia."
+          },
+          {
+            "id": "secretaria-innovacion",
+            "name": "Secretaría de Innovación, Ciencia y Tecnología",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organismo encabezado por Adriana Baravalle."
+          },
+          {
+            "id": "leici",
+            "name": "Instituto de Investigaciones en Electrónica, Control y Procesamiento de Señales (LEICI, CONICET-UNLP)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Instituto donde trabaja Fernández Corazza."
+          },
+          {
+            "id": "hector-ramiro-quinta",
+            "name": "Héctor Ramiro Quintá",
+            "type": "person",
+            "mentions": 3,
+            "description": "Investigador del CONICET en el Hospital Alemán, segundo puesto por un proyecto sobre lesiones medulares."
+          },
+          {
+            "id": "hospital-aleman",
+            "name": "Hospital Alemán",
+            "type": "org",
+            "mentions": 1,
+            "description": "Hospital donde investiga Héctor Ramiro Quintá."
+          },
+          {
+            "id": "centro-cultural-ciencia",
+            "name": "Centro Cultural de la Ciencia",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar de Buenos Aires donde se realizó el acto."
+          },
+          {
+            "id": "marcelo-ponte",
+            "name": "Marcelo Ponte",
+            "type": "person",
+            "mentions": 1,
+            "description": "Director general del Grupo Merck en Argentina."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo-institucional",
+        "framing": "La nota se cuenta desde el encuadre oficial de los organizadores, casi como una gacetilla. CONICET, Merck, la Embajada de Alemania y la Secretaría de Innovación aparecen como impulsores virtuosos de la articulación público-privada, y los dos investigadores premiados como protagonistas. No hay antagonistas ni voces críticas.",
+        "sentiment": 0.65,
+        "sources_cited": [
+          "Mariano Fernández Corazza, investigador del CONICET en el LEICI (CONICET-UNLP)",
+          "Héctor Ramiro Quintá, investigador del CONICET en el Hospital Alemán",
+          "Daniel Salamone, presidente del CONICET",
+          "Catalina Cullas, embajadora de Alemania en Argentina",
+          "Adriana Baravalle, secretaria de Innovación, Ciencia y Tecnología",
+          "Marcelo Ponte, director general del Grupo Merck en Argentina",
+          "Presentación del equipo de NViES",
+          "Organización del Premio Merck-CONICET (montos adjudicados y cifras de postulaciones)",
+          "Jurado mencionado sin citas: Ricardo Allegri (INEU, CONICET-FLENI), Marcela Michaut (IHEM, CONICET-UNCU), Natalia García (Merck Argentina) y Mauricio Valiere (Hospital Italiano)"
+        ],
+        "missing_angles": [
+          "Montos en pesos sin equivalencia en dólares ni contexto inflacionario. ¿Cuánto representan $13.000.000 y $9.100.000 frente al costo real de desarrollar un software médico o una molécula hasta la etapa clínica?",
+          "Contexto presupuestario del CONICET y del sistema científico: recortes, salarios, ingresos a carrera. Ese contexto ayudaría a dimensionar el peso de un premio privado.",
+          "Condiciones del acuerdo con Merck: si la empresa obtiene derechos, prioridad de licencia o participación en la propiedad intelectual de los desarrollos premiados.",
+          "Voces independientes: un epileptólogo o neurocirujano que evalúe la utilidad real de NViES, y un especialista en lesiones medulares que sitúe el enfoque Netrina-1/DCC frente a otras líneas de investigación.",
+          "Grado de madurez de NViES: si fue validado con pacientes reales, en qué hospitales, con qué resultados y qué falta para su aprobación regulatoria (ANMAT).",
+          "Etapa concreta del proyecto de Quintá (in vitro, modelos animales) y plazos realistas antes de llegar a ensayos en humanos.",
+          "Datos de la enfermedad: cuántas personas tienen epilepsia farmacorresistente y lesiones medulares en Argentina, y cuántas cirugías de epilepsia se hacen por año.",
+          "Trayectoria de ganadores de ediciones anteriores: si algún proyecto premiado desde 2021 llegó a transferencia, patente o uso clínico.",
+          "Los otros ocho finalistas no se mencionan, ni los criterios de evaluación del jurado.",
+          "Estructura: el párrafo 'Entre los temas previstos figuran...' quedó separado del anuncio del foro al que se refiere y hoy parece aludir a la historia del premio. Conviene reubicarlo.",
+          "Verificar nombres y cargos (embajadora de Alemania, secretaria de Innovación, adscripción de Mauricio Valiere). Valiere figura como representante de Merck pero se lo presenta como coordinador del Hospital Italiano, y eso debería aclararse.",
+          "Chequear la coherencia entre 'sexta edición' y un lanzamiento en 2021: explicar si hubo más de una edición por año."
+        ],
+        "follow_up_questions": [
+          "¿Qué ocurrió con los proyectos ganadores de las cinco ediciones anteriores? ¿Alguno llegó al mercado, se patentó o consiguió inversión adicional?",
+          "¿Quién se queda con la propiedad intelectual de NViES y del agonista DCC? ¿Merck tiene opción preferente de licencia?",
+          "¿NViES ya se probó en pacientes? ¿En qué centros, con cuántos casos y con qué reducción medible de los tiempos de internación?",
+          "¿Qué trámite regulatorio necesitaría NViES para usarse clínicamente en Argentina y cuánto costaría?",
+          "¿En qué modelos experimentales trabaja Quintá y qué resultados preliminares tiene? ¿Cuánto financiamiento adicional haría falta para llegar a ensayos clínicos?",
+          "¿Cuántos centros en Argentina hacen estimulación eléctrica intracraneal prequirúrgica y cuál es la lista de espera para cirugía de epilepsia?",
+          "¿Qué proporción del financiamiento del CONICET proviene hoy de alianzas privadas y cómo evolucionó en los últimos años?",
+          "¿Qué actividades concretas tendrá el foro de participantes, cuándo empieza y quién lo financia?",
+          "¿Cuáles fueron los criterios de evaluación del jurado y quiénes eran los otros ocho finalistas?"
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2021",
+            "title": "Lanzamiento del Premio Merck-CONICET",
+            "precision": "year",
+            "description": "El Premio Merck-CONICET de Innovación en Ciencias de la Salud fue lanzado en 2021 con el apoyo de la Embajada de Alemania en Argentina. Desde entonces reunió cerca de 400 postulaciones de distintas regiones del país.",
+            "paragraph_index": 21
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El proyecto NViES, un software para planificar la estimulación cerebral en pacientes con epilepsia resistente a fármacos, obtuvo el primer puesto de la sexta edición del Premio Merck-CONICET de Innovación en Ciencias de la Salud, entregado en Buenos Aires.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "NViES primer puesto sexta edición Premio Merck-CONICET Innovación Ciencias de la Salud"
+          },
+          {
+            "text": "El proyecto NViES está encabezado por el investigador Mariano Fernández Corazza.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Mariano Fernández Corazza NViES CONICET epilepsia"
+          },
+          {
+            "text": "La sexta edición del Premio Merck-CONICET reunió 84 iniciativas científicas y tecnológicas vinculadas con la salud de distintos puntos de Argentina.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Premio Merck-CONICET sexta edición 84 proyectos postulados"
+          },
+          {
+            "text": "Diez equipos llegaron a la instancia final de la sexta edición del Premio Merck-CONICET.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Premio Merck-CONICET 2025 diez finalistas"
+          },
+          {
+            "text": "El jurado por el CONICET estuvo integrado por Ricardo Allegri (INEU, CONICET-FLENI) y Marcela Michaut (IHEM, CONICET-UNCU).",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "jurado Premio Merck-CONICET Ricardo Allegri Marcela Michaut"
+          },
+          {
+            "text": "Por Merck Argentina integraron el jurado Natalia García, directora médica de la compañía en Argentina, y Mauricio Valiere, coordinador de la Unidad de Neurofibromatosis del Hospital Italiano de Buenos Aires.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Natalia García directora médica Merck Argentina Mauricio Valiere jurado premio CONICET"
+          },
+          {
+            "text": "El presidente del CONICET, Daniel Salamone, afirmó durante la ceremonia: \"El premio pone en valor el talento científico argentino y fortalece la articulación público-privada para transformar el conocimiento en soluciones concretas\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Daniel Salamone \"pone en valor el talento científico argentino\" Premio Merck-CONICET"
+          },
+          {
+            "text": "La embajadora de Alemania en Argentina, Catalina Cullas, sostuvo: \"Largo plazo y continuidad son dos de las principales características de nuestra relación bilateral, también en el sector científico\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "embajadora Alemania Argentina Catalina Cullas Premio Merck-CONICET"
+          },
+          {
+            "text": "La secretaria de Innovación, Ciencia y Tecnología, Adriana Baravalle, afirmó que el objetivo es que \"la investigación básica, que es clave, también se traduzca en resultados concretos que mejoren la salud de las personas\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "Adriana Baravalle secretaria Innovación Ciencia y Tecnología Premio Merck-CONICET"
+          },
+          {
+            "text": "Mariano Fernández Corazza es investigador del CONICET en el Instituto LEICI (CONICET-UNLP).",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "Mariano Fernández Corazza LEICI CONICET UNLP"
+          },
+          {
+            "text": "Según la presentación del equipo, el sistema NViES podría ayudar a ajustar la planificación de estudios de estimulación eléctrica intracraneal y reducir los tiempos de internación.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": false,
+            "paragraph_index": 11,
+            "verification_query": "NViES estimulación eléctrica intracraneal reducir internación epilepsia"
+          },
+          {
+            "text": "Fernández Corazza afirmó: \"Este impulso brindado al trabajo científico nos ayuda muchísimo y nos permite seguir avanzando\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 12,
+            "verification_query": "Fernández Corazza \"nos permite seguir avanzando\" premio"
+          },
+          {
+            "text": "El segundo lugar fue para Héctor Ramiro Quintá, investigador del CONICET en el Hospital Alemán, por un proyecto sobre lesiones medulares traumáticas graves.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "Héctor Ramiro Quintá segundo puesto Premio Merck-CONICET lesiones medulares"
+          },
+          {
+            "text": "El equipo de Quintá propone desarrollar un agonista sintético del receptor DCC a partir del estudio de la proteína Netrina-1.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 15,
+            "verification_query": "Quintá agonista receptor DCC Netrina-1 lesión medular CONICET"
+          },
+          {
+            "text": "Quintá sostuvo: \"Este subsidio representa una oportunidad importante, porque me va a permitir avanzar con mi proyecto\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 17,
+            "verification_query": "Quintá \"Este subsidio representa una oportunidad importante\""
+          },
+          {
+            "text": "El acto se realizó en el Centro Cultural de la Ciencia de Buenos Aires, donde CONICET y Merck anunciaron la creación de un foro para participantes de las distintas ediciones del certamen.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 19,
+            "verification_query": "CONICET Merck foro participantes premio Centro Cultural de la Ciencia"
+          },
+          {
+            "text": "El director general del Grupo Merck en Argentina, Marcelo Ponte, sostuvo que \"impulsar el descubrimiento también significa generar espacios para que ese conocimiento pueda crecer y desarrollarse\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 20,
+            "verification_query": "Marcelo Ponte Merck Argentina \"impulsar el descubrimiento\""
+          },
+          {
+            "text": "El Premio Merck-CONICET fue lanzado en 2021.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 21,
+            "verification_query": "Premio Merck-CONICET lanzamiento 2021 primera edición"
+          },
+          {
+            "text": "Desde 2021 el Premio Merck-CONICET reunió cerca de 400 postulaciones de distintas regiones del país.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.45,
+            "needs_source": true,
+            "paragraph_index": 21,
+            "verification_query": "Premio Merck-CONICET 400 postulaciones desde 2021"
+          },
+          {
+            "text": "El proyecto NViES recibió $13.000.000 como premio.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 23,
+            "verification_query": "Premio Merck-CONICET monto primer puesto 13 millones NViES"
+          },
+          {
+            "text": "El proyecto sobre reparación de lesiones medulares obtuvo $9.100.000 como premio.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 23,
+            "verification_query": "Premio Merck-CONICET segundo puesto 9,1 millones lesiones medulares"
+          }
+        ]
+      }
+    }
+  ]
+}

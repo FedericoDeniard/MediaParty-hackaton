@@ -1,0 +1,733 @@
+{
+  "niche": "sociedad",
+  "enrichments": [
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El papa León XIV fue intervenido quirúrgicamente hace dos semanas por un cáncer de pulmón.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "papa León XIV operación cáncer de pulmón"
+          },
+          {
+            "text": "El papa León XIV visitará la Argentina del 8 al 11 de noviembre, recorriendo la ciudad de Buenos Aires, la provincia de Buenos Aires y Córdoba.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "Vaticano confirma visita León XIV Argentina 8 al 11 de noviembre"
+          },
+          {
+            "text": "Los feriados por la visita papal se establecieron mediante el Decreto 1103/2026, publicado en el Boletín Oficial.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "Decreto 1103/2026 Boletín Oficial feriados visita papa León XIV"
+          },
+          {
+            "text": "La visita de León XIV será la primera visita papal a la Argentina desde Juan Pablo II.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "última visita papal Argentina Juan Pablo II 1987"
+          },
+          {
+            "text": "El Poder Ejecutivo declaró de interés nacional la visita oficial de León XIV y las actividades vinculadas a su llegada.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "decreto interés nacional visita papa León XIV Argentina"
+          },
+          {
+            "text": "El Gobierno fijó tres feriados por la visita papal, justificados por la superposición con los desplazamientos laborales, educativos y comerciales propios de una jornada hábil.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "decreto 1103/2026 superposición desplazamientos laborales educativos comerciales jornada hábil"
+          },
+          {
+            "text": "El lunes 9 de noviembre es feriado en todo el país por la visita del papa León XIV.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "feriado nacional 9 de noviembre visita papa"
+          },
+          {
+            "text": "El martes 10 de noviembre es feriado con alcance territorial limitado en la provincia de Córdoba y la Ciudad de Buenos Aires.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "feriado 10 de noviembre Córdoba Ciudad de Buenos Aires visita papa"
+          },
+          {
+            "text": "El miércoles 11 de noviembre es feriado con alcance territorial limitado en la provincia de Buenos Aires.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "feriado 11 de noviembre provincia de Buenos Aires visita papa Luján"
+          },
+          {
+            "text": "El decreto creó en la Jefatura de Gabinete la Unidad Ejecutora Especial Temporaria 'Visita de Su Santidad el Papa León XIV', con vigencia de hasta 12 meses.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "Unidad Ejecutora Especial Temporaria Visita de Su Santidad el Papa León XIV Jefatura de Gabinete"
+          },
+          {
+            "text": "El lunes 23 de noviembre es feriado nacional en la Argentina por el Día de la Soberanía Nacional.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "feriado Día de la Soberanía Nacional 23 de noviembre 2026"
+          },
+          {
+            "text": "Según fuentes del Gobierno, los feriados de alcance territorial limitado se rigen según el domicilio donde la persona cumple sus tareas laborales.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "feriado alcance territorial limitado domicilio laboral visita papa"
+          },
+          {
+            "text": "Se garantizará el 75% de los servicios de transporte público durante los feriados de alcance territorial limitado.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.45,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "75% transporte público feriado visita papa León XIV"
+          },
+          {
+            "text": "León XIV llegará el domingo 8 de noviembre, visitará el Monumento General San Martín, participará de una ceremonia de bienvenida en la Casa Rosada, se reunirá con Javier Milei y cerrará la jornada en el Palacio Libertad.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "agenda papa León XIV 8 de noviembre Casa Rosada Milei Palacio Libertad"
+          },
+          {
+            "text": "El lunes 9 el Papa visitará el Pequeño Cottolengo Don Orione de Claypole y celebrará una misa en el Monumento a los Españoles, en Palermo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 15,
+            "verification_query": "papa León XIV Cottolengo Don Orione Claypole misa Monumento a los Españoles"
+          },
+          {
+            "text": "El martes 10 el Papa celebrará una misa en la explanada de la Escuela de Aviación Militar de Córdoba y por la tarde participará de una vigilia con jóvenes en Buenos Aires.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 16,
+            "verification_query": "papa León XIV misa Escuela de Aviación Militar Córdoba vigilia jóvenes"
+          },
+          {
+            "text": "El miércoles 11 el Papa visitará el Complejo Penitenciario Federal de Buenos Aires, celebrará misa frente a la Basílica de Luján y partirá hacia Lima, Perú.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "papa León XIV Complejo Penitenciario Federal misa Luján viaje Lima Perú"
+          },
+          {
+            "text": "El gobierno porteño informó que habrá una zona estéril desde el Monumento a los Españoles hasta la avenida Udaondo y que la avenida del Libertador estará cortada el 9 y 10 de noviembre.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 18,
+            "verification_query": "gobierno porteño cortes avenida del Libertador zona estéril Udaondo visita papa"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo, de servicio",
+        "framing": "Nota de servicio que cuenta la visita papal desde la logística oficial: feriados, decreto y cortes de calles. El Gobierno nacional, con apoyo del porteño, aparece como organizador eficiente y el Papa como figura convocante. No hay antagonistas ni voces críticas.",
+        "sentiment": 0.25,
+        "sources_cited": [
+          "Vaticano (confirmación de la visita)",
+          "Poder Ejecutivo Nacional",
+          "Decreto 1103/2026",
+          "Boletín Oficial",
+          "Jefatura de Gabinete de Ministros (Unidad Ejecutora Especial Temporaria)",
+          "Fuentes del Gobierno consultadas por LA NACION",
+          "Gobierno porteño"
+        ],
+        "missing_angles": [
+          "Fuente y detalle de la operación por cáncer de pulmón: no se cita parte médico del Vaticano ni se explica cómo afecta la agenda o si hay planes de contingencia. Es un dato sensible que requiere atribución.",
+          "Costo económico de tres feriados (uno nacional y dos regionales) según cámaras empresarias, comercio, industria y economistas, y comparación con feriados similares.",
+          "Presupuesto, personal y titular de la Unidad Ejecutora Especial Temporaria, y por qué su vigencia es de 12 meses para una visita de cuatro días.",
+          "Si son feriados inamovibles o días no laborables, con sus consecuencias distintas para salarios (pago doble), bancos, escuelas, comercio y servicios esenciales.",
+          "Voz de la Iglesia argentina (Conferencia Episcopal, arzobispados de Buenos Aires, Córdoba y Mercedes-Luján) sobre la organización y la agenda.",
+          "Voz de las autoridades provinciales de Córdoba y Buenos Aires: se mencionan sus pedidos, pero no se las cita.",
+          "Reacciones de sindicatos, movimientos sociales, oposición o sectores laicos, sobre todo ante la reunión con sindicalistas y movimientos sociales.",
+          "Contexto histórico: Francisco nunca visitó su país natal, y conviene repasar las visitas de Juan Pablo II en 1982 y 1987 y su impacto.",
+          "Detalle del 75% de transporte garantizado: quién lo garantiza, con qué norma y qué pasa con el resto de los servicios.",
+          "Operativo de seguridad nacional y provincial, estimación de asistentes a las misas, y cortes y accesos en Córdoba, Luján y Claypole (solo se detallan los porteños).",
+          "Por qué el domingo 8 no requirió medidas especiales y qué cortes habrá ese día en la zona de Casa Rosada y Palacio Libertad.",
+          "Contradicción aparente: si en CABA el feriado es el martes, conviene aclarar por qué Libertador estará cortada también el lunes, ya cubierto por el feriado nacional."
+        ],
+        "follow_up_questions": [
+          "¿Qué informó oficialmente el Vaticano sobre la cirugía y el estado de salud de León XIV, y hay algún cambio previsto en la agenda por razones médicas?",
+          "¿Cuánto cuesta el operativo total y cuánto se asigna a la Unidad Ejecutora? ¿Quién la encabeza y con qué estructura?",
+          "¿Cuál es el impacto económico estimado de los feriados según CAME, UIA u otras entidades?",
+          "¿Cómo se aplicará la regla del domicilio laboral a trabajadores remotos, monotributistas o con varios empleos en distintas jurisdicciones?",
+          "¿Qué sindicatos y movimientos sociales participarán del encuentro del lunes 9 y con qué criterio se eligieron?",
+          "¿Qué pasará con las clases, los turnos médicos, los trámites y la actividad bancaria en cada jurisdicción?",
+          "¿Cuántos fieles se esperan en Palermo, Córdoba y Luján, y qué operativos de transporte especial habrá hacia esos puntos?",
+          "¿Por qué la provincia de Buenos Aires pidió el feriado el miércoles 11 y no el lunes, día de la visita a Claypole?",
+          "¿Hubo presión de otras provincias para obtener feriados o incluir paradas en la gira?",
+          "¿Qué temas se espera que aborde el Papa en su reunión con Milei y en la visita al Complejo Penitenciario Federal?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "vaticano",
+            "target": "papa-leon-xiv",
+            "evidence": "tras la confirmación del Vaticano",
+            "relation": "confirmó la visita de"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "argentina",
+            "evidence": "confirmó su visita a la Argentina del 8 al 11 de noviembre",
+            "relation": "visitará"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "papa-leon-xiv",
+            "evidence": "el Ejecutivo declaró de “interés nacional” la visita oficial de León XIV",
+            "relation": "declaró de interés nacional la visita de"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "decreto-1103-2026",
+            "evidence": "a través del Decreto 1103/2026, publicado en el Boletín Oficial",
+            "relation": "emitió"
+          },
+          {
+            "source": "decreto-1103-2026",
+            "target": "boletin-oficial",
+            "evidence": "Decreto 1103/2026, publicado en el Boletín Oficial",
+            "relation": "fue publicado en"
+          },
+          {
+            "source": "decreto-1103-2026",
+            "target": "unidad-ejecutora-visita-papa",
+            "evidence": "El decreto también creó, dentro de la Jefatura de Gabinete de Ministros, la Unidad Ejecutora Especial Temporaria",
+            "relation": "creó"
+          },
+          {
+            "source": "unidad-ejecutora-visita-papa",
+            "target": "jefatura-de-gabinete",
+            "evidence": "creó, dentro de la Jefatura de Gabinete de Ministros, la Unidad Ejecutora Especial Temporaria",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "lujan",
+            "evidence": "donde encabezará una misa en Luján",
+            "relation": "celebrará misa en"
+          },
+          {
+            "source": "lujan",
+            "target": "provincia-de-buenos-aires",
+            "evidence": "la provincia de Buenos Aires —donde encabezará una misa en Luján—",
+            "relation": "se ubica en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "cordoba",
+            "evidence": "El martes 10 viajará a Córdoba",
+            "relation": "visitará"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "casa-rosada",
+            "evidence": "participará de una ceremonia de bienvenida en la Casa Rosada",
+            "relation": "participará de ceremonia en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "monumento-general-san-martin",
+            "evidence": "visitará el Monumento General San Martín",
+            "relation": "visitará"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "javier-milei",
+            "evidence": "mantendrá un encuentro con el presidente Javier Milei",
+            "relation": "se reunirá con"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "palacio-libertad",
+            "evidence": "La jornada concluirá con una actividad en el Palacio Libertad",
+            "relation": "realizará actividad en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "pequeno-cottolengo-don-orione",
+            "evidence": "el Papa visitará el Pequeño Cottolengo Don Orione de Claypole",
+            "relation": "visitará"
+          },
+          {
+            "source": "pequeno-cottolengo-don-orione",
+            "target": "claypole",
+            "evidence": "Pequeño Cottolengo Don Orione de Claypole",
+            "relation": "se ubica en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "monumento-a-los-espanoles",
+            "evidence": "celebrará una misa en el Monumento a los Españoles, en Palermo",
+            "relation": "celebrará misa en"
+          },
+          {
+            "source": "monumento-a-los-espanoles",
+            "target": "palermo",
+            "evidence": "Monumento a los Españoles, en Palermo",
+            "relation": "se ubica en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "episcopado-argentino",
+            "evidence": "mantener actividades con el episcopado argentino",
+            "relation": "mantendrá actividades con"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "escuela-de-aviacion-militar",
+            "evidence": "celebrará una misa en la explanada de la Escuela de Aviación Militar",
+            "relation": "celebrará misa en"
+          },
+          {
+            "source": "escuela-de-aviacion-militar",
+            "target": "cordoba",
+            "evidence": "viajará a Córdoba, donde celebrará una misa en la explanada de la Escuela de Aviación Militar",
+            "relation": "se ubica en"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "complejo-penitenciario-federal",
+            "evidence": "el miércoles 11 visitará el Complejo Penitenciario Federal de Buenos Aires",
+            "relation": "visitará"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "basilica-de-lujan",
+            "evidence": "celebrará una misa frente a la Basílica de Nuestra Señora de Luján",
+            "relation": "celebrará misa frente a"
+          },
+          {
+            "source": "papa-leon-xiv",
+            "target": "lima",
+            "evidence": "partirá hacia Lima, Perú",
+            "relation": "partirá hacia"
+          },
+          {
+            "source": "lima",
+            "target": "peru",
+            "evidence": "Lima, Perú",
+            "relation": "se ubica en"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "cordoba",
+            "evidence": "el martes 10, en la provincia de Córdoba y la Ciudad de Buenos Aires",
+            "relation": "decretó feriado en"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "ciudad-de-buenos-aires",
+            "evidence": "el martes 10, en la provincia de Córdoba y la Ciudad de Buenos Aires",
+            "relation": "decretó feriado en"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "provincia-de-buenos-aires",
+            "evidence": "el miércoles 11, en la provincia de Buenos Aires",
+            "relation": "decretó feriado en"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "argentina",
+            "evidence": "el Gobierno estableció feriado en todo el país el lunes 9 de noviembre",
+            "relation": "estableció feriado en"
+          },
+          {
+            "source": "dia-de-la-soberania-nacional",
+            "target": "argentina",
+            "evidence": "el lunes 23 de noviembre es feriado nacional en la Argentina por el Día de la Soberanía Nacional",
+            "relation": "es feriado en"
+          },
+          {
+            "source": "la-nacion",
+            "target": "poder-ejecutivo",
+            "evidence": "Según fuentes del Gobierno consultadas por LA NACION",
+            "relation": "consultó fuentes de"
+          },
+          {
+            "source": "gobierno-porteno",
+            "target": "avenida-del-libertador",
+            "evidence": "La avenida del Libertador estará cortada el lunes 9 y el martes 10",
+            "relation": "informó corte de"
+          },
+          {
+            "source": "gobierno-porteno",
+            "target": "avenida-udaondo",
+            "evidence": "se extenderá desde el Monumento a los Españoles hasta la avenida Udaondo",
+            "relation": "fijó zona estéril hasta"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "papa-leon-xiv",
+            "name": "Papa León XIV",
+            "type": "person",
+            "mentions": 14,
+            "description": "Sumo Pontífice que visitará la Argentina del 8 al 11 de noviembre."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 5,
+            "description": "País que recibirá la visita papal y donde se fijaron feriados."
+          },
+          {
+            "id": "vaticano",
+            "name": "Vaticano",
+            "type": "org",
+            "mentions": 1,
+            "description": "Santa Sede que confirmó la visita del papa."
+          },
+          {
+            "id": "poder-ejecutivo",
+            "name": "Poder Ejecutivo Nacional",
+            "type": "org",
+            "mentions": 7,
+            "description": "Gobierno que declaró de interés nacional la visita y fijó feriados por decreto."
+          },
+          {
+            "id": "decreto-1103-2026",
+            "name": "Decreto 1103/2026",
+            "type": "event",
+            "mentions": 3,
+            "description": "Decreto que estableció los feriados y creó la unidad ejecutora para la visita."
+          },
+          {
+            "id": "boletin-oficial",
+            "name": "Boletín Oficial",
+            "type": "org",
+            "mentions": 1,
+            "description": "Publicación donde se oficializó el decreto."
+          },
+          {
+            "id": "ciudad-de-buenos-aires",
+            "name": "Ciudad de Buenos Aires",
+            "type": "place",
+            "mentions": 5,
+            "description": "Distrito que recorrerá el papa y con feriado el martes 10."
+          },
+          {
+            "id": "provincia-de-buenos-aires",
+            "name": "Provincia de Buenos Aires",
+            "type": "place",
+            "mentions": 2,
+            "description": "Provincia con feriado el miércoles 11 donde el papa oficiará misa en Luján."
+          },
+          {
+            "id": "lujan",
+            "name": "Luján",
+            "type": "place",
+            "mentions": 2,
+            "description": "Ciudad donde el papa encabezará una misa."
+          },
+          {
+            "id": "cordoba",
+            "name": "Córdoba",
+            "type": "place",
+            "mentions": 4,
+            "description": "Provincia que visitará el papa el martes 10, con feriado ese día."
+          },
+          {
+            "id": "juan-pablo-ii",
+            "name": "Juan Pablo II",
+            "type": "person",
+            "mentions": 1,
+            "description": "Último papa que visitó la Argentina antes de León XIV."
+          },
+          {
+            "id": "jefatura-de-gabinete",
+            "name": "Jefatura de Gabinete de Ministros",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organismo dentro del cual se creó la unidad ejecutora de la visita."
+          },
+          {
+            "id": "unidad-ejecutora-visita-papa",
+            "name": "Unidad Ejecutora Especial Temporaria \"Visita de Su Santidad el Papa León XIV\"",
+            "type": "org",
+            "mentions": 2,
+            "description": "Estructura encargada de planificar y coordinar la visita papal."
+          },
+          {
+            "id": "dia-de-la-soberania-nacional",
+            "name": "Día de la Soberanía Nacional",
+            "type": "event",
+            "mentions": 1,
+            "description": "Feriado nacional del lunes 23 de noviembre."
+          },
+          {
+            "id": "la-nacion",
+            "name": "LA NACION",
+            "type": "org",
+            "mentions": 1,
+            "description": "Medio que consultó a fuentes del Gobierno sobre la aplicación de los feriados."
+          },
+          {
+            "id": "claypole",
+            "name": "Claypole",
+            "type": "place",
+            "mentions": 2,
+            "description": "Localidad donde el papa visitará el Pequeño Cottolengo Don Orione."
+          },
+          {
+            "id": "casa-rosada",
+            "name": "Casa Rosada",
+            "type": "place",
+            "mentions": 1,
+            "description": "Sede de la ceremonia de bienvenida al papa."
+          },
+          {
+            "id": "monumento-general-san-martin",
+            "name": "Monumento General San Martín",
+            "type": "place",
+            "mentions": 1,
+            "description": "Monumento que visitará el papa el 8 de noviembre."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 1,
+            "description": "Presidente que mantendrá un encuentro con el papa."
+          },
+          {
+            "id": "palacio-libertad",
+            "name": "Palacio Libertad",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar donde concluirá la primera jornada de la visita."
+          },
+          {
+            "id": "pequeno-cottolengo-don-orione",
+            "name": "Pequeño Cottolengo Don Orione",
+            "type": "org",
+            "mentions": 1,
+            "description": "Institución de Claypole que visitará el papa."
+          },
+          {
+            "id": "monumento-a-los-espanoles",
+            "name": "Monumento a los Españoles",
+            "type": "place",
+            "mentions": 2,
+            "description": "Sitio de la misa central en Palermo."
+          },
+          {
+            "id": "palermo",
+            "name": "Palermo",
+            "type": "place",
+            "mentions": 1,
+            "description": "Barrio porteño donde se ubica el Monumento a los Españoles."
+          },
+          {
+            "id": "episcopado-argentino",
+            "name": "Episcopado argentino",
+            "type": "org",
+            "mentions": 1,
+            "description": "Obispos con quienes el papa mantendrá actividades."
+          },
+          {
+            "id": "escuela-de-aviacion-militar",
+            "name": "Escuela de Aviación Militar",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar en Córdoba donde el papa celebrará misa."
+          },
+          {
+            "id": "complejo-penitenciario-federal",
+            "name": "Complejo Penitenciario Federal de Buenos Aires",
+            "type": "place",
+            "mentions": 1,
+            "description": "Cárcel que visitará el papa el miércoles 11."
+          },
+          {
+            "id": "basilica-de-lujan",
+            "name": "Basílica de Nuestra Señora de Luján",
+            "type": "place",
+            "mentions": 1,
+            "description": "Basílica frente a la cual el papa celebrará misa."
+          },
+          {
+            "id": "lima",
+            "name": "Lima",
+            "type": "place",
+            "mentions": 1,
+            "description": "Destino del papa tras dejar la Argentina."
+          },
+          {
+            "id": "peru",
+            "name": "Perú",
+            "type": "place",
+            "mentions": 1,
+            "description": "País al que partirá el papa."
+          },
+          {
+            "id": "gobierno-porteno",
+            "name": "Gobierno porteño",
+            "type": "org",
+            "mentions": 1,
+            "description": "Gobierno de la Ciudad que informó cortes de calles y zona estéril."
+          },
+          {
+            "id": "avenida-udaondo",
+            "name": "Avenida Udaondo",
+            "type": "place",
+            "mentions": 1,
+            "description": "Límite de la zona estéril alrededor del papa."
+          },
+          {
+            "id": "avenida-del-libertador",
+            "name": "Avenida del Libertador",
+            "type": "place",
+            "mentions": 1,
+            "description": "Avenida que estará cortada el 9 y 10 de noviembre."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026",
+            "title": "El Papa es operado por un cáncer de pulmón",
+            "precision": "year",
+            "description": "León XIV fue intervenido quirúrgicamente por un cáncer de pulmón dos semanas antes de confirmar su visita a la Argentina.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026",
+            "title": "Se publica el Decreto 1103/2026 sobre la visita papal",
+            "precision": "year",
+            "description": "El Gobierno declaró de interés nacional la visita de León XIV, fijó tres feriados y creó una unidad ejecutora especial en la Jefatura de Gabinete.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-11-08",
+            "title": "León XIV llega a la Argentina",
+            "precision": "day",
+            "description": "El Papa llega al país, visita el Monumento General San Martín, participa de una ceremonia en la Casa Rosada, se reúne con Javier Milei y cierra la jornada en el Palacio Libertad.",
+            "paragraph_index": 15
+          },
+          {
+            "date": "2026-11-09",
+            "title": "Feriado nacional por la visita del Papa",
+            "precision": "day",
+            "description": "Rige un feriado en todo el territorio nacional por la visita de León XIV.",
+            "paragraph_index": 6
+          },
+          {
+            "date": "2026-11-09",
+            "title": "Misa en el Monumento a los Españoles y visita a Claypole",
+            "precision": "day",
+            "description": "El Papa visita el Pequeño Cottolengo Don Orione de Claypole, celebra misa en Palermo y se reúne con sindicalistas, líderes religiosos y el episcopado.",
+            "paragraph_index": 16
+          },
+          {
+            "date": "2026-11-10",
+            "title": "Feriado en Córdoba y la Ciudad de Buenos Aires",
+            "precision": "day",
+            "description": "Feriado nacional con alcance territorial limitado a la provincia de Córdoba y la Ciudad de Buenos Aires.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2026-11-10",
+            "title": "El Papa viaja a Córdoba y vigilia con jóvenes",
+            "precision": "day",
+            "description": "León XIV celebra misa en la Escuela de Aviación Militar de Córdoba y por la tarde regresa a Buenos Aires para una vigilia con jóvenes.",
+            "paragraph_index": 17
+          },
+          {
+            "date": "2026-11-11",
+            "title": "Feriado en la provincia de Buenos Aires",
+            "precision": "day",
+            "description": "Feriado nacional con alcance territorial limitado a la provincia de Buenos Aires.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2026-11-11",
+            "title": "Misa en Luján y partida hacia Lima",
+            "precision": "day",
+            "description": "El Papa visita el Complejo Penitenciario Federal, celebra misa frente a la Basílica de Luján y parte hacia Lima, Perú.",
+            "paragraph_index": 18
+          },
+          {
+            "date": "2026-11-23",
+            "title": "Feriado por el Día de la Soberanía Nacional",
+            "precision": "day",
+            "description": "El lunes 23 de noviembre es feriado nacional por el Día de la Soberanía Nacional.",
+            "paragraph_index": 9
+          }
+        ]
+      }
+    }
+  ]
+}
