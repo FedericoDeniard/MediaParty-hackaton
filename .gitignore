@@ -1,0 +1,16 @@
+# Textos de notas de prueba: son de cada medio y el repo es publico.
+# Solo se versionan corpus/notas/README.txt y corpus/notas/_indice.md.
+corpus/bruto/
+corpus/notas/md/*
+corpus/notas/txt/*
+!corpus/notas/md/.gitkeep
+!corpus/notas/txt/.gitkeep
+
+# Claves
+.env
+.env.local
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
