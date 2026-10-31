@@ -3,8 +3,9 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { EditorContent } from '@tiptap/react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 import EditorToolbar from './EditorToolbar.tsx'
-import EnrichmentPanel from './EnrichmentPanel.tsx'
+import EnrichmentPanel, { type Analysis } from './EnrichmentPanel.tsx'
 import PanelGraficosDeNota from '../graficos/PanelGraficosDeNota.tsx'
+import { analyzeNote } from '../../lib/enrich.ts'
 import { editorPage } from '../../data/app.ts'
 import {
   noteThemeLabels,
@@ -54,6 +55,7 @@ export default function NoteEditor() {
   const [title, setTitle] = useState(note?.title ?? '')
   const [saveState, setSaveState] = useState<SaveState>('idle')
   const [savedAt, setSavedAt] = useState<string | null>(null)
+  const [analysis, setAnalysis] = useState<Analysis>({ state: 'idle', rows: [] })
 
   const timer = useRef<number | undefined>(undefined)
   const pendingDoc = useRef<Parameters<typeof updateNote>[1]>({})
@@ -126,6 +128,21 @@ export default function NoteEditor() {
     fragments,
     editable: canEdit,
   })
+
+  /* Se guarda antes de analizar: el backend tiene que recibir el texto
+     que se ve, no el del último guardado. */
+  const handleAnalyze = useCallback(async () => {
+    flush()
+    const current = getNote(id)
+    if (!current) return
+    setAnalysis({ state: 'running', rows: [] })
+    try {
+      const rows = await analyzeNote(current, (rows) => setAnalysis({ state: 'running', rows }))
+      setAnalysis({ state: 'idle', rows }) // quedan a la vista si falló algún agente
+    } catch (error) {
+      setAnalysis({ state: 'error', rows: [], error: error instanceof Error ? error.message : String(error) })
+    }
+  }, [flush, id])
 
   const statusLabel =
     saveState === 'saving'
@@ -321,6 +338,8 @@ export default function NoteEditor() {
               onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
               onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
               onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
+              analysis={analysis}
+              onAnalyze={handleAnalyze}
             />
           </aside>
         )}

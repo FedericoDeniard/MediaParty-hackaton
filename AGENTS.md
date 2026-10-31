@@ -15,6 +15,8 @@ docs/       Documentación del proyecto
 
 ## Comandos
 
+Para desarrollo local alcanza con `just` (ver `justfile`): `just dev` levanta Supabase, el backend y el frontend; `just test` corre las pruebas; `just note 01` manda una nota del corpus al pipeline.
+
 Cada subproyecto tiene su propio `package.json` y usa **pnpm**. El lockfile de cada uno se actualiza con `pnpm install` desde su carpeta.
 
 ```bash

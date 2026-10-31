@@ -269,6 +269,22 @@ export function listEnrichments(noteId: string): Enrichment[] {
   return items
 }
 
+/* Un análisis nuevo reemplaza las piezas sin decidir. Lo que la
+   autora ya aprobó o descartó se queda: es su decisión, no la del
+   modelo. */
+export function replaceEnrichments(noteId: string, items: Enrichment[]) {
+  const decided = enrichments.filter(
+    (item) => item.noteId === noteId && item.status !== 'pendiente',
+  )
+  const decidedTexts = new Set(decided.map((item) => item.text))
+  enrichments = [
+    ...enrichments.filter((item) => item.noteId !== noteId),
+    ...decided,
+    ...items.filter((item) => !decidedTexts.has(item.text)),
+  ]
+  persist()
+}
+
 export function setEnrichmentStatus(id: string, status: EnrichmentStatus) {
   enrichments = enrichments.map((item) => (item.id === id ? { ...item, status } : item))
   persist()
