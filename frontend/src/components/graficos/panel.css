@@ -1,0 +1,246 @@
+/* ============================================================
+   Panel de gráficos y recorrido del motor.
+
+   `.editor__aside` deja el panel flotando: acompaña al scroll de la
+   nota, con scroll propio si no entra en la pantalla. Usa los tokens
+   del sistema y solo agrega lo que falta.
+   ============================================================ */
+
+.editor__aside {
+  position: sticky;
+  top: var(--space-5, 16px);
+  display: grid;
+  gap: var(--space-5, 16px);
+  align-self: start;
+  max-height: calc(100vh - var(--space-5, 16px) * 2);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.pg {
+  display: grid;
+  gap: 12px;
+  border-radius: 20px;
+}
+
+.pg__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin: 0;
+  padding: 3px 12px 3px 8px;
+  border-radius: 999px;
+  background: var(--ink, #171717);
+  color: var(--bg, #f2f0eb);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pg__titulo {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.pg__bajada,
+.pg__vacio {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-soft, #5b5a55);
+}
+
+.pg__vacio {
+  padding: 10px 12px;
+  border-left: 3px solid #9bbb22;
+  border-radius: 2px;
+}
+
+.pg__analizar[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.pg__lista {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pg__item {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--surface, #faf9f6);
+  animation: pg-entra 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.pg__item--agregado {
+  background: #eef4cf;
+}
+
+.pg__item--descartado {
+  opacity: 0.55;
+}
+
+.pg__tipo {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #5b5a55);
+}
+
+.pg__item-titulo {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.pg__motivo {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft, #5b5a55);
+}
+
+.pg__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  align-items: center;
+}
+
+.pg__hecho {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pg__pie {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-soft, #5b5a55);
+}
+
+/* ---- el recorrido ---- */
+
+.flujo {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--surface, #faf9f6);
+}
+
+.flujo__resumen {
+  min-height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.flujo__pasos {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flujo__paso {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  animation: pg-entra 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.flujo__fase {
+  width: fit-content;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--surface-contrast, #e9e7df);
+  color: var(--ink-soft, #5b5a55);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.flujo__paso--listo .flujo__fase {
+  background: var(--chart, #c7de58);
+  color: var(--ink, #171717);
+}
+
+.flujo__paso--listo .flujo__texto {
+  font-weight: 700;
+}
+
+.flujo__pensando {
+  display: flex;
+  gap: 6px;
+  padding: 4px 0 2px;
+}
+
+.flujo__pensando i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9bbb22;
+  animation: pg-pulso 1s ease-in-out infinite;
+}
+
+.flujo__pensando i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.flujo__pensando i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes pg-entra {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes pg-pulso {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 860px) {
+  /* En una columna no hay nada al costado que acompañar: el panel vuelve al flujo normal. */
+  .editor__aside {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg__item,
+  .flujo__paso,
+  .flujo__pensando i {
+    animation: none;
+  }
+}

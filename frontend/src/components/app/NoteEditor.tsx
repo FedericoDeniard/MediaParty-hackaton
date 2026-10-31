@@ -13,6 +13,7 @@ import {
   updateNote,
 } from '../../lib/noteStore.ts'
 import { useEditorKit } from '../../lib/editor/useEditorKit.ts'
+import PanelGraficosDeNota from '../graficos/PanelGraficosDeNota.tsx'
 
 type SaveState = 'idle' | 'saving' | 'saved' | 'error'
 
@@ -146,12 +147,16 @@ export default function NoteEditor() {
           <EditorContent editor={editor} />
         </div>
 
-        <EnrichmentPanel
-          items={enrichments}
-          onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
-          onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
-          onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
-        />
+        {/* Los dos paneles flotan juntos al scrollear la nota. */}
+        <aside className="editor__aside">
+          <EnrichmentPanel
+            items={enrichments}
+            onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
+            onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
+            onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
+          />
+          <PanelGraficosDeNota editor={editor} noteId={id} />
+        </aside>
       </div>
     </div>
   )

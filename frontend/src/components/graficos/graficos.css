@@ -261,3 +261,63 @@
     border-radius: 16px;
   }
 }
+
+/* ---- el gráfico como sección dentro de la nota (nodo del editor) ---- */
+
+.grafico-nota {
+  margin: 32px 0;
+  scroll-margin-top: 24px;
+  border-radius: 24px;
+}
+
+.grafico-nota__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4px 8px;
+  font-size: 12px;
+}
+
+.grafico-nota__sello {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #5b5a55);
+}
+
+.grafico-nota__quitar {
+  min-height: 32px;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--ink-soft, #5b5a55);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.grafico-nota--reciente {
+  animation: ctx-resalta 1.8s ease-out;
+}
+
+.ProseMirror-selectednode.grafico-nota {
+  outline: 2px solid var(--ink, #171717);
+  outline-offset: 4px;
+}
+
+@keyframes ctx-resalta {
+  0% {
+    box-shadow: 0 0 0 5px #9bbb22;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grafico-nota--reciente {
+    animation: none;
+    outline: 2px solid #9bbb22;
+  }
+}
