@@ -22,14 +22,25 @@ function tieneRecomendaciones(id: string): boolean {
   return clave !== undefined && (ejemplos[clave]?.datos.contextos.length ?? 0) > 0
 }
 
+/** Notas de relleno para que "Publicados" no quede vacío: son las únicas que se muestran como publicadas. */
+const PUBLICADAS_DE_RELLENO = new Set(['n-04', 'n-12'])
+
+const entraAlBancoDeTrabajo = (id: string) => tieneRecomendaciones(id) || PUBLICADAS_DE_RELLENO.has(id)
+
+/** Las notas con recomendaciones van como borrador (ahí se prueba el flujo); las de relleno, como publicadas. */
+function estadoDeSemilla(nota: Note): Note['status'] {
+  if (PUBLICADAS_DE_RELLENO.has(nota.id)) return 'published'
+  return nota.status === 'published' ? 'draft' : nota.status
+}
+
 function conTextoCompleto(semilla: Note): Note {
   const numero = CORPUS_DE_NOTA[semilla.id]
   if (!numero) return semilla
   const doc = corpusNote(numero).doc
-  return { ...semilla, doc, wordCount: countWords(doc) }
+  return { ...semilla, doc, wordCount: countWords(doc), status: estadoDeSemilla(semilla) }
 }
 
-export const seedNotes: Note[] = seedsRecortadas.filter((nota) => tieneRecomendaciones(nota.id)).map(conTextoCompleto)
+export const seedNotes: Note[] = seedsRecortadas.filter((nota) => entraAlBancoDeTrabajo(nota.id)).map(conTextoCompleto)
 
 const esGrafico = (bloque: JSONContent) => bloque.type === 'grafico'
 
@@ -53,7 +64,7 @@ function firmaDelTexto(doc: JSONContent): string {
  * y conserva los gráficos que la autora haya agregado. Una nota cuyo texto editó no se toca.
  */
 export function completarNotasGuardadas(guardadas: Note[]): Note[] {
-  return guardadas.flatMap((nota) => {
+  const resultado = guardadas.flatMap((nota) => {
     const recortada = seedsRecortadas.find((semilla) => semilla.id === nota.id)
     if (!recortada) return [nota]
     // Sin editar: sigue siendo el extracto o ya es el texto completo del corpus (migración anterior).
@@ -61,10 +72,13 @@ export function completarNotasGuardadas(guardadas: Note[]): Note[] {
     const sinEditar = firma === firmaDelTexto(recortada.doc) || firma === firmaDelTexto(conTextoCompleto(recortada).doc)
     const completa = seedNotes.find((semilla) => semilla.id === nota.id)
     if (!completa) return sinEditar ? [] : [nota] // semilla sin recomendaciones: sale del banco de trabajo
-    if (recortada === completa || !sinEditar) return [nota]
+    if (!sinEditar) return [nota]
 
     const graficos = (nota.doc.content ?? []).filter(esGrafico)
     const doc = { ...completa.doc, content: [...(completa.doc.content ?? []), ...graficos] }
-    return [{ ...nota, doc, wordCount: countWords(doc) }]
+    return [{ ...nota, doc, wordCount: countWords(doc), status: completa.status }]
   })
+  // Las semillas del banco de trabajo que no estén guardadas (por una migración anterior) vuelven a entrar.
+  const presentes = new Set(resultado.map((nota) => nota.id))
+  return [...resultado, ...seedNotes.filter((semilla) => !presentes.has(semilla.id))]
 }

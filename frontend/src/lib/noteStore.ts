@@ -25,7 +25,7 @@ import { completarNotasGuardadas, seedNotes } from '../data/seedsCompletas.ts'
 const NOTES_KEY = 'glosa.notes.v1'
 const ENRICHMENTS_KEY = 'glosa.enrichments.v1'
 const SEEDS_KEY = 'glosa.seeds.v2'
-const COMPLETAS_KEY = 'glosa.seeds.completas.v4'
+const COMPLETAS_KEY = 'glosa.seeds.completas.v5'
 
 function read<T>(key: string, fallback: T): T {
   if (typeof localStorage === 'undefined') return fallback
