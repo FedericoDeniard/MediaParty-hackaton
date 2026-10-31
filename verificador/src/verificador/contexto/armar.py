@@ -18,6 +18,7 @@ from .calculos import (
     serie_real,
     ultimo_mes,
 )
+from . import deportes
 from .catalogo import MES_BASE, ContextoDef, SerieRef, contexto
 from .formato import MESES_CORTOS, mes_largo, numero, porcentaje_con_signo
 from .modelos import BarraContexto, FuenteContexto, GraficoContexto, PuntoContexto, SerieContexto
@@ -195,8 +196,13 @@ def armar_contexto(
     """El gráfico de contexto `clave` con los datos al `fecha_referencia`. Lanza ErrorFuente si falta una serie."""
     definicion = contexto(clave)
     mes_ref = fecha_referencia.strftime("%Y-%m")
-    datos = _Datos(definicion, mes_ref, modo, directorio)
-    armado = _CONSTRUCTORES[clave](definicion, datos)
+    if clave in deportes.CONSTRUCTORES:  # los datos de fútbol salen siempre de copias guardadas, no de datos.gob.ar
+        armado = deportes.CONSTRUCTORES[clave](mes_ref, directorio)
+        fuentes, advertencias = armado["fuentes"], [*definicion.advertencias, *armado["advertencias"]]
+    else:
+        datos = _Datos(definicion, mes_ref, modo, directorio)
+        armado = _CONSTRUCTORES[clave](definicion, datos)
+        fuentes, advertencias = [datos.fuente(rol) for rol in armado["roles"]], _advertencias(definicion, datos)
     leer = definicion.como_leerlo.format(base=armado.get("base", ""), mes_ipc=armado.get("mes_ipc", ""))
     return GraficoContexto(
         id=clave,
@@ -206,9 +212,9 @@ def armar_contexto(
         referencia=armado.get("referencia"),
         series=armado.get("series", []),
         barras=armado.get("barras", []),
-        fuentes=[datos.fuente(rol) for rol in armado["roles"]],
+        fuentes=fuentes,
         como_leerlo=leer,
-        advertencias=_advertencias(definicion, datos),
+        advertencias=advertencias,
         motivos=list(motivos),
     )
 

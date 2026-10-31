@@ -27,7 +27,7 @@ class ContextoDef(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     clave: str
-    visual: Literal["lineas", "barras"]
+    visual: Literal["lineas", "barras", "ranking"]
     series: tuple[SerieRef, ...]
     como_leerlo: str
     advertencias: tuple[str, ...] = ()
@@ -117,6 +117,24 @@ CONTEXTOS: tuple[ContextoDef, ...] = (
             "Es solo la transferencia corriente a universidades, no todo el presupuesto universitario ni sus salarios.",
             "Mes a mes es muy irregular, por eso se suman períodos iguales de cada año.",
             "El nivel de 2023 puede reflejar cambios de imputación entre años.",
+        ),
+    ),
+    ContextoDef(
+        clave="tabla_anual",
+        visual="ranking",
+        series=(),
+        como_leerlo=(
+            "Cada barra son los puntos que suma el equipo entre el Apertura y el Clausura 2026, según la copia del {base}. "
+            "Las barras oscuras son las tres primeras posiciones, que según la propia tabla clasifican a la Libertadores 2027; "
+            "las siguientes, a la Sudamericana."
+        ),
+    ),
+    ContextoDef(
+        clave="historial_superclasico",
+        visual="barras",
+        series=(),
+        como_leerlo=(
+            "Cada barra cuenta los Superclásicos de Primera División hasta el {base}: los que ganó cada equipo y los que terminaron empatados."
         ),
     ),
 )

@@ -42,7 +42,7 @@ class GraficoContexto(_Modelo):
     """Un gráfico de contexto horizontal: no repite lo que dice la nota, la completa con datos oficiales."""
 
     id: str
-    visual: Literal["lineas", "barras"]
+    visual: Literal["lineas", "barras", "ranking"]
     titulo: str  # arma el código con los números calculados: dice el hallazgo, sin veredicto
     unidad: str
     referencia: float | None = None  # línea de referencia (por ejemplo 100 en las bases)

@@ -1,0 +1,218 @@
+{
+ "fuente": "wikipedia",
+ "pagina": "Campeonato de Primera División 2026 (Argentina)",
+ "enlace": "https://es.wikipedia.org/wiki/Campeonato_de_Primera_Divisi%C3%B3n_2026_%28Argentina%29",
+ "copiado": "2026-10-31",
+ "filas": [
+  {
+   "posicion": 1,
+   "equipo": "Rosario Central",
+   "puntos": 59,
+   "jugados": 31,
+   "diferencia_gol": 16
+  },
+  {
+   "posicion": 2,
+   "equipo": "Boca Juniors",
+   "puntos": 57,
+   "jugados": 30,
+   "diferencia_gol": 21
+  },
+  {
+   "posicion": 3,
+   "equipo": "Argentinos Juniors",
+   "puntos": 57,
+   "jugados": 30,
+   "diferencia_gol": 11
+  },
+  {
+   "posicion": 4,
+   "equipo": "Vélez Sarsfield",
+   "puntos": 55,
+   "jugados": 30,
+   "diferencia_gol": 16
+  },
+  {
+   "posicion": 5,
+   "equipo": "Gimnasia y Esgrima La Plata",
+   "puntos": 54,
+   "jugados": 31,
+   "diferencia_gol": 4
+  },
+  {
+   "posicion": 6,
+   "equipo": "Instituto",
+   "puntos": 53,
+   "jugados": 30,
+   "diferencia_gol": 11
+  },
+  {
+   "posicion": 7,
+   "equipo": "Independiente Rivadavia",
+   "puntos": 53,
+   "jugados": 30,
+   "diferencia_gol": 9
+  },
+  {
+   "posicion": 8,
+   "equipo": "River Plate",
+   "puntos": 52,
+   "jugados": 30,
+   "diferencia_gol": 16
+  },
+  {
+   "posicion": 9,
+   "equipo": "Lanús",
+   "puntos": 48,
+   "jugados": 30,
+   "diferencia_gol": 10
+  },
+  {
+   "posicion": 10,
+   "equipo": "Belgrano",
+   "puntos": 48,
+   "jugados": 30,
+   "diferencia_gol": 7
+  },
+  {
+   "posicion": 11,
+   "equipo": "Defensa y Justicia",
+   "puntos": 46,
+   "jugados": 30,
+   "diferencia_gol": 4
+  },
+  {
+   "posicion": 12,
+   "equipo": "Estudiantes de La Plata",
+   "puntos": 45,
+   "jugados": 30,
+   "diferencia_gol": 11
+  },
+  {
+   "posicion": 13,
+   "equipo": "Independiente",
+   "puntos": 43,
+   "jugados": 30,
+   "diferencia_gol": 2
+  },
+  {
+   "posicion": 14,
+   "equipo": "Barracas Central",
+   "puntos": 43,
+   "jugados": 30,
+   "diferencia_gol": 2
+  },
+  {
+   "posicion": 15,
+   "equipo": "Huracán",
+   "puntos": 41,
+   "jugados": 31,
+   "diferencia_gol": 0
+  },
+  {
+   "posicion": 16,
+   "equipo": "San Lorenzo",
+   "puntos": 40,
+   "jugados": 30,
+   "diferencia_gol": -5
+  },
+  {
+   "posicion": 17,
+   "equipo": "Sarmiento",
+   "puntos": 40,
+   "jugados": 31,
+   "diferencia_gol": -7
+  },
+  {
+   "posicion": 18,
+   "equipo": "Gimnasia y Esgrima",
+   "puntos": 39,
+   "jugados": 30,
+   "diferencia_gol": -7
+  },
+  {
+   "posicion": 19,
+   "equipo": "Unión",
+   "puntos": 38,
+   "jugados": 30,
+   "diferencia_gol": 2
+  },
+  {
+   "posicion": 20,
+   "equipo": "Tigre",
+   "puntos": 36,
+   "jugados": 31,
+   "diferencia_gol": 2
+  },
+  {
+   "posicion": 21,
+   "equipo": "Racing Club",
+   "puntos": 36,
+   "jugados": 31,
+   "diferencia_gol": -4
+  },
+  {
+   "posicion": 22,
+   "equipo": "Newell's Old Boys",
+   "puntos": 36,
+   "jugados": 30,
+   "diferencia_gol": -9
+  },
+  {
+   "posicion": 23,
+   "equipo": "Talleres",
+   "puntos": 35,
+   "jugados": 30,
+   "diferencia_gol": -5
+  },
+  {
+   "posicion": 24,
+   "equipo": "Banfield",
+   "puntos": 32,
+   "jugados": 30,
+   "diferencia_gol": -7
+  },
+  {
+   "posicion": 25,
+   "equipo": "Atlético Tucumán",
+   "puntos": 31,
+   "jugados": 30,
+   "diferencia_gol": -5
+  },
+  {
+   "posicion": 26,
+   "equipo": "Platense",
+   "puntos": 30,
+   "jugados": 30,
+   "diferencia_gol": -11
+  },
+  {
+   "posicion": 27,
+   "equipo": "Central Córdoba",
+   "puntos": 26,
+   "jugados": 30,
+   "diferencia_gol": -22
+  },
+  {
+   "posicion": 28,
+   "equipo": "Deportivo Riestra",
+   "puntos": 23,
+   "jugados": 30,
+   "diferencia_gol": -11
+  },
+  {
+   "posicion": 29,
+   "equipo": "Aldosivi",
+   "puntos": 19,
+   "jugados": 31,
+   "diferencia_gol": -21
+  },
+  {
+   "posicion": 30,
+   "equipo": "Estudiantes",
+   "puntos": 14,
+   "jugados": 31,
+   "diferencia_gol": -30
+  }
+ ]
+}

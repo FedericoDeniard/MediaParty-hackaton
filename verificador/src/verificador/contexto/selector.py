@@ -47,6 +47,10 @@ FINANCIAMIENTO: Vocabulario = (
     ("recorte", r"recorte"),
 )
 MINIMO_UNIVERSIDADES = 3  # una nota que cita dos universidades como fuente no es una nota sobre universidades
+MINIMO_TABLA_ANUAL = 2  # una mención suelta (por ejemplo en un recuadro) no hace de la nota una nota de tabla
+MINIMO_SUPERCLASICO = 1  # el título no siempre llega al análisis: alcanza con que el cuerpo lo nombre
+MINIMO_POR_EQUIPO = 2  # y que la nota hable de los dos equipos, no que los cite de pasada
+EQUIPOS_DEL_SUPERCLASICO: Vocabulario = (("Boca", r"\bboca\b"), ("River", r"\briver\b"))
 
 
 class Eleccion(BaseModel):
@@ -107,7 +111,34 @@ def _universidades_constantes(texto: str) -> Eleccion | None:
     )
 
 
-REGLAS = (_poder_adquisitivo, _cobertura_canasta, _salarios_por_sector, _universidades_constantes)
+def _tabla_anual(texto: str) -> Eleccion | None:
+    menciones = len(re.findall(r"tabla anual", texto))
+    if menciones < MINIMO_TABLA_ANUAL:
+        return None
+    return Eleccion(clave="tabla_anual", puntaje=menciones, motivos=(f"Tabla Anual (×{menciones})",))
+
+
+def _historial_superclasico(texto: str) -> Eleccion | None:
+    menciones = len(re.findall(r"superclasico", texto))
+    equipos = _hallado(texto, EQUIPOS_DEL_SUPERCLASICO)
+    habla_de_los_dos = len(equipos) == len(EQUIPOS_DEL_SUPERCLASICO) and min(equipos.values()) >= MINIMO_POR_EQUIPO
+    if menciones < MINIMO_SUPERCLASICO or not habla_de_los_dos:
+        return None
+    return Eleccion(
+        clave="historial_superclasico",
+        puntaje=menciones + sum(equipos.values()),
+        motivos=(f"Superclásico (×{menciones})", *_motivos(equipos)),
+    )
+
+
+REGLAS = (
+    _poder_adquisitivo,
+    _cobertura_canasta,
+    _salarios_por_sector,
+    _universidades_constantes,
+    _tabla_anual,
+    _historial_superclasico,
+)
 
 
 def elegir_contextos(texto: str, maximo: int = 2) -> list[Eleccion]:
