@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import {
   Check,
   Landmark,
@@ -42,6 +42,7 @@ export default function EnrichmentPanel({
 }) {
   const [open, setOpen] = useState(true)
   const [picked, setPicked] = useState<string | null>(null)
+  const rows = useRef(new Map<string, HTMLButtonElement>())
 
   /* Lo que espera una decisión va primero: es lo que se viene a hacer
      acá. Lo resuelto queda abajo, en el orden en que llegó. */
@@ -51,12 +52,15 @@ export default function EnrichmentPanel({
 
   const active = ordered.find((item) => item.id === picked) ?? ordered[0] ?? null
 
-  /* Resolver una pieza deja seleccionada la siguiente sin aplicar:
-     la decisión que sigue es la próxima. */
+  /* Resolver una pieza deja seleccionada la siguiente sin aplicar y
+     lleva el foco con ella: el botón que tenía el foco desaparece. */
   function resolve(id: string, action: (id: string) => void) {
     const next = ordered.find((item) => item.status === 'pendiente' && item.id !== id)
+    const target = next?.id ?? id
+
     action(id)
-    setPicked(next?.id ?? id)
+    setPicked(target)
+    requestAnimationFrame(() => rows.current.get(target)?.focus())
   }
 
   return (
@@ -101,6 +105,10 @@ export default function EnrichmentPanel({
                     <button
                       className="assistant__pick"
                       type="button"
+                      ref={(element) => {
+                        if (element) rows.current.set(item.id, element)
+                        else rows.current.delete(item.id)
+                      }}
                       aria-current={item.id === active?.id ? 'true' : undefined}
                       aria-controls="asistente-sugerencia"
                       onClick={() => setPicked(item.id)}
@@ -121,9 +129,11 @@ export default function EnrichmentPanel({
             </ul>
 
             {active ? (
-              <div className={`suggestion suggestion--${active.status}`} id="asistente-sugerencia">
+              <div
+                className={`suggestion suggestion--${active.status}`}
+                id="asistente-sugerencia"
+              >
                 <p className="suggestion__state">{stateLabels[active.status]}</p>
-                <h3 className="suggestion__title">{enrichmentTypeLabels[active.type]}</h3>
 
                 <p className="suggestion__text">{active.text}</p>
 

@@ -82,12 +82,6 @@ export const enrichmentTypeLabels: Record<EnrichmentType, string> = {
   dato_oficial: 'Dato oficial',
 }
 
-export const enrichmentStatusLabels: Record<EnrichmentStatus, string> = {
-  pendiente: 'Pendiente',
-  aprobada: 'Aprobada',
-  descartada: 'Descartada',
-}
-
 /* ============================================================
    Semillas.
 

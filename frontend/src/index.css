@@ -274,9 +274,9 @@ button {
   color: var(--bone);
 }
 
-/* Primario de la mesa de trabajo: plano de tinta. En /app el plano de
-   acento ya lo ocupa el estado activo de la navegación, así que la
-   decisión se marca con la tinta plena. */
+/* Primario de la mesa de trabajo: plano de tinta. Sobre el panel, el
+   acento de marca no se despega de --surface-contrast; la tinta sí
+   marca la decisión. */
 .button--ink {
   border-color: var(--ink);
   background: var(--ink);
@@ -2289,14 +2289,6 @@ button {
   text-transform: uppercase;
 }
 
-.suggestion__title {
-  margin-top: var(--space-2);
-  font-size: var(--text-md);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-
 /* La propuesta es el texto que se suma a la nota: se lee como
    documento, no como un mensaje. */
 .suggestion__text {
@@ -2329,6 +2321,12 @@ button {
   gap: var(--space-4);
   justify-items: stretch;
   margin-top: var(--space-5);
+}
+
+/* La columna es angosta: con el padding estándar, la etiqueta del
+   primario se parte en dos líneas ya a 320px. */
+.suggestion__actions .button {
+  padding-inline: var(--space-4);
 }
 
 .suggestion__discard {
@@ -2521,10 +2519,16 @@ button {
     margin-top: var(--space-3);
   }
 
-  /* El panel de enriquecimientos pasa debajo del documento. */
+  /* El panel de enriquecimientos pasa debajo del documento y se
+     limita a la medida de lectura: si no, sus filas y su acción
+     primaria se estiran al ancho de la página. */
   .editor__body {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+  }
+
+  .panel {
+    max-width: var(--measure-body);
   }
 
   .editor__canvas {
