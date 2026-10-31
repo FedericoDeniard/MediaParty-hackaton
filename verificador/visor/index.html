@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visor de gráficos</title>
+<style>
+  /* ESTILO (se cambia desde acá): superficies suaves, esquinas redondeadas, marcas sin trazo. */
+  :root {
+    --bg: #f2f0eb;
+    --surface: #faf9f6;
+    --surface-contrast: #e9e7df;
+    --ink: #171717;
+    --ink-soft: #5b5a55;
+    --rule: #dcdad2;
+    --control: #8a8880;
+    --dato: #c7de58;          /* barras y relleno */
+    --dato-fuerte: #9bbb22;   /* puntos y extremos */
+    --dato-suave: #e6efb4;    /* resaltado de texto */
+    --gris-barra: #d6d4cc;
+    --gris-punto: #a3a199;
+    --alerta-suave: #f1d2c4;
+    --r-sm: 6px;
+    --r-md: 12px;
+    --r-lg: 18px;
+    --r-pill: 999px;
+    --font-sans: 'Archivo Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--font-sans); }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: var(--r-sm); }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+  a { color: var(--ink); }
+
+  .page { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; max-width: 1280px; margin: 0 auto; padding: 24px 24px 64px; }
+  header.top { grid-column: 1 / -1; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .eyebrow { margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  h1 { margin: 4px 0 12px; font-size: 28px; line-height: 1.15; font-weight: 700; font-stretch: 75%; letter-spacing: -.01em; }
+  .picker { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .picker label { font-size: 14px; color: var(--ink-soft); }
+  select { font: inherit; min-height: 44px; padding: 0 14px; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: var(--r-pill); max-width: 100%; }
+  .nav { min-height: 44px; min-width: 44px; padding: 0 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-pill); display: inline-flex; align-items: center; justify-content: center; }
+  .nav:hover { background: var(--surface-contrast); }
+  .origen { margin: 12px 0 0; font-size: 14px; color: var(--ink-soft); }
+  .avisos { margin: 12px 0 0; padding: 0; list-style: none; font-size: 14px; }
+  .avisos li { padding: 4px 0 4px 12px; border-left: 3px solid var(--dato-fuerte); border-radius: 2px; }
+
+  main { grid-column: 1 / 8; padding-top: 24px; min-width: 0; }
+  aside { grid-column: 8 / -1; padding-top: 24px; }
+  .nota { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; background: var(--surface); border-radius: var(--r-lg); padding: 18px; }
+  .nota h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .cita { margin: 0 0 16px; padding: 12px 14px; background: var(--surface-contrast); border-radius: var(--r-md); font-size: 14px; }
+  .cita:empty::before { content: 'Elegí un punto, una marca o una fila para ver el pasaje de la nota que la respalda.'; color: var(--ink-soft); }
+  .cita dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; }
+  .cita dt { color: var(--ink-soft); }
+  .cita dd { margin: 0; }
+  .cuerpo { white-space: pre-wrap; font-size: 15px; line-height: 1.6; margin: 0; }
+  mark { background: var(--dato-suave); color: var(--ink); padding: 1px 2px; border-radius: 4px; }
+
+  section.grafico { padding: 28px 0; border-top: 1px solid var(--rule); }
+  section.grafico:first-child { border-top: 0; padding-top: 0; }
+  section.grafico h2 { margin: 0; font-size: 20px; line-height: 1.25; font-weight: 700; }
+  .meta { margin: 6px 0 16px; font-size: 14px; color: var(--ink-soft); }
+  .vacio { padding: 24px 0; color: var(--ink-soft); }
+  .proto { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; background: var(--ink); color: var(--bg); padding: 2px 10px; border-radius: var(--r-pill); margin-bottom: 10px; }
+  .leyenda { font-size: 13px; color: var(--ink-soft); margin: 12px 0 0; }
+  .aparte { padding: 14px 16px; background: var(--surface); border-radius: var(--r-md); font-size: 15px; }
+  .aparte button { text-decoration: underline; margin-left: 6px; min-height: 32px; }
+
+  svg { width: 100%; height: auto; display: block; overflow: visible; }
+  svg text { font-family: var(--font-sans); fill: var(--ink); }
+  svg .tenue { fill: var(--ink-soft); }
+  .marca { cursor: pointer; }
+  .marca:focus-visible { outline: none; }
+  .marca:focus-visible .fondo, .marca:hover .fondo { fill: var(--surface-contrast); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  th { text-align: left; font-weight: 600; color: var(--ink-soft); padding: 6px 8px 6px 0; border-bottom: 1px solid var(--rule); }
+  td { padding: 8px 8px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td button { min-height: 36px; text-decoration: underline; }
+  details.tabla { margin-top: 12px; font-size: 14px; }
+  details.tabla summary { cursor: pointer; color: var(--ink-soft); min-height: 32px; }
+
+  /* lista de filas (ranking, línea de tiempo, voces) */
+  .fila { display: grid; align-items: center; width: 100%; min-height: 48px; padding: 4px 10px; margin: 2px 0; border-radius: var(--r-md); }
+  .fila:hover, .activa { background: var(--surface-contrast); }
+  .pista { height: 12px; border-radius: var(--r-pill); background: var(--surface-contrast); overflow: hidden; }
+  .fila:hover .pista, .activa .pista { background: var(--bg); }
+  .barra { display: block; height: 100%; border-radius: var(--r-pill); background: var(--dato-fuerte); }
+  .barra.gris { background: var(--gris-punto); }
+  .rank { grid-template-columns: 170px 1fr 36px; column-gap: 12px; }
+  .rank .nombre { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rank .valor, .voz-n { text-align: right; font-variant-numeric: tabular-nums; }
+  .tiempo { grid-template-columns: 92px 1fr; column-gap: 12px; }
+  .tiempo .fecha { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--ink-soft); }
+  .tiempo .cuerpo-fila { display: grid; gap: 4px; }
+  .tiempo .pista-t { position: relative; height: 10px; border-bottom: 1px solid var(--rule); }
+  .tiempo .punto { position: absolute; bottom: -5px; width: 10px; height: 10px; background: var(--dato-fuerte); border-radius: 50%; transform: translateX(-50%); }
+  .alerta { font-size: 12px; color: var(--ink-soft); }
+
+  /* F1: quién habla */
+  .voz { grid-template-columns: 210px 1fr 32px; column-gap: 14px; min-height: 56px; }
+  .voz-et { display: grid; line-height: 1.25; }
+  .voz-et b { font-size: 14px; }
+  .voz-et small { font-size: 12px; color: var(--ink-soft); }
+  .faltan { margin-top: 20px; padding: 14px 16px; background: var(--surface); border-radius: var(--r-md); }
+  .faltan h3 { margin: 0 0 2px; font-size: 14px; }
+  .faltan p { margin: 0 0 8px; font-size: 12px; color: var(--ink-soft); }
+  .faltan ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .faltan li { margin: 4px 0; }
+
+  /* F2: la nota anotada */
+  .anot { display: grid; grid-template-columns: 1fr 20px; gap: 10px; }
+  .anot-texto { max-height: 440px; overflow: auto; padding: 16px 18px; background: var(--surface); border-radius: var(--r-md); white-space: pre-wrap; font-size: 15px; line-height: 1.75; }
+  .mini { position: relative; background: var(--surface-contrast); border-radius: var(--r-pill); cursor: pointer; }
+  .mini i { position: absolute; left: 4px; right: 4px; height: 4px; border-radius: 2px; background: var(--gris-punto); }
+  .mini i.t-cifra { background: var(--dato-fuerte); }
+  .mini i.t-ok { background: var(--ink); }
+  .mini i.t-difiere { background: #d0785a; }
+  .mini i.t-pendiente { background: var(--ink-soft); }
+  .mini .vista { position: absolute; left: 0; right: 0; border-radius: var(--r-pill); background: rgba(23, 23, 23, .1); box-shadow: inset 0 0 0 1px rgba(23, 23, 23, .22); pointer-events: none; }
+  .m-cifra { background: var(--dato-suave); border-radius: 4px; padding: 1px 2px; cursor: pointer; }
+  .m-cita { text-decoration: underline; text-decoration-color: var(--ink-soft); text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-skip-ink: none; }
+  .m-ok { background: var(--dato); border-radius: 4px; padding: 1px 3px; font-weight: 600; cursor: pointer; }
+  .m-difiere { background: var(--alerta-suave); border-radius: 4px; padding: 1px 3px; font-weight: 600; cursor: pointer; }
+  .m-pendiente { border-bottom: 2px dotted var(--ink); border-radius: 2px; font-weight: 600; cursor: pointer; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; line-height: 18px; padding: 0 8px; margin: 0 2px 0 4px; border-radius: var(--r-pill); background: var(--ink); color: var(--bg); vertical-align: 1px; white-space: nowrap; }
+  .pill.gris { background: var(--gris-barra); color: var(--ink); }
+  .guia { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--ink-soft); margin: 0 0 12px; }
+  .guia span.ej { color: var(--ink); }
+
+  .analizar { min-height: 44px; padding: 0 22px; border-radius: var(--r-pill); background: var(--ink); color: var(--bg); font-weight: 600; transition: transform .15s, background .15s; }
+  .analizar:hover { background: #2b2b2b; transform: translateY(-1px); }
+  .flujo { margin: 0 0 24px; padding: 18px 22px; background: var(--surface); border-radius: var(--r-lg); }
+  .flujo summary { cursor: pointer; font-weight: 700; font-size: 15px; min-height: 28px; }
+  .pasos { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+  .paso { display: grid; grid-template-columns: 104px 1fr; gap: 12px; align-items: baseline; font-size: 14px; animation: paso-entra .45s cubic-bezier(.2, .8, .2, 1) both; }
+  .paso .fase { justify-self: start; padding: 1px 10px; border-radius: var(--r-pill); background: var(--surface-contrast); color: var(--ink-soft); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .paso--listo .fase { background: var(--dato); color: var(--ink); }
+  .paso--listo .texto { font-weight: 700; }
+  .paso--error .fase { background: var(--alerta-suave); }
+  .pensando { display: flex; gap: 6px; padding: 6px 0 2px 116px; }
+  .pensando i { width: 8px; height: 8px; border-radius: 50%; background: var(--dato-fuerte); animation: pulso 1s ease-in-out infinite; }
+  .pensando i:nth-child(2) { animation-delay: .15s; }
+  .pensando i:nth-child(3) { animation-delay: .3s; }
+  @keyframes paso-entra { from { opacity: 0; transform: translateY(8px); } }
+  @keyframes pulso { 0%, 100% { opacity: .25; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.1); } }
+  @media (prefers-reduced-motion: reduce) { .paso, .pensando i { animation: none; } }
+  .acciones { display: flex; gap: 8px; align-items: center; margin: 0 0 12px; }
+  .agregar { min-height: 36px; padding: 0 16px; border-radius: var(--r-pill); border: 1px solid var(--ink); font-size: 13px; font-weight: 600; transition: background .15s, transform .15s; }
+  .agregar:hover { background: var(--surface-contrast); transform: translateY(-1px); }
+  .agregar[aria-pressed='true'] { background: var(--dato); border-color: var(--dato-fuerte); }
+  .ir-nota { min-height: 36px; padding: 0 12px; font-size: 13px; color: var(--ink-soft); text-decoration: underline; }
+  #nota-extra { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule); display: grid; gap: 18px; }
+  #nota-extra[hidden] { display: none; }
+  .nota-seccion { padding: 14px; background: var(--bg); border-radius: var(--r-md); animation: paso-entra .45s cubic-bezier(.2, .8, .2, 1) both; scroll-margin-top: 12px; }
+  .nota-seccion.recien { animation: resalta 1.8s ease-out; }
+  .nota-seccion__cab { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .nota-seccion__num { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .quitar { font-size: 12px; color: var(--ink-soft); text-decoration: underline; min-height: 28px; }
+  .nota-seccion section.grafico { padding: 0; border: 0; }
+  .nota-seccion .proto { display: none; }
+  .nota .nota-seccion section.grafico h2 { margin: 0; font-size: 17px; line-height: 1.3; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink); }
+  .nota-seccion .meta { margin: 4px 0 12px; }
+  @keyframes resalta { 0% { box-shadow: 0 0 0 4px var(--dato-fuerte); } 100% { box-shadow: 0 0 0 0 transparent; } }
+  @media (prefers-reduced-motion: reduce) { .nota-seccion, .nota-seccion.recien { animation: none; } }
+  .motivo { margin: 0 0 14px; padding: 8px 14px; background: var(--surface); border-radius: var(--r-pill); font-size: 13px; color: var(--ink-soft); display: inline-block; }
+  .fuentes { margin: 14px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--ink-soft); }
+  .fuentes li { padding: 3px 0; }
+  .barra-ctx { transition: opacity .2s; }
+  .ctx-bar:hover .barra-ctx { opacity: .8; }
+
+  @media (max-width: 900px) {
+    .page { column-gap: 0; padding: 16px; }
+    main, aside { grid-column: 1 / -1; }
+    .nota { position: static; max-height: none; }
+    .rank { grid-template-columns: 110px 1fr 28px; }
+    .voz { grid-template-columns: 130px 1fr 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <p class="eyebrow">Nexo · visor local de gráficos</p>
+    <h1 id="titulo">Cargando…</h1>
+    <div class="picker">
+      <label for="nota-sel">Nota</label>
+      <select id="nota-sel"></select>
+      <button class="nav" id="ant" aria-label="Nota anterior">←</button>
+      <button class="nav" id="sig" aria-label="Nota siguiente">→</button>
+      <button class="analizar" id="analizar">Analizar esta nota</button>
+    </div>
+    <p class="origen" id="origen"></p>
+    <ul class="avisos" id="avisos"></ul>
+  </header>
+  <main id="graficos" aria-live="polite"></main>
+  <aside>
+    <div class="nota" id="nota">
+      <h2>Cita seleccionada</h2>
+      <div class="cita" id="cita"></div>
+      <h2>Nota</h2>
+      <p class="cuerpo" id="cuerpo"></p>
+      <div id="nota-extra" hidden></div>
+    </div>
+  </aside>
+</div>
+
+<script>
+const fmt = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 2 });
+const NS = 'http://www.w3.org/2000/svg';
+let notas = [];
+let actual = null;
+
+function h(tag, props = {}, ...hijos) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (k === 'class') el.className = v;
+    else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+    else if (v !== false && v != null) el.setAttribute(k, v);
+  }
+  for (const hijo of hijos.flat()) if (hijo != null && hijo !== false) el.append(hijo.nodeType ? hijo : document.createTextNode(String(hijo)));
+  return el;
+}
+function s(tag, props = {}, ...hijos) {
+  const el = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+    else if (v != null) el.setAttribute(k, v);
+  }
+  for (const hijo of hijos.flat()) if (hijo != null) el.append(hijo.nodeType ? hijo : document.createTextNode(String(hijo)));
+  return el;
+}
+const mes = (x) => x.slice(0, 7);
+const urlSegura = (u) => typeof u === 'string' && /^https?:\/\//.test(u);
+const nombreMes = (p) => new Date(p.length === 7 ? p + '-01' : p).toLocaleDateString('es-AR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const mesCorto = (f) => new Date(f).toLocaleDateString('es-AR', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+const plural = (n, uno, varios) => `${n} ${n === 1 ? uno : varios}`;
+
+/* ---- selección: muestra el pasaje y lo resalta en la nota ---- */
+function seleccionar(detalle, cita, origenEl) {
+  document.querySelectorAll('.activa').forEach((e) => e.classList.remove('activa'));
+  if (origenEl && origenEl.classList) origenEl.classList.add('activa');
+  const caja = document.getElementById('cita');
+  caja.replaceChildren();
+  const dl = h('dl');
+  for (const [k, v] of detalle) {
+    if (v == null || v === '') continue;
+    dl.append(h('dt', {}, k), h('dd', {}, v));
+  }
+  caja.append(dl);
+  const cuerpo = document.getElementById('cuerpo');
+  const texto = actual.cuerpo;
+  if (!cita) { cuerpo.textContent = texto; return; }
+  const marca = h('mark', {}, texto.slice(cita.inicio, cita.fin));
+  cuerpo.replaceChildren(texto.slice(0, cita.inicio), marca, texto.slice(cita.fin));
+  marca.scrollIntoView({ block: 'center' });
+  if (matchMedia('(max-width: 900px)').matches) document.getElementById('nota').scrollIntoView();
+}
+function detalleDeCita(cita) {
+  return cita ? [['Párrafo', cita.parrafo_id], ['Pasaje', '“' + cita.cita + '”']] : [['Pasaje', 'sin cita']];
+}
+function conTeclado(nodo, accion) {
+  nodo.addEventListener('click', accion);
+  nodo.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); accion(); } });
+}
+
+/* ---- serie oficial con la cifra de la nota marcada ---- */
+function paso(maximo) {
+  const bruto = maximo / 4, pot = 10 ** Math.floor(Math.log10(bruto));
+  return [1, 2, 2.5, 5, 10].map((m) => m * pot).find((p) => p >= bruto);
+}
+function dibujarSerie(g) {
+  const W = 640, H = 290, L = 44, R = 20, T = 34, B = 40;
+  const pts = g.puntos;
+  const valores = pts.map((p) => p.y).filter((v) => v != null).concat(g.marcas.map((m) => m.y));
+  const p = paso(Math.max(...valores, 1) * 1.1), tope = p * 4;
+  const X = (i) => L + (W - L - R) * (pts.length === 1 ? 0.5 : i / (pts.length - 1));
+  const Y = (v) => T + (H - T - B) * (1 - v / tope);
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Serie ${g.titulo}` });
+  for (let k = 0; k <= 4; k++) {
+    const y = Y(k * p);
+    svg.append(
+      s('line', { x1: L, x2: W - R, y1: y, y2: y, style: 'stroke:var(--rule)', 'stroke-width': 1 }),
+      s('text', { x: L - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, class: 'tenue' }, fmt.format(k * p)),
+    );
+  }
+  const cada = Math.ceil(pts.length / 12);
+  pts.forEach((pt, i) => {
+    if (i % cada === 0) svg.append(s('text', { x: X(i), y: H - B + 18, 'text-anchor': 'middle', 'font-size': 11, class: 'tenue' }, mes(pt.x)));
+  });
+  let tramo = [];
+  const cerrar = () => { if (tramo.length > 1) svg.append(s('polyline', { points: tramo.join(' '), fill: 'none', style: 'stroke:var(--ink)', 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' })); tramo = []; };
+  pts.forEach((pt, i) => { if (pt.y == null) cerrar(); else tramo.push(`${X(i)},${Y(pt.y)}`); });
+  cerrar();
+  pts.forEach((pt, i) => { if (pt.y != null) svg.append(s('circle', { cx: X(i), cy: Y(pt.y), r: 3.5, style: 'fill:var(--ink)' })); });
+  g.marcas.forEach((m, k) => {
+    const i = pts.findIndex((pt) => pt.x === m.x);
+    if (i < 0) return;
+    const hueco = m.resultado === 'sin_dato_oficial';
+    const ultimo = i === pts.length - 1;
+    const cx = X(i), cy = Y(m.y);
+    const etiqueta = hueco ? `nota ${fmt.format(m.y)} · sin dato oficial` : m.resultado === 'difiere' ? `nota ${fmt.format(m.y)} · serie ${fmt.format(m.valor_serie)}` : fmt.format(m.y);
+    const nodo = s('g', { class: 'marca', tabindex: 0, role: 'button', 'aria-label': `${etiqueta}, ${mes(m.x)}. Ver la cita en la nota` },
+      s('circle', { cx, cy, r: 9, style: hueco ? 'fill:none;stroke:var(--ink-soft);stroke-dasharray:3 3' : 'fill:var(--dato-fuerte);stroke:var(--bg)', 'stroke-width': hueco ? 1.5 : 3 }),
+      s('text', { x: ultimo ? cx + 8 : cx, y: cy - 16 - 13 * k, 'text-anchor': ultimo ? 'end' : 'middle', 'font-size': 12, 'font-weight': 600 }, etiqueta),
+    );
+    conTeclado(nodo, () => seleccionar(detalleDeMarca(m), m.cita, nodo));
+    svg.append(nodo);
+  });
+  return svg;
+}
+function detalleDeMarca(m) {
+  return [
+    ['Dice la nota', m.texto],
+    ['Resultado', m.resultado.replaceAll('_', ' ')],
+    ['Valor de la nota', fmt.format(m.y)],
+    ['Valor de la serie', m.valor_serie == null ? 'sin dato oficial' : fmt.format(m.valor_serie)],
+    ...(m.advertencias.length ? [['Advertencias', m.advertencias.join(' · ')]] : []),
+    ...detalleDeCita(m.cita),
+  ];
+}
+function tablaDeMarcas(g) {
+  const cuerpo = h('tbody');
+  g.marcas.forEach((m) => {
+    const fila = h('tr');
+    cuerpo.append(fila);
+    fila.append(
+      h('td', {}, mes(m.x)),
+      h('td', {}, fmt.format(m.y)),
+      h('td', {}, m.valor_serie == null ? 'sin dato oficial' : fmt.format(m.valor_serie)),
+      h('td', {}, m.resultado.replaceAll('_', ' ')),
+      h('td', {}, h('button', { onclick: () => seleccionar(detalleDeMarca(m), m.cita, fila) }, 'Ver en la nota')),
+    );
+  });
+  return h('table', {}, h('thead', {}, h('tr', {}, ['Período', 'Nota', 'Serie', 'Resultado', ''].map((t) => h('th', {}, t)))), cuerpo);
+}
+
+/* ---- línea de tiempo ---- */
+function milis(x) {
+  const [a, m = '1', d = '1'] = x.split('-');
+  return Date.UTC(+a, +m - 1, +d);
+}
+function dibujarTiempo(g) {
+  const t = g.puntos.map((p) => milis(p.x));
+  const min = Math.min(...t), max = Math.max(...t);
+  const lista = h('div', { role: 'list' });
+  g.puntos.forEach((p, i) => {
+    const pos = max === min ? 50 : ((t[i] - min) / (max - min)) * 100;
+    const fila = h('button', { class: 'fila tiempo', role: 'listitem' },
+      h('span', { class: 'fecha' }, p.x),
+      h('span', { class: 'cuerpo-fila' },
+        h('span', { class: 'pista-t', 'aria-hidden': 'true' }, h('span', { class: 'punto', style: `left:${pos}%` })),
+        h('span', {}, p.etiqueta),
+        p.alertas.length ? h('span', { class: 'alerta' }, p.alertas.join(' · ')) : null,
+      ));
+    fila.addEventListener('click', () => seleccionar([['Evento', p.etiqueta], ['Fecha', p.x], ['Detalle', p.descripcion], ...detalleDeCita(p.cita)], p.cita, fila));
+    lista.append(fila);
+  });
+  return lista;
+}
+
+/* ---- ranking de entidades ---- */
+function dibujarRanking(g) {
+  const max = Math.max(...g.puntos.map((p) => p.y));
+  const lista = h('div', { role: 'list' });
+  g.puntos.forEach((p) => {
+    const fila = h('button', { class: 'fila rank', role: 'listitem' },
+      h('span', { class: 'nombre', title: p.etiqueta }, p.etiqueta),
+      h('span', { class: 'pista', 'aria-hidden': 'true' }, h('span', { class: 'barra', style: `width:${(p.y / max) * 100}%` })),
+      h('span', { class: 'valor' }, fmt.format(p.y)),
+    );
+    fila.addEventListener('click', () => seleccionar([['Entidad', p.etiqueta], ['Tipo', p.grupo], ['Menciones (contadas por código)', fmt.format(p.y)], ['Descripción', p.descripcion], ['Alertas', p.alertas.join(' · ')], ...detalleDeCita(p.cita)], p.cita, fila));
+    lista.append(fila);
+  });
+  return lista;
+}
+
+/* ---- A: proyecciones por fuente contra el último dato oficial ---- */
+function tituloA(g) {
+  const lo = Math.min(...g.filas.map((f) => f.min)), hi = Math.max(...g.filas.map((f) => f.max)), ref = g.referencia.valor;
+  const rel = lo > ref ? 'por encima del' : hi < ref ? 'por debajo del' : 'en torno al';
+  const rango = lo === hi ? `${fmt.format(lo)}%` : `entre ${fmt.format(lo)}% y ${fmt.format(hi)}%`;
+  return `Las fuentes proyectan ${rango} para ${nombreMes(g.periodo)}, ${rel} último dato oficial (${fmt.format(ref)}%)`;
+}
+function dibujarProyecciones(g) {
+  const W = 640, L = 200, R = 60, T = 62, RH = 46;
+  const filas = g.filas, ref = g.referencia;
+  const valores = filas.flatMap((f) => [f.min, f.max]).concat(ref.valor);
+  const lo = Math.floor((Math.min(...valores) - 0.2) * 10) / 10, hi = Math.ceil((Math.max(...valores) + 0.2) * 10) / 10;
+  const H = T + RH * filas.length + 34;
+  const X = (v) => L + (W - L - R) * (v - lo) / (hi - lo);
+  const paso = hi - lo <= 1.2 ? 0.1 : hi - lo <= 2.5 ? 0.2 : 0.5;
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': tituloA(g) });
+  for (let v = lo; v <= hi + 1e-9; v += paso) {
+    svg.append(
+      s('line', { x1: X(v), x2: X(v), y1: T - 8, y2: H - 30, style: 'stroke:var(--rule)', 'stroke-width': 1 }),
+      s('text', { x: X(v), y: H - 12, 'text-anchor': 'middle', 'font-size': 11, class: 'tenue' }, fmt.format(+v.toFixed(2)) + '%'),
+    );
+  }
+  const xr = X(ref.valor);
+  svg.append(
+    s('line', { x1: xr, x2: xr, y1: T - 16, y2: H - 30, style: 'stroke:var(--ink)', 'stroke-width': 2, 'stroke-linecap': 'round' }),
+    s('text', { x: xr, y: T - 36, 'text-anchor': xr > W * 0.6 ? 'end' : 'middle', 'font-size': 12, 'font-weight': 700 }, `Último dato oficial`),
+    s('text', { x: xr, y: T - 22, 'text-anchor': xr > W * 0.6 ? 'end' : 'middle', 'font-size': 12, class: 'tenue' }, `${mesCorto(ref.fecha)} · ${fmt.format(ref.valor)}%`),
+  );
+  filas.forEach((f, i) => {
+    const cy = T + RH * i + RH / 2;
+    const nombrada = !!f.fuente;
+    const barra = nombrada ? 'var(--dato)' : 'var(--gris-barra)', punto = nombrada ? 'var(--dato-fuerte)' : 'var(--gris-punto)';
+    const etiqueta = f.min === f.max ? `${fmt.format(f.min)}%` : `${fmt.format(f.min)}–${fmt.format(f.max)}%`;
+    const nodo = s('g', { class: 'marca', tabindex: 0, role: 'button', 'aria-label': `${f.fuente || 'Sin fuente nombrada'}: ${etiqueta}. Ver la cita en la nota` },
+      s('rect', { class: 'fondo', x: 0, y: cy - RH / 2 + 2, width: W, height: RH - 4, rx: 12, style: 'fill:transparent' }),
+      s('text', { x: L - 14, y: cy - (f.apoyo ? 1 : -4), 'text-anchor': 'end', 'font-size': 13, 'font-weight': 600 }, f.fuente || 'Sin fuente nombrada'),
+      f.apoyo ? s('text', { x: L - 14, y: cy + 14, 'text-anchor': 'end', 'font-size': 11, class: 'tenue' }, f.apoyo) : null,
+      f.min === f.max ? null : s('line', { x1: X(f.min), x2: X(f.max), y1: cy, y2: cy, style: `stroke:${barra}`, 'stroke-width': 14, 'stroke-linecap': 'round' }),
+      s('circle', { cx: X(f.min), cy, r: 7.5, style: `fill:${punto};stroke:var(--bg)`, 'stroke-width': 2 }),
+      f.min === f.max ? null : s('circle', { cx: X(f.max), cy, r: 7.5, style: `fill:${punto};stroke:var(--bg)`, 'stroke-width': 2 }),
+      s('text', { x: X(f.max) + 18, y: cy + 4, 'font-size': 12, 'font-weight': 700 }, etiqueta),
+    );
+    const detalle = [['Fuente', f.fuente || 'Sin fuente nombrada'], ['Persona', f.apoyo], ['Proyecta', etiqueta], ['Afirmaciones', f.n],
+      ...f.citas.map((c) => ['Dice la nota', c.texto])];
+    const cita = (f.citas.find((c) => c.cita) || {}).cita;
+    conTeclado(nodo, () => seleccionar([...detalle, ...detalleDeCita(cita)], cita, nodo));
+    svg.append(nodo);
+  });
+  return svg;
+}
+function tablaDeProyecciones(g) {
+  const cuerpo = h('tbody');
+  g.filas.forEach((f) => {
+    const cita = (f.citas.find((c) => c.cita) || {}).cita;
+    cuerpo.append(h('tr', {},
+      h('td', {}, f.fuente || 'Sin fuente nombrada', f.apoyo ? ` (${f.apoyo})` : ''),
+      h('td', {}, f.min === f.max ? `${fmt.format(f.min)}%` : `${fmt.format(f.min)}–${fmt.format(f.max)}%`),
+      h('td', {}, f.n),
+      h('td', {}, h('button', { onclick: () => seleccionar([['Fuente', f.fuente], ...f.citas.map((c) => ['Dice la nota', c.texto]), ...detalleDeCita(cita)], cita, null) }, 'Ver en la nota'))));
+  });
+  return h('details', { class: 'tabla' }, h('summary', {}, 'Ver como tabla'),
+    h('table', {}, h('thead', {}, h('tr', {}, ['Fuente', 'Proyecta', 'Afirmaciones', ''].map((t) => h('th', {}, t)))), cuerpo));
+}
+function seccionA(g) {
+  if (g.una_fuente) {
+    const f = g.filas[0];
+    const cita = (f.citas.find((c) => c.cita) || {}).cita;
+    const rango = f.min === f.max ? `${fmt.format(f.min)}%` : `${fmt.format(f.min)}–${fmt.format(f.max)}%`;
+    return seccionProto('A · Proyecciones', `Para ${nombreMes(g.periodo)} solo hay una proyección`, g.indicador,
+      h('p', { class: 'aparte' }, `${f.fuente || 'Una fuente sin nombrar'} proyecta ${rango}. Con una sola fuente no hay nada que comparar, así que no se arma gráfico.`,
+        h('button', { onclick: () => seleccionar([['Dice la nota', f.citas[0].texto], ...detalleDeCita(cita)], cita, null) }, 'Ver en la nota')), null, g.id);
+  }
+  return seccionProto('A · Proyecciones', tituloA(g), `${g.indicador} · lo que proyecta cada fuente de la nota`,
+    [dibujarProyecciones(g), tablaDeProyecciones(g)],
+    `Cómo leerlo: cada fila es una fuente. El punto es lo que proyecta; si da un rango, la barra une el mínimo y el máximo. La línea negra es el último dato publicado: el de ${nombreMes(g.periodo)} todavía no existe. En gris, lo que la nota no atribuye a nadie.`, g.id);
+}
+
+/* ---- F1: quién habla en la nota ---- */
+const TIPO_ES = { quote: 'Cita', attribution: 'Atribución', statistic: 'Cifra' };
+function dibujarVoces(v) {
+  const max = Math.max(...v.filas.map((f) => f.total), v.sin_fuente.n, 1);
+  const lista = h('div', { role: 'list' });
+  const fila = (etiqueta, sub, n, gris, ejemplos, detalle) => {
+    const el = h('button', { class: 'fila voz', role: 'listitem' },
+      h('span', { class: 'voz-et' }, h('b', {}, etiqueta), sub ? h('small', {}, sub) : null),
+      h('span', { class: 'pista', 'aria-hidden': 'true' }, h('span', { class: 'barra' + (gris ? ' gris' : ''), style: `width:${(n / max) * 100}%` })),
+      h('span', { class: 'voz-n' }, n));
+    const cita = (ejemplos.find((e) => e.cita) || {}).cita;
+    el.addEventListener('click', () => seleccionar([...detalle, ...ejemplos.map((e) => [TIPO_ES[e.tipo], e.texto]), ...detalleDeCita(cita)], cita, el));
+    return el;
+  };
+  v.filas.forEach((f) => {
+    const partes = [f.citas && plural(f.citas, 'cita', 'citas'), f.atribuciones && plural(f.atribuciones, 'atribución', 'atribuciones'), f.cifras && plural(f.cifras, 'cifra', 'cifras')].filter(Boolean).join(' · ');
+    lista.append(fila(f.fuente, [f.apoyos.join(', '), partes].filter(Boolean).join(' · '), f.total, false, f.ejemplos, [['Fuente', f.fuente], ['Persona', f.apoyos.join(', ')]]));
+  });
+  if (v.sin_fuente.n) lista.append(fila('Sin fuente nombrada', 'la frase no dice quién lo afirma', v.sin_fuente.n, true, v.sin_fuente.ejemplos, [['Qué es', 'Afirmaciones cuya frase no nombra a quien las dice']]));
+  return lista;
+}
+function seccionF1(v) {
+  const sinFuente = `En ${v.sin_fuente.n} de las ${v.universo} afirmaciones (citas, atribuciones y cifras) la frase no nombra a quien las dice.`;
+  const faltan = v.faltan.length ? h('div', { class: 'faltan' }, h('h3', {}, 'Voces y ángulos que faltan'),
+    h('p', {}, 'Según el análisis editorial del modelo'), h('ul', {}, v.faltan.map((t) => h('li', {}, t)))) : null;
+  if (!v.hay_grafico) {
+    return seccionProto('F1 · Quién habla', 'Esta nota casi no atribuye lo que afirma', 'Quién dice lo que dice la nota',
+      [h('p', { class: 'aparte' }, sinFuente + ' Con tan pocas fuentes nombradas no hay nada para comparar.'), faltan]);
+  }
+  const top = v.filas[0];
+  return seccionProto('F1 · Quién habla', `En esta nota hablan ${v.filas.length} fuentes; la que más aparece es ${top.fuente}`,
+    'Quién dice lo que dice la nota, por cantidad de afirmaciones',
+    [dibujarVoces(v), faltan],
+    `${sinFuente} ${v.fuente_de_datos === 'source' ? 'La fuente de cada afirmación la entrega el backend.' : 'La fuente se deduce por el nombre que aparece en la frase; cuando el backend la entregue, será más precisa.'}`);
+}
+
+/* ---- F2: la nota anotada, con minimapa ---- */
+function dibujarNotaAnotada(r) {
+  const texto = r.texto, marcas = r.marcas;
+  const cortes = new Set([0, texto.length]);
+  marcas.forEach((m) => { cortes.add(m.inicio); cortes.add(m.fin); });
+  const pts = [...cortes].sort((a, b) => a - b);
+  const cuerpo = h('div', { class: 'anot-texto', tabindex: 0, role: 'region', 'aria-label': 'Nota con marcas' });
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1];
+    const cubren = marcas.filter((m) => m.inicio <= a && m.fin >= b);
+    const fragmento = texto.slice(a, b);
+    if (!cubren.length) { cuerpo.append(fragmento); continue; }
+    const span = h('span', { class: [...new Set(cubren.map((m) => 'm-' + m.tipo))].join(' ') }, fragmento);
+    const principal = cubren.find((m) => m.tipo !== 'cita') || cubren[0];
+    span.addEventListener('click', () => seleccionar(detalleDeAnotacion(principal), null, null));
+    cuerpo.append(span);
+    cubren.filter((m) => m.fin === b && m.etiqueta).forEach((m) => cuerpo.append(h('span', { class: 'pill' + (m.tipo === 'pendiente' ? ' gris' : '') }, m.etiqueta)));
+  }
+  const vista = h('div', { class: 'vista' });
+  const mini = h('div', { class: 'mini', 'aria-hidden': 'true' }, vista,
+    marcas.map((m) => h('i', { class: 't-' + m.tipo, style: `top:calc(${(m.inicio / texto.length) * 100}% - 2px)` })));
+  const actualizar = () => {
+    vista.style.top = (cuerpo.scrollTop / cuerpo.scrollHeight) * 100 + '%';
+    vista.style.height = Math.min((cuerpo.clientHeight / cuerpo.scrollHeight) * 100, 100) + '%';
+  };
+  cuerpo.addEventListener('scroll', actualizar);
+  mini.addEventListener('click', (e) => {
+    const rect = mini.getBoundingClientRect();
+    cuerpo.scrollTop = ((e.clientY - rect.top) / rect.height) * cuerpo.scrollHeight - cuerpo.clientHeight / 2;
+  });
+  requestAnimationFrame(actualizar);
+  return h('div', { class: 'anot' }, cuerpo, mini);
+}
+function detalleDeAnotacion(m) {
+  const d = m.detalle;
+  if (m.tipo === 'cita') return [['Cita textual', d.texto]];
+  if (m.tipo === 'cifra') return [['Cifra', d.texto], ['Dato oficial', 'esta cifra no se contrastó con una serie oficial']];
+  return [['Dice la nota', d.afirmacion], ['Resultado', d.resultado.replaceAll('_', ' ')], ['Valor de la nota', fmt.format(d.valor_nota)],
+    ['Valor de la serie', d.valor_serie == null ? 'sin dato oficial' : fmt.format(d.valor_serie)], ['Fuente', d.fuente]];
+}
+function seccionF2(r) {
+  const m = r.resumen;
+  const titulo = `${plural(m.cifras, 'cifra', 'cifras')} y ${plural(m.citas, 'cita textual', 'citas textuales')} en la nota` +
+    (m.con_dato_oficial ? `; ${m.con_dato_oficial === 1 ? 'una se contrastó' : m.con_dato_oficial + ' se contrastaron'} con un dato oficial` : '');
+  const guia = h('p', { class: 'guia' },
+    h('span', {}, h('span', { class: 'm-cifra ej' }, '1,8%'), ' cifra'),
+    h('span', {}, h('span', { class: 'm-cita ej' }, '“cita textual”')),
+    h('span', {}, h('span', { class: 'm-ok ej' }, '1,9%'), h('span', { class: 'pill' }, '✓ BCRA 1,9'), ' coincide con el dato oficial'),
+    h('span', {}, h('span', { class: 'm-pendiente ej' }, '1,9%'), h('span', { class: 'pill gris' }, 'sin dato oficial'), ' todavía no publicado'));
+  return seccionProto('F2 · Nota anotada', titulo, 'La nota con lo importante marcado en su lugar; la tira de la derecha muestra dónde cae cada marca',
+    [guia, dibujarNotaAnotada(r)], 'Clic en una marca para ver su detalle. Clic en la tira para saltar a esa parte del texto.');
+}
+
+/* ---- Contexto horizontal: datos oficiales que completan la nota ---- */
+const NOMBRES_CORTOS = { smvm: 'Salario mínimo', haber: 'Haber mínimo', auh: 'AUH', privado: 'Privado', publico: 'Público', registrado: 'Total registrado' };
+const COLOR_SERIE = ['var(--ink)', 'var(--dato-fuerte)', 'var(--gris-punto)'];
+function paso4(min, max) {
+  const bruto = ((max - min) || 1) / 4, pot = 10 ** Math.floor(Math.log10(bruto));
+  const p = [1, 2, 2.5, 5, 10].map((m) => m * pot).find((x) => x >= bruto);
+  return { paso: p, lo: Math.floor(min / p) * p, hi: Math.ceil(max / p) * p };
+}
+function dibujarContextoLineas(g) {
+  const W = 640, H = 320, L = 48, R = 150, T = 26, B = 38;
+  const meses = [...new Set(g.series.flatMap((s) => s.puntos.map((p) => p.x)))].sort();
+  const ys = g.series.flatMap((s) => s.puntos.map((p) => p.y)).concat(g.referencia ?? []);
+  const { paso, lo, hi } = paso4(Math.min(...ys), Math.max(...ys));
+  const X = (m) => L + (W - L - R) * (meses.length === 1 ? 0.5 : meses.indexOf(m) / (meses.length - 1));
+  const Y = (v) => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': g.titulo });
+  for (let v = lo; v <= hi + 1e-9; v += paso) {
+    svg.append(s('line', { x1: L, x2: W - R, y1: Y(v), y2: Y(v), style: 'stroke:var(--rule)', 'stroke-width': 1 }),
+      s('text', { x: L - 8, y: Y(v) + 4, 'text-anchor': 'end', 'font-size': 11, class: 'tenue' }, fmt.format(+v.toFixed(2))));
+  }
+  const cada = Math.ceil(meses.length / 6);
+  meses.forEach((m, i) => { if (i === meses.length - 1 || (i % cada === 0 && meses.length - 1 - i >= cada)) svg.append(s('text', { x: X(m), y: H - B + 18, 'text-anchor': 'middle', 'font-size': 11, class: 'tenue' }, mesCorto(m + '-01'))); });
+  if (g.referencia != null) {
+    svg.append(s('line', { x1: L, x2: W - R, y1: Y(g.referencia), y2: Y(g.referencia), style: 'stroke:var(--ink-soft)', 'stroke-width': 1.5, 'stroke-dasharray': '2 4', 'stroke-linecap': 'round' }));
+  }
+  const finales = [];
+  g.series.forEach((serie, i) => {
+    const color = COLOR_SERIE[i % COLOR_SERIE.length];
+    svg.append(s('polyline', { points: serie.puntos.map((p) => `${X(p.x)},${Y(p.y)}`).join(' '), fill: 'none', style: `stroke:${color}`, 'stroke-width': 2.75, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+    const u = serie.puntos[serie.puntos.length - 1];
+    svg.append(s('circle', { cx: X(u.x), cy: Y(u.y), r: 5.5, style: `fill:${color};stroke:var(--bg)`, 'stroke-width': 2.5 }));
+    finales.push({ serie, y: Y(u.y), x: X(u.x) });
+  });
+  finales.sort((a, b) => a.y - b.y);
+  finales.forEach((f, i) => { if (i && f.y - finales[i - 1].y < 30) f.y = finales[i - 1].y + 30; });
+  finales.forEach((f) => {
+    const cambio = f.serie.cambio_pct == null ? '' : (f.serie.cambio_pct > 0 ? '+' : '−') + fmt.format(Math.abs(Math.round(f.serie.cambio_pct * 10) / 10)) + '%';
+    svg.append(s('text', { x: f.x + 12, y: f.y - 2, 'font-size': 12, 'font-weight': 700 }, NOMBRES_CORTOS[f.serie.clave] || f.serie.nombre),
+      s('text', { x: f.x + 12, y: f.y + 12, 'font-size': 12, class: 'tenue' }, cambio));
+  });
+  return svg;
+}
+function dibujarContextoBarras(g) {
+  const W = 640, H = 300, L = 24, R = 24, T = 36, B = 44;
+  const max = Math.max(...g.barras.map((b) => b.valor));
+  const ancho = (W - L - R) / g.barras.length, grosor = Math.min(70, ancho * 0.6);
+  const Y = (v) => T + (H - T - B) * (1 - v / (max * 1.1));
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': g.titulo });
+  svg.append(s('line', { x1: L, x2: W - R, y1: H - B, y2: H - B, style: 'stroke:var(--rule)', 'stroke-width': 1.5, 'stroke-linecap': 'round' }));
+  g.barras.forEach((b, i) => {
+    const cx = L + ancho * (i + 0.5), y = Y(b.valor);
+    svg.append(s('g', { class: 'ctx-bar' },
+      s('rect', { class: 'barra-ctx', x: cx - grosor / 2, y, width: grosor, height: H - B - y, rx: 12, style: `fill:${b.destacada ? 'var(--dato-fuerte)' : 'var(--dato)'}` }),
+      s('text', { x: cx, y: y - 10, 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 700 }, fmt.format(Math.round(b.valor * 100) / 100)),
+      s('text', { x: cx, y: H - B + 20, 'text-anchor': 'middle', 'font-size': 12, class: b.destacada ? '' : 'tenue', 'font-weight': b.destacada ? 700 : 400 }, b.etiqueta)));
+  });
+  return svg;
+}
+function tablaContexto(g) {
+  const filas = g.visual === 'barras'
+    ? g.barras.map((b) => [b.etiqueta, fmt.format(Math.round(b.valor * 100) / 100), ''])
+    : g.series.map((s2) => [NOMBRES_CORTOS[s2.clave] || s2.nombre, `${fmt.format(Math.round(s2.puntos[0].y * 100) / 100)} (${mes(s2.puntos[0].x)})`, `${fmt.format(Math.round(s2.puntos[s2.puntos.length - 1].y * 100) / 100)} (${mes(s2.puntos[s2.puntos.length - 1].x)})`]);
+  const cab = g.visual === 'barras' ? ['Período', 'Valor', ''] : ['Serie', 'Primer mes', 'Último mes'];
+  return h('details', { class: 'tabla' }, h('summary', {}, 'Ver como tabla'),
+    h('table', {}, h('thead', {}, h('tr', {}, cab.map((t) => h('th', {}, t)))), h('tbody', {}, filas.map((f) => h('tr', {}, f.map((c) => h('td', {}, c)))))));
+}
+function seccionContexto(g) {
+  const fuentes = h('ul', { class: 'fuentes' }, g.fuentes.map((f) => h('li', {},
+    h('a', { href: f.enlace, rel: 'noopener noreferrer', target: '_blank' }, f.nombre), ` · ${f.institucion} · último dato ${f.ultimo_dato}`,
+    f.rezago_meses ? ` (hace ${plural(f.rezago_meses, 'mes', 'meses')})` : '', f.origen_datos === 'guardado' ? ' · copia guardada' : '')));
+  return seccionProto('Contexto · datos oficiales', g.titulo, g.unidad,
+    [g.motivos.length ? h('p', { class: 'motivo' }, 'Te lo sugerimos porque la nota menciona: ' + g.motivos.join(', ')) : null,
+      g.visual === 'barras' ? dibujarContextoBarras(g) : dibujarContextoLineas(g), tablaContexto(g), fuentes,
+      g.advertencias.length ? h('ul', { class: 'avisos' }, g.advertencias.map((a) => h('li', {}, a))) : null],
+    'Cómo leerlo: ' + g.como_leerlo, 'ctx-' + g.id);
+}
+
+function seccionProto(etiqueta, titulo, meta, contenido, pie, id = null) {
+  return h('section', { class: 'grafico', 'data-id': id ?? 'proto-' + etiqueta[0] + (etiqueta[1] === '1' || etiqueta[1] === '2' ? etiqueta[1] : '') },
+    h('span', { class: 'proto' }, 'Prototipo ' + etiqueta), h('h2', {}, titulo), meta ? h('p', { class: 'meta' }, meta) : null, contenido,
+    pie ? h('p', { class: 'leyenda' }, pie) : null);
+}
+function seccionesProto(p, contextos = []) {
+  const secciones = p.proyecciones.map(seccionA);
+  if (!secciones.length) {
+    secciones.push(seccionProto('A · Proyecciones', 'No hay proyecciones por fuente para comparar', 'Lo que proyecta cada fuente contra el último dato oficial',
+      h('p', { class: 'aparte' }, 'El sistema no detectó en esta nota proyecciones para un período sin dato oficial.'),
+      'Busca cifras en % de un indicador del catálogo, para un período que todavía no tiene dato oficial.'));
+  }
+  secciones.push(...contextos.map(seccionContexto), seccionF1(p.voces), seccionF2(p.anotada));
+  return secciones;
+}
+
+/* ---- página ---- */
+function seccion(g) {
+  const meta = [
+    g.tipo === 'serie' ? 'Serie oficial verificada' : g.tipo === 'linea_tiempo' ? 'Eventos que la nota sostiene' : 'Entidades verificadas en la nota',
+    g.fuente ? `fuente: ${g.fuente}` : null,
+    g.origen_datos === 'guardado' ? 'copia guardada' : g.origen_datos === 'api' ? 'API en vivo' : null,
+  ].filter(Boolean).join(' · ');
+  const nodo = h('section', { class: 'grafico', 'data-id': g.id },
+    h('h2', {}, g.titulo),
+    h('p', { class: 'meta' }, meta, urlSegura(g.enlace) ? [' · ', h('a', { href: g.enlace, rel: 'noopener noreferrer', target: '_blank' }, 'ver la serie')] : null),
+  );
+  if (g.tipo === 'serie') nodo.append(dibujarSerie(g), tablaDeMarcas(g));
+  else if (g.tipo === 'linea_tiempo') nodo.append(dibujarTiempo(g));
+  else nodo.append(dibujarRanking(g));
+  if (g.avisos.length) nodo.append(h('ul', { class: 'avisos' }, g.avisos.map((a) => h('li', {}, a))));
+  return nodo;
+}
+
+/* ---- agregar un gráfico a la nota: aparece como una sección nueva dentro de la nota ---- */
+const agregadas = new Map(); // data-id del gráfico -> { titulo }
+const sinAnimacion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function refrescarAcciones() {
+  const extra = document.getElementById('nota-extra');
+  document.querySelectorAll('#graficos section.grafico').forEach((sec) => {
+    const id = sec.dataset.id;
+    const puesto = agregadas.has(id);
+    const boton = sec.querySelector('.agregar');
+    if (!boton) return;
+    boton.setAttribute('aria-pressed', String(puesto));
+    boton.textContent = puesto ? '✓ Agregado a la nota' : 'Agregar a la nota';
+    sec.querySelector('.ir-nota').hidden = !puesto;
+  });
+  extra.hidden = agregadas.size === 0;
+}
+function numerarSecciones() {
+  [...document.querySelectorAll('#nota-extra .nota-seccion')].forEach((el, i) => {
+    el.querySelector('.nota-seccion__num').textContent = `Sección ${i + 1}`;
+  });
+}
+function irASeccion(id) {
+  const destino = document.getElementById(`nota-sec-${id}`);
+  if (!destino) return;
+  destino.scrollIntoView({ block: 'start', behavior: sinAnimacion ? 'auto' : 'smooth' });
+  destino.classList.remove('recien');
+  void destino.offsetWidth; // reinicia la animación de resaltado
+  destino.classList.add('recien');
+}
+function agregarALaNota(sec, id, titulo) {
+  const copia = sec.cloneNode(true);
+  copia.querySelectorAll('.acciones, details.tabla').forEach((e) => e.remove());
+  const quitar = h('button', { class: 'quitar', type: 'button', onclick: () => quitarDeLaNota(id) }, 'Quitar de la nota');
+  const nodo = h('article', { class: 'nota-seccion', id: `nota-sec-${id}` },
+    h('div', { class: 'nota-seccion__cab' }, h('span', { class: 'nota-seccion__num' }), quitar), copia);
+  document.getElementById('nota-extra').append(nodo);
+  agregadas.set(id, { titulo });
+  numerarSecciones();
+  refrescarAcciones();
+  irASeccion(id);
+}
+function quitarDeLaNota(id) {
+  document.getElementById(`nota-sec-${id}`)?.remove();
+  agregadas.delete(id);
+  numerarSecciones();
+  refrescarAcciones();
+}
+function prepararSeccion(sec) {
+  const id = sec.dataset.id;
+  const titulo = sec.querySelector('h2')?.textContent ?? id;
+  const boton = h('button', { class: 'agregar', type: 'button', 'aria-pressed': 'false' }, 'Agregar a la nota');
+  const ver = h('button', { class: 'ir-nota', type: 'button', hidden: '' }, 'Ver en la nota →');
+  boton.addEventListener('click', () => (agregadas.has(id) ? quitarDeLaNota(id) : agregarALaNota(sec, id, titulo)));
+  ver.addEventListener('click', () => irASeccion(id));
+  sec.insertBefore(h('div', { class: 'acciones' }, boton, ver), sec.firstChild);
+}
+
+/* Pinta una nota ya analizada. `previa` (la tarjeta del recorrido) queda arriba de los gráficos. */
+function pintar(datos, previa = null) {
+  actual = datos;
+  document.getElementById('titulo').textContent = actual.titulo;
+  document.title = `${actual.n} · ${actual.titulo}`;
+  document.getElementById('origen').textContent =
+    `${actual.niche} · cuerpo: corpus/notas/md · enriquecimientos: ${actual.origen} (salida real del backend) · gráficos: calculados por el motor al abrir esta nota`;
+  document.getElementById('avisos').replaceChildren(...actual.avisos.map((a) => h('li', {}, a)));
+  agregadas.clear();
+  document.getElementById('nota-extra').replaceChildren();
+  const secciones = [
+    ...seccionesProto(actual.prototipos, actual.contextos),
+    ...(actual.graficos.length ? actual.graficos.map(seccion) : [h('p', { class: 'vacio' }, 'El sistema no armó ningún gráfico para esta nota.')]),
+  ];
+  // Solo los que dibujan algo se pueden agregar a la nota (no las frases de "no hay para comparar").
+  secciones.filter((x) => x.matches('section.grafico') && x.querySelector('svg, .fila, .anot')).forEach(prepararSeccion);
+  document.getElementById('graficos').replaceChildren(...(previa ? [previa] : []), ...secciones);
+  refrescarAcciones();
+  document.getElementById('cita').replaceChildren();
+  document.getElementById('cuerpo').textContent = actual.cuerpo;
+  document.getElementById('nota-sel').value = actual.n;
+  history.replaceState(null, '', `#${actual.n}`);
+}
+async function cargar(n) {
+  cerrarFlujo();
+  const r = await fetch(`/api/notas/${n}`);
+  if (!r.ok) throw new Error(`Error ${r.status}`);
+  pintar(await r.json());
+}
+
+/* ---- el recorrido en vivo: cada paso sale de un resultado real del motor para esta nota ---- */
+const FASES = { leer: 'Lectura', agentes: 'Agentes', verificar: 'Verificación', cifras: 'Cifras', contexto: 'Contexto', armar: 'Armado', listo: 'Listo' };
+let fuenteDelFlujo = null;
+function cerrarFlujo() { if (fuenteDelFlujo) { fuenteDelFlujo.close(); fuenteDelFlujo = null; } }
+const itemDePaso = (m) => h('li', { class: `paso paso--${m.fase}` }, h('span', { class: 'fase' }, FASES[m.fase] || m.fase), h('span', { class: 'texto' }, m.texto));
+
+function analizar(n) {
+  cerrarFlujo();
+  const lista = h('ol', { class: 'pasos' });
+  const pensando = h('li', { class: 'pensando', 'aria-label': 'El motor está trabajando' }, h('i'), h('i'), h('i'));
+  const resumen = h('summary', {}, 'Así piensa el motor sobre esta nota…');
+  const tarjeta = h('details', { class: 'flujo', open: '' }, resumen, lista);
+  lista.append(pensando);
+  document.getElementById('graficos').replaceChildren(tarjeta);
+  document.getElementById('cita').replaceChildren();
+  let pasos = 0;
+  const fuente = new EventSource(`/api/notas/${n}/flujo`);
+  fuenteDelFlujo = fuente;
+  fuente.onmessage = (e) => {
+    const m = JSON.parse(e.data);
+    pasos += 1;
+    if (m.fase !== 'listo') { pensando.before(itemDePaso(m)); return; }
+    cerrarFlujo();
+    pensando.remove();
+    lista.append(itemDePaso(m));
+    resumen.textContent = `Así pensó el motor · ${pasos} pasos`;
+    pintar(m.nota, tarjeta);
+    setTimeout(() => tarjeta.removeAttribute('open'), 2200);
+  };
+  fuente.onerror = () => {
+    cerrarFlujo();
+    pensando.remove();
+    lista.append(h('li', { class: 'paso paso--error' }, h('span', { class: 'fase' }, 'Error'), h('span', { class: 'texto' }, 'Se cortó la conexión con el motor.')));
+  };
+}
+function ir(delta) {
+  const i = notas.findIndex((x) => x.n === actual.n) + delta;
+  if (i >= 0 && i < notas.length) cargar(notas[i].n);
+}
+
+(async () => {
+  notas = await (await fetch('/api/notas')).json();
+  const sel = document.getElementById('nota-sel');
+  sel.append(...notas.map((x) => h('option', { value: x.n }, `${x.n} · ${x.titulo.slice(0, 70)}`)));
+  sel.addEventListener('change', () => cargar(sel.value));
+  document.getElementById('ant').addEventListener('click', () => ir(-1));
+  document.getElementById('sig').addEventListener('click', () => ir(1));
+  document.getElementById('analizar').addEventListener('click', () => analizar(actual.n));
+  const inicial = notas.some((x) => x.n === location.hash.slice(1)) ? location.hash.slice(1) : notas[0].n;
+  cargar(inicial);
+})().catch((e) => { document.getElementById('titulo').textContent = 'No se pudo cargar: ' + e.message; });
+</script>
+</body>
+</html>

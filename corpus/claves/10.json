@@ -1,0 +1,40 @@
+{
+  "nota": "10",
+  "archivo": "10-caso-libra-jueces-fiscales-y-vinculos-con-el-poder.md",
+  "parrafos_total": 15,
+  "cifras": [
+    { "texto": "cinco inversores", "parrafo": 4, "indicador": "inversores apartados del expediente como querellantes", "periodo": "decisión confirmada el 4 de septiembre", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad de personas; sin serie. Los puestos del concurso (21°, 16°, sexto) son números de orden y se excluyen." }
+  ],
+  "puntos_clave": [
+    { "texto": "Los sobreseimientos de los Milei quedaron sin acusador que pueda apelarlos, tras una secuencia judicial que dejó al fiscal como único impulsor.", "parrafos": [3, 5] },
+    { "texto": "La Sala I de la Cámara Federal, recién integrada con jueces nombrados por Milei, confirmó la exclusión de los cinco inversores como querellantes.", "parrafos": [4, 6] },
+    { "texto": "Bertuzzi pasó del puesto 16 al sexto del concurso tras una nueva revisión de entrevistas, y Milei lo nombró dos días antes del fallo.", "parrafos": [7] },
+    { "texto": "Llorens y Bertuzzi aplicaron un criterio estricto sobre quién es víctima, opuesto a la interpretación amplia que habían usado contra Cristina Kirchner.", "parrafos": [8, 9] },
+    { "texto": "La única salida es la queja en Casación, que no llega a tiempo del plazo de apelación; la PIA tampoco fue notificada.", "parrafos": [10, 12, 13, 14, 15] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Por qué nadie puede apelar los sobreseimientos?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "Con el fiscal pidiendo lo que pretendían las defensas y" },
+    { "pregunta": "¿Quiénes firmaron el fallo de la Cámara que excluyó a los querellantes?", "tipo": "con_respuesta", "parrafos": [6], "ancla": "Aquel fallo de la Cámara Federal que validó las exclusiones de" },
+    { "pregunta": "¿Por qué no intervino la Procuraduría de Investigaciones Administrativas?", "tipo": "con_respuesta", "parrafos": [10, 12], "ancla": "Fue así como el expediente quedó con Taiano como único" },
+    { "pregunta": "¿Por qué los inversores no llegan a ser repuestos antes del vencimiento del plazo?", "tipo": "con_respuesta", "parrafos": [14], "ancla": "En la Casación coinciden en que no es posible que" },
+    { "pregunta": "¿Cómo explicó Barroetaveña haber vuelto a analizar las entrevistas del concurso de Bertuzzi?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Marcelo Martínez de Giorgi", "rol": "Juez federal que sobreseyó a los Milei", "parrafo": 3 },
+    { "nombre": "Eduardo Taiano", "rol": "Fiscal; único acusador que pidió los sobreseimientos", "parrafo": 4 },
+    { "nombre": "Mariano Llorens", "rol": "Camarista federal; firmó la exclusión de querellantes", "parrafo": 6 },
+    { "nombre": "Pablo Bertuzzi", "rol": "Camarista federal nombrado por Milei; firmó la exclusión", "parrafo": 6 },
+    { "nombre": "Diego Barroetaveña", "rol": "Consejero de la Magistratura que revisó las entrevistas del concurso", "parrafo": 7 },
+    { "nombre": "Sergio Rodríguez", "rol": "Fiscal a cargo de la PIA", "parrafo": 11 },
+    { "nombre": "Procuraduría de Investigaciones Administrativas (PIA)", "rol": "Organismo del Ministerio Público que no intervino ni fue notificado", "parrafo": 10 },
+    { "nombre": "Cámara Federal de Casación", "rol": "Tribunal que debe resolver la queja; sala de Slokar, Ledesma y Yacobucci", "parrafo": 14 },
+    { "nombre": "Javier Milei", "rol": "Presidente sobreseído; nombró a Bertuzzi", "parrafo": 3 },
+    { "nombre": "Karina Milei", "rol": "Sobreseída en la causa", "parrafo": 3 }
+  ],
+  "fechas": [
+    { "texto": "4 de septiembre pasado", "parrafo": 4 },
+    { "texto": "2 de septiembre", "parrafo": 7 },
+    { "texto": "fines de 2023", "parrafo": 8 },
+    { "texto": "el jueves próximo", "parrafo": 14 }
+  ]
+}

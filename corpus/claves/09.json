@@ -1,0 +1,47 @@
+{
+  "nota": "09",
+  "archivo": "09-martinez-de-giorgi-cerro-el-caso-libra-solo-un-dia.md",
+  "parrafos_total": 22,
+  "cifras": [
+    { "texto": "60 hojas", "parrafo": 1, "indicador": "extensión de la sentencia de sobreseimiento", "periodo": "viernes anterior a la publicación", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato documental de la causa; sin serie." },
+    { "texto": "58 hojas", "parrafo": 4, "indicador": "extensión del dictamen fiscal de Taiano", "periodo": "jueves anterior al fallo", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato documental; el párrafo 14 habla de 40 páginas de repaso de pruebas dentro del dictamen." },
+    { "texto": "26 horas", "parrafo": 4, "indicador": "tiempo entre el dictamen y la sentencia", "periodo": "jueves y viernes previos a la publicación", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Intervalo calculado por el medio; sin serie." },
+    { "texto": "cinco inversores", "parrafo": 8, "indicador": "inversores desplazados de la causa como querellantes", "periodo": "decisión del 3 de julio, confirmada el 4 de septiembre", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad de personas; sin serie." },
+    { "texto": "cinco millones de dólares", "parrafo": 13, "indicador": "monto recibido de Hayden Davis por Mellino y Rodríguez Blanco", "periodo": "días antes del lanzamiento de $LIBRA", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Monto en dólares de una operación puntual; el catálogo no tiene serie para esto." },
+    { "texto": "40 páginas", "parrafo": 14, "indicador": "páginas del dictamen dedicadas a repasar las pruebas", "periodo": "jueves anterior al fallo", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato documental; sin serie." }
+  ],
+  "puntos_clave": [
+    { "texto": "Martínez de Giorgi sobreseyó a los Milei y al resto de los acusados apenas un día después del dictamen del fiscal Taiano.", "parrafos": [2, 4, 5] },
+    { "texto": "El fallo se basa en un dictamen espontáneo y hasta entonces reservado, en el que Taiano afirma que no hay sustento fáctico para seguir.", "parrafos": [2, 4, 10] },
+    { "texto": "El fiscal descartó el cohecho por falta de pruebas de un intercambio indebido y la estafa porque el proyecto y el token eran reales.", "parrafos": [15, 16, 17, 18] },
+    { "texto": "Sin la condición de querellantes, los inversores no podían impulsar la causa y ahora recurren a la Casación, en una posición débil.", "parrafos": [7, 8] },
+    { "texto": "El inversor Marchetto objeta que se cerrara el caso con peritajes pendientes, incluido el análisis de dispositivos de quienes recibieron dinero de Davis.", "parrafos": [11, 12, 13] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Cuánto tiempo pasó entre el dictamen del fiscal y la sentencia del juez?", "tipo": "con_respuesta", "parrafos": [4, 5], "ancla": "Esto quiere decir que el jueves, el juez recibió el" },
+    { "pregunta": "¿Por qué el fiscal era el único que podía impulsar la investigación?", "tipo": "con_respuesta", "parrafos": [7], "ancla": "Por decisión del propio Martínez de Giorgi, Taiano era el" },
+    { "pregunta": "¿Qué recurso intentan ahora los inversores excluidos?", "tipo": "con_respuesta", "parrafos": [8], "ancla": "Los cinco inversores desplazados de la causa apuestan ahora a" },
+    { "pregunta": "¿Por qué el fiscal descartó la estafa atribuida a Javier Milei?", "tipo": "con_respuesta", "parrafos": [17, 18], "ancla": "En cuanto a la supuesta estafa adjudicada a Javier Milei" },
+    { "pregunta": "¿Qué respondieron Javier y Karina Milei al cierre de la causa?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Marcelo Martínez de Giorgi", "rol": "Juez federal que sobreseyó a los acusados", "parrafo": 2 },
+    { "nombre": "Eduardo Taiano", "rol": "Fiscal del caso; autor del dictamen", "parrafo": 2 },
+    { "nombre": "Javier Milei", "rol": "Presidente; acusado sobreseído", "parrafo": 2 },
+    { "nombre": "Karina Milei", "rol": "Secretaria General de la Presidencia; acusada sobreseída", "parrafo": 2 },
+    { "nombre": "Juan Patricio Marchetto", "rol": "Inversor damnificado; apeló el cierre de la causa", "parrafo": 8 },
+    { "nombre": "Juan Grabois", "rol": "Abogado patrocinante de Marchetto", "parrafo": 8 },
+    { "nombre": "Hayden Davis", "rol": "Empresario que habría girado cinco millones de dólares a dos personas", "parrafo": 13 },
+    { "nombre": "Orlando Mellino", "rol": "Jubilado argentino que recibió fondos de Davis", "parrafo": 13 },
+    { "nombre": "Cámara Federal de Casación", "rol": "Tribunal que debe resolver la queja de los inversores", "parrafo": 8 },
+    { "nombre": "Oficina Anticorrupción", "rol": "Organismo cuya resolución citó el fiscal para descartar infracción ética", "parrafo": 21 }
+  ],
+  "fechas": [
+    { "texto": "el viernes pasado", "parrafo": 2 },
+    { "texto": "11:32 del jueves", "parrafo": 5 },
+    { "texto": "14:29 del viernes", "parrafo": 5 },
+    { "texto": "3 de julio pasado", "parrafo": 7 },
+    { "texto": "20 de marzo de 2025", "parrafo": 7 },
+    { "texto": "4 de septiembre pasado", "parrafo": 7 }
+  ]
+}

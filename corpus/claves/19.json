@@ -1,0 +1,38 @@
+{
+  "nota": "19",
+  "archivo": "19-la-liga-profesional-usara-el-fuera-de-juego-semiau.md",
+  "parrafos_total": 8,
+  "cifras": [
+    { "texto": "15 fechas por torneo", "parrafo": 6, "indicador": "cantidad de fechas por torneo en el nuevo formato", "periodo": "Apertura y Clausura desde 2027", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de reglamento deportivo; sin serie." },
+    { "texto": "los 16 mejores", "parrafo": 6, "indicador": "equipos que jugarán los playoffs en cada tramo", "periodo": "desde 2027", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de reglamento deportivo; sin serie." }
+  ],
+  "puntos_clave": [
+    { "texto": "La Liga incorporará el fuera de juego semiautomático al VAR desde la final del Clausura 2026, el 12 de diciembre en La Plata.", "parrafos": [1, 8] },
+    { "texto": "La implementación completa en todas las canchas llegará con el Clausura 2027, probablemente desde el segundo semestre.", "parrafos": [1, 7, 8] },
+    { "texto": "El sistema usa inteligencia artificial y cámaras para reproducir el partido en tiempo real y revisar offsides con rapidez; lo desarrolló Genius Sports.", "parrafos": [3, 5] },
+    { "texto": "La tecnología ya funciona en ligas y torneos como la Premier League, la Serie A, el Brasileirão y la CONMEBOL.", "parrafos": [2] },
+    { "texto": "El anuncio coincide con un nuevo formato para 2027: una rueda de 15 fechas, playoffs y Tabla Anual que define copas y descensos.", "parrafos": [6] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Cuándo se usará por primera vez el fuera de juego semiautomático?", "tipo": "con_respuesta", "parrafos": [1], "ancla": "a partir de la final del Torneo Clausura 2026, programada" },
+    { "pregunta": "¿Qué empresa desarrolló el sistema?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "Chief Partnerships Officer de “Genius Sports”, la empresa que" },
+    { "pregunta": "¿Cómo será el formato de los torneos desde 2027?", "tipo": "con_respuesta", "parrafos": [6], "ancla": "un nuevo formato de competencia para el Apertura y Clausura" },
+    { "pregunta": "¿Desde cuándo estará en todos los estadios de Primera?", "tipo": "con_respuesta", "parrafos": [7, 8], "ancla": "lo tendremos en todos los estadios de primera" },
+    { "pregunta": "¿Cuánto les costará a los clubes la implementación del sistema?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Claudio Tapia", "rol": "presidente de la AFA", "parrafo": 4 },
+    { "nombre": "Steven Burton", "rol": "Chief Partnerships Officer de Genius Sports", "parrafo": 5 },
+    { "nombre": "Cristian Malaspina", "rol": "presidente de Argentinos Juniors", "parrafo": 7 },
+    { "nombre": "Genius Sports", "rol": "empresa desarrolladora del SAOT", "parrafo": 5 },
+    { "nombre": "Liga Profesional de Fútbol", "rol": "organizadora del torneo; anunció la tecnología", "parrafo": 1 }
+  ],
+  "fechas": [
+    { "texto": "12 de diciembre de 2026: final del Clausura en La Plata, primer uso del SAOT", "parrafo": 1 },
+    { "texto": "Clausura 2027: implementación total en todas las canchas", "parrafo": 1 },
+    { "texto": "2027: entra en vigencia el nuevo formato de Apertura y Clausura", "parrafo": 6 },
+    { "texto": "segundo semestre del año próximo: instalación prevista en todos los estadios de Primera", "parrafo": 7 }
+  ],
+  "no_enriquecer": false,
+  "motivo_no_enriquecer": ""
+}

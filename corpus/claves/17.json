@@ -1,0 +1,29 @@
+{
+  "nota": "17",
+  "archivo": "17-la-calculadora-del-superclasico.md",
+  "parrafos_total": 47,
+  "cifras": [],
+  "puntos_clave": [],
+  "preguntas": [
+    { "pregunta": "¿Cuándo es la final de la Copa Argentina de Boca?", "tipo": "con_respuesta", "parrafos": [11], "ancla": "dirimirán su suerte en la Copa Argentina el sábado 14" },
+    { "pregunta": "¿En qué puesto de la Tabla Anual está River?", "tipo": "con_respuesta", "parrafos": [4], "ancla": "Los de Núñez hoy figuran 7° en la Tabla Anual" },
+    { "pregunta": "¿Quién arbitrará el Superclásico?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Leonardo Ponzio", "rol": "entrenador de River", "parrafo": 2 },
+    { "nombre": "Vasco Arruabarrena", "rol": "entrenador de Boca", "parrafo": 11 },
+    { "nombre": "Boca Juniors", "rol": "local del Superclásico y líder de la Tabla Anual", "parrafo": 1 },
+    { "nombre": "River Plate", "rol": "visitante del Superclásico; pelea copas internacionales", "parrafo": 1 }
+  ],
+  "fechas": [
+    { "texto": "domingo 1° de noviembre: Superclásico por la fecha 15", "parrafo": 1 },
+    { "texto": "19 de diciembre: Trofeo de Campeones entre Belgrano y el campeón del Clausura", "parrafo": 8 },
+    { "texto": "sábado 14 de noviembre: final de la Copa Argentina, Boca vs Banfield", "parrafo": 11 },
+    { "texto": "sábado 21 de noviembre: final de la Sudamericana, Boca vs Atlético Mineiro", "parrafo": 11 },
+    { "texto": "viernes 30 de octubre: comienza la fecha 15", "parrafo": 14 },
+    { "texto": "sábado 31 de octubre: tres partidos de la fecha 15", "parrafo": 19 },
+    { "texto": "lunes 2 de noviembre: cierre de la fecha 15", "parrafo": 28 }
+  ],
+  "no_enriquecer": true,
+  "motivo_no_enriquecer": "Nota de análisis de tablas con agenda de las fechas 15 y 16: el contenido son cruces, horarios y puntos de posiciones deportivas, sin cifras que se puedan contrastar con series oficiales."
+}

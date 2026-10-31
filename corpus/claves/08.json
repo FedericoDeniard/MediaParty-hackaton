@@ -1,0 +1,40 @@
+{
+  "nota": "08",
+  "archivo": "08-tras-ceder-cambios-el-gobierno-dictamino-el-proyec.md",
+  "parrafos_total": 11,
+  "cifras": [
+    { "texto": "participaciones de hasta el 2%", "parrafo": 4, "indicador": "participación accionaria máxima de accionistas minoritarios eximidos de sanciones", "periodo": "según el dictamen", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Umbral previsto en el proyecto, sin serie asociada." },
+    { "texto": "48 horas", "parrafo": 8, "indicador": "plazo para que el Ejecutivo informe a la bicameral las medidas de seguridad", "periodo": "según el dictamen", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo legal del proyecto, sin serie asociada." },
+    { "texto": "cinco a doce años de prisión", "parrafo": 9, "indicador": "pena por campañas de injerencia extranjera en elecciones", "periodo": "según el dictamen", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Escala penal del proyecto, sin serie asociada." }
+  ],
+  "puntos_clave": [
+    { "texto": "El oficialismo obtuvo dictamen de mayoría para el proyecto de Defensa de la Soberanía y apunta a tratarlo en el recinto el 12 de noviembre.", "parrafos": [1] },
+    { "texto": "El proyecto endurece las sanciones por explotar sin autorización recursos del Atlántico Sur e incluye a empresas, socios y proveedores.", "parrafos": [2] },
+    { "texto": "Tras la preocupación de Estados Unidos, el Gobierno limitó el alcance de las sanciones y eximió a accionistas minoritarios y fondos indirectos.", "parrafos": [3, 4] },
+    { "texto": "Se crea un Consejo de Seguridad Nacional que podrá controlar inversiones extranjeras, con una bicameral de seguimiento y miembros no permanentes agregados.", "parrafos": [5, 6, 7, 8, 11] },
+    { "texto": "La figura de injerencia extranjera se definió con exclusiones, pero aliados exigen más cambios en los artículos conflictivos y amenazan con votar en contra.", "parrafos": [9, 10] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Cuándo se espera que el proyecto llegue al recinto?", "tipo": "con_respuesta", "parrafos": [1], "ancla": "El oficialismo consiguió este miércoles el dictamen de mayoría del" },
+    { "pregunta": "¿Qué cambio aceptó el oficialismo en las sanciones a empresas?", "tipo": "con_respuesta", "parrafos": [4], "ancla": "En ese sentido, los libertarios aceptaron limitar las sanciones a" },
+    { "pregunta": "¿Quiénes integran de forma permanente el Consejo de Seguridad Nacional?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "Por otro lado, la iniciativa crea el Consejo de Seguridad" },
+    { "pregunta": "¿Qué pena prevé el proyecto para la injerencia extranjera en elecciones?", "tipo": "con_respuesta", "parrafos": [9], "ancla": "Otro de los puntos modificados es el artículo que sanciona" },
+    { "pregunta": "¿Cuántos votos tiene asegurados el oficialismo para aprobar el proyecto en el recinto?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Santiago Caputo", "rol": "Asesor presidencial; principal impulsor del proyecto", "parrafo": 2 },
+    { "nombre": "Christopher Landau", "rol": "Subsecretario de Estado de EE.UU.; transmitió la preocupación a Milei", "parrafo": 3 },
+    { "nombre": "Javier Milei", "rol": "Presidente; presidiría el Consejo de Seguridad Nacional", "parrafo": 3 },
+    { "nombre": "Eduardo Falcone", "rol": "Diputado del MID; propuso la bicameral de seguimiento", "parrafo": 8 },
+    { "nombre": "Alejandra Monteoliva", "rol": "Ministra de Seguridad; pasa a ser miembro permanente del Consejo", "parrafo": 11 },
+    { "nombre": "La Libertad Avanza", "rol": "Oficialismo que negoció cambios con los aliados", "parrafo": 8 },
+    { "nombre": "Consejo de Seguridad Nacional", "rol": "Órgano nuevo de coordinación de defensa, inteligencia y seguridad", "parrafo": 5 },
+    { "nombre": "Comisión Bicameral de Seguimiento", "rol": "Comisión del Congreso que auditará al Consejo", "parrafo": 8 },
+    { "nombre": "Administración Trump", "rol": "Gobierno de EE.UU. preocupado por el impacto en sus empresas", "parrafo": 3 },
+    { "nombre": "Prefectura Naval", "rol": "Fuerza cuyas competencias se precisaron junto al Comando Conjunto Marítimo", "parrafo": 11 }
+  ],
+  "fechas": [
+    { "texto": "este miércoles", "parrafo": 1 },
+    { "texto": "jueves 12 de noviembre", "parrafo": 1 }
+  ]
+}
