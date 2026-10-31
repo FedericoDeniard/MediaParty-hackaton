@@ -10,8 +10,6 @@ export const appShell = {
   navLabel: 'Secciones',
   primaryAction: 'Crear nueva nota',
   help: 'Cómo funciona',
-  /** Declaración editorial del pie: cierra la navegación, no la decora. */
-  manifesto: ['Las historias importan.', 'Tu mirada también.'],
   signOut: 'Salir',
 }
 

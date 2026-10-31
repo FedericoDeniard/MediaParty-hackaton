@@ -63,7 +63,7 @@ Es el área autenticada. La landing en `/` no se toca.
 | `/app/notas/:id` | Editor de la nota |
 | `/app/publicados` | Lista filtrada por `status = 'published'` |
 
-- **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación, declaración editorial y sesión son áreas de una grilla de cinco: en mobile pasa a una banda de tres filas y se ocultan lema, declaración, ayuda y conteos.
+- **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación y sesión son áreas de una grilla de cuatro: en mobile pasa a una banda de tres filas y se ocultan ayuda y conteos.
 - **La navegación marca el estado activo con el acento de marca** (`--accent`) y tinta encima, más peso y color de la etiqueta: el color no es el único indicador. La acción primaria es una fila más, no un botón relleno, y los conteos van en numerales tabulares.
 - **Las notas son filas de datos**, no cards: temática arriba, título y avance del texto a la izquierda, fecha, palabras y acción a la derecha. Se separan por espacio, no por filetes: el estado ya no se muestra porque la sección lo dice.
 - **La lista se filtra por nombre y por temática, y se ordena por fecha.** Los filtros son controles reales con filete inferior; el orden por defecto es el más reciente.

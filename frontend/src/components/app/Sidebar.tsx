@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import { NavLink } from 'react-router-dom'
-import { CircleHelp, Compass, Files, LogOut, Newspaper, SquarePen } from 'lucide-react'
+import { CircleHelp, Files, LogOut, Newspaper, SquarePen } from 'lucide-react'
 import { useAuth } from '../AuthProvider.tsx'
 import { appNav, appShell } from '../../data/app.ts'
 import { listNotes, subscribe } from '../../lib/noteStore.ts'
@@ -63,15 +63,6 @@ export default function Sidebar() {
           })}
         </ul>
       </nav>
-
-      <div className="side__manifesto">
-        <Compass size={16} strokeWidth={1.5} aria-hidden="true" />
-        <p>
-          {appShell.manifesto.map((line) => (
-            <span key={line}>{line}</span>
-          ))}
-        </p>
-      </div>
 
       <div className="side__foot">
         <a className="side__help" href="/#como-funciona">
