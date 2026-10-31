@@ -18,10 +18,10 @@ from verificador.graficos import armar_graficos  # noqa: E402
 from verificador.series import ClienteSeries  # noqa: E402
 from verificador.validar import validar_nota  # noqa: E402
 
-NOTAS = ("01", "02", "07", "13", "14", "17", "19")  # incluye las seis del banco de trabajo (n-01 a n-06) y la 14
+NOTAS = tuple(sorted(p.stem for p in (RAIZ / "docs" / "enrichments").glob("*.json")))  # las 18 notas del corpus
 FECHA_CORPUS = date(2026, 10, 31)
 CABECERA = (
-    "/* Datos reales de ejemplo, generados por el verificador sobre notas del corpus (01, 02, 07, 13, 14, 17 y 19)\n"
+    "/* Datos reales de ejemplo, generados por el verificador sobre las 18 notas del corpus\n"
     "   (`armar_graficos` con las series guardadas al 2026-10-31). No se editan a mano: se regeneran con\n"
     "   `verificador/scripts/generar_ejemplos_ui.py`. */\n"
     "import type { FilasDeAnalisis } from '../components/graficos/pasos.ts'\n"
