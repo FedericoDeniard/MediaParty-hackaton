@@ -274,6 +274,20 @@ button {
   color: var(--bone);
 }
 
+/* Primario de la mesa de trabajo: plano de tinta. En /app el plano de
+   acento ya lo ocupa el estado activo de la navegación, así que la
+   decisión se marca con la tinta plena. */
+.button--ink {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bone);
+}
+
+.button--ink:hover {
+  background: none;
+  color: var(--ink);
+}
+
 .button:disabled,
 .button:disabled:hover {
   background: var(--surface-contrast);
@@ -1007,6 +1021,13 @@ button {
   text-transform: uppercase;
 }
 
+/* Placeholder neutro mientras Supabase restaura la sesión. */
+.app-boot {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
 /* ============================================================
    Acceso · login / registro
    La composición viene del mock: editorial a la izquierda (70%)
@@ -1361,6 +1382,27 @@ button {
   line-height: 1.6;
 }
 
+/* Aviso del formulario: mismo filete funcional que el error de un
+   campo, pero a nivel de la operación completa. */
+.auth__notice {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--ink);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.auth__notice-label {
+  flex: none;
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 /* ============================================================
    Mesa de trabajo · /app
 
@@ -1388,17 +1430,24 @@ button {
 
 /* ---- Sidebar ---- */
 
-/* Rejilla de cuatro áreas: marca, acción, navegación y pie.
-   En desktop es una columna; en mobile, dos filas. */
+/* Columna editorial: marca, acción, navegación, declaración y pie.
+   La navegación ocupa el espacio libre para que el pie se apoye en
+   el borde inferior. En mobile pasa a una banda de dos filas. */
 .side {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
   display: grid;
   grid-template-areas:
     'brand'
     'primary'
     'nav'
+    'manifesto'
     'foot';
-  grid-template-rows: auto auto 1fr auto;
-  gap: var(--space-6);
+  grid-template-rows: auto auto 1fr auto auto;
   min-width: 0;
   background: var(--surface-contrast);
   border-right: var(--border-width) solid var(--rule);
@@ -1407,50 +1456,37 @@ button {
 
 .side__brand {
   grid-area: brand;
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-7);
   min-width: 0;
   text-decoration: none;
 }
 
+.side__mark {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+/* La marca va en caja baja, como en el pie: es el nombre, no un
+   rótulo. El punto cierra la palabra con la tinta del sistema. */
 .side__wordmark {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: 800;
-  font-stretch: var(--font-stretch-condensed);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
-.side__primary {
-  grid-area: primary;
-  width: 100%;
-  padding-inline: var(--space-4);
-  font-size: var(--text-micro);
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-
-/* El botón primario de la barra lateral lleva el plano de acento: es
-   el único de la pantalla. */
-.side__primary.button--solid {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
-}
-
-.side__primary.button--solid:hover {
+.side__dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-bottom: 6px;
   background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bone);
 }
 
-.side__nav {
-  grid-area: nav;
-  min-width: 0;
-}
-
-.side__label {
+.side__tagline {
   color: var(--text-muted);
   font-size: var(--text-micro);
   font-weight: 600;
@@ -1458,64 +1494,190 @@ button {
   text-transform: uppercase;
 }
 
-.side__link {
-  display: block;
-  border-left: 2px solid transparent;
+/* La acción primaria es una fila de navegación, no un botón: el
+   plano de acento queda para el estado activo, que es el que
+   necesita señalarse. */
+.side__primary {
+  grid-area: primary;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: calc(-1 * var(--space-2)) calc(-1 * var(--space-3)) var(--space-6);
   padding: var(--space-2) var(--space-3);
-  color: var(--text-muted);
+  color: var(--text);
   font-size: var(--text-sm);
   font-weight: 600;
   text-decoration: none;
   transition:
-    color var(--duration-fast) var(--ease),
-    border-color var(--duration-fast) var(--ease);
+    background-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
+}
+
+.side__primary:hover {
+  background: var(--bg);
+}
+
+.side__nav {
+  grid-area: nav;
+  min-width: 0;
+}
+
+.side__list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.side__link {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 40px;
+  margin-inline: calc(-1 * var(--space-3));
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
 }
 
 .side__link:hover {
+  background: var(--bg);
   color: var(--text);
 }
 
-.side__link--active {
-  border-left-color: var(--ink);
-  color: var(--text);
+/* El estado activo se marca con el verde del sistema y la tinta
+   encima, más el peso de la etiqueta: el color por sí solo no lo
+   distinguiría. */
+.side__link--active,
+.side__link--active:hover {
+  background: var(--chart);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.side__link-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.side__count {
+  color: inherit;
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.side__manifesto {
+  grid-area: manifesto;
+  margin-bottom: var(--space-6);
+}
+
+.side__manifesto svg {
+  color: var(--text-muted);
+}
+
+.side__manifesto p {
+  margin-top: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.side__manifesto p span {
+  display: block;
 }
 
 .side__foot {
   grid-area: foot;
-  border-top: var(--border-width) solid var(--rule);
-  padding-top: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.side__help {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-self: start;
+  min-height: 32px;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.side__help:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .side__user {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.side__avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.side__identity {
+  display: grid;
+  min-width: 0;
 }
 
 .side__user-name {
+  overflow: hidden;
   font-size: var(--text-sm);
   font-weight: 600;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .side__user-mail {
+  overflow: hidden;
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-micro);
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .side__signout {
-  margin-top: var(--space-3);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
   border: 0;
   background: none;
-  padding: var(--space-2) 0;
+  padding: 0;
   color: var(--text-muted);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
   cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
 }
 
 .side__signout:hover {
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -1963,96 +2125,231 @@ button {
   pointer-events: none;
 }
 
-/* ---- Panel de enriquecimientos ---- */
+/* ---- Asistente de la nota ----
+
+   El panel entero es --surface-contrast. La barra del asistente lo
+   abre y lo cierra, y su borde es el único marco: es un control real.
+   La propuesta se apoya en --surface, el hueso elevado que el sistema
+   reserva para capas dentro de un panel. Aprobada, toma el verde de
+   datos, el mismo que el pasaje resaltado en el cuerpo. */
 
 .panel {
   background: var(--surface-contrast);
   padding: var(--space-5);
 }
 
-.panel__title {
+.assistant__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--text);
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.assistant__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 36px;
+  border: var(--border-width) solid var(--line-control);
+  padding: 0 var(--space-3) 0 var(--space-2);
   font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease);
+}
+
+.assistant__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-muted);
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.assistant__bar:hover .assistant__chip {
+  border-color: var(--ink);
+  background: var(--bg);
+}
+
+.assistant__bar:hover .assistant__chevron {
+  color: var(--text);
+}
+
+.assistant {
+  border-top: var(--border-width) solid var(--rule);
+  margin-top: var(--space-3);
+  padding-top: var(--space-5);
+}
+
+.assistant__title {
+  font-size: var(--text-md);
   font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.assistant__lead {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.assistant__empty {
+  margin-top: var(--space-5);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.assistant__list {
+  margin-top: var(--space-5);
+  border-top: var(--border-width) solid var(--rule);
+}
+
+.assistant__item {
+  border-bottom: var(--border-width) solid var(--rule);
+}
+
+/* Fila de datos, no una card: icono, etiqueta y marca. El filete de
+   2px señala la sugerencia abierta; el color por sí solo no bastaría. */
+.assistant__pick {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-left: 2px solid transparent;
+  background: none;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
+}
+
+.assistant__pick:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.assistant__pick[aria-current='true'] {
+  border-left-color: var(--ink);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.assistant__pick-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.assistant__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.assistant__item--descartada .assistant__pick-label {
+  text-decoration: line-through;
+}
+
+/* ---- Sugerencia ---- */
+
+.suggestion {
+  margin-top: var(--space-5);
+}
+
+.suggestion__state {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-.panel__empty {
-  margin-top: var(--space-4);
-  color: var(--text-muted);
-  font-size: var(--text-sm);
+.suggestion__title {
+  margin-top: var(--space-2);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* La propuesta es el texto que se suma a la nota: se lee como
+   documento, no como un mensaje. */
+.suggestion__text {
+  margin-top: var(--space-3);
+  background: var(--surface);
+  padding: var(--space-4);
+  font-size: var(--text-base);
   line-height: 1.5;
 }
 
-.panel__list {
-  margin-top: var(--space-4);
+/* Aprobada, toma el verde de datos: es el mismo plano con el que el
+   pasaje queda resaltado en el cuerpo. */
+.suggestion--aprobada .suggestion__text {
+  background: var(--chart);
 }
 
-.panel__list--resolved {
-  margin-top: var(--space-6);
-  border-top: var(--border-width) solid var(--rule);
-  padding-top: var(--space-4);
-}
-
-.piece {
-  border-top: var(--border-width) solid var(--rule);
-  padding: var(--space-4) 0;
-}
-
-.panel__list > .piece:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.piece__type {
-  color: var(--text-muted);
-  font-size: var(--text-micro);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.piece__text {
-  margin-top: var(--space-2);
-  font-size: var(--text-sm);
-  line-height: 1.5;
-}
-
-.piece__citation {
-  margin-top: var(--space-2);
+.suggestion__source {
+  margin-top: var(--space-3);
   color: var(--text-muted);
   font-size: var(--text-xs);
   line-height: 1.5;
 }
 
-.piece__citation--missing {
+.suggestion__source--missing {
   font-style: italic;
 }
 
-.piece__state {
-  margin-top: var(--space-2);
-  font-size: var(--text-micro);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.suggestion__actions {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: stretch;
+  margin-top: var(--space-5);
 }
 
-.piece__state--aprobada {
-  color: var(--text);
+.suggestion__discard {
+  justify-self: center;
 }
 
-.piece__state--descartada {
-  color: var(--text-muted);
-}
-
-.piece--resolved .piece__text {
-  color: var(--text-muted);
-}
-
-.piece__actions {
+.assistant__foot {
   display: flex;
-  gap: var(--space-5);
-  margin-top: var(--space-3);
+  align-items: flex-start;
+  gap: var(--space-2);
+  border-top: var(--border-width) solid var(--rule);
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  line-height: 1.5;
+}
+
+.assistant__foot svg {
+  flex: none;
+  margin-top: 1px;
 }
 
 /* Botón terciario: texto subrayado, sin marco. */
@@ -2083,16 +2380,6 @@ button {
 
 .linkbutton:hover {
   color: var(--text);
-}
-
-.linkbutton--on {
-  color: var(--text);
-}
-
-.linkbutton--quiet {
-  margin-top: var(--space-1);
-  color: var(--text-muted);
-  font-size: var(--text-micro);
 }
 
 /* ============================================================
@@ -2173,10 +2460,14 @@ button {
   }
 
   .side {
+    position: static;
+    height: auto;
+    overflow: visible;
     grid-template-areas:
       'brand primary'
       'nav nav'
       'foot foot';
+    grid-template-columns: auto minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     gap: var(--space-4);
     border-right: 0;
@@ -2184,44 +2475,41 @@ button {
     padding: var(--space-4) var(--gutter);
   }
 
-  .side__primary {
-    width: auto;
-    justify-self: end;
+  .side__brand {
+    margin-bottom: 0;
   }
 
-  .side__label {
+  /* La banda pierde lo que no navega: lema, declaración, ayuda y
+     conteos. Queda marca, acción, destinos y sesión. */
+  .side__tagline,
+  .side__manifesto,
+  .side__count,
+  .side__help {
     display: none;
   }
 
-  .side__nav ul {
+  .side__primary {
+    justify-self: end;
+    margin: 0;
+    padding-inline: var(--space-3);
+  }
+
+  .side__list {
     display: flex;
-    gap: var(--space-5);
+    flex-wrap: wrap;
+    gap: var(--space-2);
   }
 
   .side__link {
-    border-left: 0;
-    border-bottom: 2px solid transparent;
-    padding: var(--space-2) 0;
+    margin-inline: 0;
+    min-height: 44px;
+    padding-inline: var(--space-3);
     white-space: nowrap;
   }
 
-  .side__link--active {
-    border-left-color: transparent;
-    border-bottom-color: var(--ink);
-  }
-
   .side__foot {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-4);
     border-top: var(--border-width) solid var(--rule);
     padding-top: var(--space-3);
-  }
-
-  .side__user {
-    flex-direction: row;
-    gap: var(--space-3);
   }
 
   .page__index,

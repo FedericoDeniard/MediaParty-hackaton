@@ -1,7 +1,26 @@
+import { Navigate, useLocation } from 'react-router-dom'
 import AuthForm from './AuthForm.tsx'
+import { useAuth } from './AuthProvider.tsx'
 import { authEditorial, authSidebar, type AuthMode } from '../data/auth.ts'
 
 export default function AuthPage({ mode }: { mode: AuthMode }) {
+  const { status } = useAuth()
+  const location = useLocation()
+
+  if (status === 'loading') {
+    return <div className="app-boot" role="status" aria-label="Verificando sesión" />
+  }
+
+  if (status === 'authenticated') {
+    const from = (location.state as { from?: unknown } | null)?.from
+    const destination =
+      typeof from === 'string' && from.startsWith('/') && !from.startsWith('//')
+        ? from
+        : '/app/notas'
+
+    return <Navigate to={destination} replace />
+  }
+
   return (
     <div className="auth">
       <section className="auth__editorial">

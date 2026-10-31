@@ -4,6 +4,8 @@ import Landing from './components/Landing.tsx'
 import AuthPage from './components/AuthPage.tsx'
 import AppShell from './components/app/AppShell.tsx'
 import NoteList from './components/app/NoteList.tsx'
+import PanelPreview from './components/app/PanelPreview.tsx'
+import RequireSession from './components/RequireSession.tsx'
 import { notesPage, publishedPage } from './data/app.ts'
 import { createNote } from './lib/noteStore.ts'
 
@@ -36,8 +38,16 @@ export default function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<AuthPage mode="login" />} />
       <Route path="/registro" element={<AuthPage mode="register" />} />
+      <Route path="/preview-panel" element={<PanelPreview />} />
 
-      <Route path="/app" element={<AppShell />}>
+      <Route
+        path="/app"
+        element={
+          <RequireSession>
+            <AppShell />
+          </RequireSession>
+        }
+      >
         <Route index element={<Navigate to="/app/notas" replace />} />
         <Route
           path="notas"

@@ -7,7 +7,7 @@ Repo del hackatón **MediaParty**. El producto es **Nexo**: un portal que proces
 ```
 frontend/   Landing de Nexo (React 19 + Vite 8 + TypeScript 7)
 backend/    API (vacío)
-supabase/   Base de datos local, migraciones y edge functions
+supabase/   Base de datos local, migraciones, seeds y edge functions
 docs/       Documentación del proyecto
 .agents/    Skills del repo (fuente real)
 .claude/    Symlinks a .agents/skills/ para Claude Code
@@ -32,7 +32,7 @@ No hay scripts de lint ni de tests. `pnpm run build` es la verificación disponi
 - El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
 - `Hero.tsx` tiene un widget de tabs accesible (`role="tablist"`, navegación por flechas, `tabindex` rotatorio). Mantenelo así si lo tocás.
 - El editor de notas usa **Tiptap 3.32.2** con versiones exactas: los peers exigen la misma versión en todo el árbol. Guardá sólo el JSON de Tiptap; el texto plano se deriva.
-- La capa de datos del frontend es un **store mock** sobre `localStorage` (`src/lib/noteStore.ts`). La auth también es mock: `TODO(auth)` en `AuthForm.tsx` marca dónde entra Supabase Auth.
+- La capa de datos del frontend es un **store mock** sobre `localStorage` (`src/lib/noteStore.ts`). La auth ya corre contra Supabase Auth local: email y contraseña, sin usuarios anónimos, con guard sobre `/app/*`.
 - Agregá dependencias con `pnpm add <pkg>` desde `frontend/`. No edites `pnpm-lock.yaml` a mano.
 
 ## Dirección visual: Swiss

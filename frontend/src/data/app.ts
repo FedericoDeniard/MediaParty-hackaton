@@ -11,12 +11,15 @@ export const appShell = {
   /** Etiqueta de la zona de trabajo, sobre el índice de la grilla. */
   workspace: 'Mesa de trabajo',
   primaryAction: 'Crear nueva nota',
+  help: 'Cómo funciona',
+  /** Declaración editorial del pie: cierra la navegación, no la decora. */
+  manifesto: ['Las historias importan.', 'Tu mirada también.'],
   signOut: 'Salir',
 }
 
 export const appNav = [
-  { to: '/app/notas', label: 'Mis notas', end: true },
-  { to: '/app/publicadas', label: 'Publicadas', end: false },
+  { to: '/app/notas', label: 'Mis notas', count: 'all' },
+  { to: '/app/publicadas', label: 'Publicadas', count: 'published' },
 ] as const
 
 export const notesPage = {
@@ -50,14 +53,20 @@ export const editorPage = {
 }
 
 export const enrichmentPanel = {
-  title: 'Enriquecimientos',
-  empty: 'Todavía no hay nada que aprobar en esta nota.',
-  approve: 'Aprobar',
-  discard: 'Descartar',
-  restore: 'Reabrir',
+  /** Marca del panel: el asistente que propone, no el que decide. */
+  label: 'Asistente IA',
+  title: 'Otra mirada a tu nota',
+  lead: 'Ideas para afinar tu texto, sin perder tu voz.',
+  empty: 'Todavía no hay sugerencias para esta nota.',
+  pending: 'Sugerencia · sin aplicar',
+  approved: 'Sugerencia · aplicada',
+  discarded: 'Sugerencia · descartada',
+  approve: 'Aprobar sugerencia',
+  discard: 'Descartar sugerencia',
+  restore: 'Reabrir sugerencia',
+  citation: 'Aparece en la nota',
   unanswered: 'La nota no responde esta pregunta.',
-  approved: 'Aprobado',
-  discarded: 'Descartado',
+  foot: 'Tu voz tiene la última palabra. Ningún cambio se publica automáticamente.',
 }
 
 export const notesPageTitles: Record<string, string> = {

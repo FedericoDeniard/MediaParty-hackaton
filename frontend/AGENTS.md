@@ -10,6 +10,7 @@ Landing de **Nexo**: procesa una noticia, le suma gráficos y datos, y la export
 - React Router 7 (`react-router-dom`), rutas `/`, `/login`, `/registro` y `/app/*`
 - Tiptap 3.32.2 (`@tiptap/*`) para el editor de notas. Versiones **exactas**: los peers exigen la misma versión en todo el árbol.
 - `lucide-react` para los iconos (`strokeWidth={1.5}`, `currentColor`, 24 viewBox)
+- `@supabase/supabase-js` 2.118.0 para la auth (email y contraseña, sin anónimos)
 - CSS plano con custom properties. Sin framework de estilos, sin CSS-in-JS, sin Tailwind.
 
 ## Comandos
@@ -20,6 +21,7 @@ pnpm run dev        # servidor de desarrollo en http://localhost:5173
 pnpm run build      # typecheck + build de producción en dist/
 pnpm run preview    # sirve el build de producción
 pnpm run typecheck  # solo typecheck
+cd ../supabase && pnpm run start   # stack local de Supabase (auth)
 ```
 
 No hay lint ni tests. `pnpm run build` es la verificación.
@@ -30,13 +32,15 @@ No hay lint ni tests. `pnpm run build` es la verificación.
 src/
   components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
   components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
+  components/   AuthProvider, RequireSession  (sesión de Supabase y guard)
   components/app/  AppShell, Sidebar, NoteList, NoteRow, NoteEditor,
                     EditorToolbar, EnrichmentPanel  (mesa de trabajo)
   data/         content.ts con los textos y datos de la landing
                 auth.ts con los textos, campos y reglas de login/registro
                 app.ts con el copy de la mesa de trabajo
                 notes.ts con el modelo de nota, los labels y las semillas
-  lib/          noteStore.ts (store mock sobre localStorage)
+  lib/          supabase.ts (cliente)
+                noteStore.ts (store mock sobre localStorage)
                 editor/useEditorKit.ts, editor/extensions.ts
   index.css     tokens de diseño + estilos
   App.tsx       rutas de la app
@@ -58,7 +62,8 @@ Es el área autenticada. La landing en `/` no se toca.
 | `/app/notas/:id` | Editor de la nota |
 | `/app/publicadas` | Lista filtrada por `status = 'published'` |
 
-- **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación y pie son áreas de una grilla de cuatro: en mobile pasa a dos filas.
+- **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación, declaración editorial y sesión son áreas de una grilla de cinco: en mobile pasa a una banda de tres filas y se ocultan lema, declaración, ayuda y conteos.
+- **La navegación marca el estado activo con el verde del sistema** (`--chart`) y tinta encima, más peso y color de la etiqueta: el color no es el único indicador. La acción primaria es una fila más, no un botón relleno, y los conteos van en numerales tabulares.
 - **Las notas son filas de datos**, no cards: nombre a la izquierda, valor a la derecha, filete entre filas, numerales tabulares.
 - **El editor es el cuerpo de la nota**, no una caja: el texto va sobre `--bg` y la toolbar se apoya con un filete.
 - **El panel de enriquecimientos** es `--surface-contrast`, como el `.panel` que ya existía.
@@ -81,7 +86,15 @@ Tiptap v3, headless: no trae styles propios, cada nodo se estiliza desde `index.
 
 Las semillas salen de `corpus/notas/` (19 notas reales de la semana del 24 al 31 de octubre de 2026, usadas sólo para pruebas).
 
-**La auth es mock.** `AuthForm.tsx` entra directo a `/app/notas`; `TODO(auth)` marca dónde va la llamada real a Supabase Auth.
+### Autenticación
+
+Supabase Auth con email y contraseña, sin usuarios anónimos. `AuthProvider.tsx` mantiene la sesión con `onAuthStateChange`; `RequireSession.tsx` protege `/app/*` y redirige a `/login` guardando el destino en `location.state`. Si ya hay sesión, `/login` y `/registro` redirigen a `/app/notas`.
+
+- La confirmación de email está desactivada en local: la cuenta queda activa al crearse.
+- El nombre del registro va en `user_metadata` y se usa sólo para mostrar. Nunca para autorización.
+- El cliente vive en `lib/supabase.ts` y usa únicamente la publishable key. Nunca `service_role`.
+- Env: `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` en `.env`; los valores locales están en `.env.example`.
+- Usuario de prueba: `user@test.com` / `password123`, en `../supabase/seeds/001_test_user.sql`.
 
 ## Pantallas de acceso
 
@@ -92,7 +105,7 @@ Las semillas salen de `corpus/notas/` (19 notas reales de la semana del 24 al 31
 - El plano de acento (`--accent`) va **por debajo** del texto: nunca lo tapa. Es el único plano de color de la pantalla.
 - Los campos son controles reales: llevan filete inferior de 1px, no un marco.
 - Los requisitos de contraseña **no** son una lista: es una línea que va bajando de a un requisito mientras el usuario escribe (`field__rule`). El estado en vivo vive en `AuthField.tsx` y las reglas en `authRuleTests`.
-- El submit no hace nada todavía: `TODO(auth)` en `AuthForm.tsx` es el lugar de la llamada real a Supabase Auth.
+- El submit llama a Supabase Auth: `signInWithPassword` en login y `signUp` en registro. Muestra carga en el botón y errores mapeados en `authErrorMessages`.
 
 ## Dirección visual: Swiss
 

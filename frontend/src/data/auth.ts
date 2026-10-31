@@ -31,6 +31,7 @@ export interface AuthModeSpec {
   fields: AuthFieldSpec[]
   terms: boolean
   submit: string
+  pending: string
   legal: string
 }
 
@@ -54,6 +55,7 @@ export const authModes: Record<AuthMode, AuthModeSpec> = {
     ],
     terms: false,
     submit: 'Ingresar',
+    pending: 'Ingresando…',
     legal: 'Al entrar aceptás los términos y la política de privacidad.',
   },
   register: {
@@ -95,8 +97,28 @@ export const authModes: Record<AuthMode, AuthModeSpec> = {
     ],
     terms: true,
     submit: 'Crear cuenta',
-    legal: 'Te mandamos un mail para confirmar la dirección.',
+    pending: 'Creando cuenta…',
+    legal: 'Tu cuenta queda activa apenas la creás.',
   },
+}
+
+export const authMessages = {
+  required: 'Completá este campo.',
+  invalidEmail: 'Ingresá un email válido.',
+  termsRequired: 'Aceptá los términos y la política de privacidad para crear la cuenta.',
+  confirmEmail: 'Te mandamos un mail para confirmar la cuenta. Revisá tu bandeja.',
+  genericError: 'No pudimos completar la operación. Probá de nuevo.',
+}
+
+export const authErrorMessages: Record<string, string> = {
+  invalid_credentials: 'Email o contraseña incorrectos.',
+  email_not_confirmed: 'Confirmá tu mail antes de ingresar.',
+  user_already_exists: 'Ya existe una cuenta con ese email.',
+  weak_password: 'La contraseña no cumple los requisitos mínimos.',
+  email_address_invalid: 'Ingresá un email válido.',
+  signup_disabled: 'El registro está deshabilitado.',
+  over_email_send_rate_limit: 'Esperá un momento antes de volver a intentar.',
+  over_request_rate_limit: 'Demasiados intentos. Esperá un momento.',
 }
 
 /* El bloque editorial es el mismo en las dos pantallas: es la voz
