@@ -1,0 +1,20 @@
+{
+  "name": "nexo-db",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "scripts": {
+    "start": "supabase start",
+    "stop": "supabase stop",
+    "status": "supabase status",
+    "reset": "supabase db reset",
+    "diff": "supabase db diff",
+    "migration:new": "supabase migration new",
+    "migration:list": "supabase migration list",
+    "types:gen": "supabase gen types typescript --local"
+  },
+  "devDependencies": {
+    "supabase": "^2.122.0"
+  }
+}
