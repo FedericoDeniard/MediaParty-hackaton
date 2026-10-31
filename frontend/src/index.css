@@ -1870,13 +1870,15 @@ button {
   white-space: nowrap;
 }
 
+/* El campo del título va sobre `--surface`: el plano elevado marca
+   dónde se escribe, sin dibujarle un marco. */
 .editor__title {
   width: 100%;
   min-width: 0;
   border: 0;
   border-bottom: 1px solid transparent;
-  background: none;
-  padding: var(--space-1) 0;
+  background: var(--surface);
+  padding: var(--space-2) var(--space-3);
   color: var(--text);
   font-family: var(--font-sans);
   font-size: var(--text-lg);
@@ -1991,9 +1993,14 @@ button {
   padding: var(--space-7) var(--gutter) var(--space-8);
 }
 
+/* El cuerpo de la nota va sobre `--surface`: el mismo plano elevado
+   que el campo del título. Así el área editable se distingue del
+   fondo de la página sin enmarcarla. */
 .editor__canvas {
   min-width: 0;
   max-width: var(--measure-body);
+  background: var(--surface);
+  padding: var(--space-5);
 }
 
 /* ---- Documento ---- */
@@ -2579,6 +2586,12 @@ button {
 
   .editor__save {
     order: 3;
+  }
+
+  /* En mobile la hoja achica su margen interno: el texto tiene que
+     conservar el ancho de lectura. */
+  .editor__canvas {
+    padding: var(--space-4);
   }
 
   .bar {
