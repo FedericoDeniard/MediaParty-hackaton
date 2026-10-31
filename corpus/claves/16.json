@@ -1,0 +1,29 @@
+{
+  "nota": "16",
+  "archivo": "16-argentinos-alcanzo-a-boca-en-la-tabla-anual-y-comp.md",
+  "parrafos_total": 141,
+  "cifras": [],
+  "puntos_clave": [],
+  "preguntas": [
+    { "pregunta": "¿A qué hora juegan Vélez y San Lorenzo en la fecha 15?", "tipo": "con_respuesta", "parrafos": [62, 70], "ancla": "19.15 Vélez – San Lorenzo (Zona A)" },
+    { "pregunta": "¿Cuándo y a qué hora se enfrentan Atlético Tucumán y Argentinos?", "tipo": "con_respuesta", "parrafos": [113, 128], "ancla": "21.15 Atlético Tucumán – Argentinos (Zona B)" },
+    { "pregunta": "¿En qué estadio se juega el Boca–River de la fecha 15?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Diego Dabove", "rol": "entrenador que dejó Tigre tras la derrota", "parrafo": 2 },
+    { "nombre": "Boca Juniors", "rol": "líder de la Tabla Anual, clasificado a playoffs", "parrafo": 4 },
+    { "nombre": "Argentinos Juniors", "rol": "alcanzó a Boca en la cima de la Tabla Anual", "parrafo": 9 },
+    { "nombre": "Belgrano de Córdoba", "rol": "campeón del Apertura, ya clasificado a la Libertadores", "parrafo": 10 },
+    { "nombre": "Nicolás Ramírez", "rol": "árbitro designado para Boca–River", "parrafo": 86 }
+  ],
+  "fechas": [
+    { "texto": "viernes 23 de octubre: primeros partidos de la fecha 14", "parrafo": 15 },
+    { "texto": "lunes 26 de octubre: cierre de la fecha 14 con Unión y Argentinos", "parrafo": 30 },
+    { "texto": "viernes 30 de octubre: arranca la fecha 15", "parrafo": 34 },
+    { "texto": "sábado 31 de octubre: Riestra–Talleres, Vélez–San Lorenzo y Estudiantes–Instituto", "parrafo": 62 },
+    { "texto": "domingo 1° de noviembre: Boca–River a las 15.00", "parrafo": 84 },
+    { "texto": "lunes 2 de noviembre: cierre de la fecha 15", "parrafo": 113 }
+  ],
+  "no_enriquecer": true,
+  "motivo_no_enriquecer": "Nota de resultados, tablas y programación con listado de árbitros: es una agenda y no una nota escrita; las cifras son goles y puntos de tabla sin serie oficial que enriquecer."
+}

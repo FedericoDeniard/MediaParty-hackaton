@@ -1,6 +1,7 @@
-import { Navigate, useLocation } from 'react-router-dom'
+import { Link, Navigate, useLocation } from 'react-router-dom'
 import AuthForm from './AuthForm.tsx'
 import { useAuth } from './AuthProvider.tsx'
+import Wordmark from './Wordmark.tsx'
 import { authEditorial, authSidebar, type AuthMode } from '../data/auth.ts'
 
 export default function AuthPage({ mode }: { mode: AuthMode }) {
@@ -25,20 +26,18 @@ export default function AuthPage({ mode }: { mode: AuthMode }) {
     <div className="auth">
       <section className="auth__editorial">
         <div className="auth__meta">
-          <span>{authEditorial.meta.left}</span>
-          <span>{authEditorial.meta.right}</span>
+          <span>{authEditorial.date}</span>
         </div>
 
         <p className="auth__kicker eyebrow">{authEditorial.kicker}</p>
 
-        <div className="auth__poster-wrap">
+        <div className="auth__brand-wrap">
           <span className="auth__plane" aria-hidden="true" />
-          <h1 className="auth__poster">{authEditorial.poster}</h1>
-        </div>
-
-        <div className="auth__editorial-foot">
-          <p className="auth__editorial-lead">{authEditorial.lead}</p>
-          <p className="auth__editorial-note">{authEditorial.note}</p>
+          <h1 className="auth__brand">
+            <Link className="auth__brand-link" to="/">
+              <Wordmark size="lg" />
+            </Link>
+          </h1>
         </div>
       </section>
 

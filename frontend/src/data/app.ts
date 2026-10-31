@@ -10,8 +10,6 @@ export const appShell = {
   navLabel: 'Secciones',
   primaryAction: 'Crear nueva nota',
   help: 'Cómo funciona',
-  /** Declaración editorial del pie: cierra la navegación, no la decora. */
-  manifesto: ['Las historias importan.', 'Tu mirada también.'],
   signOut: 'Salir',
 }
 
@@ -51,6 +49,17 @@ export const noteRow = {
   noTheme: 'Sin temática',
   words: 'palabras',
   open: 'Ver nota',
+  delete: 'Borrar',
+  confirm: 'Confirmar',
+  cancel: 'Cancelar',
+  archive: 'Archivar',
+  deleteLabel: (title: string) => `Borrar la nota «${title}»`,
+  confirmLabel: (title: string) => `Confirmar el borrado de «${title}»`,
+  cancelLabel: (title: string) => `Cancelar el borrado de «${title}»`,
+  archiveLabel: (title: string) => `Archivar la publicación «${title}»`,
+  confirmPrompt: (title: string) => `Se va a borrar la nota «${title}». Confirmá o cancelá.`,
+  deleted: (title: string) => `Se borró la nota «${title}».`,
+  archived: (title: string) => `Se archivó la publicación «${title}».`,
 }
 
 export const editorPage = {
@@ -66,6 +75,14 @@ export const editorPage = {
   saveError: 'No se pudo guardar',
   newNote: 'Nota nueva',
   words: 'palabras',
+  readTitle: 'Ficha',
+  readUpdated: 'Actualizada',
+  readWords: 'Palabras',
+  readTime: 'Lectura',
+  readMinutes: 'min',
+  moreIn: 'Más en',
+  morePublished: 'Más publicadas',
+  viewAllPublished: 'Ver todos los publicados',
   table: 'Tabla',
   insertTable: 'Insertar tabla',
   deleteTable: 'Borrar tabla',

@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight } from 'lucide-react'
+import { Archive, ArrowUpRight, Check, Trash2, X } from 'lucide-react'
 import { noteRow } from '../../data/app.ts'
 import { excerpt, noteThemeLabels, type Note } from '../../data/notes.ts'
+import { archiveNote, removeNote } from '../../lib/noteStore.ts'
 
 const dateFormat = new Intl.DateTimeFormat('es-AR', {
   day: '2-digit',
@@ -15,12 +17,53 @@ function formatDate(value: string): string {
   return `${dateFormat.format(date).replace('.', '')} ${date.getFullYear()}`
 }
 
-export default function NoteRow({ note }: { note: Note }) {
+export default function NoteRow({
+  note,
+  onAction,
+}: {
+  note: Note
+  onAction: (message: string) => void
+}) {
   const theme = note.theme ? noteThemeLabels[note.theme] : null
+  const isPublished = note.status === 'published'
+
+  /* Las publicaciones se archivan; los borradores se borran. Borrar
+     pide un segundo toque: no hay deshacer. */
+  const [confirming, setConfirming] = useState(false)
+
+  const handleAction = () => {
+    if (isPublished) {
+      archiveNote(note.id)
+      onAction(noteRow.archived(note.title))
+      return
+    }
+
+    if (!confirming) {
+      setConfirming(true)
+      return
+    }
+
+    removeNote(note.id)
+    onAction(noteRow.deleted(note.title))
+  }
+
+  const label = isPublished
+    ? noteRow.archive
+    : confirming
+      ? noteRow.confirm
+      : noteRow.delete
+
+  const ariaLabel = isPublished
+    ? noteRow.archiveLabel(note.title)
+    : confirming
+      ? noteRow.confirmLabel(note.title)
+      : noteRow.deleteLabel(note.title)
+
+  const Icon = isPublished ? Archive : confirming ? Check : Trash2
 
   return (
-    <li>
-      <Link className="row" to={`/app/notas/${note.id}`}>
+    <li className="row">
+      <Link className="row__link" to={`/app/notas/${note.id}`}>
         <span className="row__body">
           <span className="row__theme">{theme ?? noteRow.noTheme}</span>
           <span className="row__title">{note.title}</span>
@@ -40,6 +83,47 @@ export default function NoteRow({ note }: { note: Note }) {
           </span>
         </span>
       </Link>
+
+      {/* La acción va fuera del enlace: un botón no puede vivir dentro
+          de otro control. Se lee como una acción de la fila, no como un
+          botón relleno. */}
+      <div
+        className="row__tools"
+        onKeyDown={(event) => {
+          if (event.key === 'Escape') setConfirming(false)
+        }}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+            setConfirming(false)
+          }
+        }}
+      >
+        <button
+          className={`row__tool${confirming ? ' row__tool--confirm' : ''}`}
+          type="button"
+          aria-label={ariaLabel}
+          title={label}
+          onClick={handleAction}
+        >
+          <Icon size={16} strokeWidth={1.5} aria-hidden="true" />
+        </button>
+
+        {confirming ? (
+          <button
+            className="row__tool"
+            type="button"
+            aria-label={noteRow.cancelLabel(note.title)}
+            title={noteRow.cancel}
+            onClick={() => setConfirming(false)}
+          >
+            <X size={16} strokeWidth={1.5} aria-hidden="true" />
+          </button>
+        ) : null}
+
+        <span className="row__notice" role="status">
+          {confirming ? noteRow.confirmPrompt(note.title) : ''}
+        </span>
+      </div>
     </li>
   )
 }

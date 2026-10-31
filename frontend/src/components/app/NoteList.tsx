@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react'
 import { ChevronDown, ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import NoteRow from './NoteRow.tsx'
 import { notesFilters } from '../../data/app.ts'
@@ -38,6 +38,11 @@ export default function NoteList({
   const [order, setOrder] = useState<Order>('recent')
   const [page, setPage] = useState(1)
 
+  /* Borrar o archivar saca la fila del DOM. El foco vuelve al título
+     de la página y el resultado se anuncia desde una región viva. */
+  const heading = useRef<HTMLHeadingElement>(null)
+  const [notice, setNotice] = useState('')
+
   const visible = useMemo(() => {
     const needle = normalize(query)
     const matches = notes.filter((note) => {
@@ -58,11 +63,18 @@ export default function NoteList({
   const pageNotes = visible.slice(first, first + PAGE_SIZE)
   const pages = Array.from({ length: pageCount }, (_, index) => index + 1)
 
+  const handleRowAction = (message: string) => {
+    setNotice(message)
+    heading.current?.focus()
+  }
+
   return (
     <div className="page">
       <header className="page__head">
         <div className="page__content">
-          <h1 className="page__title">{title}</h1>
+          <h1 className="page__title" ref={heading} tabIndex={-1}>
+            {title}
+          </h1>
         </div>
 
         <div className="filters">
@@ -131,6 +143,10 @@ export default function NoteList({
         </div>
       </header>
 
+      <p className="page__status" role="status">
+        {notice}
+      </p>
+
       {notes.length === 0 ? (
         <p className="page__empty">{empty}</p>
       ) : visible.length === 0 ? (
@@ -139,7 +155,7 @@ export default function NoteList({
         <>
           <ul className="rows">
             {pageNotes.map((note) => (
-              <NoteRow key={note.id} note={note} />
+              <NoteRow key={note.id} note={note} onAction={handleRowAction} />
             ))}
           </ul>
 

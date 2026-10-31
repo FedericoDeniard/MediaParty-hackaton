@@ -4,7 +4,7 @@ from pathlib import Path
 import anthropic
 from pydantic import BaseModel
 
-MODEL = "claude-opus-5-5"
+MODEL = "claude-sonnet-5-5"
 PROMPTS = Path(__file__).parent / "prompts"
 
 client = anthropic.AsyncAnthropic()

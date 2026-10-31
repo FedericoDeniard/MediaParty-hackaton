@@ -1,0 +1,54 @@
+{
+  "nota": "11",
+  "archivo": "11-salmain-no-podia-seguir-siendo-juez-los-acusadores.md",
+  "parrafos_total": 69,
+  "cifras": [
+    { "texto": "33 concursos judiciales", "parrafo": 2, "indicador": "concursos en los que Salmain omitió su paso por el Poder Judicial y la cesantía", "periodo": "2016 a 2024", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato del expediente del jury; sin serie." },
+    { "texto": "10 millones de dólares", "parrafo": 16, "indicador": "monto autorizado al tipo de cambio oficial a favor del fideicomiso Attila", "periodo": "durante las restricciones cambiarias", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Monto de una operación puntual, no una cotización; el catálogo no tiene serie equivalente." },
+    { "texto": "200.000 dólares", "parrafo": 16, "indicador": "presunta coima", "periodo": "durante las restricciones cambiarias", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Monto de una hipótesis penal; sin serie." },
+    { "texto": "200 dólares", "parrafo": 27, "indicador": "tope de compra de dólares a precio oficial por persona", "periodo": "época del cepo cambiario", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Límite regulatorio mencionado de pasada; el catálogo no trae esa serie." },
+    { "texto": "10 millones de dólares a valor oficial", "parrafo": 28, "indicador": "monto que Salmain ordenó entregar a valor oficial", "periodo": "época del cepo cambiario", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Misma operación del párrafo 16; sin serie." },
+    { "texto": "33 concursos", "parrafo": 36, "indicador": "concursos ante el Consejo de la Magistratura sin declarar el antecedente", "periodo": "entre 2016 y 2024", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato del expediente; sin serie." },
+    { "texto": "diez años", "parrafo": 37, "indicador": "plazo del reglamento para declarar sanciones disciplinarias", "periodo": "argumento de la defensa sobre la sanción de 2002", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo reglamentario; sin serie." },
+    { "texto": "14 años después", "parrafo": 49, "indicador": "tiempo entre la cesantía y la postulación al Consejo", "periodo": "desde 2002", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Intervalo temporal citado por De la Torre; sin serie." },
+    { "texto": "fueron destituidos cuatro jueces", "parrafo": 54, "indicador": "jueces destituidos desde que Rosatti presidió el Consejo", "periodo": "presidencia de Rosatti", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo institucional; sin serie." },
+    { "texto": "22 destituciones registradas desde 1999", "parrafo": 55, "indicador": "destituciones de jueces", "periodo": "desde 1999", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo institucional; sin serie." },
+    { "texto": "casi el 20% del total", "parrafo": 55, "indicador": "proporción de destituciones bajo la presidencia de Rosatti", "periodo": "desde 1999 hasta hoy", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cuatro sobre 22 ronda el 18%; sin serie en el catálogo." },
+    { "texto": "6 magistrados", "parrafo": 58, "indicador": "magistrados contra quienes se iniciaron juicios políticos", "periodo": "últimos 3 años", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo institucional; sin serie." },
+    { "texto": "7 propuestas concretas", "parrafo": 59, "indicador": "propuestas de mejora a los concursos", "periodo": "mandato actual del Consejo", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad de propuestas; sin serie." }
+  ],
+  "puntos_clave": [
+    { "texto": "Luis Juez sostiene que ocultar la cesantía en 33 concursos no fue un error administrativo sino un engaño al sistema de selección.", "parrafos": [5] },
+    { "texto": "Barroetaveña explica que el Jurado puede valorar conductas previas a la designación si el Senado no las conoció, y el ocultamiento bastó para destituir.", "parrafos": [10] },
+    { "texto": "Juez aclara que desestimar el cargo por Attila no significa descartar las coimas: esa responsabilidad queda para la Justicia penal de Rosario.", "parrafos": [21, 25] },
+    { "texto": "Juez admite que los controles fallaron al no detectar los antecedentes en 33 concursos y pide verificarlos directamente con los organismos.", "parrafos": [41] },
+    { "texto": "De la Torre advierte que seis juicios políticos en tres años revelan un problema previo de idoneidad en el acceso al cargo.", "parrafos": [58] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Por qué el Jurado removió a Salmain?", "tipo": "con_respuesta", "parrafos": [2], "ancla": "El Jurado de Enjuiciamiento de Magistrados de la Nación resolvió este" },
+    { "pregunta": "¿Qué pasó con el cargo por presuntas coimas en el caso Attila?", "tipo": "con_respuesta", "parrafos": [18, 21], "ancla": "Durante el juicio político, los representantes del Consejo sostuvieron que" },
+    { "pregunta": "¿Por qué la Corte Suprema le impuso la cesantía en 2002?", "tipo": "con_respuesta", "parrafos": [33, 34], "ancla": "En aquella oportunidad, el máximo tribunal consideró probado que había" },
+    { "pregunta": "¿Qué propone el Consejo de la Magistratura para mejorar la verificación de antecedentes?", "tipo": "con_respuesta", "parrafos": [45], "ancla": "En cuanto a las medidas que considera necesarias, el presidente" },
+    { "pregunta": "¿Quién reemplazará a Salmain en el Juzgado Federal N° 1 de Rosario?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Gastón Salmain", "rol": "Exjuez federal de Rosario destituido por el jury", "parrafo": 1 },
+    { "nombre": "Luis Juez", "rol": "Senador por Córdoba y consejero acusador", "parrafo": 5 },
+    { "nombre": "Diego Barroetaveña", "rol": "Camarista de Casación y consejero acusador", "parrafo": 8 },
+    { "nombre": "Jimena de la Torre", "rol": "Consejera por los abogados de la matrícula federal; acusadora", "parrafo": 11 },
+    { "nombre": "Jurado de Enjuiciamiento de Magistrados", "rol": "Tribunal que removió a Salmain por unanimidad", "parrafo": 2 },
+    { "nombre": "Consejo de la Magistratura", "rol": "Organismo que formuló la acusación", "parrafo": 1 },
+    { "nombre": "Corte Suprema de Justicia", "rol": "Impuso la cesantía a Salmain en 2002", "parrafo": 33 },
+    { "nombre": "Carlos Vera Barros", "rol": "Juez federal que ordenó su detención domiciliaria", "parrafo": 3 },
+    { "nombre": "Fernando Elías Whpei", "rol": "Financista e imputado colaborador en la causa Attila", "parrafo": 17 },
+    { "nombre": "Horacio Rosatti", "rol": "Presidente del Consejo durante cuyo período hubo cuatro destituciones", "parrafo": 53 }
+  ],
+  "fechas": [
+    { "texto": "jueves 29 de octubre", "parrafo": 2 },
+    { "texto": "diciembre de 2025", "parrafo": 17 },
+    { "texto": "marzo de este año", "parrafo": 17 },
+    { "texto": "mayo de 1997", "parrafo": 33 },
+    { "texto": "11 de junio de 2002", "parrafo": 33 },
+    { "texto": "Entre 2016 y 2024", "parrafo": 36 }
+  ]
+}

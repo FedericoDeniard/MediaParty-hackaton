@@ -1,0 +1,46 @@
+{
+  "nota": "14",
+  "archivo": "14-los-universitarios-comienzan-hoy-un-nuevo-paro-que.md",
+  "parrafos_total": 15,
+  "cifras": [
+    { "texto": "más de un año", "parrafo": 4, "indicador": "tiempo de incumplimiento de la ley de financiamiento universitario según el gremio", "periodo": "hasta octubre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Afirmación del sindicato; no hay serie." },
+    { "texto": "41,6%", "parrafo": 7, "indicador": "caída presupuestaria real de las universidades nacionales", "periodo": "desde diciembre de 2023", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de una reunión de rectores; el catálogo no tiene serie presupuestaria." },
+    { "texto": "más de 30%", "parrafo": 7, "indicador": "pérdida de poder adquisitivo del salario del personal universitario", "periodo": "desde diciembre de 2023", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "No hay serie de salarios universitarios en el catálogo." },
+    { "texto": "cuatro jornadas de paro de 24 horas", "parrafo": 9, "indicador": "jornadas de paro anunciadas por FAGDUT", "periodo": "28 de octubre, 3, 12 y 16 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Medida gremial; sin serie." },
+    { "texto": "30 facultades regionales", "parrafo": 10, "indicador": "facultades regionales de la UTN alcanzadas por el paro", "periodo": "jornadas de paro de FAGDUT", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad de sedes; sin serie." },
+    { "texto": "54 organizaciones sindicales", "parrafo": 12, "indicador": "organizaciones representadas en el Consejo Directivo de FATUN", "periodo": "octubre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato institucional del gremio." }
+  ],
+  "puntos_clave": [
+    { "texto": "CONADU Histórica lanza un paro nacional docente universitario y preuniversitario de una semana, desde el miércoles 28 de octubre hasta el 3 de noviembre.", "parrafos": [1, 2] },
+    { "texto": "Los reclamos son cumplir la ley de financiamiento, saldar la deuda salarial y garantizar fondos para enseñanza, investigación, extensión y gestión.", "parrafos": [4, 5] },
+    { "texto": "Los gremios citan una fuerte caída real del presupuesto y una pérdida salarial superior al treinta por ciento desde fines de 2023.", "parrafos": [7] },
+    { "texto": "FAGDUT y FATUN, esta última de personal no docente, sumarán paros de 24 horas el 28 de octubre y el 3, 12 y 16 de noviembre.", "parrafos": [9, 11] },
+    { "texto": "La UBA adhiere por el lado docente, mientras APUBA queda afuera del cronograma; CONADU Histórica decidirá nuevas acciones el 6 de noviembre.", "parrafos": [13, 15] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Hasta cuándo se extiende el paro de CONADU Histórica?", "tipo": "con_respuesta", "parrafos": [2], "ancla": "se extenderá hasta el lunes 3 de noviembre." },
+    { "pregunta": "¿Cuáles son los reclamos centrales del paro?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "La medida de fuerza tiene tres demandas centrales." },
+    { "pregunta": "¿Qué día arranca el paro de FAGDUT?", "tipo": "con_respuesta", "parrafos": [9, 11], "ancla": "La primera será este miércoles 28 de octubre" },
+    { "pregunta": "¿El personal no docente de la UBA adhiere a los paros de FATUN?", "tipo": "con_respuesta", "parrafos": [13], "ancla": "la Asociación del Personal de la UBA (APUBA), que representa" },
+    { "pregunta": "¿Qué respondió el Gobierno al reclamo de los gremios universitarios?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "CONADU Histórica", "rol": "federación docente que impulsa el paro nacional de una semana", "parrafo": 2 },
+    { "nombre": "Javier Milei", "rol": "presidente interpelado en la consigna del gremio", "parrafo": 6 },
+    { "nombre": "FAGDUT", "rol": "gremio docente de la UTN que anunció cuatro paros de 24 horas", "parrafo": 9 },
+    { "nombre": "FATUN", "rol": "federación de trabajadores no docentes universitarios", "parrafo": 11 },
+    { "nombre": "AGD-UBA", "rol": "gremio docente de la UBA que adhiere al paro", "parrafo": 13 },
+    { "nombre": "APUBA", "rol": "asociación del personal no docente de la UBA, fuera del cronograma de FATUN", "parrafo": 13 }
+  ],
+  "fechas": [
+    { "texto": "miércoles 28 de octubre: inicio del paro nacional de CONADU Histórica, FAGDUT y FATUN", "parrafo": 9 },
+    { "texto": "martes 27 de octubre: ratificación pública del paro por la federación", "parrafo": 2 },
+    { "texto": "lunes 3 de noviembre: fin del paro de CONADU Histórica y nueva jornada de FAGDUT y FATUN", "parrafo": 2 },
+    { "texto": "diciembre de 2023: punto de partida de la caída presupuestaria y salarial citada", "parrafo": 7 },
+    { "texto": "3, 12 y 16 de noviembre: restantes jornadas de paro de FAGDUT", "parrafo": 9 },
+    { "texto": "28 de octubre y 3, 12 y 16 de noviembre: paros de 24 horas de FATUN", "parrafo": 11 },
+    { "texto": "6 de noviembre: Congreso Extraordinario de CONADU Histórica para definir los próximos pasos", "parrafo": 15 }
+  ],
+  "no_enriquecer": false,
+  "motivo_no_enriquecer": ""
+}

@@ -1,6 +1,6 @@
 # Agent guidance
 
-Repo del hackatón **MediaParty**. El producto es **glosa**: un portal que procesa noticias, suma gráficos y datos, y exporta el resultado a cada red social.
+Repo del hackatón **MediaParty**. El producto es **glosa**: un asistente para periodistas que analiza una nota, detecta cifras y fuentes verificables, y propone datos oficiales, gráficos y contexto. Cada sugerencia se ancla a un pasaje y la persona decide qué entra; nada se publica automáticamente.
 
 ## Estructura
 
@@ -29,7 +29,7 @@ No hay scripts de lint ni de tests. `pnpm run build` es la verificación disponi
 ## Frontend
 
 - React 19 con Vite. `src/components/` tiene un componente por sección de la landing; `src/data/content.ts` concentra los textos y datos; `src/index.css` contiene los tokens de diseño y todos los estilos.
-- El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
+- El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Verification`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
 - `Hero.tsx` tiene un widget de tabs accesible (`role="tablist"`, navegación por flechas, `tabindex` rotatorio). Mantenelo así si lo tocás.
 - El editor de notas usa **Tiptap 3.32.2** con versiones exactas: los peers exigen la misma versión en todo el árbol. Guardá sólo el JSON de Tiptap; el texto plano se deriva.
 - El avatar del usuario en el sidebar se genera con **boring-avatars** a partir del nombre: variante `beam`, cuadrada y con la paleta de la app (verde, arena, hueso y gris cálido). Es decorativo; el nombre y el correo son la identidad real.

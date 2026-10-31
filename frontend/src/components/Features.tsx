@@ -1,5 +1,7 @@
 import { features } from '../data/content.ts'
 
+const chart = [30, 45, 40, 62, 58, 80]
+
 export default function Features() {
   return (
     <section className="section section--contrast" id="producto">
@@ -7,7 +9,7 @@ export default function Features() {
         <header className="section__head">
           <p className="section__index">02 — Producto</p>
           <div className="section__content">
-            <h2 className="section__title">Todo lo que hay entre la fuente y el post</h2>
+            <h2 className="section__title">Todo lo que glosa suma a tu nota</h2>
           </div>
         </header>
 
@@ -23,38 +25,40 @@ export default function Features() {
               <h3 className="feature__title">{feature.title}</h3>
               <p className="feature__body">{feature.body}</p>
 
+              {feature.kind === 'passage' && feature.passage && (
+                <>
+                  <blockquote className="feature__passage">
+                    {feature.passage.before}
+                    <mark>{feature.passage.mark}</mark>
+                    {feature.passage.after}
+                  </blockquote>
+                  <p className="feature__caption">{feature.caption}</p>
+                </>
+              )}
+
               {feature.kind === 'chart' && (
-                <div className="feature__chart" aria-hidden="true">
-                  <span style={{ height: '30%' }} />
-                  <span style={{ height: '45%' }} />
-                  <span style={{ height: '40%' }} />
-                  <span style={{ height: '62%' }} />
-                  <span style={{ height: '58%' }} />
-                  <span style={{ height: '80%' }} />
-                </div>
+                <>
+                  <div className="feature__chart" aria-hidden="true">
+                    {chart.map((height, index) => (
+                      <span key={index} style={{ height: `${height}%` }} />
+                    ))}
+                  </div>
+                  <p className="feature__caption">{feature.caption}</p>
+                </>
               )}
 
-              {feature.kind === 'quote' && (
-                <blockquote className="feature__quote">
-                  <p>La demanda eléctrica récord coincidió con la mayor inversión en
-                  planta solar del país.</p>
-                </blockquote>
-              )}
-
-              {feature.kind === 'formats' && (
-                <ul className="feature__formats">
-                  <li>1080 x 1350</li>
-                  <li>280 caracteres</li>
-                  <li>3000 caracteres</li>
-                </ul>
-              )}
-
-              {feature.kind === 'team' && (
-                <ul className="feature__team">
-                  <li>MA</li>
-                  <li>LT</li>
-                  <li>SR</li>
-                </ul>
+              {feature.kind === 'checks' && feature.checks && (
+                <>
+                  <p className="feature__caption">{feature.caption}</p>
+                  <ul className="feature__checks">
+                    {feature.checks.map((check) => (
+                      <li key={check.label}>
+                        <span className="feature__check-label">{check.label}</span>
+                        <span className="feature__check-value">{check.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
             </article>
           ))}

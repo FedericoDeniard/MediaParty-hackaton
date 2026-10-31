@@ -31,7 +31,7 @@ function App() {
   const contenido = useMemo(() => docDe(ejemplo.cuerpo), [ejemplo])
   const { filas, trabajando, analizar } = useAnalisisSimulado(ejemplo)
 
-  const editor = useEditorKit({ content: contenido, contentKey: clave, onChange: () => {}, fragments: [] })
+  const editor = useEditorKit({ content: contenido, contentKey: clave, onChange: () => {}, fragments: [], editable: true })
 
   return (
     <div className="editor">

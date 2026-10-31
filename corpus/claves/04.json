@@ -1,0 +1,52 @@
+{
+  "nota": "04",
+  "archivo": "04-el-banco-central-no-compro-reservas-y-el-tesoro-ha.md",
+  "parrafos_total": 13,
+  "cifras": [
+    {"texto": "cerró a $1532 para la compra y $1541 para la venta", "parrafo": 3, "indicador": "dólar mayorista, cierre", "periodo": "lunes tras la elección en Brasil", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Hay serie del mayorista, pero el valor de ese día no está en el catálogo."},
+    {"texto": "aumento de $11,50 (0,75%)", "parrafo": 3, "indicador": "variación del dólar mayorista frente al viernes", "periodo": "lunes tras la elección en Brasil", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Falta el valor de los dos días en el catálogo."},
+    {"texto": "mínimo de $1539 y un máximo de $1542", "parrafo": 4, "indicador": "rango intradiario del dólar mayorista", "periodo": "lunes tras la elección en Brasil", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "Valores intradiarios fuera del catálogo."},
+    {"texto": "$1541", "parrafo": 4, "indicador": "nivel de cierre del dólar mayorista", "periodo": "lunes tras la elección en Brasil", "serie_catalogo": "bcra:5", "resultado_esperado": "por_verificar", "comentario": "El catálogo trae solo el último dato (30/10)."},
+    {"texto": "$1946,73", "parrafo": 5, "indicador": "techo de la banda cambiaria", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "La banda cambiaria no está en el catálogo."},
+    {"texto": "US$100 millones", "parrafo": 8, "indicador": "venta estimada de dólares del Tesoro", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación de mercado; sin serie."},
+    {"texto": "US$ 825 millones", "parrafo": 9, "indicador": "depósitos en dólares del Tesoro en el BCRA", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Depósitos del Tesoro; no son las reservas del BCRA."},
+    {"texto": "US$ 1700 millones", "parrafo": 9, "indicador": "compra de dólares del Tesoro al BCRA", "periodo": "mayo 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Operación puntual; sin serie."},
+    {"texto": "racha de 20 intervenciones", "parrafo": 10, "indicador": "cantidad de intervenciones consecutivas del BCRA con saldo positivo", "periodo": "hasta la jornada de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo de operaciones; sin serie."},
+    {"texto": "US$735,23 millones", "parrafo": 12, "indicador": "volumen operado en el mercado de contado", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Volumen de mercado; sin serie."},
+    {"texto": "31%", "parrafo": 12, "indicador": "aumento del volumen de contado frente al viernes", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Variación de volumen."},
+    {"texto": "US$2140 millones", "parrafo": 12, "indicador": "volumen en futuros", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Volumen de mercado; sin serie."},
+    {"texto": "158%", "parrafo": 12, "indicador": "aumento del volumen de futuros frente a la rueda previa", "periodo": "día de la nota", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Variación de volumen."},
+    {"texto": "US$1252 millones en lo que va del mes", "parrafo": 13, "indicador": "compras de reservas del BCRA en el mes", "periodo": "octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Compras del BCRA, no el nivel de reservas."},
+    {"texto": "US$15.820 millones en el año", "parrafo": 13, "indicador": "compras acumuladas de reservas del BCRA", "periodo": "enero a octubre 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Compras acumuladas, no el nivel de reservas."}
+  ],
+  "puntos_clave": [
+    {"texto": "El BCRA no compró reservas en un día de fuerte demanda de dólares tras el vuelco electoral en Brasil.", "parrafos": [1, 2]},
+    {"texto": "El dólar mayorista subió con fuerza a la apertura y luego se mantuvo estable, algo que los operadores atribuyen a intervención oficial.", "parrafos": [3, 4, 5, 7]},
+    {"texto": "Se estima que el Tesoro vendió unos US$100 millones, lo que dejaría sus depósitos en un mínimo desde mayo.", "parrafos": [5, 8, 9]},
+    {"texto": "El BCRA cortó una racha de intervenciones positivas, aunque siguió activo con derivados y bonos ajustables.", "parrafos": [10, 11]},
+    {"texto": "Los volúmenes de contado y futuros crecieron mucho; el BCRA acumula compras en el mes y en el año.", "parrafos": [12, 13]}
+  ],
+  "preguntas": [
+    {"pregunta": "¿Cómo cerró el dólar mayorista?", "tipo": "con_respuesta", "parrafos": [3, 4], "ancla": "el dólar mayorista abrió bajo fuerte presión y cerró a"},
+    {"pregunta": "¿Cuánto habría vendido el Tesoro para contener la suba?", "tipo": "con_respuesta", "parrafos": [8], "ancla": "el Gobierno habría sacrificado hoy unos US$100 millones de su"},
+    {"pregunta": "¿Cuál es el techo de la banda cambiaria?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "la banda cambiaria vigente, establecido para hoy en $1946,73"},
+    {"pregunta": "¿Qué racha interrumpió el Banco Central?", "tipo": "con_respuesta", "parrafos": [10], "ancla": "el BCRA cortó una racha de 20 intervenciones en el"},
+    {"pregunta": "¿Cuánto tiene hoy el BCRA en reservas internacionales totales?", "tipo": "sin_respuesta", "parrafos": [], "ancla": ""}
+  ],
+  "actores": [
+    {"nombre": "Banco Central (BCRA)", "rol": "no compró reservas en el mercado de contado", "parrafo": 2},
+    {"nombre": "Tesoro Nacional", "rol": "habría vendido dólares para contener el precio", "parrafo": 5},
+    {"nombre": "Francisco Díaz Mayer", "rol": "analista de ABC Mercado de Cambios", "parrafo": 4},
+    {"nombre": "Gustavo Quintana", "rol": "operador de PR Cambios", "parrafo": 5},
+    {"nombre": "Target de Mercado", "rol": "consultora que observó intervención oficial", "parrafo": 6},
+    {"nombre": "Federico García Martínez", "rol": "economista", "parrafo": 9},
+    {"nombre": "Santiago Bausili", "rol": "presidente del Banco Central", "parrafo": 11}
+  ],
+  "fechas": [
+    {"texto": "ayer (elección en Brasil)", "parrafo": 2},
+    {"texto": "viernes", "parrafo": 3},
+    {"texto": "24 de agosto pasado", "parrafo": 5},
+    {"texto": "15/05/2026", "parrafo": 9},
+    {"texto": "25 de septiembre último", "parrafo": 10}
+  ]
+}

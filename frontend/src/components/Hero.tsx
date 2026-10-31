@@ -1,10 +1,15 @@
 import { useRef, useState, type KeyboardEvent } from 'react'
-import { outputs, type NetworkId } from '../data/content.ts'
+import { Link } from 'react-router-dom'
+import { hero, suggestions, type SuggestionId } from '../data/content.ts'
+
+type Decision = 'incorporada' | 'descartada'
 
 export default function Hero() {
-  const [active, setActive] = useState<NetworkId>('x')
+  const [active, setActive] = useState<SuggestionId>('dato')
+  const [decisions, setDecisions] = useState<Partial<Record<SuggestionId, Decision>>>({})
   const tabsRef = useRef<HTMLDivElement>(null)
-  const current = outputs.find((output) => output.id === active)!
+  const current = suggestions.find((suggestion) => suggestion.id === active)!
+  const decision = decisions[active]
 
   const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
     const keys: Record<string, number> = {
@@ -17,90 +22,155 @@ export default function Hero() {
     if (!step) return
 
     event.preventDefault()
-    const index = outputs.findIndex((output) => output.id === active)
-    const next = outputs[(index + step + outputs.length) % outputs.length]
+    const index = suggestions.findIndex((suggestion) => suggestion.id === active)
+    const next = suggestions[(index + step + suggestions.length) % suggestions.length]
     setActive(next.id)
-    tabsRef.current?.querySelector<HTMLButtonElement>(`#tab-${next.id}`)?.focus()
+    tabsRef.current
+      ?.querySelector<HTMLButtonElement>(`#sugerencia-tab-${next.id}`)
+      ?.focus()
+  }
+
+  function decide(next: Decision) {
+    setDecisions((prev) => ({ ...prev, [active]: next }))
+  }
+
+  function reopen() {
+    setDecisions((prev) => {
+      const next = { ...prev }
+      delete next[active]
+      return next
+    })
   }
 
   return (
     <section className="hero" id="top">
       <div className="hero__meta">
-        <span>glosa · Portal de noticias</span>
-        <span>MediaParty 2026</span>
-        <span>Una fuente · Ocho destinos</span>
+        {hero.meta.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
       </div>
 
       <div className="hero__inner">
         <div className="hero__copy">
-          <p className="eyebrow">De la noticia al post</p>
+          <p className="eyebrow">{hero.eyebrow}</p>
           <h1 className="hero__title">
-            Una noticia.
+            {hero.title[0]}
             <br />
-            Todos los formatos.
+            {hero.title[1]}
           </h1>
-          <p className="hero__lead">
-            glosa procesa la noticia, le suma gráficos y datos, y la exporta lista para
-            publicar en cada red social. Sin copiar, pegar y reescribir cinco veces.
-          </p>
+          <p className="hero__lead">{hero.lead}</p>
 
           <div className="hero__actions">
-            <a className="button button--solid" href="#empezar">
-              Empezar gratis
-            </a>
+            <Link className="button button--solid" to="/registro">
+              {hero.primary}
+            </Link>
             <a className="button button--ghost" href="#como-funciona">
-              Ver cómo funciona
+              {hero.secondary}
             </a>
           </div>
         </div>
 
-        <div className="hero__demo" aria-label="Ejemplo de una noticia exportada">
+        <aside className="hero__demo" aria-label="Ejemplo de una sugerencia sobre una nota">
           <article className="source">
-            <span className="source__badge">Fuente</span>
-            <h2 className="source__title">La energía solar creció 34% en el primer semestre</h2>
-            <p className="source__meta">Informe sectorial · 12 de marzo</p>
+            <span className="source__badge">{hero.demo.label}</span>
+            <h2 className="source__title">{hero.demo.title}</h2>
+            <p className="source__meta">{hero.demo.meta}</p>
+            <p className="source__body">{hero.demo.body}</p>
           </article>
 
-          <span className="hero__arrow" aria-hidden="true">
-            ↓
-          </span>
-
-          <div className="tabs" role="tablist" aria-label="Redes de destino" ref={tabsRef}>
-            {outputs.map((output) => (
+          <div className="tabs" role="tablist" aria-label="Sugerencias sobre el pasaje" ref={tabsRef}>
+            {suggestions.map((suggestion) => (
               <button
-                key={output.id}
+                key={suggestion.id}
                 role="tab"
                 type="button"
-                id={`tab-${output.id}`}
-                aria-selected={output.id === active}
-                aria-controls="preview-panel"
-                tabIndex={output.id === active ? 0 : -1}
-                className={`tab${output.id === active ? ' tab--active' : ''}`}
-                onClick={() => setActive(output.id)}
+                id={`sugerencia-tab-${suggestion.id}`}
+                aria-selected={suggestion.id === active}
+                aria-controls="sugerencia-panel"
+                tabIndex={suggestion.id === active ? 0 : -1}
+                className={`tab${suggestion.id === active ? ' tab--active' : ''}`}
+                onClick={() => setActive(suggestion.id)}
                 onKeyDown={handleKeyDown}
               >
-                {output.name}
+                {suggestion.tab}
               </button>
             ))}
           </div>
 
-          <div role="tabpanel" id="preview-panel" aria-labelledby={`tab-${current.id}`} className="preview">
-            <p className="preview__format">{current.format}</p>
-            <p className="preview__body">
-              La energía solar creció 34% en el primer semestre, impulsada por nuevas
-              instalaciones industriales. El sector espera cerrar el año con su mejor
-              marca histórica.
-            </p>
-            <div className="preview__chart" aria-hidden="true">
-              <span style={{ height: '38%' }} />
-              <span style={{ height: '52%' }} />
-              <span style={{ height: '46%' }} />
-              <span style={{ height: '71%' }} />
-              <span style={{ height: '88%' }} />
+          <div
+            role="tabpanel"
+            id="sugerencia-panel"
+            aria-labelledby={`sugerencia-tab-${current.id}`}
+            className="preview"
+          >
+            <div className="preview__head">
+              <p className="preview__format">{current.type}</p>
+              <p className="preview__status">{current.statusLabel}</p>
             </div>
-            <p className="preview__detail">{current.detail}</p>
+
+            <p className="preview__body">{current.text}</p>
+
+            <dl className="preview__meta">
+              <div className="preview__meta-row">
+                <dt>Aparece en la nota</dt>
+                <dd>
+                  <mark>{current.passage}</mark>
+                </dd>
+              </div>
+              <div className="preview__meta-row">
+                <dt>Fuente</dt>
+                <dd>{current.source}</dd>
+              </div>
+            </dl>
+
+            {current.chart ? (
+              <>
+                <div className="preview__chart" aria-hidden="true">
+                  {current.chart.map((height, index) => (
+                    <span key={index} style={{ height: `${height}%` }} />
+                  ))}
+                </div>
+                <p className="preview__detail">{current.detail}</p>
+              </>
+            ) : null}
+
+            <div className="preview__actions">
+              {decision ? (
+                <>
+                  <p className="preview__decision" role="status">
+                    {decision === 'incorporada' ? 'Incorporada a la nota' : 'Descartada'}
+                  </p>
+                  <button className="linkbutton" type="button" onClick={reopen}>
+                    Reabrir
+                  </button>
+                </>
+              ) : (
+                <>
+                  {current.applicable ? (
+                    <button
+                      className="button button--ink"
+                      type="button"
+                      onClick={() => decide('incorporada')}
+                    >
+                      Incorporar
+                    </button>
+                  ) : (
+                    <p className="preview__decision">{hero.demo.blocked}</p>
+                  )}
+                  <button
+                    className="linkbutton"
+                    type="button"
+                    onClick={() => decide('descartada')}
+                  >
+                    Descartar
+                  </button>
+                </>
+              )}
+            </div>
           </div>
-        </div>
+
+          <p className="hero__demo-foot">{hero.demo.foot}</p>
+        </aside>
       </div>
     </section>
   )
