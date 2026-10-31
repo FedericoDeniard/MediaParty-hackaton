@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MediaParty · Hackaton</title>
+<style>
+  :root {
+    --seashell: #EAE4DA;
+    --black: #1D1D1B;
+    --lavender: #808BC5;
+    --pink: #EAA7C7;
+    --sky: #9ED6DF;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: var(--lavender);
+    color: var(--black);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .card {
+    width: min(680px, 100%);
+    background: var(--seashell);
+    border: 3px solid var(--black);
+    border-radius: 4px;
+    box-shadow: 8px 8px 0 var(--black);
+    padding: 32px;
+  }
+
+  .label {
+    display: inline-block;
+    background: var(--sky);
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 16px 0 8px;
+    font-size: clamp(35px, 8vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0 0 24px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .link {
+    display: inline-block;
+    background: var(--pink);
+    border: 3px solid var(--black);
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 var(--black);
+    padding: 12px 20px;
+    color: var(--black);
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    word-break: break-all;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+
+  .link:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--black); }
+  .link:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
+  .link:focus-visible { outline: 3px solid var(--black); outline-offset: 4px; }
+
+  footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px solid var(--black);
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    opacity: 0.75;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <span class="label">Hackaton</span>
+    <h1>MediaParty</h1>
+    <p>El repo del proyecto está en GitHub. Entrá, clonalo y arrancá.</p>
+
+    <a class="link" href="https://github.com/FedericoDeniard/MediaParty-hackaton" target="_blank" rel="noopener noreferrer">
+      github.com/FedericoDeniard/MediaParty-hackaton
+    </a>
+
+    <footer>Served on the local network</footer>
+  </main>
+</body>
+</html>
