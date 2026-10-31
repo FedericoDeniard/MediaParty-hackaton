@@ -1506,7 +1506,7 @@ button {
   margin-top: var(--space-3);
   border: 0;
   background: none;
-  padding: 0;
+  padding: var(--space-2) 0;
   color: var(--text-muted);
   font-size: var(--text-xs);
   font-weight: 600;
@@ -1597,6 +1597,7 @@ button {
   align-items: baseline;
   gap: var(--space-3);
   min-width: 0;
+  min-height: 24px;
   text-decoration: none;
 }
 
@@ -1606,7 +1607,7 @@ button {
   letter-spacing: -0.01em;
   line-height: 1.3;
   overflow-wrap: break-word;
-}</path>
+}
 
 .row__main:hover .row__title {
   text-decoration: underline;
@@ -1637,18 +1638,21 @@ button {
 }
 
 /* El estado no se marca sólo con color: la etiqueta dice qué es.
-   La variante cambia el peso, no el tono. */
+   La variante cambia el peso y el tono, nunca el subrayado — un
+   filete bajo la palabra la vuelve un link. */
 .row__status--draft {
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .row__status--review {
   color: var(--text);
+  font-weight: 600;
 }
 
 .row__status--published {
-  border-bottom: 2px solid var(--ink);
   color: var(--text);
+  font-weight: 700;
 }
 
 .row__words {
@@ -1680,6 +1684,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  min-height: 24px;
   color: var(--text-muted);
   font-size: var(--text-xs);
   font-weight: 600;
@@ -1692,7 +1697,19 @@ button {
   color: var(--text);
 }
 
+/* El `h1` es el título de la nota para la navegación por
+   encabezados. Va oculto: el texto visible es el campo editable. */
+.editor__heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .editor__title {
+  width: 100%;
   min-width: 0;
   border: 0;
   border-bottom: 1px solid transparent;
@@ -1823,7 +1840,14 @@ button {
   min-height: 50vh;
   font-size: var(--text-base);
   line-height: 1.7;
-  outline: none;
+}
+
+/* El cuerpo del documento es editable: necesita foco visible, como
+   cualquier control. El caret ya marca dónde se está escribiendo; el
+   filete marca el borde del campo. */
+.ProseMirror:focus-visible {
+  outline: var(--focus);
+  outline-offset: 3px;
 }
 
 .ProseMirror > * + * {
@@ -2036,6 +2060,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  min-height: 24px;
   border: 0;
   background: none;
   padding: 0;
@@ -2050,6 +2075,12 @@ button {
   cursor: pointer;
 }
 
+/* El subrayado es del texto, no del icono: el glifo geométrico va
+   limpio. */
+.linkbutton svg {
+  text-decoration: none;
+}
+
 .linkbutton:hover {
   color: var(--text);
 }
@@ -2059,7 +2090,7 @@ button {
 }
 
 .linkbutton--quiet {
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
   color: var(--text-muted);
   font-size: var(--text-micro);
 }

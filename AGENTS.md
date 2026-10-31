@@ -29,8 +29,10 @@ No hay scripts de lint ni de tests. `pnpm run build` es la verificación disponi
 ## Frontend
 
 - React 19 con Vite. `src/components/` tiene un componente por sección de la landing; `src/data/content.ts` concentra los textos y datos; `src/index.css` contiene los tokens de diseño y todos los estilos.
-- El sitio es una landing estática de una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`.
+- El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
 - `Hero.tsx` tiene un widget de tabs accesible (`role="tablist"`, navegación por flechas, `tabindex` rotatorio). Mantenelo así si lo tocás.
+- El editor de notas usa **Tiptap 3.32.2** con versiones exactas: los peers exigen la misma versión en todo el árbol. Guardá sólo el JSON de Tiptap; el texto plano se deriva.
+- La capa de datos del frontend es un **store mock** sobre `localStorage` (`src/lib/noteStore.ts`). La auth también es mock: `TODO(auth)` en `AuthForm.tsx` marca dónde entra Supabase Auth.
 - Agregá dependencias con `pnpm add <pkg>` desde `frontend/`. No edites `pnpm-lock.yaml` a mano.
 
 ## Dirección visual: Swiss
@@ -68,5 +70,5 @@ Los skills instalados desde GitHub se registran en `skills-lock.json`. Los hecho
 
 ## Contenido
 
-- Los textos del frontend están en español rioplatense y viven en `src/data/content.ts`.
+- Los textos del frontend están en español rioplatense y viven en `src/data/content.ts` (landing), `auth.ts` (acceso), `app.ts` y `notes.ts` (mesa de trabajo).
 - Mantené la voz directa y concreta. Evitá el emoji en la interfaz.

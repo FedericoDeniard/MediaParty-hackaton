@@ -1,13 +1,15 @@
 # Agent guidance · frontend
 
-Landing de **Nexo**: procesa una noticia, le suma gráficos y datos, y la exporta lista para cada red social. También tiene las pantallas de acceso (`/login` y `/registro`).
+Landing de **Nexo**: procesa una noticia, le suma gráficos y datos, y la exporta lista para cada red social. También tiene las pantallas de acceso (`/login` y `/registro`) y la **mesa de trabajo** (`/app`): sidebar, lista de notas y editor rich text.
 
 ## Stack
 
 - React 19
 - Vite 8
-- TypeScript 7 (strict, `noUnusedLocals`, `verbatimModuleSyntax`)
-- React Router 7 (`react-router-dom`), rutas `/`, `/login` y `/registro`
+- TypeScript 7 (strict, `noUnusedLocals`, `verbatimModuleSyntax`, `erasableSyntaxOnly`)
+- React Router 7 (`react-router-dom`), rutas `/`, `/login`, `/registro` y `/app/*`
+- Tiptap 3.32.2 (`@tiptap/*`) para el editor de notas. Versiones **exactas**: los peers exigen la misma versión en todo el árbol.
+- `lucide-react` para los iconos (`strokeWidth={1.5}`, `currentColor`, 24 viewBox)
 - CSS plano con custom properties. Sin framework de estilos, sin CSS-in-JS, sin Tailwind.
 
 ## Comandos
@@ -28,8 +30,14 @@ No hay lint ni tests. `pnpm run build` es la verificación.
 src/
   components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
   components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
+  components/app/  AppShell, Sidebar, NoteList, NoteRow, NoteEditor,
+                    EditorToolbar, EnrichmentPanel  (mesa de trabajo)
   data/         content.ts con los textos y datos de la landing
                 auth.ts con los textos, campos y reglas de login/registro
+                app.ts con el copy de la mesa de trabajo
+                notes.ts con el modelo de nota, los labels y las semillas
+  lib/          noteStore.ts (store mock sobre localStorage)
+                editor/useEditorKit.ts, editor/extensions.ts
   index.css     tokens de diseño + estilos
   App.tsx       rutas de la app
   main.tsx      entry point; importa la fuente, el CSS y monta el router
@@ -38,6 +46,42 @@ public/
 ```
 
 `dist/`, `node_modules/` y `*.tsbuildinfo` son generados e ignorados.
+
+## Mesa de trabajo · `/app`
+
+Es el área autenticada. La landing en `/` no se toca.
+
+| Ruta | Pantalla |
+|---|---|
+| `/app/notas` | Lista de notas en filas de datos |
+| `/app/notas/nueva` | Crea la nota y redirige a su editor |
+| `/app/notas/:id` | Editor de la nota |
+| `/app/publicadas` | Lista filtrada por `status = 'published'` |
+
+- **El sidebar es un campo sólido de `--surface-contrast`** separado del contenido por un filete. Marca, acción primaria, navegación y pie son áreas de una grilla de cuatro: en mobile pasa a dos filas.
+- **Las notas son filas de datos**, no cards: nombre a la izquierda, valor a la derecha, filete entre filas, numerales tabulares.
+- **El editor es el cuerpo de la nota**, no una caja: el texto va sobre `--bg` y la toolbar se apoya con un filete.
+- **El panel de enriquecimientos** es `--surface-contrast`, como el `.panel` que ya existía.
+- Los estados de la toolbar se marcan con **plano de tinta**, no con el verde: el acento queda para los datos del documento y nunca es el único indicador de un estado.
+
+### El editor
+
+Tiptap v3, headless: no trae styles propios, cada nodo se estiliza desde `index.css` con los tokens.
+
+- `doc` (JSON de Tiptap) es la **única fuente de verdad**. El texto plano nunca se guarda: se deriva con `getText`, que corta por línea en blanco como espera la ingestión del pipeline.
+- **Autosave con debounce de 800ms.** El estado ("Guardando…" / "Guardado 15:04") es texto en la barra, no un toast.
+- El título es un `<input>` aparte; el `h1` oculto lleva el texto para la navegación por encabezados.
+- **Al aprobar una pieza, su pasaje se resalta en el cuerpo** con el verde de datos (`--chart`, 11.97:1 con la tinta encima). Es una decoración de ProseMirror (`Pasaje` en `lib/editor/extensions.ts`): el texto no cambia, se sigue pudiendo verificar.
+- Al cambiar de nota en la misma ruta, el editor **se recarga**: `useEditor` sólo lee `content` al crearse, así que `useEditorKit` lo resincroniza por `contentKey`.
+- Atajos de teclado: Tiptap ya trae `Mod-b/i/u`, `Mod-Shift-s`, `Mod-Shift-7/8/9` y `Mod-z/y`. `Atajos` suma `Mod-k` (enlace), `Mod-Alt-1/2/3` (títulos) y `Mod-Shift-0` (párrafo).
+
+### Datos
+
+`lib/noteStore.ts` es un store **mock** sobre `localStorage`: las notas y las piezas sobreviven al refresh y la app anda sin backend. La interfaz es angosta a propósito (`listNotes` / `getNote` / `createNote` / `updateNote` / `listEnrichments` / `setEnrichmentStatus`); cuando llegue Supabase se cambia la implementación, no las pantallas.
+
+Las semillas salen de `corpus/notas/` (19 notas reales de la semana del 24 al 31 de octubre de 2026, usadas sólo para pruebas).
+
+**La auth es mock.** `AuthForm.tsx` entra directo a `/app/notas`; `TODO(auth)` marca dónde va la llamada real a Supabase Auth.
 
 ## Pantallas de acceso
 
@@ -85,3 +129,4 @@ WCAG 2.2 AA como piso.
 3. Verificá los estados de interacción, no sólo el estado en reposo.
 4. Corré `pnpm run typecheck` y `pnpm run build` antes de dar por terminada una tarea.
 5. Revisá la página en `320`, `768` y `1440` px.
+6. En el editor, no guardes el texto plano: `doc` es la fuente de verdad.
