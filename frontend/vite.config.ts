@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, searchForWorkspaceRoot } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
 
@@ -7,6 +7,10 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    /* Las notas de prueba viven en `corpus/`, fuera del frontend. */
+    fs: {
+      allow: [searchForWorkspaceRoot(process.cwd()), resolve(import.meta.dirname, '../corpus/notas')],
+    },
     /* El backend de enriquecimiento (FastAPI, `backend/`). El proxy evita
        CORS en desarrollo: el navegador sólo habla con Vite. */
     proxy: {

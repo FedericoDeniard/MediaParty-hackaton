@@ -1,4 +1,5 @@
 import type { JSONContent } from '@tiptap/core'
+import { corpusNote, corpusNotes } from './corpus.ts'
 
 /* ============================================================
    El modelo de una nota.
@@ -36,24 +37,6 @@ export interface Enrichment {
   /** Texto literal de la nota que respalda la pieza. Es lo que se resalta. */
   citation: string | null
   status: EnrichmentStatus
-}
-
-/* ---- Construcciones de documento ---- */
-
-export function textDoc(blocks: JSONContent[]): JSONContent {
-  return { type: 'doc', content: blocks }
-}
-
-export function paragraph(text: string): JSONContent {
-  return { type: 'paragraph', content: [{ type: 'text', text }] }
-}
-
-export function heading(level: 2 | 3, text: string): JSONContent {
-  return { type: 'heading', attrs: { level }, content: [{ type: 'text', text }] }
-}
-
-export function quote(text: string): JSONContent {
-  return { type: 'blockquote', content: [paragraph(text)] }
 }
 
 /* ---- Texto y conteo ---- */
@@ -94,7 +77,7 @@ export const enrichmentTypeLabels: Record<EnrichmentType, string> = {
    documento, que es lo que el editor resalta al aprobarla.
    ============================================================ */
 
-export const seedNotes: Note[] = [
+const handSeeds: Note[] = [
   {
     id: 'n-01',
     title: 'A cuánto llegará el índice de inflación de octubre según las consultoras',
@@ -102,21 +85,7 @@ export const seedNotes: Note[] = [
     niche: 'economía',
     createdAt: '2026-10-27T14:20:00.000Z',
     updatedAt: '2026-10-31T09:12:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'Luego de que la inflación se ubicara en 1,9% en septiembre, un salto intermensual respecto del 1,7% de agosto, la expectativa para octubre está centrada en si podrá lograrse una desaceleración. Hasta la tercera semana del mes, los relevamientos de las consultoras son optimistas al respecto, aunque no anticipan una baja abrupta. Sin embargo, el Gobierno podría lograr el segundo dato más bajo del último año.',
-      ),
-      paragraph(
-        'Las estimaciones privadas ubican la variación mensual de octubre en 1,8%, una desaceleración de 0,1 puntos porcentuales, muy leve, aún lejos de la expectativa oficial de que la inflación comenzara en algún mes del 2026 en cero.',
-      ),
-      heading(2, 'Nuevas proyecciones'),
-      paragraph(
-        'El dato de 1,8% se repite en distintos relevamientos. La diferencia con el mes anterior sería acotada, aunque el alcanzaría al Gobierno para mostrar una desaceleración.',
-      ),
-      paragraph(
-        'El número tendría un peso político y económico por su comparación con los registros recientes. Según las estimaciones privadas, octubre podría convertirse en el segundo dato más bajo de 2026 y de los últimos doce meses.',
-      ),
-    ]),
+    doc: corpusNote('01').doc,
     wordCount: 0,
   },
   {
@@ -126,17 +95,7 @@ export const seedNotes: Note[] = [
     niche: 'economía',
     createdAt: '2026-10-24T10:05:00.000Z',
     updatedAt: '2026-10-30T17:41:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'La inflación argentina parece encontrar dificultades para profundizar su desaceleración. Después de alcanzar el 1,7% mensual en agosto, el índice de precios al consumidor volvió a subir en septiembre, cuando fue 1,9%, y las primeras estimaciones privadas para octubre anticipan un resultado similar.',
-      ),
-      paragraph(
-        'Aunque el ritmo de aumento de los precios se mantiene por debajo del 2%, los economistas no esperan una reducción significativa en los últimos meses de 2026 y advierten que el escenario de 2027 dependerá, en buena medida, de la evolución del dólar, los precios internacionales de la energía y la incertidumbre propia de un año electoral.',
-      ),
-      paragraph(
-        'El próximo dato oficial se conocerá el 12 de noviembre, cuando el Indec publique la inflación correspondiente a octubre. Por ahora, los relevamientos de las consultoras privadas ubican el incremento mensual entre 1,8% y 2%, prácticamente en línea con septiembre.',
-      ),
-    ]),
+    doc: corpusNote('02').doc,
     wordCount: 0,
   },
   {
@@ -146,17 +105,7 @@ export const seedNotes: Note[] = [
     niche: 'política',
     createdAt: '2026-10-29T08:30:00.000Z',
     updatedAt: '2026-10-31T08:02:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'El Senado aprobó y giró en revisión a la Cámara de Diputados la reforma de la Ley Nacional de Salud Mental (26.657), un proyecto enviado por el Poder Ejecutivo pero que sufrió severas modificaciones en el recinto mismo de la Cámara alta.',
-      ),
-      paragraph(
-        'La iniciativa fue aprobada poco antes de la 1 de la madrugada por 42 votos a favor, aportados por el oficialismo y sus aliados, y 21 en contra, todos del kirchnerismo.',
-      ),
-      quote(
-        'Por lo pronto, el proyecto que pasará en revisión a la Cámara de Diputados ya no es el que redactó la Casa Rosada con la intención de levantar la prohibición en la creación de manicomios que había establecido la ley sancionada por el kirchnerismo en 2010.',
-      ),
-    ]),
+    doc: corpusNote('07').doc,
     wordCount: 0,
   },
   {
@@ -166,17 +115,7 @@ export const seedNotes: Note[] = [
     niche: 'sociedad',
     createdAt: '2026-10-26T11:00:00.000Z',
     updatedAt: '2026-10-29T19:26:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'Tras haber sido intervenido quirúrgicamente hace dos semanas por un cáncer de pulmón, el Sumo Pontífice confirmó su visita a la Argentina del 8 al 11 de noviembre: recorrerá la ciudad de Buenos Aires, la provincia de Buenos Aires —donde encabezará una misa en Luján— y Córdoba.',
-      ),
-      paragraph(
-        'En el marco de mucha expectativa en torno a la primera visita papal desde Juan Pablo II, el Ejecutivo declaró de “interés nacional” la visita oficial de León XIV y las actividades oficiales, institucionales, protocolares y de organización vinculadas a su llegada.',
-      ),
-      paragraph(
-        'Además, producto de lo que definió como “la superposición con los desplazamientos laborales, educativos y comerciales propios de una jornada hábil”, fijó tres feriados.',
-      ),
-    ]),
+    doc: corpusNote('13').doc,
     wordCount: 0,
   },
   {
@@ -186,17 +125,7 @@ export const seedNotes: Note[] = [
     niche: 'deportes',
     createdAt: '2026-10-30T09:15:00.000Z',
     updatedAt: '2026-10-30T21:03:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'El Superclásico en la Bombonera de este domingo 1° de noviembre se desarrollará en un punto crucial del torneo. Boca Juniors recibirá a River Plate por la 15ª fecha del Torneo Clausura con los ojos de ambos puestos en las distintas tablas de la Liga Profesional de Fútbol.',
-      ),
-      paragraph(
-        'Antes del inicio de la anteúltima jornada, con todavía seis puntos en disputa, el Millonario aparece cuarto en la Zona B con 23 puntos detrás de Rosario Central (28), Argentinos Juniors (28) y Gimnasia La Plata (25).',
-      ),
-      paragraph(
-        'Los de Núñez hoy figuran 7° en la Tabla Anual con 52 puntos y dentro de la zona de clasificación a la Sudamericana. Boca Juniors (57), Argentinos Juniors (57) y Rosario Central (56) estarían metiéndose en la Libertadores 2027 por esa vía.',
-      ),
-    ]),
+    doc: corpusNote('17').doc,
     wordCount: 0,
   },
   {
@@ -206,16 +135,46 @@ export const seedNotes: Note[] = [
     niche: 'deportes',
     createdAt: '2026-10-30T12:40:00.000Z',
     updatedAt: '2026-10-31T11:48:00.000Z',
-    doc: textDoc([
-      paragraph(
-        'La Liga Profesional de Fútbol (LPF) de la Argentina incorporará el sistema de Fuera de Juego Semiautomático (SAOT, por sus siglas en inglés) a su plataforma VAR a partir de la final del Torneo Clausura 2026, programada para el 12 de diciembre en el Estadio Diego Armando Maradona de La Plata, con implementación total en todas las canchas desde el Clausura 2027.',
-      ),
-      paragraph(
-        'El SAOT funciona con una plataforma basada en inteligencia artificial y datos deportivos. El sistema construye una réplica digital del partido en tiempo real y permite analizar “cada jugada de fuera de juego con precisión milimétrica, optimizando los tiempos de revisión y respaldando la toma de decisiones arbitrales”, según el comunicado oficial de la LPF.',
-      ),
-    ]),
+    doc: corpusNote('19').doc,
     wordCount: 0,
   },
+]
+
+/* El resto del corpus entra como borrador, con el nicho de su sección
+   en `docs/corpus-prueba.md` y la fecha de publicación de la nota. */
+const corpusMeta: Record<string, [niche: string, date: string]> = {
+  '03': ['economía', '2026-10-28'],
+  '04': ['economía', '2026-10-26'],
+  '05': ['economía', '2026-10-29'],
+  '06': ['economía', '2026-10-29'],
+  '08': ['política', '2026-10-27'],
+  '09': ['política', '2026-10-27'],
+  '10': ['política', '2026-10-24'],
+  '11': ['política', '2026-10-31'],
+  '12': ['sociedad', '2026-10-31'],
+  '14': ['sociedad', '2026-10-28'],
+  '15': ['sociedad', '2026-10-26'],
+  '16': ['deportes', '2026-10-28'],
+}
+
+export const seedNotes: Note[] = [
+  ...handSeeds,
+  ...corpusNotes
+    .filter((note) => note.number in corpusMeta)
+    .map((note): Note => {
+      const [niche, date] = corpusMeta[note.number]
+      const at = `${date}T12:00:00.000Z`
+      return {
+        id: `n-corpus-${note.number}`,
+        title: note.title,
+        doc: note.doc,
+        status: 'draft',
+        niche,
+        wordCount: 0,
+        createdAt: at,
+        updatedAt: at,
+      }
+    }),
 ]
 
 export const seedEnrichments: Enrichment[] = [

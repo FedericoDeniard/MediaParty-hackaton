@@ -20,8 +20,9 @@ import {
    estas funciones y no las pantallas.
    ============================================================ */
 
-const NOTES_KEY = 'nexo.notes.v1'
-const ENRICHMENTS_KEY = 'nexo.enrichments.v1'
+/* v2: las semillas pasaron a ser las notas completas del corpus. */
+const NOTES_KEY = 'nexo.notes.v2'
+const ENRICHMENTS_KEY = 'nexo.enrichments.v2'
 
 function read<T>(key: string, fallback: T): T {
   if (typeof localStorage === 'undefined') return fallback
