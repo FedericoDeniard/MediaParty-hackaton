@@ -15,6 +15,9 @@ surfaces:
   contrast: "#E7E5DC"
   raised: "#FAF9F6"
   inverse: "#171717"
+chart:
+  fill: "#C7DE58"
+  baseline: "#C7DE58"
 typography:
   h1:
     fontFamily: "Archivo Variable"
@@ -105,6 +108,19 @@ The set does not change between pages. Do not introduce a second background hue:
 | Ink / Bone Sunken | 14.20:1 | Text on the contrast tone |
 | Ink Soft / Bone Sunken | 5.48:1 | Secondary text on the contrast tone |
 | Control / Bone Sunken | 4.41:1 | Control borders on the contrast tone |
+
+### Data colour
+
+The chart palette is the one place where the system carries a colour.
+
+| Token | Value | Role |
+|---|---|---|
+| `--chart` | `#C7DE58` | Fill of the data bars. The brand's data colour. |
+| `--chart-baseline` | `#C7DE58` | Baseline rule under the bars. |
+
+The fill is a light green: `1.32:1` against bone and `1.19:1` against the contrast tone, below the `3:1` that WCAG 1.4.11 asks for graphics that carry information. It reads clearly on the inverted plane (`11.97:1`). The bars carry no stroke: a chart is flat, and the colour does the work.
+
+On the inverted plane the chart flips: the fill and the baseline become the inverted ink.
 
 ## Typography
 

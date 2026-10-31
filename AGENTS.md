@@ -62,6 +62,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 | `grill-me` | Cuestionar un plan o diseño antes de implementarlo |
 | `supabase` | Cualquier tarea que toque Supabase: auth, RLS, edge functions, realtime, storage, CLI, migraciones |
 | `supabase-postgres-best-practices` | Antes de escribir o cambiar algo en Postgres: esquema, tipos, índices, RLS, locks, performance |
+| `db-modeling` | Modelar el schema de Nexo: derivar entidades, 1NF/2NF/3NF, decidir qué va en jsonb |
 
 Los skills instalados desde GitHub se registran en `skills-lock.json`. Los hechos a mano (como `swiss`) no van ahí.
 
