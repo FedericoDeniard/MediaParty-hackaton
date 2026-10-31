@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Archive, ArrowUpRight, Trash2 } from 'lucide-react'
+import { Archive, ArrowUpRight, Check, Trash2, X } from 'lucide-react'
 import { noteRow } from '../../data/app.ts'
 import { excerpt, noteThemeLabels, type Note } from '../../data/notes.ts'
 import { archiveNote, removeNote } from '../../lib/noteStore.ts'
@@ -59,6 +59,8 @@ export default function NoteRow({
       ? noteRow.confirmLabel(note.title)
       : noteRow.deleteLabel(note.title)
 
+  const Icon = isPublished ? Archive : confirming ? Check : Trash2
+
   return (
     <li className="row">
       <Link className="row__link" to={`/app/notas/${note.id}`}>
@@ -100,14 +102,10 @@ export default function NoteRow({
           className={`row__tool${confirming ? ' row__tool--confirm' : ''}`}
           type="button"
           aria-label={ariaLabel}
+          title={label}
           onClick={handleAction}
         >
-          {isPublished ? (
-            <Archive size={14} strokeWidth={1.5} aria-hidden="true" />
-          ) : (
-            <Trash2 size={14} strokeWidth={1.5} aria-hidden="true" />
-          )}
-          {label}
+          <Icon size={16} strokeWidth={1.5} aria-hidden="true" />
         </button>
 
         {confirming ? (
@@ -115,9 +113,10 @@ export default function NoteRow({
             className="row__tool"
             type="button"
             aria-label={noteRow.cancelLabel(note.title)}
+            title={noteRow.cancel}
             onClick={() => setConfirming(false)}
           >
-            {noteRow.cancel}
+            <X size={16} strokeWidth={1.5} aria-hidden="true" />
           </button>
         ) : null}
 

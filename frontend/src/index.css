@@ -1911,32 +1911,27 @@ button {
   text-transform: uppercase;
 }
 
-/* La acción de la fila es texto con filete, no un botón relleno. El
-   segundo toque para borrar se marca con el filete de énfasis: el
-   color no es el único indicador. */
+/* La acción de la fila es un icono, no un botón relleno. El segundo
+   toque para borrar se marca con el filete de énfasis: el color no es
+   el único indicador. */
 .row__tools {
   display: flex;
   flex: none;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-2);
 }
 
 .row__tool {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
+  justify-content: center;
+  min-width: 44px;
   min-height: 44px;
   border: 0;
   border-bottom: 2px solid transparent;
   background: transparent;
-  padding: var(--space-2) 0;
+  padding: 0;
   color: var(--text-muted);
-  font-family: inherit;
-  font-size: var(--text-micro);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 1.4;
-  text-transform: uppercase;
   cursor: pointer;
   transition:
     color var(--duration-fast) var(--ease),
