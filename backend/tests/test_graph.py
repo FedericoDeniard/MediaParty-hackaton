@@ -31,13 +31,14 @@ async def test_graph_runs_all_nodes(monkeypatch):
         def model_dump(self, mode):
             return {"ok": True}
 
-    def fake_validar(body, done, usar_modelo, fecha_referencia):
+    def fake_validar(body, done, cliente_series, usar_modelo, fecha_referencia):
         seen.update(done)
         seen["_fecha"] = fecha_referencia
         return Report()
 
     monkeypatch.setattr(graph, "extract", fake_extract)
     monkeypatch.setattr(graph, "validar_nota", fake_validar)
+    monkeypatch.setattr(graph, "armar_graficos", lambda report, done, cliente: Report())
     monkeypatch.setattr(graph.db, "get_article", lambda _id: article)
     monkeypatch.setattr(graph.db, "update_article", lambda _id, **f: article.update(f))
     monkeypatch.setattr(
@@ -48,8 +49,9 @@ async def test_graph_runs_all_nodes(monkeypatch):
     await graph.run("a1")
 
     assert article["niche"] == "política"
-    assert set(rows) == set(NODES) | {"validation"}
+    assert set(rows) == set(NODES) | {"validation", "graficos"}
     assert rows["validation"]["status"] == "done"
+    assert rows["graficos"]["status"] == "done"
     assert set(seen) - {"_fecha"} == set(NODES) - {"timeline"}  # failed branch is not sent to validation
     assert str(seen["_fecha"]) == "2026-10-27"
     assert early >= {"entities", "editorial"} and not early & graph.LINKED  # unlinked rows don't wait for the rest

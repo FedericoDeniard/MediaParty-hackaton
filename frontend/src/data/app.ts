@@ -79,6 +79,7 @@ export const enrichmentPanel = {
     editorial: 'Mirada editorial',
     figures: 'Cifras',
     validation: 'Cruce con datos oficiales',
+    graficos: 'Gráficos',
   } as Record<string, string>,
   stepStatus: {
     pending: 'en espera',
