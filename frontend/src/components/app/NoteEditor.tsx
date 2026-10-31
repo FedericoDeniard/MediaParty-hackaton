@@ -4,6 +4,7 @@ import { EditorContent } from '@tiptap/react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 import EditorToolbar from './EditorToolbar.tsx'
 import EnrichmentPanel from './EnrichmentPanel.tsx'
+import PanelGraficosDeNota from '../graficos/PanelGraficosDeNota.tsx'
 import { editorPage } from '../../data/app.ts'
 import {
   noteThemeLabels,
@@ -313,12 +314,15 @@ export default function NoteEditor() {
         )}
 
         {canEdit && (
-          <EnrichmentPanel
-            items={enrichments}
-            onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
-            onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
-            onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
-          />
+          <aside className="editor__aside">
+            <PanelGraficosDeNota editor={editor} noteId={id} />
+            <EnrichmentPanel
+              items={enrichments}
+              onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
+              onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
+              onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
+            />
+          </aside>
         )}
       </div>
     </div>

@@ -1,0 +1,349 @@
+/* ============================================================
+   Gráficos de contexto.
+
+   Estilo propio: superficies suaves, esquinas redondeadas y marcas
+   sin trazo alrededor. Usa los tokens del sistema (`--ink`, `--rule`,
+   `--chart`...) y solo agrega lo que falta. Todo vive bajo `.ctx`.
+   ============================================================ */
+
+.ctx {
+  --ctx-ink: var(--ink, #171717);
+  --ctx-soft: var(--ink-soft, #5b5a55);
+  --ctx-rule: var(--rule, #dcdad2);
+  --ctx-superficie: var(--surface, #faf9f6);
+  --ctx-fondo: var(--bg, #f2f0eb);
+  --ctx-dato: var(--chart, #c7de58);
+  --ctx-dato-fuerte: #9bbb22;
+  --ctx-gris: #a3a199;
+  --ctx-radio: 14px;
+
+  padding: 24px;
+  background: var(--ctx-superficie);
+  border-radius: 20px;
+  color: var(--ctx-ink);
+  animation: ctx-entrada 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.ctx__sello {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--ctx-ink);
+  color: var(--ctx-fondo);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ctx__titulo {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.ctx__unidad {
+  margin: 6px 0 12px;
+  font-size: 14px;
+  color: var(--ctx-soft);
+}
+
+.ctx__motivo {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--ctx-fondo);
+  font-size: 13px;
+  color: var(--ctx-soft);
+}
+
+.ctx__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ctx__svg text {
+  font-family: inherit;
+  fill: var(--ctx-ink);
+}
+
+.ctx__guia {
+  stroke: var(--ctx-rule);
+  stroke-width: 1;
+}
+
+.ctx__base {
+  stroke: var(--ctx-rule);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.ctx__referencia {
+  stroke: var(--ctx-soft);
+  stroke-width: 1.5;
+  stroke-dasharray: 2 4;
+  stroke-linecap: round;
+}
+
+.ctx__eje {
+  font-size: 11px;
+  fill: var(--ctx-soft) !important;
+}
+
+.ctx__eje--fuerte {
+  font-weight: 700;
+  fill: var(--ctx-ink) !important;
+}
+
+.ctx__linea {
+  fill: none;
+  stroke-width: 2.75;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: ctx-trazo 1.1s cubic-bezier(0.3, 0.7, 0.2, 1) forwards;
+}
+
+.ctx__punto {
+  stroke: var(--ctx-superficie);
+  stroke-width: 2.5;
+  opacity: 0;
+  animation: ctx-aparecer 0.35s ease-out 1s forwards;
+}
+
+.ctx__etiqueta-final {
+  opacity: 0;
+  animation: ctx-aparecer 0.4s ease-out 0.9s forwards;
+}
+
+.ctx__nombre {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ctx__cambio {
+  font-size: 12px;
+  fill: var(--ctx-soft) !important;
+}
+
+.ctx__barra {
+  fill: var(--ctx-dato);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: ctx-crecer 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.ctx__barra--horizontal {
+  transform-origin: 0 50%;
+  animation-name: ctx-crecer-horizontal;
+}
+
+.ctx__barra--destacada {
+  fill: var(--ctx-dato-fuerte);
+}
+
+.ctx__valor {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  animation: ctx-aparecer 0.4s ease-out 0.6s forwards;
+}
+
+/* Fuentes y detalle: cerrados de entrada, el gráfico va solo. */
+.ctx__detalle {
+  margin-top: 12px;
+}
+
+.ctx__detalle > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ctx-soft);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ctx__leer {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--ctx-soft);
+}
+
+.ctx__leer strong {
+  color: var(--ctx-ink);
+}
+
+.ctx__tabla {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.ctx__tabla summary {
+  min-height: 32px;
+  color: var(--ctx-soft);
+  cursor: pointer;
+}
+
+.ctx__tabla table {
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+}
+
+.ctx__tabla th {
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid var(--ctx-rule);
+  color: var(--ctx-soft);
+  font-weight: 600;
+  text-align: left;
+}
+
+.ctx__tabla td {
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid var(--ctx-rule);
+}
+
+.ctx__fuentes,
+.ctx__avisos {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--ctx-soft);
+}
+
+.ctx__fuentes li {
+  padding: 3px 0;
+}
+
+.ctx__avisos li {
+  padding: 4px 0 4px 12px;
+  border-left: 3px solid var(--ctx-dato-fuerte);
+  border-radius: 2px;
+}
+
+.ctx a {
+  color: var(--ctx-ink);
+}
+
+@keyframes ctx-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes ctx-trazo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ctx-aparecer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ctx-crecer-horizontal {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes ctx-crecer {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctx,
+  .ctx * {
+    animation: none !important;
+  }
+
+  .ctx__linea {
+    stroke-dashoffset: 0;
+  }
+
+  .ctx__punto,
+  .ctx__etiqueta-final,
+  .ctx__valor {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .ctx {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+
+/* ---- el gráfico como sección dentro de la nota (nodo del editor) ---- */
+
+.grafico-nota {
+  margin: 32px 0;
+  scroll-margin-top: 24px;
+  border-radius: 24px;
+}
+
+.grafico-nota__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4px 8px;
+  font-size: 12px;
+}
+
+.grafico-nota__sello {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #5b5a55);
+}
+
+.grafico-nota__quitar {
+  min-height: 32px;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--ink-soft, #5b5a55);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.grafico-nota--reciente {
+  animation: ctx-resalta 1.8s ease-out;
+}
+
+.ProseMirror-selectednode.grafico-nota {
+  outline: 2px solid var(--ink, #171717);
+  outline-offset: 4px;
+}
+
+@keyframes ctx-resalta {
+  0% {
+    box-shadow: 0 0 0 5px #9bbb22;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grafico-nota--reciente {
+    animation: none;
+    outline: 2px solid #9bbb22;
+  }
+}
