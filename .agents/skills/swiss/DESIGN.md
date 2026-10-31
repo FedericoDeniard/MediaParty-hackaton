@@ -46,7 +46,7 @@ typography:
     fontSize: "11px"
     letterSpacing: "0.16em"
     textTransform: "uppercase"
-  sourceScale: "11/12/14/16/18/22/28/36/48 + display clamp"
+  sourceScale: "11/12/14/16/18/22/28/36/48 + display clamp + display-sm clamp"
   weights: "400, 500, 600, 700, 800, 850"
   axes: "wght 100-900, wdth 62-125"
 rounded:
@@ -129,6 +129,7 @@ One family: **Archivo Variable**, self-hosted via `@fontsource-variable/archivo/
 | Role | Weight | Width | Size |
 |---|---|---|---|
 | Display | 850 | 75% | `clamp(44px, 8vw, 96px)`, line-height 0.88, uppercase |
+| Display small | 850 | 75% | `clamp(36px, 5vw, 64px)`, line-height 0.92, uppercase |
 | Heading | 700 | 100% | 36px, line-height 1.02, uppercase |
 | Subheading | 600 | 100% | 22px |
 | Lead | 400 | 100% | 18px, max `65ch` |

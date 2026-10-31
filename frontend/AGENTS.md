@@ -1,12 +1,13 @@
 # Agent guidance · frontend
 
-Landing de **Nexo**: procesa una noticia, le suma gráficos y datos, y la exporta lista para cada red social.
+Landing de **Nexo**: procesa una noticia, le suma gráficos y datos, y la exporta lista para cada red social. También tiene las pantallas de acceso (`/login` y `/registro`).
 
 ## Stack
 
 - React 19
 - Vite 8
 - TypeScript 7 (strict, `noUnusedLocals`, `verbatimModuleSyntax`)
+- React Router 7 (`react-router-dom`), rutas `/`, `/login` y `/registro`
 - CSS plano con custom properties. Sin framework de estilos, sin CSS-in-JS, sin Tailwind.
 
 ## Comandos
@@ -25,16 +26,28 @@ No hay lint ni tests. `pnpm run build` es la verificación.
 
 ```
 src/
-  components/   Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
   data/         content.ts con los textos y datos de la landing
+                auth.ts con los textos, campos y reglas de login/registro
   index.css     tokens de diseño + estilos
-  App.tsx       composición de la página
-  main.tsx      entry point; importa la fuente y el CSS
+  App.tsx       rutas de la app
+  main.tsx      entry point; importa la fuente, el CSS y monta el router
 public/
   favicon.svg
 ```
 
 `dist/`, `node_modules/` y `*.tsbuildinfo` son generados e ignorados.
+
+## Pantallas de acceso
+
+`/login` y `/registro` comparten `AuthPage.tsx` y se diferencian por el `mode`
+(`login` | `register`), con el copy en `src/data/auth.ts`.
+
+- El panel editorial es un campo de `--surface-contrast`, sin marco. El formulario va en las columnas 8 a 12, sobre `--bg`.
+- Los campos son controles reales: llevan filete inferior de `1px` en `--line-control`, no un marco.
+- Los requisitos de contraseña **no** son una lista: es una línea que va bajando de a un requisito mientras el usuario escribe (`field__rule`). El estado en vivo vive en `AuthField.tsx` y las reglas en `authRuleTests`.
+- El submit no hace nada todavía: `TODO(auth)` en `AuthForm.tsx` es el lugar de la llamada real a Supabase Auth.
 
 ## Dirección visual: Swiss
 

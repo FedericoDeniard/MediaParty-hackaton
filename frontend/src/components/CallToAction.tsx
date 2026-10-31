@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CallToAction() {
   return (
     <section className="section section--inverted" id="empezar">
@@ -9,9 +11,9 @@ export default function CallToAction() {
           </p>
         </div>
         <div className="cta__actions">
-          <a className="button button--solid" href="#empezar">
+          <Link className="button button--solid" to="/registro">
             Crear cuenta
-          </a>
+          </Link>
           <a className="button button--ghost" href="#top">
             Hablar con el equipo
           </a>

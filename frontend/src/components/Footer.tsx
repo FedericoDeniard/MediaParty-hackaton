@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from './Logo.tsx'
 
 export default function Footer() {
@@ -13,6 +14,7 @@ export default function Footer() {
           <a href="#producto">Producto</a>
           <a href="#como-funciona">Cómo funciona</a>
           <a href="#redes">Redes</a>
+          <Link to="/login">Iniciar sesión</Link>
         </nav>
 
         <p className="footer__note">Proyecto del hackatón MediaParty</p>

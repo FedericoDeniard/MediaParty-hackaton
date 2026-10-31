@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from './Logo.tsx'
 
 const links = [
@@ -21,11 +22,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <Link className="header__link" to="/login">
+            Iniciar sesión
+          </Link>
         </nav>
 
-        <a className="button button--solid" href="#empezar">
+        <Link className="button button--solid" to="/registro">
           Empezar
-        </a>
+        </Link>
       </div>
     </header>
   )

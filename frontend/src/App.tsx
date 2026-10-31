@@ -1,23 +1,14 @@
-import Header from './components/Header.tsx'
-import Hero from './components/Hero.tsx'
-import Steps from './components/Steps.tsx'
-import Features from './components/Features.tsx'
-import Networks from './components/Networks.tsx'
-import CallToAction from './components/CallToAction.tsx'
-import Footer from './components/Footer.tsx'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Landing from './components/Landing.tsx'
+import AuthPage from './components/AuthPage.tsx'
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Steps />
-        <Features />
-        <Networks />
-        <CallToAction />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<AuthPage mode="login" />} />
+      <Route path="/registro" element={<AuthPage mode="register" />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }

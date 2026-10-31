@@ -24,12 +24,28 @@ pnpm run typecheck  # solo typecheck
 
 ```
 src/
-  components/   Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
   data/         content.ts con los textos y datos de la landing
+                auth.ts con los textos, campos y reglas de login/registro
   index.css     tokens de diseño + estilos
-  App.tsx       composición de la página
-  main.tsx      entry point; importa la fuente y el CSS
+  App.tsx       rutas de la app
+  main.tsx      entry point; importa la fuente, el CSS y monta el router
 ```
+
+## Pantallas de acceso
+
+`/login` y `/registro` son rutas de la misma app y comparten `AuthPage.tsx`: el
+`mode` (`login` | `register`) elige el copy de `src/data/auth.ts`.
+
+El diseño está completo; la lógica de autenticación todavía no. El submit no
+manda nada y `TODO(auth)` en `AuthForm.tsx` marca dónde entra la llamada real a
+Supabase Auth.
+
+Lo que sí es real es el feedback en vivo del formulario: los requisitos de
+contraseña no son una lista, son una línea que va bajando de a un requisito
+mientras el usuario escribe, y el campo de confirmación avisa cuando las
+contraseñas no coinciden.
 
 ## Estilos
 
