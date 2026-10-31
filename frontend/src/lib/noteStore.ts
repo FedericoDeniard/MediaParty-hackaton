@@ -3,13 +3,13 @@ import {
   countWords,
   noteThemes,
   seedEnrichments,
-  seedNotes,
   type Enrichment,
   type EnrichmentStatus,
   type Note,
   type NoteScope,
   type NoteTheme,
 } from '../data/notes.ts'
+import { completarNotasGuardadas, seedNotes } from '../data/seedsCompletas.ts'
 
 /* ============================================================
    Store mock.
@@ -25,6 +25,7 @@ import {
 const NOTES_KEY = 'glosa.notes.v1'
 const ENRICHMENTS_KEY = 'glosa.enrichments.v1'
 const SEEDS_KEY = 'glosa.seeds.v2'
+const COMPLETAS_KEY = 'glosa.seeds.completas.v3'
 
 function read<T>(key: string, fallback: T): T {
   if (typeof localStorage === 'undefined') return fallback
@@ -98,7 +99,17 @@ function loadEnrichments(): Enrichment[] {
   return seedEnrichments
 }
 
-let notes: Note[] = loadNotes()
+/* Las notas semilla ya guardadas con el extracto pasan, una sola vez, al texto completo del corpus. */
+function loadNotesCompletas(): Note[] {
+  const cargadas = loadNotes()
+  if (read<boolean>(COMPLETAS_KEY, false)) return cargadas
+  const completas = completarNotasGuardadas(cargadas)
+  write(NOTES_KEY, completas)
+  write(COMPLETAS_KEY, true)
+  return completas
+}
+
+let notes: Note[] = loadNotesCompletas()
 let enrichments: Enrichment[] = loadEnrichments()
 
 const listeners = new Set<() => void>()

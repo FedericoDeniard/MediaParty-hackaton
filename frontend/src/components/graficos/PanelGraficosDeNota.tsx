@@ -1,30 +1,11 @@
 import type { Editor } from '@tiptap/react'
+import { CORPUS_DE_NOTA } from '../../data/corpusDeNota.ts'
 import { ejemplos } from '../../data/graficos-ejemplos.ts'
 import PanelGraficos from './PanelGraficos.tsx'
 import { useAnalisisSimulado } from './useAnalisisSimulado.ts'
 
-/* Notas del banco de trabajo (semillas n-01 a n-18) y la nota del corpus con la que se analizaron.
-   Cuando el backend guarde la fila `graficos`, esto se reemplaza por esa fila y desaparece el mapa. */
-const EJEMPLO_DE_NOTA: Record<string, string> = {
-  'n-01': '01',
-  'n-02': '02',
-  'n-03': '07',
-  'n-04': '13',
-  'n-05': '17',
-  'n-06': '19',
-  'n-07': '03',
-  'n-08': '04',
-  'n-09': '05',
-  'n-10': '06',
-  'n-11': '08',
-  'n-12': '09',
-  'n-13': '10',
-  'n-14': '11',
-  'n-15': '12',
-  'n-16': '14',
-  'n-17': '15',
-  'n-18': '16',
-}
+/* Cuando el backend guarde la fila `graficos`, esto se reemplaza por esa fila y desaparece el mapa. */
+const EJEMPLO_DE_NOTA = CORPUS_DE_NOTA
 
 function PanelConEjemplo({ editor, claveDeEjemplo }: { editor: Editor | null; claveDeEjemplo: string }) {
   const ejemplo = ejemplos[claveDeEjemplo]
