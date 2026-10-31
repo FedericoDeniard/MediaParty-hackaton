@@ -17,6 +17,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from .graficos import GraficosNota, armar_graficos
 from .series import ClienteSeries
 from .validar import VERSION_VALIDACION, InformeValidacion, catalogo_publico, validar_nota
 
@@ -57,5 +58,16 @@ def crear_app(cliente_series: ClienteSeries | None = None) -> FastAPI:
             usar_modelo=solicitud.usar_modelo,
             fecha_referencia=solicitud.fecha_referencia,
         )
+
+    @app.post("/graficos", response_model=GraficosNota)
+    def graficos(solicitud: SolicitudValidacion) -> GraficosNota:
+        informe = validar_nota(
+            solicitud.cuerpo,
+            solicitud.enriquecimientos,
+            cliente_series=cliente,
+            usar_modelo=solicitud.usar_modelo,
+            fecha_referencia=solicitud.fecha_referencia,
+        )
+        return armar_graficos(informe, solicitud.enriquecimientos, cliente)
 
     return app
