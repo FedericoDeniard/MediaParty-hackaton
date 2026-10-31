@@ -25,6 +25,13 @@
   --accent: var(--ink);
   --accent-ink: var(--bone);
 
+  /* ---- Color · gráficos ----
+     El color de las barras y su línea de base viven acá para que
+     cambiar la paleta de datos no toque componentes.
+     PROBANDO: indigo #282072. Pendiente de confirmación.        */
+  --chart: #282072;
+  --chart-baseline: #282072;
+
   /* ---- Color · superficies ----
      --bg               Fondo de la app. Es el tono de las secciones
                         de contenido principal (ej. "01 — Flujo").
@@ -492,12 +499,12 @@ button {
   gap: 2px;
   height: 72px;
   margin: var(--space-4) 0 var(--space-2);
-  border-bottom: var(--border-width) solid var(--ink);
+  border-bottom: var(--border-width) solid var(--chart-baseline);
 }
 
 .preview__chart span {
   flex: 1;
-  background: var(--ink);
+  background: var(--chart);
 }
 
 .preview__detail {
@@ -761,12 +768,12 @@ button {
   gap: 2px;
   height: 96px;
   margin-top: var(--space-5);
-  border-bottom: var(--border-width) solid var(--ink);
+  border-bottom: var(--border-width) solid var(--chart-baseline);
 }
 
 .feature__chart span {
   flex: 1;
-  background: var(--ink);
+  background: var(--chart);
 }
 
 .feature__quote {
@@ -827,6 +834,8 @@ button {
   opacity: 0.78;
 }
 
+/* Sobre el plano de acento el gráfico se invierte: barras claras
+   sobre fondo oscuro, con la línea de base del mismo tono. */
 .feature--accent .feature__chart {
   border-bottom-color: var(--accent-ink);
 }
