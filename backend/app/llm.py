@@ -25,11 +25,14 @@ def load_prompt(node: str, niche: str | None) -> str:
     raise FileNotFoundError(f"no prompt for node {node}")
 
 
-async def extract[T: BaseModel](node: str, niche: str | None, text: str, schema: type[T]) -> T:
+async def extract[T: BaseModel](node: str, niche: str | None, text: str, schema: type[T], context: str | None = None) -> T:
+    system = load_prompt(node, niche)
+    if context:  # in the system prompt, not the article, so paragraph_index doesn't shift
+        system += "\n\n" + context
     r = await client.messages.parse(
         model=MODEL,
         max_tokens=16000,
-        system=load_prompt(node, niche),
+        system=system,
         messages=[{"role": "user", "content": text}],
         output_format=schema,
     )
