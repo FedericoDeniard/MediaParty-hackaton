@@ -35,4 +35,5 @@ def test_prompt_fallback():
     from app.llm import load_prompt
 
     assert "política" in load_prompt("claims", "politica")       # override exists
+    assert load_prompt("claims", "Política") == load_prompt("claims", "politica")  # accents/case from model
     assert load_prompt("entities", "politica") == load_prompt("entities", None)  # falls back to default
