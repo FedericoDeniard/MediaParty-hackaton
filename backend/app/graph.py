@@ -9,11 +9,16 @@ from .llm import MODEL, extract, slug
 from .schemas import NODES, Parsed
 
 
+LINKED = {"claims", "figures", "timeline"}  # need entity ids, so they're written after link_entities
+
+
 async def node(article_id: str, kind: str, niche: str | None, text: str, schema: type[BaseModel], context: str | None) -> dict | None:
-    """Writes running/error; the caller writes done after linking entities across nodes."""
     db.set_enrichment(article_id, kind, "running")
     try:
-        return (await extract(kind, niche, text, schema, context)).model_dump()
+        out = (await extract(kind, niche, text, schema, context)).model_dump()
+        if kind not in LINKED:
+            db.set_enrichment(article_id, kind, "done", data=out, model=MODEL)
+        return out
     except Exception as e:  # one failed branch must not kill the others
         db.set_enrichment(article_id, kind, "error", error=str(e))
         return None
@@ -62,6 +67,6 @@ async def run(article_id: str) -> None:
     outs = await asyncio.gather(*(node(article_id, kind, niche, art["body"], schema, context) for kind, schema in NODES.items()))
     done = {k: o for k, o in zip(NODES, outs) if o is not None}
     link_entities(done)
-    for kind, data in done.items():
-        db.set_enrichment(article_id, kind, "done", data=data, model=MODEL)
+    for kind in LINKED & done.keys():
+        db.set_enrichment(article_id, kind, "done", data=done[kind], model=MODEL)
     await validate(article_id, art["body"], done, published)
