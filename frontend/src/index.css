@@ -322,27 +322,13 @@ button {
   text-decoration: none;
 }
 
-/* Marca: el nombre en caja baja, como el logotipo de la app, cerrado
-   por el corchete que antes vivía en el símbolo. El corchete es un
-   trazo liviano, no una letra más: la palabra es lo que se lee. */
+/* Marca: el logotipo “glosa]” trazado desde el original, en un solo
+   trazo. Va como SVG en línea para heredar la tinta y no depender de
+   la resolución de la pantalla. */
 .wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  font-size: var(--text-lg);
-  font-weight: 750;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  text-transform: lowercase;
-}
-
-.wordmark--lg {
-  font-size: var(--text-xl);
-}
-
-.wordmark__bracket {
-  margin-left: 0.22em;
-  font-weight: 200;
-  letter-spacing: 0;
+  display: block;
+  flex: none;
+  color: var(--ink);
 }
 
 .header__nav {
