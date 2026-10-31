@@ -5,7 +5,7 @@ import AuthPage from './components/AuthPage.tsx'
 import AppShell from './components/app/AppShell.tsx'
 import NoteList from './components/app/NoteList.tsx'
 import RequireSession from './components/RequireSession.tsx'
-import { notesPage, publishedPage } from './data/app.ts'
+import { draftsPage, publishedPage } from './data/app.ts'
 import { createNote } from './lib/noteStore.ts'
 
 /* El editor arrastra ProseMirror y todo el paquete de Tiptap: pesa
@@ -24,7 +24,7 @@ function NewNote() {
     if (created.current) return
     created.current = true
 
-    const note = createNote()
+    const note = createNote({ ephemeral: true })
     navigate(`/app/notas/${note.id}`, { replace: true })
   }, [navigate])
 
@@ -46,18 +46,18 @@ export default function App() {
           </RequireSession>
         }
       >
-        <Route index element={<Navigate to="/app/notas" replace />} />
+        <Route index element={<Navigate to="/app/borradores" replace />} />
         <Route
-          path="notas"
+          path="borradores"
           element={
             <NoteList
-              index={notesPage.index}
-              title={notesPage.title}
-              lead={notesPage.lead}
-              empty={notesPage.empty}
+              scope="unpublished"
+              title={draftsPage.title}
+              empty={draftsPage.empty}
             />
           }
         />
+        <Route path="notas" element={<Navigate to="/app/borradores" replace />} />
         <Route path="notas/nueva" element={<NewNote />} />
         <Route
           path="notas/:id"
@@ -68,17 +68,16 @@ export default function App() {
           }
         />
         <Route
-          path="publicadas"
+          path="publicados"
           element={
             <NoteList
-              status="published"
-              index={publishedPage.index}
+              scope="published"
               title={publishedPage.title}
-              lead={publishedPage.lead}
               empty={publishedPage.empty}
             />
           }
         />
+        <Route path="publicadas" element={<Navigate to="/app/publicados" replace />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />

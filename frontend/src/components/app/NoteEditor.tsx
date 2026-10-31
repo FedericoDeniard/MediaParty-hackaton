@@ -1,12 +1,18 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { EditorContent } from '@tiptap/react'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ChevronDown } from 'lucide-react'
 import EditorToolbar from './EditorToolbar.tsx'
 import EnrichmentPanel from './EnrichmentPanel.tsx'
 import { editorPage } from '../../data/app.ts'
 import {
+  noteThemeLabels,
+  noteThemes,
+  type NoteTheme,
+} from '../../data/notes.ts'
+import {
   getNote,
+  isEphemeralNote,
   listEnrichments,
   setEnrichmentStatus,
   subscribe,
@@ -34,7 +40,7 @@ export default function NoteEditor() {
 
   /* Si la nota no existe (o se borró), se vuelve a la lista. */
   useEffect(() => {
-    if (!note) navigate('/app/notas', { replace: true })
+    if (!note) navigate('/app/borradores', { replace: true })
   }, [note, navigate])
 
   /* Cambiar de nota reinicia el título y el estado de guardado. El
@@ -110,14 +116,28 @@ export default function NoteEditor() {
               hour: '2-digit',
               minute: '2-digit',
             })}`
-          : editorPage.saved
+          : isEphemeralNote(id)
+            ? editorPage.unsaved
+            : editorPage.saved
+
+  const backTo = note?.status === 'published' ? '/app/publicados' : '/app/borradores'
+  const backLabel =
+    note?.status === 'published' ? editorPage.backPublished : editorPage.backDrafts
+
+  const handleThemeChange = (value: string) => {
+    updateNote(id, { theme: value ? (value as NoteTheme) : null })
+    if (!isEphemeralNote(id)) {
+      setSaveState('saved')
+      setSavedAt(new Date().toISOString())
+    }
+  }
 
   return (
     <div className="editor">
       <header className="editor__bar">
-        <Link className="editor__back" to="/app/notas">
+        <Link className="editor__back" to={backTo}>
           <ArrowLeft size={16} aria-hidden="true" />
-          {editorPage.back}
+          {backLabel}
         </Link>
 
         {/* El título es el encabezado de primer nivel de la pantalla.
@@ -133,6 +153,30 @@ export default function NoteEditor() {
           aria-label="Título de la nota"
           onChange={(event) => handleTitleChange(event.target.value)}
         />
+
+        <label className="editor__theme">
+          <span className="editor__theme-label">{editorPage.theme}</span>
+          <span className="editor__theme-control">
+            <select
+              className="editor__theme-select"
+              value={note?.theme ?? ''}
+              onChange={(event) => handleThemeChange(event.target.value)}
+            >
+              <option value="">{editorPage.noTheme}</option>
+              {noteThemes.map((item) => (
+                <option key={item} value={item}>
+                  {noteThemeLabels[item]}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              className="editor__theme-chevron"
+              size={14}
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+          </span>
+        </label>
 
         <p className={`editor__save editor__save--${saveState}`} role="status">
           {statusLabel}

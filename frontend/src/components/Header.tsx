@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Logo from './Logo.tsx'
+import Wordmark from './Wordmark.tsx'
 
 const links = [
   { href: '#producto', label: 'Producto' },
@@ -12,8 +12,7 @@ export default function Header() {
     <header className="header">
       <div className="header__inner">
         <a className="header__brand" href="#top">
-          <Logo />
-          <span className="header__wordmark">Nexo</span>
+          <Wordmark size="lg" />
         </a>
 
         <nav className="header__nav" aria-label="Principal">

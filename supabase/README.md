@@ -1,6 +1,6 @@
-# Nexo · db
+# glosa · db
 
-Base de datos local de **Nexo** con la [Supabase CLI](https://supabase.com/docs/reference/cli/supabase-cli).
+Base de datos local de **glosa** con la [Supabase CLI](https://supabase.com/docs/reference/cli/supabase-cli).
 
 La CLI de Supabase espera que el proyecto viva en una carpeta llamada `supabase/`
 dentro de la raíz del repo, así que esta carpeta se llama `supabase/` y no `db/`.

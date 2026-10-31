@@ -1,11 +1,11 @@
 # Agent guidance
 
-Repo del hackatón **MediaParty**. El producto es **Nexo**: un portal que procesa noticias, suma gráficos y datos, y exporta el resultado a cada red social.
+Repo del hackatón **MediaParty**. El producto es **glosa**: un portal que procesa noticias, suma gráficos y datos, y exporta el resultado a cada red social.
 
 ## Estructura
 
 ```
-frontend/   Landing de Nexo (React 19 + Vite 8 + TypeScript 7)
+frontend/   Landing de glosa (React 19 + Vite 8 + TypeScript 7)
 backend/    API (vacío)
 supabase/   Base de datos local, migraciones, seeds y edge functions
 docs/       Documentación del proyecto
@@ -32,6 +32,7 @@ No hay scripts de lint ni de tests. `pnpm run build` es la verificación disponi
 - El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
 - `Hero.tsx` tiene un widget de tabs accesible (`role="tablist"`, navegación por flechas, `tabindex` rotatorio). Mantenelo así si lo tocás.
 - El editor de notas usa **Tiptap 3.32.2** con versiones exactas: los peers exigen la misma versión en todo el árbol. Guardá sólo el JSON de Tiptap; el texto plano se deriva.
+- El avatar del usuario en el sidebar se genera con **boring-avatars** a partir del nombre: variante `beam`, cuadrada y con la paleta de la app (verde, arena, hueso y gris cálido). Es decorativo; el nombre y el correo son la identidad real.
 - La capa de datos del frontend es un **store mock** sobre `localStorage` (`src/lib/noteStore.ts`). La auth ya corre contra Supabase Auth local: email y contraseña, sin usuarios anónimos, con guard sobre `/app/*`.
 - Agregá dependencias con `pnpm add <pkg>` desde `frontend/`. No edites `pnpm-lock.yaml` a mano.
 
@@ -64,7 +65,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 | `grill-me` | Cuestionar un plan o diseño antes de implementarlo |
 | `supabase` | Cualquier tarea que toque Supabase: auth, RLS, edge functions, realtime, storage, CLI, migraciones |
 | `supabase-postgres-best-practices` | Antes de escribir o cambiar algo en Postgres: esquema, tipos, índices, RLS, locks, performance |
-| `db-modeling` | Modelar el schema de Nexo: derivar entidades, 1NF/2NF/3NF, decidir qué va en jsonb |
+| `db-modeling` | Modelar el schema de glosa: derivar entidades, 1NF/2NF/3NF, decidir qué va en jsonb |
 
 Los skills instalados desde GitHub se registran en `skills-lock.json`. Los hechos a mano (como `swiss`) no van ahí.
 

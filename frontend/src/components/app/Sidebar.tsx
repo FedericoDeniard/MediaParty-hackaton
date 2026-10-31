@@ -4,27 +4,20 @@ import { CircleHelp, Compass, Files, LogOut, Newspaper, SquarePen } from 'lucide
 import { useAuth } from '../AuthProvider.tsx'
 import { appNav, appShell } from '../../data/app.ts'
 import { listNotes, subscribe } from '../../lib/noteStore.ts'
+import UserAvatar from './UserAvatar.tsx'
+import Wordmark from '../Wordmark.tsx'
 
 const navIcons = {
-  '/app/notas': Files,
-  '/app/publicadas': Newspaper,
+  '/app/publicados': Newspaper,
+  '/app/borradores': Files,
 }
 
-function countAll() {
-  return listNotes().length
+function countUnpublished() {
+  return listNotes('unpublished').length
 }
 
 function countPublished() {
   return listNotes('published').length
-}
-
-function initialsOf(text: string) {
-  return text
-    .split(/[\s@._-]+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? '')
-    .join('')
 }
 
 export default function Sidebar() {
@@ -32,19 +25,14 @@ export default function Sidebar() {
   const name =
     typeof user?.user_metadata?.name === 'string' ? user.user_metadata.name.trim() : ''
   const displayName = name || user?.email || ''
-  const initials = initialsOf(displayName)
 
-  const total = useSyncExternalStore(subscribe, countAll)
+  const unpublished = useSyncExternalStore(subscribe, countUnpublished)
   const published = useSyncExternalStore(subscribe, countPublished)
 
   return (
     <div className="side">
-      <NavLink className="side__brand" to="/app/notas">
-        <span className="side__mark">
-          <span className="side__wordmark">{appShell.wordmark}</span>
-          <span className="side__dot" aria-hidden="true" />
-        </span>
-        <span className="side__tagline">{appShell.workspace}</span>
+      <NavLink className="side__brand" to="/app/borradores">
+        <Wordmark size="lg" />
       </NavLink>
 
       <NavLink className="side__primary" to="/app/notas/nueva">
@@ -52,11 +40,11 @@ export default function Sidebar() {
         <span>{appShell.primaryAction}</span>
       </NavLink>
 
-      <nav className="side__nav" aria-label="Notas">
+      <nav className="side__nav" aria-label={appShell.navLabel}>
         <ul className="side__list">
           {appNav.map((item) => {
             const Icon = navIcons[item.to]
-            const count = item.count === 'published' ? published : total
+            const count = item.scope === 'published' ? published : unpublished
 
             return (
               <li key={item.to}>
@@ -92,9 +80,7 @@ export default function Sidebar() {
         </a>
 
         <div className="side__user">
-          <span className="side__avatar" aria-hidden="true">
-            {initials}
-          </span>
+          <UserAvatar name={displayName} />
           <span className="side__identity">
             <span className="side__user-name">{name || user?.email}</span>
             <span className="side__user-mail">{user?.email}</span>

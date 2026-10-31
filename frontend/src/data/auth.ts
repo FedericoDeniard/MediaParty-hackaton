@@ -125,7 +125,7 @@ export const authErrorMessages: Record<string, string> = {
    de la marca, no la del formulario. */
 export const authEditorial = {
   meta: {
-    left: 'Nexo · Plataforma editorial',
+    left: 'glosa · Plataforma editorial',
     right: 'MediaParty 2026',
   },
   kicker: 'Edición independiente',

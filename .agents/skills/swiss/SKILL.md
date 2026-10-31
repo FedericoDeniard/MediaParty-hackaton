@@ -1,6 +1,6 @@
 ---
 name: swiss
-description: Design system for the Swiss / International Typographic Style used across this repo (Nexo frontend). Use when creating or changing any UI, layout, typography, color, spacing, component, icon, chart or motion in the frontend, or when reviewing visual consistency against the design system. Enforces a single variable grotesque, a 4/8/12 grid, hairline rules, flat color and zero-radius shapes.
+description: Design system for the Swiss / International Typographic Style used across this repo (glosa frontend). Use when creating or changing any UI, layout, typography, color, spacing, component, icon, chart or motion in the frontend, or when reviewing visual consistency against the design system. Enforces a single variable grotesque, a 4/8/12 grid, hairline rules, flat color and zero-radius shapes.
 ---
 
 # Swiss Design System

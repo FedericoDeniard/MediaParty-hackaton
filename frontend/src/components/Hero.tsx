@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero__meta">
-        <span>Nexo · Portal de noticias</span>
+        <span>glosa · Portal de noticias</span>
         <span>MediaParty 2026</span>
         <span>Una fuente · Ocho destinos</span>
       </div>
@@ -40,7 +40,7 @@ export default function Hero() {
             Todos los formatos.
           </h1>
           <p className="hero__lead">
-            Nexo procesa la noticia, le suma gráficos y datos, y la exporta lista para
+            glosa procesa la noticia, le suma gráficos y datos, y la exporta lista para
             publicar en cada red social. Sin copiar, pegar y reescribir cinco veces.
           </p>
 
