@@ -40,10 +40,11 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 - Una sola tipografía: **Archivo Variable**, autoalojada vía `@fontsource-variable/archivo/wdth.css` (`wght 100–900`, `wdth 62–125`). Cero requests de fuentes remotas.
 - Anchura condensada (`font-stretch: 75%`) solo para display. Texto y UI siempre a `100%`.
 - Grilla de 12 columnas en desktop, 8 en tablet, 4 en mobile. La asimetría es la norma: los spans desiguales son el default.
-- Hairlines de `1px` separan, `2px` reservado para foco y énfasis funcional.
+- **La grilla alinea, no encuadra.** Una grilla de celdas iguales con borde propio es bento grid, no Swiss. Ningún bloque de contenido lleva marco.
+- Las reglas dividen zonas o datos, no bloques: filetes de tabla, baselines de gráficos, estados activos y bordes de control. `1px` para filetes, `2px` para foco y énfasis funcional.
 - Sin sombras, sin gradientes, sin glass, `border-radius: 0`.
 - Color plano: fondo hueso `#F2F0EB`, tinta `#171717`, texto secundario `#5B5A55`, hairline `#C9C7C0`, borde de control `#6A6862`.
-- El acento de marca **todavía no está definido**. Vive en `--accent` / `--accent-ink`, que hoy resuelven a tinta y hueso. Elegirlo es cambiar esos dos tokens.
+- Un solo plano de acento por viewport. El acento de marca **todavía no está definido**: vive en `--accent` / `--accent-ink`, que hoy resuelven a tinta y hueso. Elegirlo es cambiar esos dos tokens.
 - Todo se controla por tokens semánticos en el `:root` de `frontend/src/index.css`. No hardcodees hex en componentes.
 - Accesibilidad: WCAG 2.2 AA. Foco visible de `2px`, contraste de texto `>= 4.5:1` y de bordes `>= 3:1`, targets de `44px`, `prefers-reduced-motion` respetado, reflow a `320px`.
 - Antes de cerrar trabajo de UI, revisá la página en mobile y desktop, probá el foco por teclado, verificá contraste y corré `pnpm run build`.

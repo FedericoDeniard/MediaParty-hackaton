@@ -34,8 +34,13 @@ src/
 ## Estilos
 
 El sistema visual es **Swiss / International Typographic Style**: una sola
-grotesca variable, grilla de 12 columnas, hairlines de 1px, color plano y sin
+grotesca variable, grilla de 12 columnas, filetes de 1px, color plano y sin
 radios.
+
+El principio que gobierna todo: **la grilla alinea, no encuadra**. Ningún
+bloque de contenido lleva marco; las líneas dividen zonas o datos
+(tablas, baselines de gráficos, tab activo, bordes de control), nunca
+celdas.
 
 Todo el sistema vive en los custom properties del bloque `:root` de
 `src/index.css`. Cambiar `--bone`, `--ink`, `--rule`, `--accent` o

@@ -56,7 +56,7 @@ export const steps: Step[] = [
   },
 ]
 
-export type FeatureTone = 'base' | 'raised' | 'sunken' | 'inverted'
+export type FeatureTone = 'base' | 'accent'
 export type FeatureKind = 'chart' | 'quote' | 'formats' | 'team'
 
 export interface Feature {
@@ -65,7 +65,8 @@ export interface Feature {
   body: string
   tone: FeatureTone
   kind: FeatureKind
-  span: 4 | 6 | 8
+  col: 1 | 2 | 7 | 8
+  shift: 0 | 1 | 2
 }
 
 export const features: Feature[] = [
@@ -73,9 +74,10 @@ export const features: Feature[] = [
     n: '01',
     title: 'Gráficos que se arman solos',
     body: 'Cargás los datos en una tabla y elegís plantilla. El gráfico sale con la tipografía, los colores y el tamaño que pide cada red.',
-    tone: 'sunken',
+    tone: 'base',
     kind: 'chart',
-    span: 8,
+    col: 1,
+    shift: 0,
   },
   {
     n: '02',
@@ -83,7 +85,8 @@ export const features: Feature[] = [
     body: 'Nexo conserva el documento fuente, las notas y las citas, así el equipo edita sobre datos y no sobre suposiciones.',
     tone: 'base',
     kind: 'quote',
-    span: 4,
+    col: 8,
+    shift: 1,
   },
   {
     n: '03',
@@ -91,15 +94,17 @@ export const features: Feature[] = [
     body: 'Cada publicación sale con el largo, la relación de aspecto y las reglas de cada plataforma ya resueltas.',
     tone: 'base',
     kind: 'formats',
-    span: 6,
+    col: 2,
+    shift: 0,
   },
   {
     n: '04',
     title: 'Equipo y calendario',
     body: 'Editores, aprobaciones y horarios de publicación en un tablero compartido.',
-    tone: 'inverted',
+    tone: 'accent',
     kind: 'team',
-    span: 6,
+    col: 7,
+    shift: 2,
   },
 ]
 

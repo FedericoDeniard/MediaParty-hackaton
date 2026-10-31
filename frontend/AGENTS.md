@@ -46,10 +46,10 @@ Reglas que más se incumplen:
 - **Una sola familia.** Archivo Variable (`wght 100–900`, `wdth 62–125`), autoalojada con `@fontsource-variable/archivo/wdth.css`. No agregues otra fuente ni pidas nada a Google en runtime.
 - **Condensado solo para display.** `font-stretch: 75%` con `font-weight` 700–850 en titulares grandes. Navegación, labels y body a `100%` y `400`–`600`.
 - **Sin sombras, sin radius, sin gradientes.** `--radius: 0` y `--shadow: none`.
-- **Hairlines de `1px`.** `2px` es para foco o énfasis funcional, nunca decorativo.
-- **Grilla asimétrica.** 12 columnas en desktop. Las secciones abren con índice en columnas 1–3 y contenido en 4–12. Nada de centrar.
-- **Espacio antes que borde.** Una regla sólo cuando expresa una relación real.
-- **Acento pendiente.** `--accent` y `--accent-ink` resuelven a tinta/hueso hasta que se defina el color de marca. Cuando se defina, cambiá esos dos tokens y verificá el contraste del texto encima.
+- **Ningún bloque de contenido lleva marco.** Sin cards, sin celdas con borde, sin chips delineados, sin badges enmarcados. Una etiqueta es tipografía, no un objeto.
+- **La grilla alinea, no encuadra.** Nada de grillas de celdas iguales con borde: eso es bento grid. Usá spans desiguales, escalonamiento vertical y espacio.
+- **Las reglas dividen zonas o datos.** Filetes de tabla, baselines de gráficos, tab activo, bordes de control. `1px` para filetes, `2px` para foco y énfasis funcional.
+- **Un solo plano de acento por viewport.** Acento pendiente: `--accent` y `--accent-ink` resuelven a tinta/hueso hasta que se defina el color de marca. Cuando se defina, cambiá esos dos tokens y verificá el contraste del texto encima.
 - **Motion mínimo.** `120ms` para feedback, `180ms` estándar, easing `cubic-bezier(0.2, 0, 0, 1)`. Se anima estado y opacidad, no la lectura.
 
 ## Accesibilidad

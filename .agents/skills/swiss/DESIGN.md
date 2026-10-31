@@ -112,13 +112,17 @@ Rules: condensed width only on display type; body left-aligned at `65ch`; upperc
 - 12 columns desktop, 8 tablet, 4 mobile.
 - Max width `1320px`, outer margin `clamp(16px, 4vw, 48px)`, gap `clamp(12px, 1.5vw, 24px)`.
 - Section head: index label in columns 1–3, content in columns 4–12.
-- Feature grid spans `4 / 6 / 8` — never 3 equal columns.
+- Feature grid spans `5 / 6 / 7` with explicit column starts and vertical offsets. Never 3 equal columns, never bordered cells.
+- The grid aligns content to shared columns. It never draws a box around a cell.
 
 ## Borders and shapes
 
 - `1px` hairline for structural rules, `2px` for focus and functional emphasis.
+- **No content block carries a border.** Frames turn the layout into a bento grid.
+- Rules are allowed where they express structure: table rows, chart baselines, active tab, control boundaries.
 - `border-radius: 0` on every element.
 - No shadows, no gradients, no glass.
+- At most one accent plane per viewport.
 
 ## Motion
 

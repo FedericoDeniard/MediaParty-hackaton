@@ -16,7 +16,8 @@ export default function Features() {
             <article
               key={feature.n}
               className={`feature feature--${feature.tone}`}
-              data-span={feature.span}
+              data-col={feature.col}
+              data-shift={feature.shift}
             >
               <span className="feature__index">{feature.n}</span>
               <h3 className="feature__title">{feature.title}</h3>
@@ -49,11 +50,11 @@ export default function Features() {
               )}
 
               {feature.kind === 'team' && (
-                <div className="feature__avatars" aria-hidden="true">
-                  <span>MA</span>
-                  <span>LT</span>
-                  <span>SR</span>
-                </div>
+                <ul className="feature__team">
+                  <li>MA</li>
+                  <li>LT</li>
+                  <li>SR</li>
+                </ul>
               )}
             </article>
           ))}

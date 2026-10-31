@@ -1,8 +1,11 @@
 /* ============================================================
    Nexo · Swiss design system
-   International Typographic Style: grilla, hairlines, color plano.
-   Todos los valores viven acá. Cambiar un token reestiliza el sitio.
-   Ver AGENTS.md y .agents/skills/swiss/ para las reglas.
+   International Typographic Style: grilla, espacio, hairlines, color plano.
+
+   Principio: la grilla ALINEA, no ENCUADRA. Ningún elemento lleva
+   un marco propio salvo que sea un control real. Las reglas dividen
+   zonas o filas de datos, nunca cada bloque. Ver AGENTS.md y
+   .agents/skills/swiss/ para las reglas.
    ============================================================ */
 
 :root {
@@ -29,6 +32,7 @@
   --text: var(--ink);
   --text-muted: var(--ink-soft);
   --text-inverted: var(--bone);
+  --text-inverted-muted: #bdbbb4;
   --line: var(--rule);
   --line-control: var(--control);
   --focus: 2px solid var(--ink);
@@ -172,7 +176,7 @@ button {
 }
 
 .eyebrow--inverted {
-  color: color-mix(in srgb, var(--bone) 72%, transparent);
+  color: var(--text-inverted-muted);
 }
 
 .eyebrow--inverted::before {
@@ -204,6 +208,8 @@ button {
 
 /* ============================================================
    Controles
+   Los controles reales sí llevan borde: es lo que los hace
+   reconocibles. El resto del sistema no usa marcos.
    ============================================================ */
 
 .button {
@@ -212,7 +218,7 @@ button {
   justify-content: center;
   gap: var(--space-2);
   min-height: 44px;
-  border: var(--border-width) solid var(--ink);
+  border: var(--border-width) solid transparent;
   border-radius: var(--radius);
   padding: var(--space-3) var(--space-5);
   font-size: var(--text-xs);
@@ -238,15 +244,15 @@ button {
 }
 
 .button--ghost {
-  background: transparent;
+  border-color: var(--line-control);
   color: var(--ink);
 }
 
 .button--ghost:hover {
   background: var(--ink);
+  border-color: var(--ink);
   color: var(--bone);
 }
-
 /* ============================================================
    Header
    ============================================================ */
@@ -256,7 +262,7 @@ button {
   top: 0;
   z-index: 20;
   background: var(--bg);
-  border-bottom: var(--border-width) solid var(--ink);
+  border-bottom: var(--border-width) solid var(--line);
 }
 
 .header__inner {
@@ -265,7 +271,7 @@ button {
   gap: var(--space-6);
   width: min(var(--max-width), 100% - var(--gutter) * 2);
   margin-inline: auto;
-  padding: var(--space-3) 0;
+  padding: var(--space-4) 0;
 }
 
 .header__brand {
@@ -321,10 +327,6 @@ button {
    Hero
    ============================================================ */
 
-.hero {
-  border-bottom: var(--border-width) solid var(--ink);
-}
-
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -356,14 +358,15 @@ button {
   min-width: 0;
 }
 
+/* El demo es una columna editorial: una regla superior y filetes
+   internos. Nunca un marco completo. */
 .hero__demo {
   grid-column: 8 / -1;
   align-self: start;
   min-width: 0;
-  border: var(--border-width) solid var(--ink);
-  padding: var(--space-5);
+  border-top: var(--border-width) solid var(--ink);
+  padding-top: var(--space-4);
 }
-
 .hero__title {
   margin: var(--space-5) 0 var(--space-6);
   font-size: var(--text-display);
@@ -388,23 +391,20 @@ button {
   margin-top: var(--space-6);
 }
 
-/* ---- Specimen sheet (demo del hero) ---- */
+/* ---- Columna editorial (demo del hero) ---- */
 
 .source {
-  border-bottom: var(--border-width) solid var(--line);
   padding-bottom: var(--space-4);
 }
 
 .source__badge {
-  display: inline-block;
-  border: var(--border-width) solid var(--ink);
-  padding: 2px var(--space-2);
+  display: block;
+  color: var(--text-muted);
   font-size: var(--text-micro);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-
 .source__title {
   margin-top: var(--space-3);
   font-size: var(--text-lg);
@@ -461,8 +461,7 @@ button {
 }
 
 .preview {
-  background: var(--surface-sunken);
-  padding: var(--space-4);
+  padding-top: var(--space-4);
 }
 
 .preview__format {
@@ -499,10 +498,10 @@ button {
 
 /* ============================================================
    Secciones
+   Ninguna sección se encuadra: el fondo y el espacio las separan.
    ============================================================ */
 
 .section {
-  border-bottom: var(--border-width) solid var(--ink);
   padding: var(--space-8) 0;
 }
 
@@ -517,9 +516,7 @@ button {
 .section--inverted {
   background: var(--ink);
   color: var(--bone);
-  border-bottom-color: var(--bone);
 }
-
 .section--inverted .section__title {
   color: var(--bone);
 }
@@ -527,7 +524,7 @@ button {
 .section--inverted .section__lead,
 .section--inverted .lead,
 .section--inverted .muted {
-  color: color-mix(in srgb, var(--bone) 76%, transparent);
+  color: var(--text-inverted-muted);
 }
 
 .section__inner {
@@ -552,7 +549,7 @@ button {
 }
 
 .section--inverted .section__index {
-  color: color-mix(in srgb, var(--bone) 72%, transparent);
+  color: var(--text-inverted-muted);
 }
 
 .section__content {
@@ -564,7 +561,6 @@ button {
   margin-top: var(--space-4);
   font-size: var(--text-2xl);
   font-weight: 700;
-  font-stretch: var(--font-stretch-normal);
   letter-spacing: -0.015em;
   line-height: 1.02;
   text-transform: uppercase;
@@ -579,22 +575,17 @@ button {
 
 /* ============================================================
    Steps
+   Columnas separadas por espacio. Sin reglas verticales.
    ============================================================ */
 
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: var(--border-width) solid var(--ink);
+  gap: var(--grid-gap);
 }
 
 .step {
-  border-bottom: var(--border-width) solid var(--ink);
-  padding: var(--space-5) var(--space-5) var(--space-6) 0;
-}
-
-.step + .step {
-  border-left: var(--border-width) solid var(--line);
-  padding-left: var(--space-5);
+  padding-right: var(--space-6);
 }
 
 .step__number {
@@ -624,8 +615,6 @@ button {
 
 .step__aside {
   margin-top: var(--space-4);
-  border-top: var(--border-width) solid var(--line);
-  padding-top: var(--space-2);
   color: var(--text-muted);
   font-size: var(--text-micro);
   font-weight: 600;
@@ -635,55 +624,51 @@ button {
 
 /* ============================================================
    Features
+   Composición asimétrica sobre la grilla. Sin celdas, sin
+   marcos: la grilla alinea, el espacio separa. Un único bloque
+   de acento aporta el contraste de color.
    ============================================================ */
 
 .features {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
-  border-top: var(--border-width) solid var(--ink);
-  border-left: var(--border-width) solid var(--ink);
+  column-gap: var(--grid-gap);
+  row-gap: var(--space-8);
+  align-items: start;
 }
 
 .feature {
-  grid-column: span 6;
-  display: flex;
-  flex-direction: column;
-  border-right: var(--border-width) solid var(--ink);
-  border-bottom: var(--border-width) solid var(--ink);
-  padding: var(--space-5);
+  min-width: 0;
 }
 
-.feature[data-span='4'] {
-  grid-column: span 4;
+/* Colocación explícita: spans desiguales anclados a la grilla. */
+.feature[data-col='1'] {
+  grid-column: 1 / span 7;
 }
 
-.feature[data-span='8'] {
-  grid-column: span 8;
+.feature[data-col='8'] {
+  grid-column: 8 / span 5;
 }
 
-.feature--base {
-  background: var(--bg);
+.feature[data-col='2'] {
+  grid-column: 2 / span 5;
 }
 
-.feature--raised {
-  background: var(--surface);
+.feature[data-col='7'] {
+  grid-column: 7 / span 6;
 }
 
-.feature--sunken {
-  background: var(--surface-sunken);
+/* Escalonamiento: rompe la línea superior común y genera tensión. */
+.feature[data-shift='1'] {
+  margin-top: var(--space-7);
 }
 
-.feature--inverted {
-  background: var(--ink);
-  color: var(--bone);
-}
-
-.feature--inverted .feature__index,
-.feature--inverted .feature__body {
-  color: color-mix(in srgb, var(--bone) 76%, transparent);
+.feature[data-shift='2'] {
+  margin-top: var(--space-4);
 }
 
 .feature__index {
+  display: block;
   color: var(--text-muted);
   font-size: var(--text-micro);
   font-weight: 600;
@@ -720,73 +705,79 @@ button {
   background: var(--ink);
 }
 
-.feature--inverted .feature__chart {
-  border-bottom-color: var(--bone);
-}
-
-.feature--inverted .feature__chart span {
-  background: var(--bone);
-}
-
 .feature__quote {
   margin-top: var(--space-5);
-  border-left: 2px solid var(--ink);
   padding-left: var(--space-4);
+  border-left: 2px solid var(--ink);
   font-size: var(--text-base);
   line-height: 1.5;
 }
 
-.feature--inverted .feature__quote {
-  border-left-color: var(--bone);
-}
-
+/* Los formatos son datos, no chips: se leen como una lista abierta. */
 .feature__formats {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
   margin-top: var(--space-5);
-}
-
-.feature__formats li {
-  border: var(--border-width) solid var(--ink);
-  padding: var(--space-1) var(--space-3);
-  font-size: var(--text-micro);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   font-variant-numeric: tabular-nums;
   text-transform: uppercase;
 }
 
-.feature--inverted .feature__formats li {
-  border-color: var(--bone);
+.feature__formats li + li::before {
+  content: '/';
+  margin-right: var(--space-2);
+  color: var(--rule);
 }
 
-.feature__avatars {
+/* El equipo son iniciales, no cuadrados: sin marcos ni sombras. */
+.feature__team {
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-4);
   margin-top: var(--space-5);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
 }
 
-.feature__avatars span {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: var(--border-width) solid var(--ink);
-  background: var(--bg);
-  font-size: var(--text-micro);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+.feature__team li + li::before {
+  content: '·';
+  margin-right: var(--space-4);
+  color: var(--rule);
 }
 
-.feature--inverted .feature__avatars span {
-  border-color: var(--bone);
-  background: transparent;
-  color: var(--bone);
+/* Bloque de acento: un único plano de color que ancla la página. */
+.feature--accent {
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: var(--space-5);
+}
+
+.feature--accent .feature__index,
+.feature--accent .feature__body {
+  color: var(--accent-ink);
+  opacity: 0.78;
+}
+
+.feature--accent .feature__chart {
+  border-bottom-color: var(--accent-ink);
+}
+
+.feature--accent .feature__chart span {
+  background: var(--accent-ink);
+}
+
+.feature--accent .feature__quote {
+  border-left-color: var(--accent-ink);
 }
 
 /* ============================================================
    Networks (tabla de datos)
+   Acá sí hay filetes: expresa una relación de datos real.
    ============================================================ */
 
 .networks {
@@ -812,14 +803,6 @@ button {
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
   text-align: right;
-}
-
-.section--inverted .network {
-  border-bottom-color: color-mix(in srgb, var(--bone) 30%, transparent);
-}
-
-.section--inverted .network__rule {
-  color: color-mix(in srgb, var(--bone) 76%, transparent);
 }
 
 /* ============================================================
@@ -849,7 +832,7 @@ button {
 .cta__body {
   margin-top: var(--space-4);
   max-width: 44ch;
-  color: color-mix(in srgb, var(--bone) 76%, transparent);
+  color: var(--text-inverted-muted);
   font-size: var(--text-md);
 }
 
@@ -892,7 +875,7 @@ button {
    ============================================================ */
 
 .footer {
-  padding: var(--space-6) 0;
+  padding: var(--space-7) 0;
 }
 
 .footer__inner {
@@ -932,8 +915,6 @@ button {
 
 .footer__note {
   width: 100%;
-  border-top: var(--border-width) solid var(--line);
-  padding-top: var(--space-3);
   color: var(--text-muted);
   font-size: var(--text-micro);
   letter-spacing: 0.14em;
@@ -957,22 +938,27 @@ button {
   .cta__actions {
     justify-content: flex-start;
   }
+
+  /* La composición asimétrica colapsa a una columna plana. */
+  .feature[data-col],
+  .feature[data-shift] {
+    grid-column: 1 / span 12;
+    margin-top: 0;
+  }
+
+  .features {
+    row-gap: var(--space-7);
+  }
 }
 
 @media (max-width: 860px) {
   .steps {
     grid-template-columns: 1fr;
+    gap: var(--space-6);
   }
 
-  .step + .step {
-    border-left: 0;
-    padding-left: 0;
-  }
-
-  .feature,
-  .feature[data-span='4'],
-  .feature[data-span='8'] {
-    grid-column: span 12;
+  .step {
+    padding-right: 0;
   }
 }
 

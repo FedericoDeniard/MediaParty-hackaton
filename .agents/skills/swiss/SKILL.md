@@ -17,9 +17,12 @@ Order before decoration: content, then hierarchy, then grid, then color — and 
 
 - **One typeface.** Archivo Variable, self-hosted via `@fontsource-variable/archivo/wdth.css` (wght 100–900, wdth 62–125). No second family, ever.
 - **One grid.** 12 columns on desktop, 8 on tablet, 4 on mobile. Asymmetric spans are the default; equal thirds are the exception.
-- **Hairlines.** `1px` rules do the work that borders and shadows did before. `2px` is reserved for focus and functional emphasis.
+- **The grid aligns, it does not frame.** This is the single most common way to drift back into neobrutalism. A grid of equal cells, each with its own border, is a bento grid, not Swiss. The grid exists to align content to shared columns; it never draws a box around a cell.
+- **No element gets a frame.** Nothing is outlined unless it is a real control that needs a visible boundary, or it carries data that a rule organizes (a table row, a chart baseline, an active tab).
+- **Rules divide zones and data, not content blocks.** A rule earns its place when it separates two zones or organizes comparable data. It does not earn a place because a block needs a border.
+- **Space is the separator.** Prefer whitespace over a rule, always.
 - **Flat color.** No shadows, no gradients, no glass, no offset blocks. `border-radius: 0` everywhere.
-- **Space is the separator.** Prefer whitespace over a rule. A hairline only when it expresses a real relationship.
+- **One accent plane.** At most one block of accent color per viewport. It anchors the page; it does not decorate it.
 
 ## Rules: Do
 
@@ -28,14 +31,17 @@ Order before decoration: content, then hierarchy, then grid, then color — and 
 - Keep body and UI text at normal width (`wdth 100`, `wght 400`) and left-aligned; cap body copy at `65ch`.
 - Use uppercase only for short labels (eyebrows, buttons, table headers) with positive tracking (`0.12em`–`0.16em`).
 - Use tabular numerals for anything comparable across rows (prices, limits, counts, dates).
-- Build sections on the grid with unequal spans; let whitespace carry the asymmetry.
+- Build sections on the grid with unequal spans and deliberate vertical offsets; let whitespace carry the asymmetry.
+- Separate content with space first. Add a rule only when it divides zones or organizes comparable data.
 - Keep the whole system fully usable in the neutral palette. Activate the accent only after both `--accent` and `--accent-ink` are validated.
 
 ## Rules: Don't
 
 - Don't use `scaleX()` or any synthetic condensation. Use the `wdth` axis.
-- Don't compress display type into more than 3 lines, and don't set fixed heights on headings or cards.
-- Don't turn every block into a bordered card. A rule between rows is not a card.
+- Don't compress display type into more than 3 lines, and don't set fixed heights on headings or containers.
+- Don't put a border on a content block. No card frames, no cell borders, no boxed sections, no outlined chips.
+- Don't build a grid of equal cells with borders. That is a bento grid.
+- Don't outline a label, a badge or an avatar as if it were a control. Labels are type, not objects.
 - Don't rely on the faint hairline as the only indicator of a control, focus state or status.
 - Don't use color alone to signal state. Pair it with text, a rule or a position change.
 - Don't add motion that delays reading: no parallax, no scroll-jacking, no autoplay, no letter-by-letter reveals.
@@ -59,13 +65,21 @@ Minimum target size `44x44`. Never shrink, translate, or add a shadow on hover.
 
 Every section opens with a grid: an index label in the left 3 columns (`01 — Producto`, uppercase, tracked, muted) and the content in columns 4–12. This asymmetry is the signature of the style; do not center it.
 
+### Feature block
+
+A feature is type and space, not a box. Place it on the grid with an explicit column start, a span that is not a third, and an optional vertical offset so the row never shares a common top line. A feature may carry one accent plane of solid color. It never carries a border.
+
 ### Tabs
 
-Flat row, `1px` bottom rule in ink, active tab gets a `2px` ink underline. Never a filled pill. Arrow keys move between tabs and focus follows.
+Flat row, hairline bottom rule in `--line-control` so the control is perceivable, active tab gets a `2px` ink underline. Never a filled pill, never a boxed button. Arrow keys move between tabs and focus follows.
 
 ### Data rows
 
-Name left, value right, `1px` rule between rows, tabular numerals on the value. Use this instead of a card grid for lists of comparable items.
+Name left, value right, hairline rule between rows, tabular numerals on the value. Use this instead of a card grid for lists of comparable items. This is the one place where rules are expected: the rule organizes the data, it does not frame a block.
+
+### Labels and badges
+
+A label is type: uppercase, tracked, muted, no border, no background. A badge is a label with meaning, not a chip. If a piece of information needs a shape, it needs a reason to be a control.
 
 ### Charts
 
@@ -97,10 +111,13 @@ One geometric family, `24` viewBox, `1.5` stroke, `currentColor`, sizes `16/20/2
 
 | Pattern | Why it breaks the system | Instead |
 |---|---|---|
-| Thick `2–3px` borders on every element | Reads as neobrutalism, not Swiss | `1px` hairlines |
+| Every block has a border | Reads as neobrutalism, not Swiss | Space, and rules only for zones or data |
+| A grid of equal bordered cells | Bento grid, not a typographic grid | Asymmetric spans and vertical offsets |
+| Thick `2–3px` borders | Same reason | `1px` hairlines |
 | Offset hard shadows | Same reason | Flat surfaces |
 | Pastel block per section | Color becomes decoration | One neutral field, one inverted band |
 | Rounded cards (`4–8px`) | Softens the typographic edge | `border-radius: 0` |
+| Outlined chips and badges | Turns a label into an object | The label as type |
 | Monospace for labels | Reads as a developer tool, not editorial | Uppercase grotesque with tracking |
 | Centered section headings | Breaks the grid logic | Index column + left-aligned title |
 | Font weight `900` in body text | Hurts legibility at small sizes | `400` body, `600` labels, `700` headings |
@@ -119,7 +136,10 @@ One geometric family, `24` viewBox, `1.5` stroke, `currentColor`, sizes `16/20/2
 - [ ] Only semantic tokens used; no raw hex in components.
 - [ ] One typeface; condensed width only on display type.
 - [ ] Spans are asymmetric on desktop; content stacks on mobile.
+- [ ] No content block carries a border; the only rules are zone dividers, data rows, chart baselines and control boundaries.
+- [ ] No grid of equal bordered cells.
 - [ ] No shadows, no gradients, no radius above `0`.
+- [ ] At most one accent plane per viewport.
 - [ ] Every interactive element has hover, focus-visible, active and disabled states.
 - [ ] Focus is visible on light and inverted surfaces.
 - [ ] Body copy is left-aligned and capped at `65ch`.
