@@ -1,6 +1,6 @@
 # Agent guidance · frontend
 
-Landing de **glosa**: procesa una noticia, le suma gráficos y datos, y la exporta lista para cada red social. También tiene las pantallas de acceso (`/login` y `/registro`) y la **mesa de trabajo** (`/app`): sidebar, lista de notas y editor rich text.
+Landing de **glosa**: analiza una nota, detecta sus cifras y fuentes verificables, y propone datos oficiales, gráficos y contexto anclados a un pasaje. También tiene las pantallas de acceso (`/login` y `/registro`) y la **mesa de trabajo** (`/app`): sidebar, lista de notas y editor rich text.
 
 ## Stack
 
@@ -31,7 +31,7 @@ No hay lint ni tests. `pnpm run build` es la verificación.
 
 ```
 src/
-  components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   Landing, Header, Hero, Steps, Features, Verification, CallToAction, Footer, Logo
   components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
   components/   AuthProvider, RequireSession  (sesión de Supabase y guard)
   components/app/  AppShell, Sidebar, UserAvatar, NoteList, NoteRow, NoteEditor,

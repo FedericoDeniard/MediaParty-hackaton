@@ -1,8 +1,9 @@
 # glosa · frontend
 
-Landing de **glosa**, un portal para procesar noticias, sumar gráficos y datos, y
-exportar el resultado a cada red social. Incluye las pantallas de acceso y la
-mesa de trabajo con editor de notas.
+Landing de **glosa**, el asistente que analiza una nota periodística, detecta
+cifras y fuentes verificables, y propone datos oficiales, gráficos y contexto.
+Cada sugerencia se ancla al pasaje que la origina y la autora decide si entra.
+Incluye las pantallas de acceso y la mesa de trabajo con editor de notas.
 
 ## Stack
 
@@ -29,7 +30,7 @@ pnpm run typecheck  # solo typecheck
 
 ```
 src/
-  components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
+  components/   Landing, Header, Hero, Steps, Features, Verification, CallToAction, Footer, Logo
   components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
   components/   AuthProvider, RequireSession  (sesión de Supabase y guard)
   components/app/  AppShell, Sidebar, UserAvatar, NoteList, NoteRow, NoteEditor,
@@ -45,6 +46,17 @@ src/
   App.tsx       rutas de la app
   main.tsx      entry point; importa la fuente, el CSS y monta el router
 ```
+
+## Landing
+
+`/` presenta el producto en cinco bloques: hero con una demo interactiva de
+sugerencias (dato oficial, gráfico y contexto, con estado verificado o no
+disponible y decisión de incorporar o descartar), pasos del flujo, producto,
+verificación y cierre.
+
+Los textos y el contenido de la demo viven en `src/data/content.ts`. El widget
+del hero conserva el patrón de tabs accesible: `role="tablist"`, navegación con
+flechas y `tabindex` rotatorio.
 
 ## Pantallas de acceso
 
