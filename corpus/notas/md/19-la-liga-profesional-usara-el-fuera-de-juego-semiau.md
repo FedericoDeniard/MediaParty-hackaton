@@ -1,0 +1,17 @@
+# La Liga Profesional usará el fuera de juego semiautomático desde la final del Clausura
+
+La Liga Profesional de Fútbol (LPF) de la Argentina incorporará el sistema de Fuera de Juego Semiautomático (SAOT, por sus siglas en inglés) a su plataforma VAR a partir de la final del Torneo Clausura 2026, programada para el 12 de diciembre en el Estadio Diego Armando Maradona de La Plata, con implementación total en todas las canchas desde el Clausura 2027.
+
+El anuncio, realizado de manera oficial por la LPF y la Asociación del Fútbol Argentino (AFA), convierte al torneo local en el más reciente en adoptar una tecnología que ya opera en competencias como la Premier League, la UEFA, la CONMEBOL, la Ligue 1, el Brasileirão, la Serie A, la Liga MX y la Pro League, entre otras.
+
+El SAOT funciona con una plataforma basada en inteligencia artificial y datos deportivos. El sistema construye una réplica digital del partido en tiempo real y permite analizar “cada jugada de fuera de juego con precisión milimétrica, optimizando los tiempos de revisión y respaldando la toma de decisiones arbitrales”, según el comunicado oficial de la LPF. Para ello, combina “cámaras de ultimísima generación como hardware de captura de imagen, mientras que el núcleo tecnológico reside en su avanzado software de procesamiento de datos”.
+
+El presidente de la AFA, Claudio Tapia, habló sobre el anuncio: “Los fanáticos del fútbol argentino merecen la mejor experiencia en el día del partido y la tecnología de fuera de juego semiautomático es una solución crucial para tomar decisiones rápidas y precisas”. Al mismo tiempo, aseguró que la empresa que desarrolló el sistema lanzó el SAOT “más avanzado del fútbol mundial con resultados probados en las ligas más importantes y estamos encantados de ampliar nuestra alianza con ellos”.
+
+“Ya hemos demostrado que nuestra tecnología puede reducir significativamente los tiempos de decisión de las competencias más grandes del mundo. Ahora traemos esos beneficios al fútbol argentino”, fue la frase que difundieron de Steven Burton, Chief Partnerships Officer de “Genius Sports”, la empresa que desarrolló el sistema.
+
+La llegada del sistema de fuera de juego semiautomático se produce en paralelo a una reestructuración más amplia del fútbol argentino. En la reunión del Comité Ejecutivo celebrada en Puerto Madero, la LPF aprobó por mayoría un nuevo formato de competencia para el Apertura y Clausura a partir de 2027: todos los equipos se enfrentarán entre sí al menos una vez por temporada, con 15 fechas por torneo, playoffs entre los 16 mejores de cada tramo y una Tabla Anual que definirá los clasificados a copas internacionales y los descensos.
+
+Fue justamente en esa misma reunión donde Cristian Malaspina, presidente de Argentinos Juniors, anticipó la llegada del SAOT. “Se viene el VAR semiautomático en el fútbol argentino a partir del año que viene. El primer caso de éxito va a ser la final del 12 de diciembre de este año. Creo que es un crecimiento para el fútbol argentino. El año que viene, seguramente por tema de implementación a partir del segundo semestre, lo tendremos en todos los estadios de primera”, declaró Malaspina.
+
+“Esta nueva tecnología se utilizará en la final del actual Torneo Clausura que se disputará en el estadio Diego Armando Maradona de La Plata, el 12 de diciembre próximo y quedará definitivamete instalado para uso en todos los encuentros de la Liga Profesional de Fútbol a partir del Torneo Clausura del 2027″, especificó la LPF en su comunicado.

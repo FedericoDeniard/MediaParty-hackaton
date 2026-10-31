@@ -1,0 +1,95 @@
+# La calculadora del Superclásico
+
+El Superclásico en la Bombonera de este domingo 1° de noviembre se desarrollará en un punto crucial del torneo. Boca Juniors recibirá a River Plate por la 15ª fecha del Torneo Clausura con los ojos de ambos puestos en las distintas tablas de la Liga Profesional de Fútbol.
+
+Antes del inicio de la anteúltima jornada, con todavía seis puntos en disputa, el Millonario aparece cuarto en la Zona B con 23 puntos detrás de Rosario Central (28), Argentinos Juniors (28) y Gimnasia La Plata (25). El dato clave es que está cuatro unidades por delante de Independiente Rivadavia (9° con 19), el primer equipo que no ingresaría a los playoffs. Es decir, como punto de partida, los de Leonardo Ponzio podrían asegurar en esta fecha su avance a la siguiente etapa del Clausura.
+
+Sin embargo, uno de los focos principales de River está en la pelea por la clasificación a las copas. Para poder jugar la próxima Libertadores tiene dos caminos: ser campeón del Clausura en curso o pelear por uno de los tres boletos que repartirá al Tabla Anual. Y ahí la matemática es mucho más amplia...
+
+Los de Núñez hoy figuran 7° en la Tabla Anual con 52 puntos y dentro de la zona de clasificación a la Sudamericana. Boca Juniors (57), Argentinos Juniors (57) y Rosario Central (56) estarían metiéndose en la Libertadores 2027 por esa vía. Sin embargo, podrían liberarse dos cupos si el Xeneize es campeón de Copa Argentina o de la Sudamericana y si el Bicho o el Canalla se quedan con el título del Clausura.
+
+En ese contexto, River tiene por delante hoy en día a Vélez (55), Instituto de Córdoba (53) e Independiente Rivadavia (53). Si bien hoy River está a cuatro y cinco puntos de distancia de los tres que irían por Tabla Anual, los posibles movimientos por títulos le permiten pensar que debe aspirar al menos a recortar diferencias con el Fortín. Vélez debe chocar todavía con San Lorenzo en Liniers y visitar a Unión en Santa Fe.
+
+Un detalle a tener en cuenta: Argentina tiene seis boletos disponibles para la Copa Libertadores (tres para campeones de Apertura, Clausura y Copa Argentina y otros tres por Tabla Anual), aunque se podrían abrir dos opciones más si Boca gana la Sudamericana de este año y Estudiantes conquista la Libertadores del 2026. En ese caso, irían ocho representantes del país al máximo torneo continental.
+
+A la espera de esas resoluciones para entender quiénes irán por la Tabla Anual, River hoy ya tiene virtualmente asegurada su clasificación al menos a la Sudamericana porque le lleva seis puntos de distancia a Defensa y Justicia (46), primer equipo por fuera de los seis que irían a esa Copa.
+
+Por el lado de Boca, los frentes abiertos son varios: Sudamericana, Copa Argentina, Clausura y Tabla Anual. Los de la Ribera podrían cerrar el 2026 ganando 5 títulos (a los cuatro hipotéticos mencionados, se le podría sumar el del Trofeo de Campeones que se disputará entre Belgrano de Córdoba y el campeón del Clausura el 19 de diciembre).
+
+Lo primero que se le definirá al Xeneize es el título de Tabla Anual que hasta ahora lo tiene como líder junto a Argentinos Juniors, aunque virtualmente único puntero por la amplia diferencia de gol que le lleva al Bicho de La Paternal (requisito que definiría la corona en caso de igualdad de unidades). Si bien dependerá de resultados ajenos de rivales directos, Boca podría prácticamente sellar su boleto para la Libertadores independientemente de sus otras vías de clasificación (Sudamericana y Copa Argentina).
+
+Ya clasificado a los octavos de los playoffs, también concretaría matemáticamente su ingreso al cuadro final para definir en condición de local al menos en el primer mata-mata. En tanto, obligaría a sus oponentes directos (Argentinos, Rosario Central y Vélez) a triunfar ya que de lo contrario quedará con una considerable ventaja a la espera del encuentro final por la fase regular ante Defensa y Justicia (también en la Bombonera, con día y horario a definir).
+
+Los dirigidos por el Vasco Arruabarrena definirán si ganan la Tabla Anual la semana que viene (al unísono, si sellan el boleto a la Libertadores 2027 por esa vía), dirimirán su suerte en la Copa Argentina el sábado 14 de noviembre contra Banfield en Mendoza (en la final ya espera Platense) y protagonizarán la final de la Sudamericana el sábado 21 frente a Atlético Mineiro en Barranquilla. En medio de esos partidos, afrontarán los octavos de final del Clausura.
+
+TABLAS DEL CLAUSURA Y LA ANUAL
+
+LA AGENDA DE LA FECHA 15
+
+Viernes 30 de octubre
+
+19.00: Huracán-Tigre
+
+19.00: Estudiantes de Río Cuarto-Gimnasia La Plata
+
+21.15: Sarmiento-Rosario Central
+
+21.15: Racing-Aldosivi
+
+Sábado 31 de octubre
+
+17.00: Deportivo Riestra-Talleres de Córdoba
+
+19.15: Vélez-San Lorenzo
+
+21.30: Estudiantes de La Plata-Instituto de Córdoba
+
+Domingo 1 de noviembre
+
+15.00: Boca Juniors-River Plate
+
+18.30: Belgrano de Córdoba-Barracas Central
+
+18.30: Newell’s-Unión de Santa Fe
+
+20.45: Lanús-Gimnasia de Mendoza
+
+Lunes 2 de noviembre
+
+19.00: Platense-Central Córdoba de Santiago del Estero
+
+19.00: Defensa y Justicia-Independiente
+
+21.15: Independiente Rivadavia-Banfield
+
+21.15: Atlético Tucumán-Argentinos Juniors
+
+LOS PARTIDOS DE LA FECHA 16
+
+Boca Juniors-Defensa y Justicia
+
+Aldosivi-River Plate
+
+Argentinos Juniors-Huracán
+
+Rosario Central-Estudiantes de Río Cuarto
+
+Instituto de Córdoba-Newell’s
+
+Unión de Santa Fe-Vélez
+
+Barracas Central-Racing
+
+Tigre-Sarmiento de Junín
+
+Banfield-Atlético Tucumán
+
+Independiente-Deportivo Riestra
+
+Talleres de Córdoba-Estudiantes de La Plata
+
+San Lorenzo-Platense
+
+Central Córdoba de Santiago del Estero-Lanús
+
+Gimnasia de Mendoza-Independiente Rivadavia de Mendoza

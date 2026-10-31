@@ -1,0 +1,11 @@
+# Descargas en bruto y archivos intermedios de las notas (los limpios van en corpus/notas)
+corpus/bruto/
+
+# Claves
+.env
+.env.local
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
