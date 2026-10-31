@@ -1,7 +1,7 @@
 # Fuentes de las notas de prueba
 
-Cada nota pertenece al medio que la publicó. Acá solo figuran el título, el medio,
-la fecha y el enlace. Los textos no están en el repositorio: ver README.txt.
+Cada nota pertenece al medio que la publicó. Acá figuran el título, el medio,
+la fecha y el enlace a la original. Derechos y créditos: ver README.txt.
 
 | Archivo | Medio | Fecha | Título | Párrafos | Enlace |
 | --- | --- | --- | --- | --- | --- |

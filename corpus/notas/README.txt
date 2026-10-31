@@ -3,35 +3,38 @@ NOTAS DE PRUEBA - MEDIA PARTY 2026
 
 Para qué sirve esta carpeta
 ---------------------------
-Son notas periodísticas argentinas de la semana del 24 al 31 de octubre de 2026,
-que usamos únicamente para probar internamente el backend de la hackatón (cómo
-el sistema parte una nota en párrafos y la enriquece). No son parte del producto
-ni se muestran a ningún lector.
+Son 18 notas periodísticas argentinas de la semana del 24 al 31 de octubre de 2026,
+que usamos para probar el backend de la hackatón (cómo el sistema parte una nota
+en párrafos y la enriquece con material respaldado). No se muestran a ningún
+lector ni forman parte del producto.
 
-Aviso sobre derechos de autor
------------------------------
+Derechos de autor y créditos
+----------------------------
 - Cada nota pertenece al medio y a los autores que la publicaron (La Nación,
-  Infobae y otros). Los créditos están en _indice.md, con título, medio, fecha y
-  enlace a la nota original.
-- Los textos completos NO están en este repositorio. Como el repositorio es
-  público, no republicamos contenido de terceros. En esta carpeta solo hay
-  este aviso y el índice de fuentes.
-- Quien quiera probar el sistema con las notas las genera en su propia máquina
-  (ver abajo). Esos archivos quedan en las carpetas md/ y txt/, que git ignora, y
-  son de uso interno: no se publican ni se redistribuyen.
-- Si algún medio o autor pide que se quite una referencia, se elimina de
-  inmediato.
+  Infobae y otros). El título, el medio, la fecha y el enlace a la nota original
+  de cada una están en _indice.md.
+- Según informó la organización de la hackatón, los medios autorizaron sumar sus
+  contenidos a los sistemas que se desarrollan en el evento. Las notas se incluyen
+  en esta carpeta con esa autorización y solo para esa finalidad.
+- No se republican ni se redistribuyen fuera de este proyecto. Los textos se
+  dejan tal como los publicó el medio, sin cambios de contenido (solo se quitó el
+  ruido de la página: menús, avisos, "minutos de lectura", tuits incrustados).
+- Si algún medio o autor pide que se retire una nota, se elimina de inmediato.
 
 Estructura
 ----------
   notas/
     README.txt     este aviso
-    _indice.md     fuentes de cada nota (esto sí está en el repositorio)
-    md/            una nota por archivo, en Markdown (generada localmente)
-    txt/           la misma nota en texto plano (generada localmente)
+    _indice.md     fuentes de cada nota
+    md/            una nota por archivo, en Markdown
+    txt/           la misma nota en texto plano
 
-Cómo generar las notas en tu máquina
-------------------------------------
+Notas 16 y 17 son agendas de partidos y tablas, no notas escritas: sirven como
+caso difícil para la ingesta en párrafos. Se descartó una nota (la 18, de
+Página/12) porque no se pudo bajar.
+
+Cómo regenerarlas
+-----------------
 Requiere Python 3 y una librería gratuita para extraer el texto de la página:
 
   pip install trafilatura
@@ -40,10 +43,4 @@ Requiere Python 3 y una librería gratuita para extraer el texto de la página:
   python scripts/validar_notas.py      # revisa que no queden restos de la página
 
 El script respeta el robots.txt de cada sitio y no esquiva suscripciones ni
-bloqueos. Las notas que un sitio no deja bajar se pegan a mano.
-
-Qué se hizo con cada nota
--------------------------
-Se sacó el ruido de la página (menús, avisos, "minutos de lectura", tuits
-incrustados) y se dejó el título y los párrafos, como los entregaría una
-periodista. El contenido de la nota no se modifica.
+bloqueos.

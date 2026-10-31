@@ -1,10 +1,5 @@
-# Textos de notas de prueba: son de cada medio y el repo es publico.
-# Solo se versionan corpus/notas/README.txt y corpus/notas/_indice.md.
+# Descargas en bruto y archivos intermedios de las notas (los limpios van en corpus/notas)
 corpus/bruto/
-corpus/notas/md/*
-corpus/notas/txt/*
-!corpus/notas/md/.gitkeep
-!corpus/notas/txt/.gitkeep
 
 # Claves
 .env

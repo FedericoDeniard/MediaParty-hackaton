@@ -1,0 +1,47 @@
+# Distinguieron a dos proyectos del CONICET: un software para epilepsia y una molécula para lesiones medulares
+
+El desarrollo de un software para planificar la estimulación cerebral en pacientes con epilepsia resistente a fármacos obtuvo el primer puesto de la sexta edición del Premio Merck-CONICET de Innovación en Ciencias de la Salud, entregado en Buenos Aires.
+
+La distinción recayó en el proyecto NViES, encabezado por el investigador Mariano Fernández Corazza. La convocatoria reunió 84 iniciativas científicas y tecnológicas vinculadas con la salud de distintos puntos de Argentina.
+
+Diez equipos llegaron a la instancia final y expusieron sus propuestas ante un gran jurado integrado, en representación del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), por Ricardo Allegri, investigador del Instituto de Neurociencias (INEU, CONICET-FLENI), y Marcela Michaut, investigadora del Instituto de Histología y Embriología de Mendoza “Dr. Mario H. Burgos” (IHEM, CONICET-UNCU).
+
+Por Merck Argentina, empresa alemana líder en ciencia y tecnología, participaron Natalia García, directora médica de la compañía en Argentina, y Mauricio Valiere, neurólogo y neurorradiólogo coordinador de la Unidad de Neurofibromatosis del Hospital Italiano de Buenos Aires.
+
+El presidente del CONICET, Daniel Salamone, destacó el alcance de la convocatoria. “El premio pone en valor el talento científico argentino y fortalece la articulación público-privada para transformar el conocimiento en soluciones concretas”, afirmó durante la ceremonia.
+
+La embajadora de Alemania en Argentina, Catalina Cullas, señaló que la iniciativa se consolidó como una actividad anual de la cooperación entre ambos países. “Largo plazo y continuidad son dos de las principales características de nuestra relación bilateral, también en el sector científico”, sostuvo.
+
+Por su parte, la secretaria de Innovación, Ciencia y Tecnología, Adriana Baravalle, afirmó que el objetivo es que “la investigación básica, que es clave, también se traduzca en resultados concretos que mejoren la salud de las personas”.
+
+Un software busca mejorar la planificación de cirugías por epilepsia
+
+El proyecto ganador, denominado NeuroVisualizer for Electrical Stimulation (NViES), está orientado a la evaluación prequirúrgica de personas con epilepsia farmacorresistente. Fernández Corazza es investigador del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) en el Instituto de Investigaciones en Electrónica, Control y Procesamiento de Señales (LEICI, CONICET-UNLP).
+
+La herramienta utiliza imágenes clínicas para elaborar un modelo tridimensional del cerebro y simular la activación de regiones cerebrales ante distintas combinaciones de electrodos. El objetivo es aportar información para definir qué zonas deben estudiarse durante la estimulación eléctrica intracraneal, una etapa previa a determinadas cirugías contra la epilepsia.
+
+Según la presentación del equipo, el sistema podría ayudar a ajustar la planificación de esos estudios y, eventualmente, reducir los tiempos de internación.
+
+“Este impulso brindado al trabajo científico nos ayuda muchísimo y nos permite seguir avanzando”, afirmó Fernández Corazza. El investigador señaló que el equipo trabaja en una plataforma informática destinada a mejorar el abordaje de pacientes con epilepsia.
+
+Una molécula sintética para investigar la reparación de lesiones medulares
+
+El segundo lugar fue para Héctor Ramiro Quintá, investigador del CONICET en el Hospital Alemán, por un proyecto enfocado en lesiones medulares traumáticas graves.
+
+Su equipo propone desarrollar un agonista sintético del receptor DCC, una molécula capaz de reproducir una señal asociada a la reparación de conexiones nerviosas. La investigación parte del estudio de la proteína Netrina-1 y busca evaluar, en modelos experimentales, si esa señal puede contribuir a la regeneración neuronal.
+
+El trabajo se encuentra en una etapa de investigación y desarrollo. Si las pruebas arrojan resultados favorables, podría aportar una base para futuras estrategias terapéuticas frente a lesiones medulares, un campo en el que las alternativas de recuperación son limitadas.
+
+“Este subsidio representa una oportunidad importante, porque me va a permitir avanzar con mi proyecto”, sostuvo Quintá, quien agradeció el respaldo para continuar la investigación.
+
+El certamen incorporará un foro para equipos de distintas ediciones
+
+Durante el acto, realizado en el Centro Cultural de la Ciencia de Buenos Aires, el CONICET y Merck anunciaron la creación de un foro para quienes participaron en las distintas ediciones del certamen. La propuesta prevé reunir a ganadores, finalistas y otros postulantes para intercambiar experiencias y acceder a instancias de capacitación.
+
+El director general del Grupo Merck en Argentina, Marcelo Ponte, sostuvo que “impulsar el descubrimiento también significa generar espacios para que ese conocimiento pueda crecer y desarrollarse”. Añadió que la innovación requiere colaboración entre distintos actores.
+
+Desde su lanzamiento en 2021, el Premio Merck-CONICET, que cuenta con el apoyo de la Embajada de Alemania en Argentina, reunió cerca de 400 postulaciones de distintas regiones del país. La iniciativa propone vincular la investigación científica con el desarrollo de herramientas y tratamientos para el ámbito de la salud.
+
+Entre los temas previstos figuran el financiamiento, la propiedad intelectual, la regulación, el desarrollo de prototipos y la transferencia tecnológica. La iniciativa contará con la articulación de áreas del CONICET y el acompañamiento de la Embajada de Alemania en Argentina.
+
+Según indicaron desde la organización, el proyecto de NViES recibió $13.000.000 y la iniciativa sobre reparación de lesiones medulares obtuvo $9.100.000. La sexta edición del premio cerró con dos desarrollos en etapas diferentes, vinculados con la neurología, que continuarán sus procesos de investigación con los fondos adjudicados.

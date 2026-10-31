@@ -1,0 +1,37 @@
+# A cuánto llegará el índice de inflación de octubre según las consultoras
+
+Luego de que la inflación se ubicara en 1,9% en septiembre, un salto intermensual respecto del 1,7% de agosto, la expectativa para octubre está centrada en si podrá lograrse una desaceleración. Hasta la tercera semana del mes, los relevamientos de las consultoras son optimistas al respecto, aunque no anticipan una baja abrupta. Sin embargo, el Gobierno podría lograr el segundo dato más bajo del último año.
+
+Las estimaciones privadas ubican la variación mensual de octubre en 1,8%, una desaceleración de 0,1 puntos porcentuales, muy leve, aún lejos de la expectativa oficial de que la inflación comenzara en algún mes del 2026 en cero.
+
+El resultado de septiembre interrumpió la tendencia descendente. Las mediciones de las consultoras muestran que los precios siguen con aumentos, aunque a un ritmo menor que el registrado durante el mes previo.
+
+Nuevas proyecciones
+
+El dato de 1,8% se repite en distintos relevamientos. La diferencia con el mes anterior sería acotada, aunque el alcanzaría al Gobierno para mostrar una desaceleración.
+
+El número tendría un peso político y económico por su comparación con los registros recientes. Según las estimaciones privadas, octubre podría convertirse en el segundo dato más bajo de 2026 y de los últimos doce meses. El guarismo final depende de cómo cierren los precios esta semana.
+
+La evolución de los alimentos aparece como uno de los puntos centrales para seguir esa dinámica. Las mediciones semanales difundidas por LCG, Invecq y Eco Go muestran aumentos en distintos segmentos, aunque también registran factores que moderan el nivel general de precios.
+
+La presión de alimentos
+
+LCG informó que el segmento de alimentos y bebidas aumentó 0,5% durante la tercera semana de octubre. El dato marcó la séptima semana consecutiva con incrementos para ese conjunto de productos, aunque la firma indicó que las subas fueron más acotadas.
+
+La consultora señaló que la inflación promedio de las últimas cuatro semanas desaceleró. En esa medición, la variación quedó en 3,8%, con un avance de 0,6 puntos porcentuales respecto de la semana anterior. Carnes y bebidas explicaron más de la mitad de la inflación semanal.
+
+Las carnes subieron 0,5% semanal, mientras que las bebidas aumentaron 1,1%. Esos dos rubros tuvieron una participación central en el incremento de la tercera semana de octubre dentro de la canasta de alimentos y bebidas.En la medición mensual de LCG, las carnes, los panificados y las verduras explicaron más de la mitad de la suba acumulada. El informe ubicó ese aporte en 2,4 p.p..
+
+EcoGo también informó una variación semanal de 0,59% en alimentos durante la tercera semana de octubre. Para el mes completo, proyectó que su Relevamiento de Precios Minoristas marcaría una suba de 1,8 por ciento.
+
+La firma señaló que alimentos y bebidas no alcohólicas realizaron el mayor aporte al nivel general. Ese comportamiento mantuvo a la canasta alimentaria como una de las principales referencias para seguir la evolución de los precios durante octubre. Eco Go también identificó un factor que contuvo el indicador: las prendas registraron una baja de 1,75%, que compensó una parte de los aumentos observados en otros componentes del relevamiento.
+
+Mayor fue el dato que informó Invecq. Para la consultora dirigida por Esteban Domecq, los precios aumentaron 0,9% durante la tercera semana de octubre (una diferencia de 0,4 p.p. con LCG y Eco Go). Con ese resultado, la inflación promedio móvil de cuatro semanas quedó en 1,8 por ciento.
+
+La justificación oficial
+
+Ante los relevamientos de los privados y la expectativa por el dato de octubre, la semana pasada, el presidente Javier Milei admitió que “el ritmo al que baja la inflación es más lento”. El mandatario habló con Radio Rivadavia y relacionó la evolución de los precios con los efectos del escenario mundial sobre la Argentina.
+
+Milei sostuvo que los acontecimientos internacionales afectan al país a través del riesgo país y de los precios. En ese marco, señaló que el indicador superó los 700 puntos básicos (p.b.) y afirmó que la economía crece por debajo de lo previsto. “La economía está creciendo menos de lo que se esperaba. Eso hace que la demanda de dinero crezca menos de lo que debería crecer y, consecuentemente, el ritmo al que baja la inflación es menor”, dijo el Presidente durante la entrevista.
+
+La referencia de Milei al contexto mundial se vincula con el argumento que podrían utilizar el Gobierno si el resultado mensual se ubica cerca de la estimación privada. Es que si bien se trataría de una desaceleración del ritmo de aumento de precios está lejos de la expectativa que puso el oficialismo sobre que iba a pasar este año con la inflación.

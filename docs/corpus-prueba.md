@@ -2,7 +2,7 @@
 
 Origen: búsqueda web del 2026-10-31. Solo hay enlaces y metadatos. Los títulos y las fechas salen de los resultados de búsqueda y de la fecha que lleva el enlace; las notas no se abrieron. Antes de usar una cifra de una nota como "dato correcto" hay que leerla.
 
-No se guarda el texto de las notas en el repositorio: es público y los textos son de cada medio. Para probar, cada integrante las genera en su máquina con `scripts/bajar_notas.py` y `scripts/compilar_notas.py` (ver `corpus/notas/README.txt`). Los textos quedan en `corpus/notas/md/` y `corpus/notas/txt/`, que `.gitignore` excluye.
+Los textos limpios de las notas están en `corpus/notas/md/` y `corpus/notas/txt/`, con su aviso de derechos y créditos en `corpus/notas/README.txt`. Se pueden regenerar con `scripts/bajar_notas.py` y `scripts/compilar_notas.py`.
 
 Clarín y Olé no se pudieron incluir: bloquean el rastreo de la herramienta de búsqueda. Si las querés, pegá el texto a mano.
 

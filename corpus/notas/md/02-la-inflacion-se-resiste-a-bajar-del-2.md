@@ -1,0 +1,79 @@
+# La inflación se resiste a bajar del 2%
+
+La inflación argentina parece encontrar dificultades para profundizar su desaceleración. Después de alcanzar el 1,7% mensual en agosto, el índice de precios al consumidor volvió a subir en septiembre, cuando fue 1,9%, y las primeras estimaciones privadas para octubre anticipan un resultado similar.
+
+Aunque el ritmo de aumento de los precios se mantiene por debajo del 2%, los economistas no esperan una reducción significativa en los últimos meses de 2026 y advierten que el escenario de 2027 dependerá, en buena medida, de la evolución del dólar, los precios internacionales de la energía y la incertidumbre propia de un año electoral.
+
+El próximo dato oficial se conocerá el 12 de noviembre, cuando el Indec publique la inflación correspondiente a octubre. Por ahora, los relevamientos de las consultoras privadas ubican el incremento mensual entre 1,8% y 2%, prácticamente en línea con septiembre. La estacionalidad, que habitualmente presiona sobre los precios durante determinados meses del año, también aparece entre los factores que explican las dificultades para consolidar una trayectoria descendente.
+
+La estacionalidad también aparece entre los factores que explican las dificultades para consolidar una trayectoria descendente
+
+La relativa estabilidad de los últimos registros convive con dos fuerzas contrapuestas:
+
+- La debilidad de la demanda limita la capacidad de las empresas para trasladar mayores costos a los consumidores.
+
+- La inercia de los ajustes de tarifas y combustibles y determinados aumentos estacionales impiden que el índice general descienda con mayor rapidez.
+
+Según Lorenzo Sigaut Gravina, economista del centro de estudios Equilibra, la inflación de octubre se ubicaría en torno al 1,9%, después de que la tercera semana mostrara un incremento algo superior al previsto inicialmente por la consultora. El economista explicó que el relevamiento semanal registró una variación del 0,4%, frente al 0,3% esperado, principalmente por aumentos en verduras e indumentaria asociados, en este último caso, al cambio de temporada.
+
+Sigaut Gravina consideró que un resultado del 2% representaría una dificultad adicional para el Gobierno. Para noviembre, estimó que el índice podría mantenerse ligeramente por debajo de ese umbral, aunque advirtió sobre las presiones habituales de fin de año.
+
+Desde Analytica, el economista Claudio Caprarulo también proyectó una inflación cercana al 2% para octubre, en línea con el registro de septiembre. Explicó que los aumentos de alimentos y bebidas relevados durante las primeras dos semanas del mes resultaron similares a los del período anterior, mientras que los ajustes tarifarios continuaron en niveles cercanos al promedio de 2,3% mensual que registra la categoría de precios regulados.
+
+Qué muestran los precios de octubre
+
+Los últimos datos de Eco Go reflejan las diferencias entre la evolución del índice general y el comportamiento de algunos rubros de consumo cotidiano. La consultora proyectó una inflación mensual del 1,8% para octubre, bajo el supuesto de aumentos del 0,5% en cada una de las semanas restantes. Sin embargo, detrás de ese promedio aparecen movimientos de precios muy diferentes.
+
+Los alimentos y bebidas no alcohólicas aumentaron 0,59% en la tercera semana, casi cinco veces más que el nivel general. Los mayores incrementos se concentraron en panificados y cereales, con 2,1%; frutas, con 1,7%; azúcar y dulces, con 1,2%; y verduras, con 0,8%. En cambio, los lácteos y huevos retrocedieron 0,5%, mientras que las carnes prácticamente no registraron variaciones.
+
+La caída de los precios de la indumentaria resultó determinante para contener el índice semanal. El rubro prendas de vestir y calzado bajó 1,75%, impulsado por reducciones del 7,1% en pantalones y del 4,2% en calzado.
+
+En sentido contrario, los servicios registraron aumentos importantes. Los pasajes aéreos subieron 6,4%, el alojamiento 5,3% y las naftas y peajes 2,7%. Eco Go estimó incrementos del 3% en restaurantes y hoteles, del 2,6% en prendas de vestir y calzado y del 2,4% en alimentos y bebidas no alcohólicas.
+
+La carne y los combustibles pueden meter ruido y hacer que la inflación esté más cerca del 2% que del 1,5% (Menescaldi)
+
+Sebastián Menescaldi, economista de Eco Go, dijo a Infobae que la consultora espera una inflación de entre 1,8% y 1,9% para octubre, sin grandes diferencias respecto de septiembre. Para los próximos meses, consideró probable que la suba del índice continúe oscilando entre 1,5% y 2%, con mayor cercanía al límite superior de ese rango por las presiones que podrían ejercer algunos alimentos y los combustibles.
+
+Las presiones que pueden aparecer antes de diciembre
+
+La evolución de la carne constituye uno de los principales factores de atención para los próximos meses. Aunque los precios minoristas prácticamente no variaron durante la tercera semana de octubre, los mayoristas acumularon tres semanas consecutivas de aumentos, con una suba del 3,6% en ese período, según Eco Go.
+
+Menescaldi advirtió que noviembre suele presentar presiones estacionales sobre el precio de la carne, a las que podrían sumarse factores climáticos que afecten la producción y la salida de animales. También mencionó la posibilidad de nuevos ajustes en los combustibles.
+
+A esas presiones se suma la evolución de los precios mayoristas. Claudio Caprarulo destacó que el índice mayorista se aceleró hasta el 3,2% en septiembre, impulsado especialmente por los costos de combustibles y energía, una dinámica que podría generar nuevos aumentos en los próximos meses. “Para noviembre y diciembre esperamos que la inflación oscile entre 1,7% y 2%”, sostuvo el economista de Analytica.
+
+Las estimaciones para el cierre de 2026 muestran diferencias acotadas. Equilibra proyecta una inflación anual de entre 30% y 31%, mientras que Eco Go espera un resultado cercano al 30%, aunque ligeramente inferior a ese nivel. En ambos casos, las previsiones suponen que el ritmo mensual de aumento de los precios continuará relativamente estable hasta diciembre.
+
+Para noviembre y diciembre esperamos que la inflación oscile entre 1,7% y 2% (Caprarulo)
+
+Para Menescaldi, el comportamiento de la demanda resulta central para entender esa estabilidad. La debilidad del consumo restringe la posibilidad de convalidar incrementos mayores, pero la persistencia de la inercia inflacionaria dificulta una reducción más pronunciada.
+
+El economista Gabriel Caamaño coincidió en que, si no aparecen sorpresas negativas, la inflación podría mantenerse entre 1,7% y 2% mensual durante lo que resta del año. En este sentido, consideró que el margen de la política económica para modificar significativamente esa trayectoria en el corto plazo resulta limitado. “La ventana para bajar la inflación este año ya se cerró; intervenir precios sería contraproducente”, afirmó.
+
+Según su análisis, una definición más clara del régimen monetario podría contribuir a mejorar el anclaje de las expectativas, pero difícilmente tendría efectos inmediatos sobre los índices de noviembre y diciembre. Otras alternativas, como contener artificialmente las tarifas, podrían generar dificultades posteriores.
+
+El dólar y las elecciones
+
+La perspectiva para el próximo año incorpora un elemento de incertidumbre adicional: las elecciones de 2027 y su posible impacto sobre la demanda de dólares. Los economistas coinciden en que la evolución del tipo de cambio será uno de los factores centrales para determinar si la inflación consigue desacelerarse o permanece cerca de los niveles actuales.
+
+Aunque la Argentina registra un superávit comercial importante, la compra de divisas por parte de los particulares podría intensificarse ante la incertidumbre electoral (Sigaut Gravina)
+
+Sigaut Gravina explicó que, aunque la Argentina registra un superávit comercial importante, la compra de divisas por parte de los particulares podría intensificarse ante la incertidumbre electoral. En ese escenario, el dólar podría acercarse al techo de la banda cambiaria y generar nuevas presiones sobre los precios, incluso si el traslado de la depreciación a la inflación resulta relativamente bajo.
+
+El economista de Equilibra considera que la inflación de 2027 podría ubicarse entre 25% y 30% si coinciden presiones cambiarias y precios internacionales de la energía elevados. En cambio, un escenario más favorable, con menores tensiones sobre el dólar y una reducción del precio del petróleo, permitiría pensar en un índice cercano al 20% anual.
+
+Actualmente, el barril se encuentra por encima de los USD 110, por lo que un eventual regreso hacia los USD 70 contribuiría a reducir las presiones inflacionarias, según Lorenzo Sigaut Gravina. No obstante, aclaró que se trata de un factor externo sobre el cual la política económica argentina tiene escaso margen de intervención.
+
+Claudio Caprarulo también identificó la estabilidad cambiaria como una condición necesaria para sostener la desaceleración. Según explicó, si el Gobierno logra contener las presiones sobre el tipo de cambio y la inflación mensual se mantiene ligeramente por debajo del 2%, el incremento acumulado durante 2027 podría rondar el 25 por ciento.
+
+Menescaldi, a su vez, planteó que las proyecciones para el próximo año dependen del escenario político y financiero. Bajo el supuesto de continuidad de un gobierno con orientación favorable al mercado, consideró que las estimaciones podrían variar alrededor de cinco puntos porcentuales respecto del nivel con el que termine 2026, según las condiciones que prevalezcan. De ganar en primera vuelta el presidente Javier Milei, podría cerrar más cerca de 25%, pero si va a un ballotage con un candidato opuesto ideológicamente, la inflación podría superar el 35%, sostuvo.
+
+Una eventual normalización de la región, acompañada por una reducción de los costos energéticos, podría favorecer una desaceleración más rápida de la inflación (Caamaño)
+
+Caamaño también resaltó que el contexto político y cambiario será determinante, pero puso especial atención en los precios internacionales de la energía y la evolución del conflicto en Medio Oriente. Una eventual normalización de la región, acompañada por una reducción de los costos energéticos, podría favorecer una desaceleración más rápida de la inflación.
+
+El economista sostuvo que una definición más precisa del régimen monetario y una mejor comunicación de sus objetivos podrían contribuir a ordenar las expectativas. También mencionó la posibilidad de coordinar pautas futuras de salarios y tarifas, aunque consideró que el calendario electoral reduce el margen para que esas medidas produzcan resultados en el corto plazo.
+
+En relación con el tipo de cambio, Sigaut Gravina planteó distintos escenarios para el período electoral. Uno contempla una mayor demanda de dólares que provoque un incremento sostenido de la cotización, con efectos sobre los precios internos. Otro supone que las presiones cambiarias resulten transitorias y que, una vez superada la incertidumbre electoral, el dólar retroceda, como ocurrió después de las elecciones de 2025.
+
+Para el economista de Equilibra, esa diferencia será importante para determinar el resultado inflacionario de 2027. Su escenario central contempla una inflación inferior a la de 2026, aunque no demasiado alejada del 25% anual, mientras que una reducción hacia el 20% dependerá de una combinación de condiciones cambiarias e internacionales más favorables.

@@ -5,8 +5,8 @@ queda y escribe:
   - corpus/bruto/notas-limpias.md y .txt: todas juntas, cada nota con su fuente.
   - corpus/notas/md/NN-tema.md y corpus/notas/txt/NN-tema.txt: un archivo por
     nota, solo titulo y parrafos, como la entregaria una periodista.
-  - corpus/notas/_indice.md: las fuentes de cada nota (este si va al repo).
-Los textos quedan ignorados por git; ver corpus/notas/README.txt.
+  - corpus/notas/_indice.md: las fuentes de cada nota.
+Las notas de corpus/notas/ van al repo; corpus/bruto/ no. Ver corpus/notas/README.txt.
 La carpeta no se sube a git.
 
 Uso:
@@ -142,8 +142,8 @@ def escribir_por_nota(notas):
     indice = [
         "# Fuentes de las notas de prueba",
         "",
-        "Cada nota pertenece al medio que la publicó. Acá solo figuran el título, el medio,",
-        "la fecha y el enlace. Los textos no están en el repositorio: ver README.txt.",
+        "Cada nota pertenece al medio que la publicó. Acá figuran el título, el medio,",
+        "la fecha y el enlace a la original. Derechos y créditos: ver README.txt.",
         "",
         "| Archivo | Medio | Fecha | Título | Párrafos | Enlace |",
         "| --- | --- | --- | --- | --- | --- |",
