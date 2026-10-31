@@ -1,0 +1,495 @@
+{
+  "niche": "política",
+  "enrichments": [
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo con sesgo oficialista",
+        "framing": "La nota narra la aprobación desde la lógica parlamentaria (votos, negociaciones, cambios para conseguir apoyos) y otorga al oficialismo, en especial a Patricia Bullrich, el cierre argumental con un caso policial emotivo; el kirchnerismo aparece solo como bloque que vota en contra, sin voz propia, y la ley de 2010 queda implícitamente como antagonista asociada a la 'laxitud'.",
+        "sentiment": 0.2,
+        "sources_cited": [
+          "Senador Guillermo Andrada (peronista disidente, Catamarca)",
+          "Senador Carlos Arce (Misiones)",
+          "Senadora Patricia Bullrich (jefa del bloque oficialista, Capital)",
+          "Dictamen de comisión / proyecto del Poder Ejecutivo",
+          "Ley Nacional de Salud Mental 26.657",
+          "Resultado de la votación en el Senado"
+        ],
+        "missing_angles": [
+          "Voz del kirchnerismo: los 21 votos negativos no tienen ningún argumento citado, lo que desequilibra la cobertura.",
+          "Opinión de organizaciones de usuarios, familiares, CELS, colegios de psicólogos, APSA y otras entidades profesionales y de derechos humanos.",
+          "Posición del Ministerio de Salud y del Órgano de Revisión Nacional sobre la reforma y su capacidad operativa.",
+          "Verificación del caso Roldán-Roza: la nota afirma como hecho que abandonó la medicación 'como consecuencia de la laxitud de la ley', una atribución causal que debería presentarse como opinión de Bullrich o respaldarse con fuentes judiciales.",
+          "Cuadro comparativo explícito entre la ley 26.657 vigente, el proyecto original del Ejecutivo y el texto finalmente aprobado.",
+          "Cifras de contexto: cantidad de camas psiquiátricas, internaciones prolongadas, personas aún en monovalentes, cumplimiento de la meta de cierre de manicomios prevista para 2020.",
+          "Montos concretos del financiamiento federal: no se indica partida, cifra ni fuente presupuestaria, pese a que los senadores lo señalan como causa del fracaso de la ley anterior.",
+          "Estándares internacionales (Convención sobre los Derechos de las Personas con Discapacidad, OMS) frente a los cambios en internación involuntaria.",
+          "Perspectiva de las provincias y su disponibilidad real de psiquiatras, clave para evaluar la teleconsulta.",
+          "Escenario en Diputados: correlación de fuerzas y posibilidad de nuevos cambios.",
+          "Precisión sobre el término 'centros especializados en psiquiatría', que podría habilitar instituciones monovalentes pese a la prohibición de manicomios."
+        ],
+        "follow_up_questions": [
+          "¿Qué artículos concretos del proyecto original del Ejecutivo se eliminaron o modificaron en el recinto y quién los negoció?",
+          "¿Cuánto dinero asignará el Estado nacional a los convenios bilaterales con las provincias y desde qué partida?",
+          "¿Qué diferencia jurídica hay entre un 'centro especializado en psiquiatría' y un manicomio según el nuevo texto?",
+          "¿Cuál es la postura de las organizaciones de usuarios de salud mental y de derechos humanos sobre el texto aprobado?",
+          "¿Cuántas personas permanecen hoy internadas en hospitales monovalentes y cuántas superan los 180 días?",
+          "¿Tiene el Órgano de Revisión recursos para intervenir de oficio en todas las internaciones prolongadas?",
+          "¿Qué dice el expediente judicial del caso Roza sobre su tratamiento y la aplicación de la ley vigente?",
+          "¿Cuántas jurisdicciones carecen de psiquiatras suficientes y cómo se implementará la teleconsulta?",
+          "¿Qué votos tiene el oficialismo en Diputados y qué bloques piden cambios?",
+          "¿Cómo se hará cumplir la obligación de familiares de presentarse al alta y qué ocurre si no lo hacen?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "senado",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "El Senado aprobó y giró en revisión a la Cámara de Diputados la reforma de la Ley Nacional de Salud Mental (26.657)",
+            "relation": "aprobó la reforma de"
+          },
+          {
+            "source": "senado",
+            "target": "camara-de-diputados",
+            "evidence": "El Senado aprobó y giró en revisión a la Cámara de Diputados",
+            "relation": "giró en revisión el proyecto a"
+          },
+          {
+            "source": "poder-ejecutivo",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "un proyecto enviado por el Poder Ejecutivo",
+            "relation": "envió proyecto de reforma de"
+          },
+          {
+            "source": "kirchnerismo",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "la ley sancionada por el kirchnerismo en 2010",
+            "relation": "sancionó"
+          },
+          {
+            "source": "kirchnerismo",
+            "target": "senado",
+            "evidence": "21 en contra, todos del kirchnerismo",
+            "relation": "votó en contra en"
+          },
+          {
+            "source": "guillermo-andrada",
+            "target": "catamarca",
+            "evidence": "el peronista disidente Guillermo Andrada (Catamarca)",
+            "relation": "representa a"
+          },
+          {
+            "source": "guillermo-andrada",
+            "target": "senado",
+            "evidence": "afirmó el senador catamarqueño",
+            "relation": "es senador de"
+          },
+          {
+            "source": "carlos-arce",
+            "target": "misiones",
+            "evidence": "el misionero Carlos Arce",
+            "relation": "representa a"
+          },
+          {
+            "source": "patricia-bullrich",
+            "target": "ciudad-autonoma-de-buenos-aires",
+            "evidence": "Patricia Bullrich (Capital)",
+            "relation": "representa a"
+          },
+          {
+            "source": "patricia-bullrich",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "defendió la iniciativa y destacó las fallas del régimen vigente",
+            "relation": "defendió la reforma de"
+          },
+          {
+            "source": "patricia-bullrich",
+            "target": "juan-pablo-roldan",
+            "evidence": "al recordar el caso de Juan Pablo Roldán",
+            "relation": "recordó el caso de"
+          },
+          {
+            "source": "rodrigo-roza",
+            "target": "juan-pablo-roldan",
+            "evidence": "murió asesinado a manos de Rodrigo Roza",
+            "relation": "asesinó a"
+          },
+          {
+            "source": "juan-pablo-roldan",
+            "target": "policia-de-la-ciudad",
+            "evidence": "el policía de la Ciudad que murió asesinado",
+            "relation": "pertenecía a"
+          },
+          {
+            "source": "cofesa",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "Estos recursos, coordinados en el ámbito del Consejo Federal de Salud (COFESA)",
+            "relation": "coordina recursos del financiamiento previsto en"
+          },
+          {
+            "source": "ministerio-de-salud",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "partidas presupuestarias específicas del Ministerio de Salud de la Nación",
+            "relation": "aporta partidas para"
+          },
+          {
+            "source": "organo-de-revision",
+            "target": "ley-nacional-de-salud-mental",
+            "evidence": "supuesto que activa la intervención de oficio del Órgano de Revisión",
+            "relation": "interviene según"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "senado",
+            "name": "Senado de la Nación",
+            "type": "org",
+            "mentions": 5,
+            "description": "Cámara alta que aprobó y giró a Diputados la reforma de la ley de salud mental."
+          },
+          {
+            "id": "camara-de-diputados",
+            "name": "Cámara de Diputados",
+            "type": "org",
+            "mentions": 2,
+            "description": "Cámara que recibirá en revisión el proyecto aprobado por el Senado."
+          },
+          {
+            "id": "ley-nacional-de-salud-mental",
+            "name": "Ley Nacional de Salud Mental (26.657)",
+            "type": "event",
+            "mentions": 5,
+            "description": "Ley sancionada en 2010 cuya reforma fue aprobada por el Senado."
+          },
+          {
+            "id": "poder-ejecutivo",
+            "name": "Poder Ejecutivo Nacional (Casa Rosada)",
+            "type": "org",
+            "mentions": 2,
+            "description": "Envió el proyecto de reforma, que sufrió modificaciones en el Senado."
+          },
+          {
+            "id": "kirchnerismo",
+            "name": "Kirchnerismo",
+            "type": "org",
+            "mentions": 3,
+            "description": "Espacio que votó en contra y que sancionó la ley vigente en 2010."
+          },
+          {
+            "id": "guillermo-andrada",
+            "name": "Guillermo Andrada",
+            "type": "person",
+            "mentions": 3,
+            "description": "Senador peronista disidente por Catamarca que reclamó financiamiento nacional."
+          },
+          {
+            "id": "catamarca",
+            "name": "Catamarca",
+            "type": "place",
+            "mentions": 2,
+            "description": "Provincia representada por Guillermo Andrada."
+          },
+          {
+            "id": "carlos-arce",
+            "name": "Carlos Arce",
+            "type": "person",
+            "mentions": 1,
+            "description": "Senador misionero que apoyó el pedido de financiamiento y destacó la evaluación clínica integral."
+          },
+          {
+            "id": "misiones",
+            "name": "Misiones",
+            "type": "place",
+            "mentions": 1,
+            "description": "Provincia representada por Carlos Arce."
+          },
+          {
+            "id": "patricia-bullrich",
+            "name": "Patricia Bullrich",
+            "type": "person",
+            "mentions": 3,
+            "description": "Jefa del bloque oficialista en el Senado que defendió la iniciativa en el cierre del debate."
+          },
+          {
+            "id": "juan-pablo-roldan",
+            "name": "Juan Pablo Roldán",
+            "type": "person",
+            "mentions": 1,
+            "description": "Policía de la Ciudad asesinado, caso citado por Bullrich."
+          },
+          {
+            "id": "rodrigo-roza",
+            "name": "Rodrigo Roza",
+            "type": "person",
+            "mentions": 1,
+            "description": "Enfermo de esquizofrenia que asesinó a Juan Pablo Roldán."
+          },
+          {
+            "id": "policia-de-la-ciudad",
+            "name": "Policía de la Ciudad",
+            "type": "org",
+            "mentions": 1,
+            "description": "Fuerza a la que pertenecía Juan Pablo Roldán."
+          },
+          {
+            "id": "ciudad-autonoma-de-buenos-aires",
+            "name": "Ciudad Autónoma de Buenos Aires",
+            "type": "place",
+            "mentions": 2,
+            "description": "Distrito representado por Bullrich y beneficiario del esquema de financiamiento federal."
+          },
+          {
+            "id": "organo-de-revision",
+            "name": "Órgano de Revisión",
+            "type": "org",
+            "mentions": 2,
+            "description": "Organismo que interviene de oficio en internaciones prolongadas e involuntarias."
+          },
+          {
+            "id": "cofesa",
+            "name": "Consejo Federal de Salud (COFESA)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Ámbito de coordinación de los recursos del financiamiento federal."
+          },
+          {
+            "id": "ministerio-de-salud",
+            "name": "Ministerio de Salud de la Nación",
+            "type": "org",
+            "mentions": 1,
+            "description": "Ministerio con partidas presupuestarias específicas para el esquema de financiamiento."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 1,
+            "description": "Territorio donde regirá el marco regulatorio de salud mental."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El Senado aprobó y giró en revisión a la Cámara de Diputados la reforma de la Ley Nacional de Salud Mental 26.657.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "Senado de la Nación aprobó reforma Ley de Salud Mental 26.657 giro a Diputados acta de sesión"
+          },
+          {
+            "text": "El proyecto de reforma de la Ley de Salud Mental fue enviado por el Poder Ejecutivo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "proyecto Poder Ejecutivo reforma Ley de Salud Mental 26.657 mensaje Senado expediente"
+          },
+          {
+            "text": "La reforma fue aprobada en el Senado poco antes de la 1 de la madrugada por 42 votos a favor y 21 en contra.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "votación Senado reforma ley salud mental 42 votos a favor 21 en contra acta nominal"
+          },
+          {
+            "text": "Los 42 votos afirmativos fueron aportados por el oficialismo y sus aliados, y los 21 negativos fueron todos del kirchnerismo.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "votación nominal Senado reforma salud mental votos por bloque"
+          },
+          {
+            "text": "El texto debatido es el dictamen de comisión impulsado por el oficialismo dos semanas antes de la sesión, con modificaciones hasta minutos antes del debate.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "dictamen comisión Senado reforma ley salud mental fecha firma modificaciones recinto"
+          },
+          {
+            "text": "El proyecto original de la Casa Rosada buscaba levantar la prohibición de crear manicomios establecida por la ley de 2010.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "proyecto Ejecutivo reforma salud mental derogaba prohibición manicomios artículo 27 Ley 26.657"
+          },
+          {
+            "text": "La Ley 26.657 de Salud Mental fue sancionada en 2010.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "Ley 26.657 Salud Mental fecha sanción Boletín Oficial 2010"
+          },
+          {
+            "text": "El texto aprobado mantiene la prohibición de crear manicomios y considera la internación como medida excepcional.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "texto aprobado Senado reforma salud mental prohibición manicomios internación excepcional"
+          },
+          {
+            "text": "El senador Guillermo Andrada (Catamarca) afirmó que \"no alcanza con cambiar el criterio clínico de la internación de un paciente y con aplicar controles judiciales o de internación sino tenemos las herramientas necesarias para controlarlos\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "versión taquigráfica Senado Guillermo Andrada salud mental \"no alcanza con cambiar el criterio clínico\""
+          },
+          {
+            "text": "Andrada afirmó: \"No vamos a cercenar garantías y no vamos a cejar para que el paradigma comunitario esté presente\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "Andrada \"no vamos a cercenar garantías\" Senado salud mental versión taquigráfica"
+          },
+          {
+            "text": "Andrada dijo que una de las causas del fracaso de la ley de 2010 fue la falta de presupuesto.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "Andrada falta de presupuesto ley salud mental Senado discurso"
+          },
+          {
+            "text": "El senador misionero Carlos Arce destacó \"la enorme importancia de una evaluación clínica integral\" y apoyó el pedido de financiamiento nacional para las provincias.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "Carlos Arce Senado salud mental \"evaluación clínica integral\" versión taquigráfica"
+          },
+          {
+            "text": "La evaluación clínica integral se incorporó al texto como resultado de la negociación entre bloques del Senado.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "reforma salud mental Senado incorporación evaluación clínica integral modificaciones"
+          },
+          {
+            "text": "El policía de la Ciudad Juan Pablo Roldán fue asesinado por Rodrigo Roza, un enfermo de esquizofrenia que había abandonado la medicación.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "Juan Pablo Roldán policía asesinado Rodrigo Roza esquizofrenia Palermo causa judicial"
+          },
+          {
+            "text": "Patricia Bullrich, jefa del bloque oficialista, afirmó: \"Intervenir a tiempo cuida a la sociedad y cuida también a las personas con problemas mentales\" y \"Esto salva vidas\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 11,
+            "verification_query": "Patricia Bullrich Senado salud mental \"Esto salva vidas\" cierre debate"
+          },
+          {
+            "text": "El proyecto exige que los equipos de atención incluyan obligatoriamente un médico psiquiatra, junto a psicólogos, trabajadores sociales, enfermeros y terapistas ocupacionales.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "texto reforma ley salud mental Senado equipo interdisciplinario psiquiatra obligatorio"
+          },
+          {
+            "text": "El proyecto autoriza la intervención remota del psiquiatra mediante teleconsultas sincrónicas cuando no se pueda garantizar su presencia física.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 15,
+            "verification_query": "reforma salud mental teleconsulta sincrónica psiquiatra texto aprobado Senado"
+          },
+          {
+            "text": "El proyecto fija en 180 días el límite para considerar prolongada una internación, lo que activa la intervención de oficio del Órgano de Revisión.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 17,
+            "verification_query": "reforma ley salud mental 180 días internación prolongada Órgano de Revisión texto"
+          },
+          {
+            "text": "Las internaciones involuntarias requieren riesgo grave de daño verificado con la firma de dos profesionales.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 18,
+            "verification_query": "reforma salud mental internación involuntaria firma dos profesionales riesgo grave"
+          },
+          {
+            "text": "Las internaciones involuntarias deben notificarse en un máximo de 24 horas al juez y al órgano de revisión, y el juez tiene tres días para convalidarlas, pedir peritajes o disponer la externación.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 19,
+            "verification_query": "reforma ley salud mental notificación 24 horas juez tres días convalidar internación"
+          },
+          {
+            "text": "El proyecto incorpora un esquema de financiamiento federal mediante convenios bilaterales con las provincias y la CABA, coordinado en el ámbito del COFESA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 23,
+            "verification_query": "reforma salud mental financiamiento federal convenios bilaterales COFESA texto Senado"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2010",
+            "title": "Sanción de la Ley Nacional de Salud Mental 26.657",
+            "precision": "year",
+            "description": "El kirchnerismo sancionó la Ley Nacional de Salud Mental, que estableció la prohibición de crear manicomios. Esa restricción se mantiene en la reforma aprobada por el Senado.",
+            "paragraph_index": 5
+          }
+        ]
+      }
+    }
+  ]
+}

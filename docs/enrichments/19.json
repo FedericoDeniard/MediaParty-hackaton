@@ -1,0 +1,540 @@
+{
+  "niche": "deportes",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026-12-12",
+            "title": "Debut del fuera de juego semiautomático en la final del Clausura",
+            "precision": "day",
+            "description": "La final del Torneo Clausura 2026, en el Estadio Diego Armando Maradona de La Plata, será el primer partido de la LPF con el sistema SAOT.",
+            "paragraph_index": 0
+          },
+          {
+            "date": "2027",
+            "title": "Nuevo formato de competencia para Apertura y Clausura",
+            "precision": "year",
+            "description": "Desde 2027 todos los equipos se enfrentarán al menos una vez por temporada, con 15 fechas por torneo, playoffs entre los 16 mejores y una Tabla Anual para copas y descensos.",
+            "paragraph_index": 5
+          },
+          {
+            "date": "2027",
+            "title": "Implementación total del SAOT desde el Clausura 2027",
+            "precision": "year",
+            "description": "El fuera de juego semiautomático quedará instalado en todos los partidos de la Liga Profesional a partir del Torneo Clausura 2027, previsto para el segundo semestre.",
+            "paragraph_index": 7
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo, con matiz institucional",
+        "framing": "La nota se cuenta desde el anuncio oficial de la LPF y la AFA como un avance de modernización del fútbol argentino. Los protagonistas son las autoridades (Tapia, Malaspina) y la empresa proveedora Genius Sports, cuyas declaraciones promocionales se reproducen sin contrapeso. No hay voces críticas ni antagonistas.",
+        "sentiment": 0.6,
+        "sources_cited": [
+          "Liga Profesional de Fútbol (LPF), comunicado oficial",
+          "Asociación del Fútbol Argentino (AFA)",
+          "Claudio Tapia, presidente de la AFA",
+          "Steven Burton, Chief Partnerships Officer de Genius Sports",
+          "Genius Sports",
+          "Cristian Malaspina, presidente de Argentinos Juniors",
+          "Comité Ejecutivo de la LPF (reunión en Puerto Madero)"
+        ],
+        "missing_angles": [
+          "Costo de la implementación y quién lo financia (AFA, LPF, clubes, la propia Genius Sports o un acuerdo comercial de derechos de datos).",
+          "Condiciones del contrato con Genius Sports: duración, si hubo licitación y en qué consiste la 'alianza' previa que menciona Tapia.",
+          "Voces independientes: árbitros, la Asociación Argentina de Árbitros, entrenadores, jugadores o especialistas en reglamento.",
+          "Experiencias comparadas con cifras: cuánto se redujeron los tiempos de revisión en otras ligas y qué errores o polémicas generó el sistema (p. ej., fallas en la Premier League o casos de la CONMEBOL).",
+          "Contexto local: polémicas recientes del VAR en Argentina por fuera de juego que motivan el cambio, y cuánto demoran hoy las revisiones.",
+          "Viabilidad técnica en todos los estadios: requisitos de infraestructura (cámaras, techos, iluminación) y qué canchas podrían no cumplirlos.",
+          "Contradicción de plazos: Malaspina habla de 'a partir del año que viene' y del segundo semestre, mientras el comunicado fija el Clausura 2027. Conviene aclarar por qué la implementación no llega al Apertura.",
+          "Qué pasa en las categorías de ascenso y en la Copa Argentina: si quedan excluidas, crea una disparidad tecnológica.",
+          "Formación de árbitros y operadores VAR para usar la nueva herramienta.",
+          "El nuevo formato de torneos aparece de pasada sin explicar si la votación tuvo oposición ni cuántos clubes votaron en contra."
+        ],
+        "follow_up_questions": [
+          "¿Cuál es el monto del contrato con Genius Sports y qué contraprestaciones (datos, derechos, apuestas) incluye?",
+          "¿Hubo otras empresas evaluadas, como Hawk-Eye/Sony o el proveedor de la FIFA, y por qué se eligió Genius Sports?",
+          "¿Qué estadios de primera división necesitan obras o equipamiento adicional para instalar las cámaras del SAOT y quién las paga?",
+          "¿Cómo se capacitará a los árbitros VAR y cuándo comenzarán las pruebas en partidos sin impacto oficial antes de la final?",
+          "¿Qué opina la Asociación Argentina de Árbitros y qué cambia en el protocolo de comunicación de las decisiones al público en el estadio y la TV?",
+          "¿Por qué la implementación total se fija en el Clausura 2027 y no en el Apertura? ¿Es un problema técnico, presupuestario o logístico?",
+          "¿Se mostrarán al público las animaciones 3D de las jugadas, como en el Mundial de Qatar y la Premier League?",
+          "¿Cuáles fueron los casos más polémicos de offside con VAR en Argentina en 2025-2026 y cuánto tiempo demandaron?",
+          "¿Qué clubes votaron en contra del nuevo formato de torneo y con qué argumentos?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "La Liga Profesional de Fútbol de Argentina incorporará el sistema de Fuera de Juego Semiautomático (SAOT) a su plataforma VAR a partir de la final del Torneo Clausura 2026.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "LPF fuera de juego semiautomático final Torneo Clausura 2026 comunicado"
+          },
+          {
+            "text": "La final del Torneo Clausura 2026 está programada para el 12 de diciembre en el Estadio Diego Armando Maradona de La Plata.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "final Torneo Clausura 2026 12 de diciembre estadio Diego Armando Maradona La Plata"
+          },
+          {
+            "text": "El sistema SAOT tendrá implementación total en todos los partidos de la Liga Profesional a partir del Torneo Clausura 2027.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "SAOT todos los estadios Liga Profesional Clausura 2027"
+          },
+          {
+            "text": "El anuncio de la incorporación del SAOT fue realizado de manera oficial por la LPF y la AFA.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "anuncio oficial LPF AFA fuera de juego semiautomático"
+          },
+          {
+            "text": "El fuera de juego semiautomático ya opera en competencias como la Premier League, la UEFA, la CONMEBOL, la Ligue 1, el Brasileirão, la Serie A, la Liga MX y la Pro League.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "competencias que usan fuera de juego semiautomático Premier League Ligue 1 Brasileirão Liga MX Pro League"
+          },
+          {
+            "text": "Según el comunicado oficial de la LPF, el SAOT construye una réplica digital del partido en tiempo real y permite analizar cada jugada de fuera de juego con precisión milimétrica.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 3,
+            "verification_query": "comunicado LPF SAOT réplica digital precisión milimétrica"
+          },
+          {
+            "text": "Claudio Tapia, presidente de la AFA, dijo: \"Los fanáticos del fútbol argentino merecen la mejor experiencia en el día del partido y la tecnología de fuera de juego semiautomático es una solución crucial para tomar decisiones rápidas y precisas\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "Claudio Tapia fuera de juego semiautomático \"solución crucial para tomar decisiones rápidas y precisas\""
+          },
+          {
+            "text": "Claudio Tapia afirmó que la empresa desarrolladora lanzó el SAOT \"más avanzado del fútbol mundial\" y que la AFA está encantada de ampliar su alianza con ella.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "Tapia Genius Sports SAOT \"más avanzado del fútbol mundial\" alianza"
+          },
+          {
+            "text": "El sistema de fuera de juego semiautomático que adoptará la LPF fue desarrollado por la empresa Genius Sports.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Genius Sports fuera de juego semiautomático Liga Profesional Argentina"
+          },
+          {
+            "text": "Steven Burton, Chief Partnerships Officer de Genius Sports, dijo: \"Ya hemos demostrado que nuestra tecnología puede reducir significativamente los tiempos de decisión de las competencias más grandes del mundo. Ahora traemos esos beneficios al fútbol argentino\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Steven Burton Genius Sports fútbol argentino SAOT declaración"
+          },
+          {
+            "text": "En una reunión del Comité Ejecutivo celebrada en Puerto Madero, la LPF aprobó por mayoría un nuevo formato de competencia para el Apertura y el Clausura a partir de 2027.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Comité Ejecutivo LPF Puerto Madero nuevo formato torneos 2027 aprobado por mayoría"
+          },
+          {
+            "text": "Con el nuevo formato desde 2027, todos los equipos se enfrentarán al menos una vez por temporada, con 15 fechas por torneo y playoffs entre los 16 mejores de cada tramo.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "nuevo formato Liga Profesional 2027 15 fechas playoffs 16 equipos"
+          },
+          {
+            "text": "En el nuevo formato, una Tabla Anual definirá los clasificados a copas internacionales y los descensos.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Tabla Anual 2027 clasificación copas internacionales descensos Liga Profesional"
+          },
+          {
+            "text": "Cristian Malaspina, presidente de Argentinos Juniors, anticipó en la reunión del Comité Ejecutivo la llegada del SAOT y dijo: \"El primer caso de éxito va a ser la final del 12 de diciembre de este año\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "Cristian Malaspina VAR semiautomático final 12 de diciembre declaraciones"
+          },
+          {
+            "text": "Malaspina declaró que el SAOT estaría en todos los estadios de primera división el año próximo, probablemente a partir del segundo semestre por razones de implementación.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 7,
+            "verification_query": "Malaspina VAR semiautomático todos los estadios segundo semestre"
+          },
+          {
+            "text": "Según el comunicado de la LPF, la tecnología se usará en la final del Torneo Clausura en La Plata el 12 de diciembre y quedará instalada para todos los encuentros desde el Torneo Clausura 2027.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "comunicado LPF \"quedará definitivamente instalado\" Torneo Clausura 2027"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "liga-profesional-de-futbol",
+            "target": "saot",
+            "evidence": "incorporará el sistema de Fuera de Juego Semiautomático (SAOT, por sus siglas en inglés) a su plataforma VAR",
+            "relation": "incorporará"
+          },
+          {
+            "source": "saot",
+            "target": "final-torneo-clausura-2026",
+            "evidence": "Esta nueva tecnología se utilizará en la final del actual Torneo Clausura",
+            "relation": "debutará en"
+          },
+          {
+            "source": "final-torneo-clausura-2026",
+            "target": "torneo-clausura-2026",
+            "evidence": "a partir de la final del Torneo Clausura 2026",
+            "relation": "forma parte de"
+          },
+          {
+            "source": "final-torneo-clausura-2026",
+            "target": "estadio-diego-armando-maradona",
+            "evidence": "programada para el 12 de diciembre en el Estadio Diego Armando Maradona de La Plata",
+            "relation": "se jugará en"
+          },
+          {
+            "source": "estadio-diego-armando-maradona",
+            "target": "la-plata",
+            "evidence": "Estadio Diego Armando Maradona de La Plata",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "saot",
+            "target": "torneo-clausura-2027",
+            "evidence": "con implementación total en todas las canchas desde el Clausura 2027",
+            "relation": "se implementará totalmente desde"
+          },
+          {
+            "source": "afa",
+            "target": "saot",
+            "evidence": "El anuncio, realizado de manera oficial por la LPF y la Asociación del Fútbol Argentino (AFA)",
+            "relation": "anunció"
+          },
+          {
+            "source": "claudio-tapia",
+            "target": "afa",
+            "evidence": "El presidente de la AFA, Claudio Tapia",
+            "relation": "preside"
+          },
+          {
+            "source": "genius-sports",
+            "target": "saot",
+            "evidence": "\"Genius Sports\", la empresa que desarrolló el sistema",
+            "relation": "desarrolló"
+          },
+          {
+            "source": "steven-burton",
+            "target": "genius-sports",
+            "evidence": "Steven Burton, Chief Partnerships Officer de \"Genius Sports\"",
+            "relation": "es Chief Partnerships Officer de"
+          },
+          {
+            "source": "afa",
+            "target": "genius-sports",
+            "evidence": "estamos encantados de ampliar nuestra alianza con ellos",
+            "relation": "amplía alianza con"
+          },
+          {
+            "source": "cristian-malaspina",
+            "target": "argentinos-juniors",
+            "evidence": "Cristian Malaspina, presidente de Argentinos Juniors",
+            "relation": "preside"
+          },
+          {
+            "source": "cristian-malaspina",
+            "target": "saot",
+            "evidence": "Cristian Malaspina, presidente de Argentinos Juniors, anticipó la llegada del SAOT",
+            "relation": "anticipó la llegada de"
+          },
+          {
+            "source": "comite-ejecutivo-lpf",
+            "target": "puerto-madero",
+            "evidence": "En la reunión del Comité Ejecutivo celebrada en Puerto Madero",
+            "relation": "se reunió en"
+          },
+          {
+            "source": "comite-ejecutivo-lpf",
+            "target": "liga-profesional-de-futbol",
+            "evidence": "En la reunión del Comité Ejecutivo celebrada en Puerto Madero, la LPF aprobó por mayoría un nuevo formato",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "premier-league",
+            "target": "saot",
+            "evidence": "una tecnología que ya opera en competencias como la Premier League",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "uefa",
+            "target": "saot",
+            "evidence": "ya opera en competencias como la Premier League, la UEFA",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "conmebol",
+            "target": "saot",
+            "evidence": "la UEFA, la CONMEBOL",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "ligue-1",
+            "target": "saot",
+            "evidence": "la CONMEBOL, la Ligue 1",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "brasileirao",
+            "target": "saot",
+            "evidence": "la Ligue 1, el Brasileirão",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "serie-a",
+            "target": "saot",
+            "evidence": "el Brasileirão, la Serie A",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "liga-mx",
+            "target": "saot",
+            "evidence": "la Serie A, la Liga MX",
+            "relation": "ya utiliza"
+          },
+          {
+            "source": "pro-league",
+            "target": "saot",
+            "evidence": "la Liga MX y la Pro League, entre otras",
+            "relation": "ya utiliza"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "liga-profesional-de-futbol",
+            "name": "Liga Profesional de Fútbol",
+            "type": "org",
+            "mentions": 9,
+            "description": "Liga argentina que incorporará el fuera de juego semiautomático y aprobó un nuevo formato de competencia."
+          },
+          {
+            "id": "saot",
+            "name": "Fuera de Juego Semiautomático (SAOT)",
+            "type": "org",
+            "mentions": 7,
+            "description": "Sistema tecnológico de detección de fuera de juego que se incorporará al VAR del fútbol argentino."
+          },
+          {
+            "id": "torneo-clausura-2026",
+            "name": "Torneo Clausura 2026",
+            "type": "event",
+            "mentions": 3,
+            "description": "Torneo cuya final será el primer partido en usar el SAOT en la Argentina."
+          },
+          {
+            "id": "final-torneo-clausura-2026",
+            "name": "Final del Torneo Clausura 2026",
+            "type": "event",
+            "mentions": 4,
+            "description": "Partido del 12 de diciembre en el que debutará el sistema semiautomático."
+          },
+          {
+            "id": "estadio-diego-armando-maradona",
+            "name": "Estadio Diego Armando Maradona",
+            "type": "place",
+            "mentions": 2,
+            "description": "Estadio de La Plata donde se jugará la final del Clausura."
+          },
+          {
+            "id": "la-plata",
+            "name": "La Plata",
+            "type": "place",
+            "mentions": 2,
+            "description": "Ciudad donde se ubica el estadio de la final."
+          },
+          {
+            "id": "torneo-clausura-2027",
+            "name": "Torneo Clausura 2027",
+            "type": "event",
+            "mentions": 2,
+            "description": "Torneo desde el cual el SAOT se implementará en todas las canchas."
+          },
+          {
+            "id": "afa",
+            "name": "Asociación del Fútbol Argentino",
+            "type": "org",
+            "mentions": 2,
+            "description": "Entidad que realizó el anuncio oficial junto con la LPF."
+          },
+          {
+            "id": "claudio-tapia",
+            "name": "Claudio Tapia",
+            "type": "person",
+            "mentions": 2,
+            "description": "Presidente de la AFA que celebró la llegada del sistema."
+          },
+          {
+            "id": "genius-sports",
+            "name": "Genius Sports",
+            "type": "org",
+            "mentions": 3,
+            "description": "Empresa que desarrolló el sistema de fuera de juego semiautomático."
+          },
+          {
+            "id": "steven-burton",
+            "name": "Steven Burton",
+            "type": "person",
+            "mentions": 1,
+            "description": "Chief Partnerships Officer de Genius Sports que destacó los beneficios de la tecnología."
+          },
+          {
+            "id": "cristian-malaspina",
+            "name": "Cristian Malaspina",
+            "type": "person",
+            "mentions": 2,
+            "description": "Presidente de Argentinos Juniors que anticipó la llegada del SAOT."
+          },
+          {
+            "id": "argentinos-juniors",
+            "name": "Argentinos Juniors",
+            "type": "org",
+            "mentions": 1,
+            "description": "Club presidido por Cristian Malaspina."
+          },
+          {
+            "id": "comite-ejecutivo-lpf",
+            "name": "Comité Ejecutivo de la LPF",
+            "type": "org",
+            "mentions": 1,
+            "description": "Órgano que se reunió en Puerto Madero y aprobó el nuevo formato de competencia."
+          },
+          {
+            "id": "puerto-madero",
+            "name": "Puerto Madero",
+            "type": "place",
+            "mentions": 1,
+            "description": "Lugar donde se celebró la reunión del Comité Ejecutivo."
+          },
+          {
+            "id": "premier-league",
+            "name": "Premier League",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          },
+          {
+            "id": "uefa",
+            "name": "UEFA",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organización que ya utiliza la tecnología."
+          },
+          {
+            "id": "conmebol",
+            "name": "CONMEBOL",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organización que ya utiliza la tecnología."
+          },
+          {
+            "id": "ligue-1",
+            "name": "Ligue 1",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          },
+          {
+            "id": "brasileirao",
+            "name": "Brasileirão",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          },
+          {
+            "id": "serie-a",
+            "name": "Serie A",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          },
+          {
+            "id": "liga-mx",
+            "name": "Liga MX",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          },
+          {
+            "id": "pro-league",
+            "name": "Pro League",
+            "type": "org",
+            "mentions": 1,
+            "description": "Competencia que ya utiliza la tecnología."
+          }
+        ]
+      }
+    }
+  ]
+}

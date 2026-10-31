@@ -1,0 +1,512 @@
+{
+  "niche": "política",
+  "enrichments": [
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo",
+        "framing": "Crónica parlamentaria que cuenta el dictamen como un logro táctico del oficialismo, conseguido a costa de concesiones. La Libertad Avanza y Santiago Caputo son los protagonistas; los aliados dialoguistas y la administración Trump, a través de Landau, aparecen como actores que condicionan y moldean el texto. La oposición dura y el Reino Unido casi no figuran.",
+        "sentiment": 0.05,
+        "sources_cited": [
+          "Dictamen de mayoría del proyecto de Defensa de la Soberanía Nacional",
+          "Christopher Landau, subsecretario de Estado de EE.UU. (posición reportada, sin cita directa)",
+          "Diputado Eduardo Falcone (MID), como impulsor de la propuesta de comisión bicameral",
+          "Diputada aliada anónima (cita textual)",
+          "Alfil libertario anónimo (cita textual)"
+        ],
+        "missing_angles": [
+          "Voz de la oposición no aliada (peronismo, izquierda) y su postura sobre el proyecto, en particular sobre el Consejo de Seguridad Nacional y el delito de injerencia extranjera.",
+          "Reacción del Reino Unido y del gobierno de las Islas, actores directamente afectados por las sanciones a la explotación en el Atlántico Sur.",
+          "Contexto histórico y normativo: qué establecían las leyes vigentes (por ejemplo, la Ley 26.659 y sus modificaciones) y en qué medida este proyecto las agrava.",
+          "Cifras: cuántas empresas operan hoy en la zona, cuántas fueron sancionadas con la normativa actual y qué volumen de recursos está en juego.",
+          "Opinión de especialistas en derecho constitucional y libertades civiles sobre los riesgos del tipo penal de injerencia (penas de 5 a 12 años) para ONG, periodistas y académicos.",
+          "Mirada de especialistas en defensa e inteligencia sobre la concentración de facultades en un Consejo integrado solo por el Ejecutivo y su control de inversiones extranjeras.",
+          "Contenido concreto de los artículos 127, 128 y 129 cuestionados y qué cambios piden exactamente los aliados.",
+          "Recuento de votos: qué bloques firmaron, cuántas firmas tuvo el dictamen y cuántos votos le faltan al oficialismo para aprobarlo en el recinto.",
+          "Contradicción interna a corregir: primero se dice que el Ministerio de Seguridad se suma como miembro no permanente y al final, como miembro permanente; además, en la integración permanente inicial no figura.",
+          "Detalle de la gestión de Landau: cuándo y dónde fue el encuentro y qué empresas estadounidenses estarían alcanzadas.",
+          "El criterio del 2% para eximir a accionistas minoritarios: su origen y si responde al pedido estadounidense."
+        ],
+        "follow_up_questions": [
+          "¿Qué empresas estadounidenses o fondos de inversión con participación en operadoras de Malvinas quedan exentos con el umbral del 2%?",
+          "¿Hubo pedidos formales por escrito del Departamento de Estado o solo la transmisión verbal de Landau?",
+          "¿Qué redacción alternativa proponen los aliados para los artículos 127 a 129 y cómo quedarían las ONG con financiamiento externo?",
+          "¿Cómo se integrará la Comisión Bicameral de Seguimiento y con qué acceso a información clasificada contará?",
+          "¿Qué criterios usará el Consejo para rechazar inversiones de Estados extranjeros? ¿Apunta en particular a capitales chinos en telecomunicaciones, energía, minería y actividades espaciales?",
+          "¿Por qué no se definió una regla de intervención primaria y subsidiaria entre Prefectura y el Comando Conjunto Marítimo, y qué conflictos operativos podría generar?",
+          "¿Qué papel concreto tuvo Santiago Caputo en las negociaciones con los bloques aliados?",
+          "¿Se mantiene la sesión del 12 de noviembre pese a la visita del papa León XIV, y con cuántos votos cuenta el oficialismo?",
+          "¿Cómo reaccionaron el Foreign Office británico y el gobierno isleño al dictamen?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El oficialismo obtuvo un miércoles el dictamen de mayoría del proyecto de Defensa de la Soberanía Nacional, que busca defender los recursos naturales en las Islas Malvinas.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "dictamen de mayoría proyecto Defensa de la Soberanía Nacional Malvinas Cámara de Diputados comisiones firmas"
+          },
+          {
+            "text": "La fecha tentativa que maneja La Libertad Avanza para tratar el proyecto en el recinto es el jueves 12 de noviembre.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "sesión Cámara de Diputados jueves 12 de noviembre proyecto soberanía nacional Malvinas convocatoria"
+          },
+          {
+            "text": "El Papa León XIV visitará la Argentina durante la semana prevista para la sesión.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "visita Papa León XIV Argentina fecha agenda oficial Santa Sede"
+          },
+          {
+            "text": "El proyecto de Defensa de la Soberanía Nacional fue impulsado principalmente por el asesor presidencial Santiago Caputo.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Santiago Caputo proyecto ley soberanía nacional Malvinas autoría"
+          },
+          {
+            "text": "El proyecto agrava las sanciones por explotación no autorizada de recursos naturales renovables y no renovables en el Atlántico Sur, e incluye multas y suspensión o cancelación de habilitaciones para empresas, socios y proveedores.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "texto proyecto ley Defensa de la Soberanía Nacional sanciones explotación recursos Atlántico Sur HCDN expediente"
+          },
+          {
+            "text": "El subsecretario de Estado de Estados Unidos, Christopher Landau, transmitió en persona al presidente Milei la preocupación de la Administración Trump por las consecuencias de las sanciones del proyecto para empresas estadounidenses.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Christopher Landau reunión Milei preocupación sanciones Malvinas empresas estadounidenses Departamento de Estado"
+          },
+          {
+            "text": "El dictamen limita las sanciones a operadoras directas, licenciatarias, sus proveedores y accionistas directos, y exime a accionistas minoritarios con participaciones de hasta el 2% y a fondos de inversión indirectos.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "dictamen soberanía nacional Malvinas accionistas minoritarios 2% fondos de inversión exención texto"
+          },
+          {
+            "text": "El proyecto crea un Consejo de Seguridad Nacional integrado de forma permanente por el Presidente, el jefe de Gabinete, los ministros de Relaciones Exteriores, Defensa y Economía, el secretario de Inteligencia de Estado y la secretaria Legal y Técnica.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "proyecto ley Consejo de Seguridad Nacional integrantes permanentes texto dictamen Diputados"
+          },
+          {
+            "text": "El Consejo de Seguridad Nacional, presidido por el Presidente, podrá controlar, aceptar o rechazar inversiones de Estados extranjeros y empresas con sus capitales en defensa, telecomunicaciones, energía, hidrocarburos, minería y actividades espaciales.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Consejo de Seguridad Nacional facultad rechazar inversiones extranjeras proyecto ley texto"
+          },
+          {
+            "text": "El oficialismo habilitó como miembros no permanentes del Consejo al presidente de la Cámara de Diputados, al presidente provisional del Senado, a gobernadores y al Ministerio de Seguridad Interior.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "dictamen Consejo de Seguridad Nacional miembros no permanentes gobernadores presidente Diputados Senado"
+          },
+          {
+            "text": "La Libertad Avanza aceptó crear una Comisión Bicameral de Seguimiento del Consejo, propuesta por el diputado Eduardo Falcone (MID), a la que el Ejecutivo deberá informar en 48 horas las medidas que adopte el Consejo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Eduardo Falcone MID comisión bicameral seguimiento Consejo de Seguridad Nacional 48 horas dictamen"
+          },
+          {
+            "text": "El proyecto sanciona con penas de cinco a doce años de prisión a quienes, por cuenta de un Estado extranjero, alteren procesos electorales o manipulen la opinión pública, y el dictamen define y excluye supuestos de 'campaña de injerencia extranjera'.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "dictamen campaña de injerencia extranjera penas cinco a doce años prisión proyecto soberanía nacional"
+          },
+          {
+            "text": "Bloques aliados que firmaron el dictamen con disidencias exigen cambios en los artículos 127, 128 y 129.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "disidencias dictamen soberanía nacional artículos 127 128 129 bloques aliados"
+          },
+          {
+            "text": "Una diputada aliada no identificada afirmó: 'Si no hacen más cambios, yo voto en contra y se va a terminar cayendo en el recinto'.",
+            "type": "quote",
+            "checkable": false,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "diputada aliada voto en contra proyecto soberanía nacional cambios"
+          },
+          {
+            "text": "Un dirigente libertario no identificado reconoció que habrá más cambios porque no queda clara la situación de las ONG que buscan influir sobre las políticas del gobierno.",
+            "type": "quote",
+            "checkable": false,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "La Libertad Avanza cambios proyecto injerencia extranjera ONG"
+          },
+          {
+            "text": "Se incorporó al Ministerio de Seguridad, a cargo de Alejandra Monteoliva, como miembro permanente del Consejo de Seguridad Nacional (en contradicción con lo dicho antes, que lo ubicaba como miembro no permanente).",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Ministerio de Seguridad Monteoliva miembro permanente Consejo de Seguridad Nacional dictamen"
+          },
+          {
+            "text": "El dictamen precisó las competencias de la Prefectura Naval y el Comando Conjunto Marítimo sin establecer una regla de intervención primaria y subsidiaria entre ambas fuerzas.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "dictamen Prefectura Naval Comando Conjunto Marítimo competencias proyecto soberanía nacional"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "santiago-caputo",
+            "target": "gobierno-nacional",
+            "evidence": "El proyecto del Gobierno, impulsado principalmente por el asesor presidencial Santiago Caputo",
+            "relation": "impulsó el proyecto del"
+          },
+          {
+            "source": "christopher-landau",
+            "target": "javier-milei",
+            "evidence": "Christopher Landau, le transmitió en persona al presidente Milei la preocupación",
+            "relation": "se reunió con"
+          },
+          {
+            "source": "christopher-landau",
+            "target": "administracion-trump",
+            "evidence": "la preocupación de la Administración Trump",
+            "relation": "representa a"
+          },
+          {
+            "source": "christopher-landau",
+            "target": "estados-unidos",
+            "evidence": "subsecretario de Estado de Estados Unidos, Christopher Landau",
+            "relation": "es funcionario de"
+          },
+          {
+            "source": "leon-xiv",
+            "target": "argentina",
+            "evidence": "la visita del Papa León XIV a la Argentina",
+            "relation": "visitará"
+          },
+          {
+            "source": "javier-milei",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "Estará presidido por el Presidente",
+            "relation": "presidirá"
+          },
+          {
+            "source": "ministerio-de-seguridad",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "se incorporó al Ministerio de Seguridad... como miembro permanente del Consejo de Seguridad Nacional",
+            "relation": "es miembro permanente de"
+          },
+          {
+            "source": "alejandra-monteoliva",
+            "target": "ministerio-de-seguridad",
+            "evidence": "Ministerio de Seguridad, a cargo de Alejandra Monteoliva",
+            "relation": "está a cargo de"
+          },
+          {
+            "source": "comision-bicameral-de-seguimiento",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "facultada para auditar las decisiones y procesos del Consejo",
+            "relation": "auditará"
+          },
+          {
+            "source": "comision-bicameral-de-seguimiento",
+            "target": "congreso",
+            "evidence": "Comisión Bicameral de Seguimiento dentro del Congreso",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "eduardo-falcone",
+            "target": "comision-bicameral-de-seguimiento",
+            "evidence": "La propuesta había sido impulsada por el diputado Eduardo Falcone",
+            "relation": "impulsó"
+          },
+          {
+            "source": "eduardo-falcone",
+            "target": "mid",
+            "evidence": "el diputado Eduardo Falcone, del Movimiento de Integración y Desarrollo (MID)",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "la-libertad-avanza",
+            "target": "comision-bicameral-de-seguimiento",
+            "evidence": "La Libertad Avanza tamién aceptó conformar una Comisión Bicameral de Seguimiento",
+            "relation": "aceptó conformar"
+          },
+          {
+            "source": "camara-de-diputados",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "habilitó la participación del Presidente de la Cámara de Diputados... como miembros no permanentes",
+            "relation": "su presidente es miembro no permanente de"
+          },
+          {
+            "source": "senado",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "el presidente provisional del Senado... como miembros no permanentes",
+            "relation": "su presidente provisional es miembro no permanente de"
+          },
+          {
+            "source": "secretaria-de-inteligencia-del-estado",
+            "target": "consejo-de-seguridad-nacional",
+            "evidence": "el secretario de Inteligencia de Estado y la secretaria Legal y Técnica",
+            "relation": "su secretario integra"
+          },
+          {
+            "source": "gobierno-nacional",
+            "target": "islas-malvinas",
+            "evidence": "busca, entre otros puntos, defender los recursos naturales en las Islas Malvinas",
+            "relation": "busca defender recursos en"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "gobierno-nacional",
+            "name": "Gobierno nacional",
+            "type": "org",
+            "mentions": 4,
+            "description": "Oficialismo que consiguió el dictamen de mayoría del proyecto de Defensa de la Soberanía Nacional."
+          },
+          {
+            "id": "la-libertad-avanza",
+            "name": "La Libertad Avanza",
+            "type": "org",
+            "mentions": 5,
+            "description": "Partido oficialista que aceptó cambios al proyecto para conseguir el dictamen."
+          },
+          {
+            "id": "islas-malvinas",
+            "name": "Islas Malvinas",
+            "type": "place",
+            "mentions": 2,
+            "description": "Territorio cuyos recursos naturales busca defender el proyecto."
+          },
+          {
+            "id": "leon-xiv",
+            "name": "Papa León XIV",
+            "type": "person",
+            "mentions": 1,
+            "description": "Pontífice cuya visita a la Argentina podría alterar el cronograma legislativo."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 3,
+            "description": "País donde se tramita el proyecto y que recibirá la visita del Papa."
+          },
+          {
+            "id": "santiago-caputo",
+            "name": "Santiago Caputo",
+            "type": "person",
+            "mentions": 1,
+            "description": "Asesor presidencial que impulsó principalmente el proyecto."
+          },
+          {
+            "id": "atlantico-sur",
+            "name": "Atlántico Sur",
+            "type": "place",
+            "mentions": 1,
+            "description": "Zona donde el proyecto agrava las sanciones por explotación no autorizada de recursos."
+          },
+          {
+            "id": "estados-unidos",
+            "name": "Estados Unidos",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cuyo gobierno expresó preocupación por las sanciones a sus empresas."
+          },
+          {
+            "id": "christopher-landau",
+            "name": "Christopher Landau",
+            "type": "person",
+            "mentions": 1,
+            "description": "Subsecretario de Estado de EE.UU. que transmitió a Milei la preocupación de la Administración Trump."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 3,
+            "description": "Presidente de la Nación, que presidirá el Consejo de Seguridad Nacional."
+          },
+          {
+            "id": "administracion-trump",
+            "name": "Administración Trump",
+            "type": "org",
+            "mentions": 1,
+            "description": "Gobierno estadounidense preocupado por las consecuencias de las sanciones para empresas de su país."
+          },
+          {
+            "id": "consejo-de-seguridad-nacional",
+            "name": "Consejo de Seguridad Nacional",
+            "type": "org",
+            "mentions": 6,
+            "description": "Órgano creado por el proyecto para coordinar defensa, inteligencia y seguridad interior."
+          },
+          {
+            "id": "camara-de-diputados",
+            "name": "Cámara de Diputados",
+            "type": "org",
+            "mentions": 1,
+            "description": "Su presidente podrá participar como miembro no permanente del Consejo."
+          },
+          {
+            "id": "senado",
+            "name": "Senado",
+            "type": "org",
+            "mentions": 1,
+            "description": "Su presidente provisional podrá participar como miembro no permanente del Consejo."
+          },
+          {
+            "id": "ministerio-de-seguridad",
+            "name": "Ministerio de Seguridad",
+            "type": "org",
+            "mentions": 2,
+            "description": "Cartera incorporada como miembro permanente del Consejo de Seguridad Nacional."
+          },
+          {
+            "id": "comision-bicameral-de-seguimiento",
+            "name": "Comisión Bicameral de Seguimiento",
+            "type": "org",
+            "mentions": 3,
+            "description": "Comisión del Congreso que auditará las decisiones del Consejo."
+          },
+          {
+            "id": "congreso",
+            "name": "Congreso de la Nación",
+            "type": "org",
+            "mentions": 2,
+            "description": "Parlamento dentro del cual se conformará la comisión bicameral."
+          },
+          {
+            "id": "secretaria-de-inteligencia-del-estado",
+            "name": "Secretaría de Inteligencia del Estado",
+            "type": "org",
+            "mentions": 2,
+            "description": "Organismo controlado por una bicameral que sirve de modelo; su secretario integra el Consejo."
+          },
+          {
+            "id": "eduardo-falcone",
+            "name": "Eduardo Falcone",
+            "type": "person",
+            "mentions": 1,
+            "description": "Diputado del MID que impulsó la creación de la comisión bicameral."
+          },
+          {
+            "id": "mid",
+            "name": "Movimiento de Integración y Desarrollo",
+            "type": "org",
+            "mentions": 1,
+            "description": "Partido al que pertenece el diputado Eduardo Falcone."
+          },
+          {
+            "id": "alejandra-monteoliva",
+            "name": "Alejandra Monteoliva",
+            "type": "person",
+            "mentions": 1,
+            "description": "Ministra de Seguridad."
+          },
+          {
+            "id": "prefectura-naval",
+            "name": "Prefectura Naval",
+            "type": "org",
+            "mentions": 1,
+            "description": "Fuerza cuyas competencias fueron precisadas en el dictamen."
+          },
+          {
+            "id": "comando-conjunto-maritimo",
+            "name": "Comando Conjunto Marítimo",
+            "type": "org",
+            "mentions": 1,
+            "description": "Fuerza cuyas competencias fueron precisadas en el dictamen."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026",
+            "title": "El oficialismo obtiene dictamen del proyecto de Soberanía Nacional",
+            "precision": "year",
+            "description": "Un miércoles, cuya fecha exacta el artículo no precisa, La Libertad Avanza consiguió el dictamen de mayoría del proyecto de Defensa de la Soberanía Nacional tras ceder cambios a los bloques aliados. El año surge del contexto y no del texto.",
+            "paragraph_index": 0
+          },
+          {
+            "date": "2026-11",
+            "title": "Visita del Papa León XIV a la Argentina",
+            "precision": "month",
+            "description": "La visita del Papa León XIV vuelve \"corta\" la semana prevista para el tratamiento del proyecto, lo que podría alterar el cronograma legislativo. El año se infiere del contexto.",
+            "paragraph_index": 0
+          },
+          {
+            "date": "2026-11-12",
+            "title": "Fecha tentativa para tratar el proyecto en el recinto",
+            "precision": "day",
+            "description": "Los libertarios manejan el jueves 12 de noviembre como fecha tentativa para llevar el proyecto a sesión en Diputados, aunque podría haber cambios. El año se deduce porque en 2026 el 12 de noviembre cae jueves.",
+            "paragraph_index": 0
+          }
+        ]
+      }
+    }
+  ]
+}

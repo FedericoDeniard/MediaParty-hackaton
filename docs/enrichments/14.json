@@ -1,0 +1,438 @@
+{
+  "niche": "sociedad",
+  "enrichments": [
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Los docentes universitarios y preuniversitarios inician un paro nacional de una semana el miércoles, convocado por CONADU Histórica, que se extenderá hasta el lunes 3 de noviembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "CONADU Histórica paro semana hasta 3 de noviembre"
+          },
+          {
+            "text": "CONADU Histórica ratificó el martes mediante una convocatoria pública el paro resuelto en su Congreso Extraordinario.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "CONADU Histórica Congreso Extraordinario ratifica paro"
+          },
+          {
+            "text": "CONADU Histórica sostiene que lleva más de un año sin cumplirse la Ley de Financiamiento Universitario.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "Ley de Financiamiento Universitario incumplimiento gobierno Milei"
+          },
+          {
+            "text": "CONADU Histórica afirmó en su comunicado: \"Frente al ajuste salarial y el ahogamiento presupuestario, respondemos con organización y la fuerza de la docencia universitaria y preuniversitaria de todo el país\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "CONADU Histórica comunicado \"ahogamiento presupuestario\" paro"
+          },
+          {
+            "text": "La aplicación de la Ley de Financiamiento Universitario es objeto de reclamos gremiales y judiciales.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "Ley de Financiamiento Universitario reclamo judicial aplicación"
+          },
+          {
+            "text": "CONADU Histórica expresó \"Sin salarios dignos no hay universidad pública\" en la convocatoria acompañada con la consigna \"Milei cumplí con la ley\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "CONADU Histórica \"Milei cumplí con la ley\" \"Sin salarios dignos no hay universidad pública\""
+          },
+          {
+            "text": "Desde diciembre de 2023 las universidades nacionales registraron una caída presupuestaria real del 41,6%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.45,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "caída presupuestaria real universidades nacionales 41,6% desde diciembre 2023 rectores CIN"
+          },
+          {
+            "text": "Los salarios del personal universitario perdieron más del 30% de poder adquisitivo desde diciembre de 2023.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.45,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "salarios universitarios pérdida poder adquisitivo 30% desde diciembre 2023"
+          },
+          {
+            "text": "FAGDUT anunció cuatro jornadas de paro de 24 horas sin asistencia los días 28 de octubre y 3, 12 y 16 de noviembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "FAGDUT paro 24 horas 28 de octubre 3 12 16 de noviembre"
+          },
+          {
+            "text": "El paro de FAGDUT alcanzará a las 30 facultades regionales de la UTN, el Instituto Nacional Superior del Profesorado Técnico y el Centro de Estudios Bariloche, sin clases presenciales ni virtuales.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "UTN 30 facultades regionales paro FAGDUT sin clases"
+          },
+          {
+            "text": "FATUN realizará paros de 24 horas del personal no docente el 28 de octubre y el 3, 12 y 16 de noviembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 11,
+            "verification_query": "FATUN paro no docentes 28 de octubre 3 12 16 noviembre"
+          },
+          {
+            "text": "La resolución de FATUN fue adoptada por su Consejo Directivo con representantes de 54 organizaciones sindicales.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "FATUN Consejo Directivo 54 organizaciones sindicales paro"
+          },
+          {
+            "text": "FATUN prevé impulsar acciones ante el fuero Contencioso Administrativo Federal para que la garantía salarial se incorpore a los salarios básicos según el convenio colectivo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "FATUN Contencioso Administrativo Federal garantía salarial salario básico"
+          },
+          {
+            "text": "AGD-UBA confirmó su adhesión al paro nacional docente y preuniversitario hasta el 3 de noviembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "AGD-UBA adhesión paro hasta 3 de noviembre"
+          },
+          {
+            "text": "Según AGD-UBA, APUBA no integra el cronograma de medidas convocado por FATUN para esas fechas.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "APUBA no adhiere paro FATUN noviembre"
+          },
+          {
+            "text": "CONADU Histórica reunirá a su Congreso Extraordinario el 6 de noviembre para definir los próximos pasos del plan de lucha.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 15,
+            "verification_query": "CONADU Histórica Congreso Extraordinario 6 de noviembre plan de lucha"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "conadu-historica",
+            "target": "ley-de-financiamiento-universitario",
+            "evidence": "La primera es el cumplimiento efectivo de la Ley de Financiamiento Universitario",
+            "relation": "reclama el cumplimiento de"
+          },
+          {
+            "source": "conadu-historica",
+            "target": "javier-milei",
+            "evidence": "acompañó con la consigna “Milei cumplí con la ley”",
+            "relation": "reclama a"
+          },
+          {
+            "source": "fagdut",
+            "target": "utn",
+            "evidence": "La huelga alcanzará a las 30 facultades regionales de la Universidad Tecnológica Nacional (UTN)",
+            "relation": "realiza paro en"
+          },
+          {
+            "source": "fagdut",
+            "target": "instituto-nacional-superior-del-profesorado-tecnico",
+            "evidence": "el Instituto Nacional Superior del Profesorado Técnico y el Centro de Estudios Bariloche",
+            "relation": "realiza paro en"
+          },
+          {
+            "source": "fagdut",
+            "target": "centro-de-estudios-bariloche",
+            "evidence": "el Instituto Nacional Superior del Profesorado Técnico y el Centro de Estudios Bariloche",
+            "relation": "realiza paro en"
+          },
+          {
+            "source": "fatun",
+            "target": "fuero-contencioso-administrativo-federal",
+            "evidence": "prevé impulsar acciones ante el fuero Contencioso Administrativo Federal",
+            "relation": "prevé impulsar acciones ante"
+          },
+          {
+            "source": "agd-uba",
+            "target": "uba",
+            "evidence": "En la Universidad de Buenos Aires (UBA), la Asociación Gremial Docente (AGD-UBA)",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "agd-uba",
+            "target": "conadu-historica",
+            "evidence": "confirmó su adhesión al paro nacional docente y preuniversitario hasta el 3 de noviembre",
+            "relation": "adhiere al paro de"
+          },
+          {
+            "source": "apuba",
+            "target": "uba",
+            "evidence": "la Asociación del Personal de la UBA (APUBA), que representa al personal no docente",
+            "relation": "representa al personal no docente de"
+          },
+          {
+            "source": "apuba",
+            "target": "fatun",
+            "evidence": "no integra el cronograma de medidas convocado por FATUN para esas fechas",
+            "relation": "no integra el cronograma de"
+          },
+          {
+            "source": "fagdut",
+            "target": "utn",
+            "evidence": "Asociación Gremial de Docentes de la Universidad Tecnológica Nacional (FAGDUT)",
+            "relation": "pertenece a"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "conadu-historica",
+            "name": "Federación Nacional de Docentes, Investigadores y Creadores Universitarios (CONADU Histórica)",
+            "type": "org",
+            "mentions": 9,
+            "description": "Federación docente que impulsa la semana de paro nacional hasta el 3 de noviembre."
+          },
+          {
+            "id": "ley-de-financiamiento-universitario",
+            "name": "Ley de Financiamiento Universitario",
+            "type": "event",
+            "mentions": 3,
+            "description": "Normativa cuyo cumplimiento efectivo es la principal demanda de los gremios."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 1,
+            "description": "Presidente interpelado por la consigna gremial \"Milei cumplí con la ley\"."
+          },
+          {
+            "id": "fagdut",
+            "name": "Asociación Gremial de Docentes de la Universidad Tecnológica Nacional (FAGDUT)",
+            "type": "org",
+            "mentions": 5,
+            "description": "Gremio docente de la UTN que anunció cuatro jornadas de paro de 24 horas."
+          },
+          {
+            "id": "utn",
+            "name": "Universidad Tecnológica Nacional (UTN)",
+            "type": "org",
+            "mentions": 2,
+            "description": "Universidad cuyas 30 facultades regionales serán alcanzadas por la huelga de FAGDUT."
+          },
+          {
+            "id": "instituto-nacional-superior-del-profesorado-tecnico",
+            "name": "Instituto Nacional Superior del Profesorado Técnico",
+            "type": "org",
+            "mentions": 1,
+            "description": "Institución alcanzada por la huelga de FAGDUT."
+          },
+          {
+            "id": "centro-de-estudios-bariloche",
+            "name": "Centro de Estudios Bariloche",
+            "type": "org",
+            "mentions": 1,
+            "description": "Institución alcanzada por la huelga de FAGDUT."
+          },
+          {
+            "id": "fatun",
+            "name": "Federación Argentina del Trabajador de las Universidades Nacionales (FATUN)",
+            "type": "org",
+            "mentions": 6,
+            "description": "Federación de no docentes que realizará paros de 24 horas en octubre y noviembre."
+          },
+          {
+            "id": "uba",
+            "name": "Universidad de Buenos Aires (UBA)",
+            "type": "org",
+            "mentions": 2,
+            "description": "Universidad donde AGD-UBA adhiere al paro y APUBA no integra el cronograma de FATUN."
+          },
+          {
+            "id": "agd-uba",
+            "name": "Asociación Gremial Docente de la UBA (AGD-UBA)",
+            "type": "org",
+            "mentions": 2,
+            "description": "Gremio docente de la UBA que confirmó su adhesión al paro nacional."
+          },
+          {
+            "id": "apuba",
+            "name": "Asociación del Personal de la UBA (APUBA)",
+            "type": "org",
+            "mentions": 1,
+            "description": "Gremio no docente de la UBA que no integra el cronograma de medidas de FATUN."
+          },
+          {
+            "id": "fuero-contencioso-administrativo-federal",
+            "name": "Fuero Contencioso Administrativo Federal",
+            "type": "org",
+            "mentions": 1,
+            "description": "Fuero judicial ante el cual FATUN prevé impulsar acciones por la garantía salarial."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2023-12",
+            "title": "Comienza la caída presupuestaria de las universidades",
+            "precision": "month",
+            "description": "Según datos difundidos en una reunión de rectores, desde diciembre de 2023 las universidades nacionales registraron una caída presupuestaria real del 41,6% y los salarios perdieron más de 30% de poder adquisitivo.",
+            "paragraph_index": 6
+          },
+          {
+            "date": "2025-10-27",
+            "title": "CONADU Histórica ratifica el paro nacional",
+            "precision": "day",
+            "description": "La federación ratificó mediante una convocatoria pública el paro resuelto en su Congreso Extraordinario. El año se infiere del contexto, ya que el artículo no lo indica.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2025-10-28",
+            "title": "Inicia la semana de paro docente universitario",
+            "precision": "day",
+            "description": "Los docentes universitarios y preuniversitarios de CONADU Histórica comienzan una semana de paro nacional por la Ley de Financiamiento Universitario y la recomposición salarial.",
+            "paragraph_index": 1
+          },
+          {
+            "date": "2025-10-28",
+            "title": "Primera jornada de paro de FAGDUT en la UTN",
+            "precision": "day",
+            "description": "FAGDUT realiza la primera de cuatro jornadas de paro de 24 horas, que alcanza a las 30 facultades regionales de la UTN.",
+            "paragraph_index": 8
+          },
+          {
+            "date": "2025-10-28",
+            "title": "Primer paro no docente de FATUN",
+            "precision": "day",
+            "description": "FATUN realiza un paro de 24 horas sin asistencia a los lugares de trabajo del personal no docente de las universidades públicas.",
+            "paragraph_index": 10
+          },
+          {
+            "date": "2025-11-03",
+            "title": "Finaliza el paro de CONADU Histórica",
+            "precision": "day",
+            "description": "Termina la semana de paro nacional docente, a la que también adhirió AGD-UBA hasta esa fecha.",
+            "paragraph_index": 13
+          },
+          {
+            "date": "2025-11-03",
+            "title": "Segunda jornada de paro de FAGDUT y FATUN",
+            "precision": "day",
+            "description": "FAGDUT y FATUN realizan un nuevo paro de 24 horas sin asistencia a los lugares de trabajo.",
+            "paragraph_index": 10
+          },
+          {
+            "date": "2025-11-06",
+            "title": "Congreso Extraordinario de CONADU Histórica",
+            "precision": "day",
+            "description": "La federación reunirá a su Congreso Extraordinario para definir los próximos pasos del plan de lucha.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2025-11-12",
+            "title": "Tercera jornada de paro de FAGDUT y FATUN",
+            "precision": "day",
+            "description": "FAGDUT y FATUN continúan su plan de lucha con un nuevo paro de 24 horas.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2025-11-16",
+            "title": "Cuarta jornada de paro de FAGDUT y FATUN",
+            "precision": "day",
+            "description": "FAGDUT y FATUN realizan la última jornada prevista de paro de 24 horas.",
+            "paragraph_index": 14
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo",
+        "framing": "La nota se cuenta desde el conflicto gremial universitario y se apoya casi exclusivamente en comunicados sindicales. Las federaciones docentes y no docentes (CONADU Histórica, FAGDUT, FATUN, AGD-UBA) son las protagonistas y el gobierno de Milei aparece como antagonista implícito, señalado por incumplir la Ley de Financiamiento Universitario, pero sin voz propia.",
+        "sentiment": -0.5,
+        "sources_cited": [
+          "CONADU Histórica (comunicado/convocatoria pública y resolución de su Congreso Extraordinario)",
+          "Datos difundidos en una reunión de rectores (sin identificar)",
+          "FAGDUT (gremio docente de la UTN)",
+          "FATUN (resolución de su Consejo Directivo)",
+          "AGD-UBA",
+          "APUBA (información atribuida a AGD-UBA)"
+        ],
+        "missing_angles": [
+          "La postura del Gobierno nacional (Ministerio de Capital Humano o Subsecretaría de Políticas Universitarias) sobre el incumplimiento de la ley, la deuda salarial y los fondos transferidos.",
+          "Contexto de la Ley de Financiamiento Universitario: aprobación, veto presidencial, insistencia del Congreso y estado de las causas judiciales que se mencionan sin detalle.",
+          "Identificación precisa de la fuente de las cifras (41,6% de caída presupuestaria y más de 30% de pérdida salarial): qué reunión de rectores, si fue el CIN, con qué metodología y deflactor.",
+          "Posición de las otras federaciones docentes, como CONADU, CTERA universitarios o UDA, y si adhieren o no al paro.",
+          "Voz de rectores, autoridades universitarias y estudiantes sobre el impacto concreto en cursadas, exámenes y calendario académico.",
+          "Cifras comparables: salario actual de un docente con dedicación simple o exclusiva frente a la inflación, y evolución histórica de paros en el sector.",
+          "Explicación de por qué APUBA no adhiere a las medidas de FATUN y qué implica para el funcionamiento de la UBA.",
+          "Verificación de fechas: el artículo dice 'este miércoles 28 de octubre', pero en 2025 el 28 de octubre cae martes, y el 16 de noviembre de 2025 cae domingo. Conviene chequear el calendario y la jornada del 3 de noviembre.",
+          "Verificación del nombre de FAGDUT: suele presentarse como Federación de Asociaciones Gremiales de Docentes de la UTN, no como 'Asociación Gremial'.",
+          "Impacto en los colegios preuniversitarios (cantidad de alumnos, escuelas afectadas), mencionados pero no desarrollados."
+        ],
+        "follow_up_questions": [
+          "¿Qué respondió el Gobierno al reclamo y qué montos efectivamente transfirió a las universidades en 2025 frente a lo que establece la ley?",
+          "¿En qué estado están las presentaciones judiciales por la aplicación de la Ley de Financiamiento Universitario y qué juzgados las tramitan?",
+          "¿Cuál fue el nivel real de adhesión al paro por universidad y cuántas clases se perdieron?",
+          "¿Qué resolverá el Congreso Extraordinario de CONADU Histórica el 6 de noviembre y hay posibilidad de un paro por tiempo indeterminado o de no inicio del ciclo lectivo?",
+          "¿Cuánto es la deuda salarial reclamada en términos concretos, por categoría docente y no docente?",
+          "¿Cómo afecta el conflicto al calendario de exámenes finales y a la acreditación de cuatrimestres?",
+          "¿En qué consiste la acción de FATUN ante el fuero Contencioso Administrativo Federal para incorporar la garantía salarial al básico y qué antecedentes tiene?",
+          "¿Hay renuncias o migración de docentes e investigadores atribuibles a la caída salarial? ¿Hay datos por universidad?"
+        ]
+      }
+    }
+  ]
+}

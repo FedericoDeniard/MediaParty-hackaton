@@ -1,3 +1,4 @@
+import unicodedata
 from pathlib import Path
 
 import anthropic
@@ -9,9 +10,16 @@ PROMPTS = Path(__file__).parent / "prompts"
 client = anthropic.AsyncAnthropic()
 
 
+def slug(niche: str | None) -> str:
+    """'Política' -> 'politica', so model output matches prompt folder names."""
+    if not niche:
+        return "default"
+    return unicodedata.normalize("NFKD", niche).encode("ascii", "ignore").decode().strip().lower()
+
+
 def load_prompt(node: str, niche: str | None) -> str:
-    for folder in (niche, "default"):
-        p = PROMPTS / (folder or "default") / f"{node}.md"
+    for folder in (slug(niche), "default"):
+        p = PROMPTS / folder / f"{node}.md"
         if p.exists():
             return p.read_text()
     raise FileNotFoundError(f"no prompt for node {node}")

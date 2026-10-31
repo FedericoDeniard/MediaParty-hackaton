@@ -1,0 +1,643 @@
+{
+  "niche": "deportes",
+  "enrichments": [
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Boca Juniors recibirá a River Plate en la Bombonera el domingo 1° de noviembre por la 15ª fecha del Torneo Clausura.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "Boca River Superclásico Bombonera 1 de noviembre fecha 15 Torneo Clausura"
+          },
+          {
+            "text": "El Superclásico entre Boca Juniors y River Plate de la fecha 15 se juega a las 15.00.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 24,
+            "verification_query": "horario Boca River domingo 1 de noviembre fecha 15 Clausura"
+          },
+          {
+            "text": "Antes de la fecha 15, River Plate es cuarto en la Zona B del Clausura con 23 puntos, detrás de Rosario Central (28), Argentinos Juniors (28) y Gimnasia La Plata (25).",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "tabla Zona B Torneo Clausura Liga Profesional River 23 puntos Rosario Central Argentinos 28"
+          },
+          {
+            "text": "Independiente Rivadavia es noveno en la Zona B con 19 puntos, primer equipo fuera de los playoffs, cuatro unidades detrás de River.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Independiente Rivadavia 19 puntos noveno Zona B Clausura"
+          },
+          {
+            "text": "River Plate es dirigido por Leonardo Ponzio.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "Leonardo Ponzio entrenador River Plate"
+          },
+          {
+            "text": "La Tabla Anual otorga tres cupos para la Copa Libertadores.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "cupos Copa Libertadores Tabla Anual Liga Profesional Argentina"
+          },
+          {
+            "text": "River Plate figura séptimo en la Tabla Anual con 52 puntos, dentro de la zona de clasificación a la Sudamericana.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Tabla Anual Liga Profesional River 52 puntos séptimo"
+          },
+          {
+            "text": "En la Tabla Anual, Boca Juniors y Argentinos Juniors tienen 57 puntos y Rosario Central 56, ocupando los puestos de clasificación a la Libertadores 2027.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Tabla Anual Boca 57 Argentinos 57 Rosario Central 56 puntos"
+          },
+          {
+            "text": "En la Tabla Anual, Vélez tiene 55 puntos, e Instituto de Córdoba e Independiente Rivadavia tienen 53 puntos cada uno.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "Tabla Anual Vélez 55 Instituto 53 Independiente Rivadavia 53 puntos"
+          },
+          {
+            "text": "A Vélez le resta enfrentar a San Lorenzo en Liniers y visitar a Unión en Santa Fe.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "fixture Vélez San Lorenzo Unión fechas 15 y 16 Clausura"
+          },
+          {
+            "text": "Argentina tiene seis cupos para la Copa Libertadores: tres para los campeones de Apertura, Clausura y Copa Argentina y tres por Tabla Anual.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "cupos argentinos Copa Libertadores 2027 Apertura Clausura Copa Argentina Tabla Anual"
+          },
+          {
+            "text": "Podrían ser ocho los representantes argentinos en la Libertadores si Boca gana la Sudamericana y Estudiantes conquista la Libertadores 2026.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "ocho equipos argentinos Libertadores 2027 Boca Sudamericana Estudiantes Libertadores 2026"
+          },
+          {
+            "text": "Defensa y Justicia tiene 46 puntos en la Tabla Anual y es el primer equipo fuera de los cupos a la Sudamericana, seis puntos detrás de River.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Tabla Anual Defensa y Justicia 46 puntos cupos Sudamericana"
+          },
+          {
+            "text": "El Trofeo de Campeones se disputará entre Belgrano de Córdoba y el campeón del Clausura el 19 de diciembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Trofeo de Campeones 2026 Belgrano 19 de diciembre"
+          },
+          {
+            "text": "Boca Juniors lidera la Tabla Anual junto a Argentinos Juniors y le saca amplia ventaja en diferencia de gol, criterio de desempate.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "Tabla Anual diferencia de gol Boca Argentinos Juniors desempate"
+          },
+          {
+            "text": "Boca Juniors ya está clasificado a los octavos de final de los playoffs del Clausura.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "Boca clasificado octavos de final playoffs Clausura"
+          },
+          {
+            "text": "Boca cerrará la fase regular ante Defensa y Justicia en la Bombonera, con día y horario a definir.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "Boca Defensa y Justicia fecha 16 Bombonera horario"
+          },
+          {
+            "text": "Boca Juniors es dirigido por el Vasco Arruabarrena.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Arruabarrena director técnico Boca Juniors"
+          },
+          {
+            "text": "Boca jugará la semifinal de la Copa Argentina contra Banfield en Mendoza el sábado 14 de noviembre, y en la final espera Platense.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Boca Banfield semifinal Copa Argentina Mendoza 14 de noviembre Platense final"
+          },
+          {
+            "text": "Boca disputará la final de la Copa Sudamericana el sábado 21 de noviembre frente a Atlético Mineiro en Barranquilla.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "final Copa Sudamericana Boca Atlético Mineiro Barranquilla 21 de noviembre"
+          },
+          {
+            "text": "En la fecha 16, River Plate visitará a Aldosivi.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 43,
+            "verification_query": "fixture fecha 16 Clausura Aldosivi River"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026-10-30",
+            "title": "Comienza la fecha 15 del Torneo Clausura",
+            "precision": "day",
+            "description": "La 15ª fecha arranca el viernes con Huracán-Tigre, Estudiantes de Río Cuarto-Gimnasia La Plata, Sarmiento-Rosario Central y Racing-Aldosivi.",
+            "paragraph_index": 14
+          },
+          {
+            "date": "2026-10-31",
+            "title": "Vélez recibe a San Lorenzo en Liniers",
+            "precision": "day",
+            "description": "Vélez, rival de River en la Tabla Anual, enfrenta a San Lorenzo a las 19.15 por la fecha 15.",
+            "paragraph_index": 21
+          },
+          {
+            "date": "2026-11-01",
+            "title": "Superclásico Boca-River en la Bombonera",
+            "precision": "day",
+            "description": "Boca Juniors recibe a River Plate por la 15ª fecha del Torneo Clausura, en un momento clave para ambos en las tablas.",
+            "paragraph_index": 1
+          },
+          {
+            "date": "2026-11-02",
+            "title": "Cierre de la fecha 15 del Clausura",
+            "precision": "day",
+            "description": "La fecha se completa el lunes con partidos como Defensa y Justicia-Independiente y Atlético Tucumán-Argentinos Juniors.",
+            "paragraph_index": 28
+          },
+          {
+            "date": "2026-11",
+            "title": "Boca define si gana la Tabla Anual",
+            "precision": "month",
+            "description": "En la última fecha de la fase regular, ante Defensa y Justicia, Boca definirá si gana la Tabla Anual y sella su boleto a la Libertadores 2027.",
+            "paragraph_index": 11
+          },
+          {
+            "date": "2026-11-14",
+            "title": "Boca enfrenta a Banfield por Copa Argentina",
+            "precision": "day",
+            "description": "Boca juega ante Banfield en Mendoza por la Copa Argentina; en la final ya espera Platense.",
+            "paragraph_index": 11
+          },
+          {
+            "date": "2026-11-21",
+            "title": "Final de la Sudamericana: Boca vs Atlético Mineiro",
+            "precision": "day",
+            "description": "Boca disputa la final de la Copa Sudamericana frente a Atlético Mineiro en Barranquilla.",
+            "paragraph_index": 11
+          },
+          {
+            "date": "2026-12-19",
+            "title": "Trofeo de Campeones entre Belgrano y campeón del Clausura",
+            "precision": "day",
+            "description": "Belgrano de Córdoba y el campeón del Clausura disputarán el Trofeo de Campeones, posible quinto título para Boca en 2026.",
+            "paragraph_index": 8
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "Informativo, explicativo",
+        "framing": "Una guía de escenarios matemáticos que presenta el Superclásico como bisagra de las tablas. Boca aparece como protagonista dominante, con varios frentes abiertos, y River como perseguidor que busca la Libertadores. Vélez, Argentinos y Rosario Central quedan como rivales directos en la Tabla Anual.",
+        "sentiment": 0.15,
+        "sources_cited": [],
+        "missing_angles": [
+          "La posición de Boca en su zona del Clausura: se dice que ya está en octavos, pero no figuran sus puntos ni sus perseguidores.",
+          "Escenarios concretos por resultado (victoria, empate o derrota en el Superclásico) para cada equipo, que es lo que promete el título 'La calculadora'.",
+          "Criterios de desempate completos (Clausura, Anual y cupos de Sudamericana) más allá de la diferencia de gol.",
+          "El sistema de cruces de playoffs: quién enfrentaría a quién según la posición final y cómo se define la localía.",
+          "Contexto del Superclásico en sí: historial reciente, estado de los planteles, lesionados, suspendidos y probables formaciones.",
+          "Cómo influye la seguidilla de finales de Boca (Copa Argentina y Sudamericana) en la rotación y gestión del plantel.",
+          "Las secciones 'Tablas del Clausura y la Anual' están anunciadas pero vacías: falta el contenido o el gráfico.",
+          "Verificar nombres de entrenadores (Ponzio en River, Arruabarrena en Boca) y fechas de finales, ya que son datos sensibles a error.",
+          "Precisar la diferencia con Vélez (tres puntos), que es el rival más cercano y no se explicita numéricamente.",
+          "Explicar mejor la cadena de cupos liberados (campeón de Copa Argentina o Sudamericana que ya clasificó por otra vía), quizá con un esquema."
+        ],
+        "follow_up_questions": [
+          "¿Qué combinación exacta de resultados le asegura a River un lugar en la Tabla Anual con cupo a Libertadores en la última fecha?",
+          "Si Boca gana Sudamericana y Copa Argentina, ¿cómo se redistribuyen los cupos y hasta qué puesto de la Anual entraría a la Libertadores 2027?",
+          "¿Cómo planifica Arruabarrena las rotaciones entre octavos del Clausura, la final de Copa Argentina y la final de Sudamericana?",
+          "¿Qué pasa con los cupos si Estudiantes gana la Libertadores 2026 pero Boca pierde la Sudamericana?",
+          "¿Cuál es la diferencia de gol exacta entre Boca y Argentinos y qué goleada necesitaría el Bicho para superarlo?",
+          "¿Cuándo y dónde se jugará Boca-Defensa y Justicia, y por qué todavía no tiene día ni horario?",
+          "¿Qué rivales potenciales tendría River en octavos según termine cuarto, quinto u octavo en la Zona B?"
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "boca-juniors",
+            "target": "river-plate",
+            "evidence": "Boca Juniors recibirá a River Plate por la 15ª fecha del Torneo Clausura",
+            "relation": "recibirá a"
+          },
+          {
+            "source": "superclasico",
+            "target": "la-bombonera",
+            "evidence": "El Superclásico en la Bombonera de este domingo 1° de noviembre",
+            "relation": "ocurre en"
+          },
+          {
+            "source": "superclasico",
+            "target": "torneo-clausura",
+            "evidence": "por la 15ª fecha del Torneo Clausura",
+            "relation": "forma parte de"
+          },
+          {
+            "source": "leonardo-ponzio",
+            "target": "river-plate",
+            "evidence": "los de Leonardo Ponzio podrían asegurar en esta fecha su avance",
+            "relation": "dirige a"
+          },
+          {
+            "source": "claudio-arruabarrena",
+            "target": "boca-juniors",
+            "evidence": "Los dirigidos por el Vasco Arruabarrena",
+            "relation": "dirige a"
+          },
+          {
+            "source": "velez",
+            "target": "san-lorenzo",
+            "evidence": "Vélez debe chocar todavía con San Lorenzo en Liniers",
+            "relation": "enfrentará a"
+          },
+          {
+            "source": "velez",
+            "target": "union-de-santa-fe",
+            "evidence": "visitar a Unión en Santa Fe",
+            "relation": "visitará a"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "banfield",
+            "evidence": "la Copa Argentina el sábado 14 de noviembre contra Banfield en Mendoza",
+            "relation": "enfrentará en Copa Argentina"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "atletico-mineiro",
+            "evidence": "la final de la Sudamericana el sábado 21 frente a Atlético Mineiro en Barranquilla",
+            "relation": "disputará la final contra"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "copa-sudamericana",
+            "evidence": "protagonizarán la final de la Sudamericana",
+            "relation": "es finalista de"
+          },
+          {
+            "source": "copa-sudamericana",
+            "target": "barranquilla",
+            "evidence": "frente a Atlético Mineiro en Barranquilla",
+            "relation": "final se juega en"
+          },
+          {
+            "source": "platense",
+            "target": "copa-argentina",
+            "evidence": "en la final ya espera Platense",
+            "relation": "es finalista de"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "defensa-y-justicia",
+            "evidence": "el encuentro final por la fase regular ante Defensa y Justicia",
+            "relation": "enfrentará a"
+          },
+          {
+            "source": "belgrano-de-cordoba",
+            "target": "trofeo-de-campeones",
+            "evidence": "Trofeo de Campeones que se disputará entre Belgrano de Córdoba y el campeón del Clausura",
+            "relation": "disputará"
+          },
+          {
+            "source": "estudiantes-de-la-plata",
+            "target": "copa-libertadores",
+            "evidence": "Estudiantes conquista la Libertadores del 2026",
+            "relation": "podría conquistar"
+          },
+          {
+            "source": "river-plate",
+            "target": "aldosivi",
+            "evidence": "Aldosivi-River Plate",
+            "relation": "visitará a"
+          },
+          {
+            "source": "boca-juniors",
+            "target": "argentinos-juniors",
+            "evidence": "lo tiene como líder junto a Argentinos Juniors",
+            "relation": "comparte liderazgo de la Tabla Anual con"
+          },
+          {
+            "source": "river-plate",
+            "target": "defensa-y-justicia",
+            "evidence": "le lleva seis puntos de distancia a Defensa y Justicia (46)",
+            "relation": "aventaja por seis puntos a"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "superclasico",
+            "name": "Superclásico Boca Juniors-River Plate",
+            "type": "event",
+            "mentions": 3,
+            "description": "Partido entre Boca y River en la Bombonera por la 15ª fecha del Torneo Clausura."
+          },
+          {
+            "id": "la-bombonera",
+            "name": "La Bombonera",
+            "type": "place",
+            "mentions": 2,
+            "description": "Estadio de Boca donde se juega el Superclásico y el partido ante Defensa y Justicia."
+          },
+          {
+            "id": "boca-juniors",
+            "name": "Boca Juniors",
+            "type": "org",
+            "mentions": 14,
+            "description": "Club local del Superclásico, líder de la Tabla Anual con varios frentes abiertos."
+          },
+          {
+            "id": "river-plate",
+            "name": "River Plate",
+            "type": "org",
+            "mentions": 12,
+            "description": "Club visitante del Superclásico, cuarto en la Zona B y séptimo en la Tabla Anual."
+          },
+          {
+            "id": "torneo-clausura",
+            "name": "Torneo Clausura",
+            "type": "event",
+            "mentions": 9,
+            "description": "Torneo en curso de la Liga Profesional cuyo campeón accede a la Libertadores."
+          },
+          {
+            "id": "liga-profesional-de-futbol",
+            "name": "Liga Profesional de Fútbol",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organizadora del torneo argentino."
+          },
+          {
+            "id": "rosario-central",
+            "name": "Rosario Central",
+            "type": "org",
+            "mentions": 6,
+            "description": "Líder de la Zona B con 28 puntos y tercero en la Tabla Anual."
+          },
+          {
+            "id": "argentinos-juniors",
+            "name": "Argentinos Juniors",
+            "type": "org",
+            "mentions": 7,
+            "description": "Colíder de la Zona B y de la Tabla Anual junto a Boca."
+          },
+          {
+            "id": "gimnasia-la-plata",
+            "name": "Gimnasia La Plata",
+            "type": "org",
+            "mentions": 2,
+            "description": "Tercero en la Zona B con 25 puntos."
+          },
+          {
+            "id": "independiente-rivadavia",
+            "name": "Independiente Rivadavia",
+            "type": "org",
+            "mentions": 4,
+            "description": "Equipo de Mendoza noveno en la Zona B y con 53 puntos en la Tabla Anual."
+          },
+          {
+            "id": "leonardo-ponzio",
+            "name": "Leonardo Ponzio",
+            "type": "person",
+            "mentions": 1,
+            "description": "Entrenador de River Plate."
+          },
+          {
+            "id": "copa-libertadores",
+            "name": "Copa Libertadores",
+            "type": "event",
+            "mentions": 7,
+            "description": "Máximo torneo continental al que aspiran River y Boca."
+          },
+          {
+            "id": "copa-sudamericana",
+            "name": "Copa Sudamericana",
+            "type": "event",
+            "mentions": 7,
+            "description": "Torneo continental cuya final disputará Boca ante Atlético Mineiro."
+          },
+          {
+            "id": "velez",
+            "name": "Vélez Sarsfield",
+            "type": "org",
+            "mentions": 6,
+            "description": "Rival directo de River en la Tabla Anual con 55 puntos."
+          },
+          {
+            "id": "instituto-de-cordoba",
+            "name": "Instituto de Córdoba",
+            "type": "org",
+            "mentions": 3,
+            "description": "Equipo con 53 puntos en la Tabla Anual por delante de River."
+          },
+          {
+            "id": "san-lorenzo",
+            "name": "San Lorenzo",
+            "type": "org",
+            "mentions": 3,
+            "description": "Próximo rival de Vélez en Liniers."
+          },
+          {
+            "id": "liniers",
+            "name": "Liniers",
+            "type": "place",
+            "mentions": 1,
+            "description": "Barrio donde Vélez recibirá a San Lorenzo."
+          },
+          {
+            "id": "union-de-santa-fe",
+            "name": "Unión de Santa Fe",
+            "type": "org",
+            "mentions": 3,
+            "description": "Rival de Vélez en la última fecha."
+          },
+          {
+            "id": "santa-fe",
+            "name": "Santa Fe",
+            "type": "place",
+            "mentions": 1,
+            "description": "Ciudad donde Vélez visitará a Unión."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 2,
+            "description": "País con seis cupos disponibles para la Libertadores."
+          },
+          {
+            "id": "copa-argentina",
+            "name": "Copa Argentina",
+            "type": "event",
+            "mentions": 5,
+            "description": "Competencia en la que Boca jugará la semifinal ante Banfield."
+          },
+          {
+            "id": "estudiantes-de-la-plata",
+            "name": "Estudiantes de La Plata",
+            "type": "org",
+            "mentions": 3,
+            "description": "Club que podría abrir un cupo extra si gana la Libertadores 2026."
+          },
+          {
+            "id": "defensa-y-justicia",
+            "name": "Defensa y Justicia",
+            "type": "org",
+            "mentions": 4,
+            "description": "Primer equipo fuera de zona de Sudamericana y rival de Boca en la última fecha."
+          },
+          {
+            "id": "trofeo-de-campeones",
+            "name": "Trofeo de Campeones",
+            "type": "event",
+            "mentions": 1,
+            "description": "Partido entre Belgrano y el campeón del Clausura el 19 de diciembre."
+          },
+          {
+            "id": "belgrano-de-cordoba",
+            "name": "Belgrano de Córdoba",
+            "type": "org",
+            "mentions": 2,
+            "description": "Participante del Trofeo de Campeones."
+          },
+          {
+            "id": "claudio-arruabarrena",
+            "name": "Vasco Arruabarrena",
+            "type": "person",
+            "mentions": 1,
+            "description": "Entrenador de Boca Juniors."
+          },
+          {
+            "id": "banfield",
+            "name": "Banfield",
+            "type": "org",
+            "mentions": 3,
+            "description": "Rival de Boca en la Copa Argentina."
+          },
+          {
+            "id": "mendoza",
+            "name": "Mendoza",
+            "type": "place",
+            "mentions": 1,
+            "description": "Sede del partido de Copa Argentina entre Boca y Banfield."
+          },
+          {
+            "id": "platense",
+            "name": "Platense",
+            "type": "org",
+            "mentions": 3,
+            "description": "Finalista que espera en la Copa Argentina."
+          },
+          {
+            "id": "atletico-mineiro",
+            "name": "Atlético Mineiro",
+            "type": "org",
+            "mentions": 1,
+            "description": "Rival de Boca en la final de la Sudamericana."
+          },
+          {
+            "id": "barranquilla",
+            "name": "Barranquilla",
+            "type": "place",
+            "mentions": 1,
+            "description": "Sede de la final de la Sudamericana."
+          },
+          {
+            "id": "aldosivi",
+            "name": "Aldosivi",
+            "type": "org",
+            "mentions": 2,
+            "description": "Rival de River en la fecha 16."
+          }
+        ]
+      }
+    }
+  ]
+}

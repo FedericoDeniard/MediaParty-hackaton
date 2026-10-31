@@ -1,0 +1,474 @@
+{
+  "niche": "economía",
+  "enrichments": [
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El Banco Central de la República Argentina (BCRA) no compró reservas en el mercado cambiario en la jornada.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "BCRA compras de reservas hoy saldo neutro mercado de cambios"
+          },
+          {
+            "text": "El dólar subió en la plaza local en respuesta al resultado de la elección en Brasil del día anterior.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "dólar sube Argentina elección Brasil"
+          },
+          {
+            "text": "El dólar mayorista cerró a $1532 para la compra y $1541 para la venta.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "dólar mayorista cierre $1541 venta"
+          },
+          {
+            "text": "El dólar mayorista subió $11,50 (0,75%) respecto del cierre del viernes.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "dólar mayorista suba $11,50 0,75%"
+          },
+          {
+            "text": "Según Francisco Díaz Mayer, de ABC Mercado de Cambios, el tipo de cambio operó entre un mínimo de $1539 y un máximo de $1542, con concentración de operaciones entre $1540 y $1541.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "Francisco Díaz Mayer ABC Mercado de Cambios dólar mínimo $1539 máximo $1542"
+          },
+          {
+            "text": "Según Díaz Mayer, durante la última hora hubo una aceleración del volumen negociado con operaciones concentradas en $1541, nivel de cierre.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "Díaz Mayer dólar última hora volumen $1541"
+          },
+          {
+            "text": "El dólar mayorista marcó nuevos máximos nominales.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "dólar mayorista máximo nominal récord"
+          },
+          {
+            "text": "Según Gustavo Quintana, de PR Cambios, la suba del dólar fue la mayor desde el 24 de agosto.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 5,
+            "verification_query": "Gustavo Quintana PR Cambios dólar mayor suba desde 24 de agosto"
+          },
+          {
+            "text": "El Tesoro Nacional habría vendido dólares para contener la suba del tipo de cambio.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "Tesoro vendió dólares mercado cambiario contener suba"
+          },
+          {
+            "text": "El techo de la banda cambiaria vigente estaba fijado para la jornada en $1946,73.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "techo banda cambiaria BCRA $1946,73"
+          },
+          {
+            "text": "Target de Mercado observó intervención oficial en el spot y en activos vinculados al dólar en medio de un mercado afectado por el risk-off en Brasil.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 6,
+            "verification_query": "Target de Mercado intervención oficial spot risk-off Brasil"
+          },
+          {
+            "text": "Según cálculos del mercado, el Gobierno habría vendido unos US$100 millones de su tenencia para estabilizar el dólar.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.3,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Tesoro vendió US$100 millones dólar estabilizar"
+          },
+          {
+            "text": "Según el economista Federico García Martínez, los depósitos en dólares del Tesoro en el BCRA habrían caído a US$825 millones, nuevo mínimo desde el 15/05/2026.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.55,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "depósitos en dólares del Tesoro en el BCRA US$825 millones"
+          },
+          {
+            "text": "El 15/05/2026 el Tesoro compró US$1700 millones al BCRA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "Tesoro compra dólares al BCRA US$1700 millones mayo 2026"
+          },
+          {
+            "text": "El Gobierno mantiene pausada la emisión del Bonar 2029.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "emisión Bonar 2029 pausada Gobierno"
+          },
+          {
+            "text": "En poco más de tres meses el Gobierno debe afrontar un nuevo pago de los bonos surgidos de la última reestructuración de deuda.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "próximo vencimiento pago bonos Bonares Globales reestructuración"
+          },
+          {
+            "text": "El BCRA cortó una racha de 20 intervenciones consecutivas con saldo positivo en el mercado de contado.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "BCRA racha 20 ruedas compras consecutivas"
+          },
+          {
+            "text": "El BCRA había cerrado con saldo neutro el 25 de septiembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "BCRA 25 de septiembre saldo neutro compras"
+          },
+          {
+            "text": "Santiago Bausili conduce el BCRA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 11,
+            "verification_query": "presidente del Banco Central Santiago Bausili"
+          },
+          {
+            "text": "El BCRA ofreció derivados y bonos ajustables por el tipo de cambio oficial para aplacar la demanda de dólares.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "BCRA ofreció futuros bonos dollar linked intervención"
+          },
+          {
+            "text": "El volumen operado en el mercado de contado fue de US$735,23 millones, 31% más que el viernes.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "volumen mercado de contado US$735,23 millones"
+          },
+          {
+            "text": "El volumen en futuros alcanzó un equivalente a US$2140 millones, con una suba del 158% respecto de la rueda previa.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "volumen futuros dólar US$2140 millones A3 Mercados"
+          },
+          {
+            "text": "Es la quinta rueda del año en la que el BCRA no compra reservas, contando la primera jornada hábil del año.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 13,
+            "verification_query": "BCRA ruedas sin compras de reservas en el año"
+          },
+          {
+            "text": "El BCRA compró US$1252 millones en lo que va del mes y US$15.820 millones en el año.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 13,
+            "verification_query": "BCRA compras acumuladas año US$15.820 millones"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "santiago-bausili",
+            "target": "banco-central",
+            "evidence": "la entidad que conduce Santiago Bausili se mostró muy activa",
+            "relation": "conduce"
+          },
+          {
+            "source": "francisco-diaz-mayer",
+            "target": "abc-mercado-de-cambios",
+            "evidence": "explicó el analista Francisco Díaz Mayer, de ABC Mercado de Cambios",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "gustavo-quintana",
+            "target": "pr-cambios",
+            "evidence": "hizo notar el operador Gustavo Quintana, de PR Cambios",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "eleccion-brasil",
+            "target": "brasil",
+            "evidence": "el vuelco registrado ayer en la elección en Brasil",
+            "relation": "ocurrió en"
+          },
+          {
+            "source": "tesoro-nacional",
+            "target": "banco-central",
+            "evidence": "los depósitos en dólares del Tesoro en el BCRA habrían caído hasta los US$ 825 millones",
+            "relation": "tiene depósitos en"
+          },
+          {
+            "source": "tesoro-nacional",
+            "target": "banco-central",
+            "evidence": "previo a una compra de dólares al BCRA por US$ 1700 millones",
+            "relation": "compró dólares a"
+          },
+          {
+            "source": "gobierno-argentino",
+            "target": "bonar-2029",
+            "evidence": "mantiene pausada la emisión del Bonar2029",
+            "relation": "mantiene pausada la emisión de"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "banco-central",
+            "name": "Banco Central de la República Argentina (BCRA)",
+            "type": "org",
+            "mentions": 9,
+            "description": "Autoridad monetaria que se abstuvo de comprar reservas en la jornada y cortó una racha de 20 intervenciones con saldo positivo."
+          },
+          {
+            "id": "tesoro-nacional",
+            "name": "Tesoro Nacional",
+            "type": "org",
+            "mentions": 4,
+            "description": "Habría vendido dólares de sus tenencias para contener la suba del tipo de cambio."
+          },
+          {
+            "id": "brasil",
+            "name": "Brasil",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cuya elección y el consecuente risk-off presionaron al dólar en la plaza local."
+          },
+          {
+            "id": "eleccion-brasil",
+            "name": "Elección en Brasil",
+            "type": "event",
+            "mentions": 1,
+            "description": "Comicios cuyo vuelco impulsó la demanda de dólares en Argentina."
+          },
+          {
+            "id": "francisco-diaz-mayer",
+            "name": "Francisco Díaz Mayer",
+            "type": "person",
+            "mentions": 1,
+            "description": "Analista de ABC Mercado de Cambios que describió la evolución de la rueda."
+          },
+          {
+            "id": "abc-mercado-de-cambios",
+            "name": "ABC Mercado de Cambios",
+            "type": "org",
+            "mentions": 1,
+            "description": "Casa de cambios donde trabaja el analista Francisco Díaz Mayer."
+          },
+          {
+            "id": "gustavo-quintana",
+            "name": "Gustavo Quintana",
+            "type": "person",
+            "mentions": 1,
+            "description": "Operador de PR Cambios que señaló que la suba fue la mayor desde el 24 de agosto."
+          },
+          {
+            "id": "pr-cambios",
+            "name": "PR Cambios",
+            "type": "org",
+            "mentions": 1,
+            "description": "Casa de cambios donde opera Gustavo Quintana."
+          },
+          {
+            "id": "target-de-mercado",
+            "name": "Target de Mercado",
+            "type": "org",
+            "mentions": 1,
+            "description": "Consultora que percibió intervención oficial en el mercado spot."
+          },
+          {
+            "id": "gobierno-argentino",
+            "name": "Gobierno",
+            "type": "org",
+            "mentions": 2,
+            "description": "Habría sacrificado unos US$100 millones para estabilizar el dólar y debe afrontar pagos de deuda."
+          },
+          {
+            "id": "federico-garcia-martinez",
+            "name": "Federico García Martínez",
+            "type": "person",
+            "mentions": 1,
+            "description": "Economista que advirtió que los depósitos del Tesoro en el BCRA marcarían un nuevo mínimo."
+          },
+          {
+            "id": "santiago-bausili",
+            "name": "Santiago Bausili",
+            "type": "person",
+            "mentions": 1,
+            "description": "Presidente del BCRA, entidad que se mostró activa ofreciendo derivados y bonos ajustables."
+          },
+          {
+            "id": "bonar-2029",
+            "name": "Bonar2029",
+            "type": "org",
+            "mentions": 1,
+            "description": "Bono cuya emisión se mantiene pausada."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo con matiz de alerta",
+        "framing": "La nota se cuenta desde la lógica del mercado cambiario: el shock electoral en Brasil presiona al dólar y el Gobierno (Tesoro y BCRA) aparece como un actor que interviene de forma discreta para contenerlo. Los protagonistas son los operadores y analistas, que interpretan señales indirectas. El Tesoro queda en un lugar ambiguo, con reservas propias que se erosionan ante pagos de deuda próximos.",
+        "sentiment": -0.4,
+        "sources_cited": [
+          "Francisco Díaz Mayer (ABC Mercado de Cambios)",
+          "Gustavo Quintana (PR Cambios)",
+          "Target de Mercado",
+          "Federico García Martínez (economista)",
+          "Operadores del mercado (sin identificar)",
+          "Datos del Banco Central de la República Argentina (compras de reservas, depósitos del Tesoro, banda cambiaria)"
+        ],
+        "missing_angles": [
+          "No hay confirmación ni desmentida oficial del Ministerio de Economía, el Tesoro o el BCRA sobre las supuestas ventas. Toda la intervención se apoya en inferencias del mercado ('habría', 'se percibió').",
+          "No se explica qué fue el 'vuelco' en la elección de Brasil: quién ganó o avanzó, por qué genera risk-off y cómo reaccionaron el real y los activos brasileños.",
+          "Faltan las cotizaciones de los dólares financieros (MEP, CCL) y del informal, y la evolución de la brecha. Es clave para evaluar si la presión se trasladó a otros segmentos.",
+          "No se cuantifica la intervención del BCRA en futuros y bonos dollar-linked (montos, posición abierta), aunque se la menciona como muy activa.",
+          "No se precisan el monto ni la fecha exacta del próximo pago de bonos de la reestructuración. Tampoco se compara con los US$825 millones estimados de depósitos del Tesoro ni con otras fuentes de financiamiento.",
+          "No se explica por qué está pausada la emisión del Bonar 2029 ni qué alternativas tiene el Tesoro para conseguir dólares.",
+          "Falta contexto sobre la distancia entre el dólar mayorista ($1541) y el techo de la banda ($1946,73). Esa holgura hace llamativo que se intervenga y merece una explicación sobre la estrategia oficial (¿la banda es un techo real o hay un techo implícito más bajo?).",
+          "Hay una posible inconsistencia a revisar: se habla de una 'racha de 20 intervenciones' cortada, del 25 de septiembre como otra jornada neutra y de 'quinta rueda del año' sin compras. Conviene detallar cuáles son esas cinco ruedas.",
+          "Falta el impacto en riesgo país, bonos soberanos y acciones locales, que se menciona solo de pasada vía Target de Mercado.",
+          "No hay una voz que discuta si usar depósitos del Tesoro para contener el dólar es sostenible o conveniente frente a dejar flotar dentro de la banda.",
+          "No se aclara el origen del cálculo de US$100 millones ('según calculan en el mercado'): quién lo estima y con qué método."
+        ],
+        "follow_up_questions": [
+          "¿El Ministerio de Economía o el Tesoro confirman las ventas de dólares en el mercado de contado? ¿Por qué monto y a través de qué banco o agente?",
+          "¿Cuánto vendió el BCRA en futuros y en bonos dollar-linked durante la jornada, y cómo quedó su posición neta en derivados?",
+          "¿Cuál es el monto exacto del próximo vencimiento de Globales/Bonares y cómo planea el Tesoro reunir esos dólares si los depósitos caen por debajo de US$1000 millones?",
+          "¿Por qué se pausó la emisión del Bonar 2029 y hay fecha para retomarla?",
+          "¿Existe un techo informal del tipo de cambio por debajo de la banda oficial? ¿Qué dicen los operadores y economistas sobre la coherencia entre el esquema de bandas y estas intervenciones?",
+          "¿Cómo reaccionaron el real, la bolsa de San Pablo y los bonos brasileños? ¿Qué antecedentes hay de contagio de Brasil al mercado cambiario argentino?",
+          "¿Cómo evolucionaron la brecha cambiaria y el riesgo país en la jornada?",
+          "¿Qué impacto podría tener un dólar en máximos nominales sobre la inflación de los próximos meses?",
+          "¿Puede el Tesoro volver a comprarle dólares al BCRA, como hizo en mayo por US$1700 millones? ¿Con qué efecto sobre las reservas netas?"
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2026-01-02",
+            "title": "BCRA no opera en la primera jornada hábil del año",
+            "precision": "day",
+            "description": "En la primera jornada hábil del año el BCRA no sumó reservas porque aún no había comenzado su programa de acumulación.",
+            "paragraph_index": 13
+          },
+          {
+            "date": "2026-05-15",
+            "title": "Depósitos del Tesoro en mínimo previo a compra al BCRA",
+            "precision": "day",
+            "description": "Fecha del mínimo anterior de los depósitos en dólares del Tesoro en el BCRA, previo a una compra de US$1700 millones al BCRA.",
+            "paragraph_index": 9
+          },
+          {
+            "date": "2026-08-24",
+            "title": "Mayor suba previa del dólar mayorista",
+            "precision": "day",
+            "description": "Según Gustavo Quintana, la suba del dólar de la jornada fue la mayor registrada desde el 24 de agosto.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2026-09-25",
+            "title": "BCRA cierra con saldo neutro en el mercado",
+            "precision": "day",
+            "description": "El Banco Central había cerrado con saldo neutro en el mercado de contado, antes de una racha de 20 intervenciones con saldo positivo.",
+            "paragraph_index": 10
+          },
+          {
+            "date": "2026",
+            "title": "Vuelco en la elección de Brasil",
+            "precision": "year",
+            "description": "La elección en Brasil, realizada el día anterior a la rueda, registró un vuelco que generó un clima de risk-off en los mercados.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026",
+            "title": "El BCRA se abstiene de comprar reservas",
+            "precision": "year",
+            "description": "El Banco Central no compró reservas y cortó una racha de 20 intervenciones con saldo positivo; el dólar mayorista cerró a $1541, con una suba de $11,50.",
+            "paragraph_index": 2
+          },
+          {
+            "date": "2026",
+            "title": "El Tesoro habría vendido unos US$100 millones",
+            "precision": "year",
+            "description": "Según el mercado, el Tesoro habría vendido alrededor de US$100 millones para contener la suba del dólar, lo que dejaría sus depósitos en el BCRA en US$825 millones.",
+            "paragraph_index": 8
+          }
+        ]
+      }
+    }
+  ]
+}
