@@ -6,9 +6,11 @@ from app.schemas import NODES, Parsed
 
 async def test_graph_runs_all_nodes(monkeypatch):
     rows: dict[str, dict] = {}
-    article = {"id": "a1", "body": "Texto.", "niche": None}
+    article = {"id": "a1", "body": "Texto.", "niche": None, "published_at": "2026-10-27"}
+    contexts: dict = {}
 
-    async def fake_extract(node, niche, text, schema):
+    async def fake_extract(node, niche, text, schema, context=None):
+        contexts[node] = context
         if node == "parse":
             return Parsed(niche="política", summary="s", paragraphs=["Texto."])
         if node == "timeline":
@@ -23,8 +25,9 @@ async def test_graph_runs_all_nodes(monkeypatch):
         def model_dump(self, mode):
             return {"ok": True}
 
-    def fake_validar(body, done, usar_modelo):
+    def fake_validar(body, done, usar_modelo, fecha_referencia):
         seen.update(done)
+        seen["_fecha"] = fecha_referencia
         return Report()
 
     monkeypatch.setattr(graph, "extract", fake_extract)
@@ -41,9 +44,24 @@ async def test_graph_runs_all_nodes(monkeypatch):
     assert article["niche"] == "política"
     assert set(rows) == set(NODES) | {"validation"}
     assert rows["validation"]["status"] == "done"
-    assert set(seen) == set(NODES) - {"timeline"}  # failed branch is not sent to validation
+    assert set(seen) - {"_fecha"} == set(NODES) - {"timeline"}  # failed branch is not sent to validation
+    assert str(seen["_fecha"]) == "2026-10-27"
+    assert contexts["figures"] == "Fecha de publicación de la nota: 2026-10-27"
     assert rows["timeline"] == {"status": "error", "data": None, "error": "boom"}
     assert all(rows[k]["status"] == "done" for k in NODES if k != "timeline")
+
+
+def test_link_entities():
+    outs = {
+        "entities": {"nodes": [{"id": "eco-go", "name": "Eco Go", "aliases": ["EcoGo"]}, {"id": "indec", "name": "Indec", "aliases": []}]},
+        "claims": {"claims": [{"source": "ecogo"}, {"source": "Nadie"}, {"source": None}]},
+        "figures": {"figures": [{"source": "el Indec"}, {"source": "INDEC"}]},
+        "timeline": {"events": [{"entities": ["Indec", "Roma"]}]},
+    }
+    graph.link_entities(outs)
+    assert [c["source_id"] for c in outs["claims"]["claims"]] == ["eco-go", None, None]  # alias, unknown, unattributed
+    assert [f["source_id"] for f in outs["figures"]["figures"]] == ["indec", "indec"]  # leading article, case ignored
+    assert outs["timeline"]["events"][0]["entity_ids"] == ["indec"]
 
 
 def test_prompt_fallback():

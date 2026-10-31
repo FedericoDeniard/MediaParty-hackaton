@@ -1,3 +1,5 @@
+from datetime import date
+
 from fastapi import BackgroundTasks, FastAPI
 from pydantic import BaseModel
 
@@ -12,11 +14,12 @@ class ArticleIn(BaseModel):
     body: str
     url: str | None = None
     niche: str | None = None
+    published_at: date | None = None
 
 
 @app.post("/articles")
 def create_article(a: ArticleIn, bg: BackgroundTasks) -> dict:
-    article_id = db.insert_article(a.title, a.body, a.url, a.niche, list(NODES) + ["validation"])
+    article_id = db.insert_article(a.title, a.body, a.url, a.niche, a.published_at, list(NODES) + ["validation"])
     bg.add_task(graph.run, article_id)  # ponytail: in-process; swap for a queue if runs outlive a worker
     return {"id": article_id}
 
