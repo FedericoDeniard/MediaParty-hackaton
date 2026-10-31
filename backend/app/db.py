@@ -1,4 +1,5 @@
 import os
+from datetime import date
 
 from dotenv import load_dotenv
 from supabase import Client, create_client
@@ -15,8 +16,10 @@ def sb() -> Client:
     return _client
 
 
-def insert_article(title: str, body: str, url: str | None, niche: str | None, kinds: list[str]) -> str:
-    row = sb().table("articles").insert({"title": title, "body": body, "url": url, "niche": niche}).execute().data[0]
+def insert_article(title: str, body: str, url: str | None, niche: str | None, published_at: date | None, kinds: list[str]) -> str:
+    row = sb().table("articles").insert(
+        {"title": title, "body": body, "url": url, "niche": niche, "published_at": published_at and published_at.isoformat()}
+    ).execute().data[0]
     sb().table("enrichments").insert([{"article_id": row["id"], "kind": k} for k in kinds]).execute()
     return row["id"]
 
