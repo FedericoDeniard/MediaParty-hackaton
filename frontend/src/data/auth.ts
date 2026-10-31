@@ -113,7 +113,6 @@ export const authEditorial = {
 }
 
 export const authSidebar = {
-  eyebrow: 'Acceso a Nexo',
   title: 'Entrá a tu mesa de trabajo.',
 }
 

@@ -1122,16 +1122,7 @@ button {
   padding: var(--space-6) var(--gutter) var(--space-5);
 }
 
-.auth__eyebrow {
-  color: var(--text-muted);
-  font-size: var(--text-micro);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
 .auth__title {
-  margin-top: var(--space-5);
   font-size: var(--text-3xl);
   font-weight: 850;
   font-stretch: var(--font-stretch-condensed);
@@ -1146,6 +1137,7 @@ button {
 
 .auth__tabs {
   display: flex;
+  margin-top: var(--space-6);
   border-bottom: var(--border-width) solid var(--ink);
 }
 

@@ -24,7 +24,6 @@ export default function AuthPage({ mode }: { mode: AuthMode }) {
       </section>
 
       <section className="auth__sidebar">
-        <p className="auth__eyebrow">{authSidebar.eyebrow}</p>
         <h2 className="auth__title">{authSidebar.title}</h2>
 
         <AuthForm mode={mode} />
