@@ -14,6 +14,7 @@ import {
   getNote,
   isEphemeralNote,
   listEnrichments,
+  listNotes,
   setEnrichmentStatus,
   subscribe,
   updateNote,
@@ -24,12 +25,30 @@ type SaveState = 'idle' | 'saving' | 'saved' | 'error'
 
 const SAVE_DELAY = 800
 
+/* Fecha de la ficha. Se arma como en la lista: día, mes corto y año,
+   sin el punto de la abreviatura. */
+const dateFormat = new Intl.DateTimeFormat('es-AR', {
+  day: '2-digit',
+  month: 'short',
+})
+
+function formatDate(iso: string): string {
+  const date = new Date(iso)
+  return `${dateFormat.format(date).replace('.', '')} ${date.getFullYear()}`
+}
+
 export default function NoteEditor() {
   const { id = '' } = useParams()
   const navigate = useNavigate()
 
   const note = useSyncExternalStore(subscribe, () => getNote(id))
   const enrichments = useSyncExternalStore(subscribe, () => listEnrichments(id))
+
+  /* Una nota publicada se lee: no se edita, así que no lleva los
+     planos del área editable, ni la toolbar, ni las sugerencias del
+     asistente. */
+  const isPublished = note?.status === 'published'
+  const canEdit = !isPublished
 
   const [title, setTitle] = useState(note?.title ?? '')
   const [saveState, setSaveState] = useState<SaveState>('idle')
@@ -104,6 +123,7 @@ export default function NoteEditor() {
     contentKey: id,
     onChange: handleDocChange,
     fragments,
+    editable: canEdit,
   })
 
   const statusLabel =
@@ -124,6 +144,26 @@ export default function NoteEditor() {
   const backLabel =
     note?.status === 'published' ? editorPage.backPublished : editorPage.backDrafts
 
+  /* Relacionadas de la vista de lectura: primero las publicadas de la
+     misma temática, y si no hay, las más recientes. Tres es el máximo
+     que se lee en un rail. */
+  const theme = note?.theme ?? null
+  const published = listNotes('published')
+  const themed = theme
+    ? published.filter((item) => item.id !== id && item.theme === theme)
+    : []
+  const related = (themed.length > 0 ? themed : published.filter((item) => item.id !== id)).slice(
+    0,
+    3,
+  )
+  const relatedTitle =
+    themed.length > 0 && theme
+      ? `${editorPage.moreIn} ${noteThemeLabels[theme]}`
+      : editorPage.morePublished
+
+  /* Tiempo de lectura a 200 palabras por minuto, redondeado. */
+  const readingMinutes = note ? Math.max(1, Math.round(note.wordCount / 200)) : 0
+
   const handleThemeChange = (value: string) => {
     updateNote(id, { theme: value ? (value as NoteTheme) : null })
     if (!isEphemeralNote(id)) {
@@ -134,68 +174,152 @@ export default function NoteEditor() {
 
   return (
     <div className="editor">
-      <header className="editor__bar">
+      <header className={`editor__bar${canEdit ? '' : ' editor__bar--read'}`}>
         <Link className="editor__back" to={backTo}>
           <ArrowLeft size={16} aria-hidden="true" />
           {backLabel}
         </Link>
 
-        {/* El título es el encabezado de primer nivel de la pantalla.
-            El `h1` lleva el texto y el campo editable va aparte, para
-            que la navegación por encabezados anuncie el título. */}
-        <h1 className="editor__heading">{title || editorPage.titlePlaceholder}</h1>
+        {canEdit ? (
+          <>
+            {/* El título es el encabezado de primer nivel de la pantalla.
+                El `h1` lleva el texto y el campo editable va aparte, para
+                que la navegación por encabezados anuncie el título. */}
+            <h1 className="editor__heading">{title || editorPage.titlePlaceholder}</h1>
 
-        <input
-          className="editor__title"
-          type="text"
-          value={title}
-          placeholder={editorPage.titlePlaceholder}
-          aria-label="Título de la nota"
-          onChange={(event) => handleTitleChange(event.target.value)}
-        />
-
-        <label className="editor__theme">
-          <span className="editor__theme-label">{editorPage.theme}</span>
-          <span className="editor__theme-control">
-            <select
-              className="editor__theme-select"
-              value={note?.theme ?? ''}
-              onChange={(event) => handleThemeChange(event.target.value)}
-            >
-              <option value="">{editorPage.noTheme}</option>
-              {noteThemes.map((item) => (
-                <option key={item} value={item}>
-                  {noteThemeLabels[item]}
-                </option>
-              ))}
-            </select>
-            <ChevronDown
-              className="editor__theme-chevron"
-              size={14}
-              strokeWidth={1.5}
-              aria-hidden="true"
+            <input
+              className="editor__title"
+              type="text"
+              value={title}
+              placeholder={editorPage.titlePlaceholder}
+              aria-label="Título de la nota"
+              onChange={(event) => handleTitleChange(event.target.value)}
             />
-          </span>
-        </label>
+          </>
+        ) : (
+          <h1 className="editor__title editor__title--read">
+            {title || editorPage.titlePlaceholder}
+          </h1>
+        )}
 
-        <p className={`editor__save editor__save--${saveState}`} role="status">
-          {statusLabel}
-        </p>
+        {canEdit && (
+          <label className="editor__theme">
+            <span className="editor__theme-label">{editorPage.theme}</span>
+            <span className="editor__theme-control">
+              <select
+                className="editor__theme-select"
+                value={note?.theme ?? ''}
+                onChange={(event) => handleThemeChange(event.target.value)}
+              >
+                <option value="">{editorPage.noTheme}</option>
+                {noteThemes.map((item) => (
+                  <option key={item} value={item}>
+                    {noteThemeLabels[item]}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                className="editor__theme-chevron"
+                size={14}
+                strokeWidth={1.5}
+                aria-hidden="true"
+              />
+            </span>
+          </label>
+        )}
+
+        {canEdit && (
+          <p className={`editor__save editor__save--${saveState}`} role="status">
+            {statusLabel}
+          </p>
+        )}
       </header>
 
-      {editor ? <EditorToolbar editor={editor} /> : <div className="bar bar--empty" />}
+      {canEdit &&
+        (editor ? (
+          <EditorToolbar editor={editor} />
+        ) : (
+          <div className="bar bar--empty" />
+        ))}
 
-      <div className="editor__body">
-        <div className="editor__canvas">
+      <div className={`editor__body${canEdit ? '' : ' editor__body--read'}`}>
+        <div className={`editor__canvas${canEdit ? '' : ' editor__canvas--read'}`}>
           <EditorContent editor={editor} />
+
+          {/* Publicada, la nota se lee: la temática cierra el
+              documento como dato, no como un control. */}
+          {!canEdit && (
+            <footer className="editor__category">
+              <span className="editor__category-label">{editorPage.theme}</span>
+              <p className="editor__category-value">
+                {note?.theme ? noteThemeLabels[note.theme] : editorPage.noTheme}
+              </p>
+            </footer>
+          )}
         </div>
 
-        <EnrichmentPanel
-          items={enrichments}
-          onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
-          onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
-          onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
-        />
+        {!canEdit && (
+          <aside className="panel read-rail" aria-labelledby="read-rail-title">
+            <h2 className="panel__title" id="read-rail-title">
+              {editorPage.readTitle}
+            </h2>
+
+            <ul className="panel__list">
+              <li className="read-rail__row">
+                <span className="read-rail__key">{editorPage.readUpdated}</span>
+                <span className="read-rail__value">
+                  {note ? formatDate(note.updatedAt) : ''}
+                </span>
+              </li>
+              <li className="read-rail__row">
+                <span className="read-rail__key">{editorPage.readWords}</span>
+                <span className="read-rail__value">{note?.wordCount ?? 0}</span>
+              </li>
+              <li className="read-rail__row">
+                <span className="read-rail__key">{editorPage.readTime}</span>
+                <span className="read-rail__value">
+                  {readingMinutes} {editorPage.readMinutes}
+                </span>
+              </li>
+            </ul>
+
+            {related.length > 0 && (
+              <section className="read-rail__section" aria-labelledby="read-rail-more">
+                <h3 className="panel__title" id="read-rail-more">
+                  {relatedTitle}
+                </h3>
+
+                <ul className="panel__list">
+                  {related.map((item) => (
+                    <li key={item.id}>
+                      <Link className="read-rail__link" to={`/app/notas/${item.id}`}>
+                        <span className="read-rail__link-title">
+                          {item.title || editorPage.titlePlaceholder}
+                        </span>
+                        <span className="read-rail__link-date">
+                          {formatDate(item.updatedAt)}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link className="read-rail__all" to="/app/publicados">
+                  {editorPage.viewAllPublished}
+                </Link>
+              </section>
+            )}
+          </aside>
+        )}
+
+        {canEdit && (
+          <EnrichmentPanel
+            items={enrichments}
+            onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
+            onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
+            onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
+          />
+        )}
       </div>
     </div>
   )

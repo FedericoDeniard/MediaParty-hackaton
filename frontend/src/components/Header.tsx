@@ -4,7 +4,7 @@ import Wordmark from './Wordmark.tsx'
 const links = [
   { href: '#producto', label: 'Producto' },
   { href: '#como-funciona', label: 'Cómo funciona' },
-  { href: '#redes', label: 'Redes' },
+  { href: '#verificacion', label: 'Verificación' },
 ]
 
 export default function Header() {

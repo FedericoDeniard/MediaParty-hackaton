@@ -145,7 +145,7 @@ let publishedCache: Note[] = []
 const enrichmentCache = new Map<string, Enrichment[]>()
 
 function invalidate() {
-  const visible = notes.filter((note) => !ephemeral.has(note.id))
+  const visible = notes.filter((note) => !ephemeral.has(note.id) && !note.archivedAt)
   notesCache = [...visible].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
   unpublishedCache = notesCache.filter((note) => note.status !== 'published')
   publishedCache = notesCache.filter((note) => note.status === 'published')
@@ -233,6 +233,18 @@ export function removeNote(id: string) {
   notes = notes.filter((note) => note.id !== id)
   enrichments = enrichments.filter((item) => item.noteId !== id)
   persist()
+}
+
+/* Archivar saca una publicación del archivo activo sin borrarla:
+   la nota sigue guardada, con su contenido y sus enriquecimientos. */
+export function archiveNote(id: string) {
+  let archived = false
+  notes = notes.map((note) => {
+    if (note.id !== id || note.status !== 'published' || note.archivedAt) return note
+    archived = true
+    return { ...note, archivedAt: new Date().toISOString() }
+  })
+  if (archived) persist()
 }
 
 /* ---- Enriquecimientos ---- */

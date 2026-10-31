@@ -7,7 +7,7 @@ export default function Steps() {
         <header className="section__head">
           <p className="section__index">01 — Flujo de trabajo</p>
           <div className="section__content">
-            <h2 className="section__title">Tres pasos, una sola fuente de verdad</h2>
+            <h2 className="section__title">Tres pasos, ninguna decisión automática</h2>
           </div>
         </header>
 

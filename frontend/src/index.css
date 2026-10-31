@@ -461,12 +461,12 @@ button {
   font-variant-numeric: tabular-nums;
 }
 
-.hero__arrow {
-  display: block;
-  margin: var(--space-3) 0;
-  font-size: var(--text-base);
-  line-height: 1;
-  text-align: center;
+.source__body {
+  margin-top: var(--space-3);
+  max-width: 46ch;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
 }
 
 .tabs {
@@ -506,6 +506,14 @@ button {
   padding-top: var(--space-4);
 }
 
+.preview__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+}
+
 .preview__format {
   font-size: var(--text-micro);
   font-weight: 700;
@@ -513,10 +521,57 @@ button {
   text-transform: uppercase;
 }
 
+.preview__status {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
 .preview__body {
   margin-top: var(--space-2);
   font-size: var(--text-sm);
   line-height: 1.5;
+}
+
+.preview__meta {
+  margin-top: var(--space-4);
+}
+
+.preview__meta-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-3);
+  border-top: var(--border-width) solid var(--line);
+  padding: var(--space-2) 0;
+}
+
+.preview__meta-row:last-child {
+  border-bottom: var(--border-width) solid var(--line);
+}
+
+.preview__meta dt {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.preview__meta dd {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.preview__meta mark {
+  background: var(--chart);
+  color: var(--ink);
+  padding: 1px 3px;
 }
 
 .preview__chart {
@@ -536,6 +591,32 @@ button {
 .preview__detail {
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
+}
+
+.preview__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.preview__decision {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero__demo-foot {
+  border-top: var(--border-width) solid var(--line);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  line-height: 1.5;
 }
 
 /* ============================================================
@@ -802,7 +883,7 @@ button {
   background: var(--chart);
 }
 
-.feature__quote {
+.feature__passage {
   margin-top: var(--space-5);
   padding-left: var(--space-4);
   border-left: 2px solid var(--ink);
@@ -810,41 +891,49 @@ button {
   line-height: 1.5;
 }
 
-/* Los formatos son datos, no chips: se leen como una lista abierta. */
-.feature__formats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-5);
+.feature__passage mark {
+  background: var(--chart);
+  color: var(--ink);
+  padding: 1px 3px;
+}
+
+.feature__caption {
+  margin-top: var(--space-3);
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-micro);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
-.feature__formats li + li::before {
-  content: '/';
-  margin-right: var(--space-2);
-  color: var(--rule);
+.feature__checks {
+  margin-top: var(--space-2);
+  border-top: var(--border-width) solid var(--line);
 }
 
-/* El equipo son iniciales, no cuadrados: sin marcos ni sombras. */
-.feature__team {
+.feature__checks li {
   display: flex;
-  gap: var(--space-4);
-  margin-top: var(--space-5);
-  color: var(--text-muted);
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  border-bottom: var(--border-width) solid var(--line);
+  padding: var(--space-2) 0;
   font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  line-height: 1.5;
 }
 
-.feature__team li + li::before {
-  content: '·';
-  margin-right: var(--space-4);
-  color: var(--rule);
+.feature__check-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.feature__check-value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
 /* Bloque de acento: un único plano de color que ancla la página. */
@@ -860,48 +949,67 @@ button {
   opacity: 0.78;
 }
 
-/* Sobre el plano de acento el gráfico se invierte: barras claras
-   sobre fondo oscuro, con la línea de base del mismo tono. */
-.feature--accent .feature__chart {
-  border-bottom-color: var(--accent-ink);
-}
-
-.feature--accent .feature__chart span {
-  background: var(--accent-ink);
-}
-
-.feature--accent .feature__quote {
-  border-left-color: var(--accent-ink);
-}
-
 /* ============================================================
-   Networks (tabla de datos)
+   Verificación (tabla de datos)
    Acá sí hay filetes: expresa una relación de datos real.
    ============================================================ */
 
-.networks {
+.checks {
   border-top: var(--border-width) solid var(--ink);
 }
 
-.network {
-  display: flex;
+.checks__row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) minmax(0, 2fr);
   align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-5);
+  gap: var(--grid-gap);
   border-bottom: var(--border-width) solid var(--line);
   padding: var(--space-4) 0;
 }
 
-.network__name {
+.checks__head {
+  border-bottom-color: var(--line-control);
+  padding-block: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.checks__state {
   font-size: var(--text-md);
   font-weight: 600;
 }
 
-.network__rule {
+.checks__meaning,
+.checks__action {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.checks__meaning {
   color: var(--text-muted);
-  font-size: var(--text-xs);
-  font-variant-numeric: tabular-nums;
-  text-align: right;
+}
+
+.sources {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  max-width: 80ch;
+}
+
+.sources__label {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources__list {
+  font-size: var(--text-sm);
+  line-height: 1.6;
 }
 
 /* ============================================================
@@ -991,26 +1099,6 @@ button {
   align-items: center;
 }
 
-.footer__nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-5);
-  margin-left: auto;
-}
-
-.footer__nav a {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.footer__nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 .footer__note {
   width: 100%;
   color: var(--text-muted);
@@ -1029,8 +1117,8 @@ button {
 /* ============================================================
    Acceso · login / registro
    La composición viene del mock: editorial a la izquierda (70%)
-   y mesa de trabajo a la derecha (30%), con el titular en escala
-   póster y un cuadrado de acento rotado que lo cruza.
+   y mesa de trabajo a la derecha (30%), con la marca en escala
+   póster y un cuadrado de acento rotado que la cruza.
    Los colores son los del sistema: `--accent` para el plano de
    color, `--line-control` para los controles y `--ink` para los
    filetes que dividen zonas.
@@ -1062,7 +1150,7 @@ button {
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-3);
   color: var(--text-muted);
   font-size: var(--text-micro);
@@ -1077,58 +1165,41 @@ button {
   margin-top: var(--space-9);
 }
 
-.auth__poster-wrap {
+/* La marca ocupa el lugar del titular: es el póster de la pantalla. */
+.auth__brand-wrap {
   position: relative;
-  margin-top: var(--space-4);
+  width: fit-content;
+  margin-top: var(--space-5);
 }
 
-/* El plano de acento: un cuadrado rotado que cruza el titular.
-   Va por debajo del texto (z-index 0) y sus medidas siguen a la
-   escala del titular, así que se mueven con él. */
+.auth__brand {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.auth__brand-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.auth__brand .wordmark {
+  width: clamp(240px, 42vw, 620px);
+  height: auto;
+}
+
+/* El plano de acento: un cuadrado rotado que cruza la marca por
+   detrás y acompaña su escala. */
 .auth__plane {
   position: absolute;
   z-index: 0;
-  top: calc(var(--text-poster) * -0.6);
-  left: calc(var(--text-poster) * 3.1);
-  width: calc(var(--text-poster) * 2.78);
+  top: -14%;
+  left: 58%;
+  width: 62%;
   aspect-ratio: 1;
   background: var(--accent);
   transform: rotate(12deg);
-}
-
-.auth__poster {
-  position: relative;
-  z-index: 1;
-  margin-top: 0;
-  font-size: var(--text-poster);
-  font-weight: 850;
-  font-stretch: var(--font-stretch-condensed);
-  letter-spacing: -0.03em;
-  line-height: 0.78;
-  text-transform: uppercase;
-}
-
-.auth__editorial-foot {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--grid-gap);
-  margin-top: auto;
-}
-
-.auth__editorial-lead {
-  max-width: 26ch;
-  font-size: var(--text-base);
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.auth__editorial-note {
-  max-width: 34ch;
-  color: var(--text-muted);
-  font-size: var(--text-base);
-  line-height: 1.45;
 }
 
 /* ---- Mesa de trabajo ---- */
@@ -1758,6 +1829,16 @@ button {
 .row {
   display: flex;
   align-items: center;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+/* El enlace cubre el cuerpo y los datos de la fila; la acción de
+   borrar/archivar vive afuera, como un control hermano. */
+.row__link {
+  display: flex;
+  flex: 1;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
   min-width: 0;
@@ -1828,6 +1909,59 @@ button {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+/* La acción de la fila es texto con filete, no un botón relleno. El
+   segundo toque para borrar se marca con el filete de énfasis: el
+   color no es el único indicador. */
+.row__tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.row__tool {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: var(--space-2) 0;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
+}
+
+.row__tool:hover {
+  color: var(--text);
+}
+
+.row__tool--confirm {
+  border-bottom-color: var(--ink);
+  color: var(--text);
+}
+
+/* Anuncios para lectores de pantalla: el borrado o el archivo sacan
+   la fila del DOM y el resultado se informa fuera de ella. */
+.page__status,
+.row__notice {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* ---- Paginación ----
@@ -1930,17 +2064,30 @@ button {
 
 .editor__bar {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    'back back back'
+    'title theme save';
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3) var(--space-5);
   border-bottom: var(--border-width) solid var(--rule);
-  padding: var(--space-4) var(--gutter);
+  padding: var(--space-3) var(--gutter);
+}
+
+/* Publicada: la barra es sólo volver y título, sin columnas vacías. */
+.editor__bar--read {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'back'
+    'title';
 }
 
 .editor__back {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  grid-area: back;
+  justify-self: start;
   min-height: 24px;
   color: var(--text-muted);
   font-size: var(--text-xs);
@@ -1970,6 +2117,7 @@ button {
 .editor__title {
   width: 100%;
   min-width: 0;
+  grid-area: title;
   border: 0;
   border-bottom: 1px solid transparent;
   background: var(--surface);
@@ -1995,10 +2143,20 @@ button {
   border-bottom-color: var(--ink);
 }
 
+/* Publicada, la nota se lee: el título es texto, no un campo, y
+   pierde el plano del área editable. */
+.editor__title--read {
+  border-bottom: 0;
+  background: none;
+  padding: 0;
+  line-height: 1.2;
+}
+
 .editor__save {
   color: var(--text-muted);
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
+  grid-area: save;
   white-space: nowrap;
 }
 
@@ -2012,6 +2170,7 @@ button {
   display: grid;
   gap: var(--space-1);
   min-width: 0;
+  grid-area: theme;
 }
 
 .editor__theme-label {
@@ -2145,6 +2304,116 @@ button {
   max-width: var(--measure-body);
   background: var(--surface);
   padding: var(--space-5);
+}
+
+/* La nota publicada va sobre el fondo de la página, no sobre una
+   hoja: no se escribe. Mantiene la medida de lectura en todos los
+   anchos. */
+.editor__canvas.editor__canvas--read {
+  max-width: var(--measure-body);
+  background: none;
+  padding: 0;
+}
+
+/* La nota publicada se lee: el texto conserva su medida y la ficha
+   de datos ocupa la columna derecha, como un rail de diario. */
+.editor__body--read {
+  grid-template-columns: minmax(0, var(--measure-body)) minmax(280px, 340px);
+  justify-content: space-between;
+}
+
+/* En lectura la nota termina donde termina el texto: la categoría no
+   queda a media página. */
+.editor__canvas--read .ProseMirror {
+  min-height: 0;
+}
+
+/* La ficha reusa el patrón del panel: campo sólido de contraste y
+   filas de datos separadas por filetes. */
+.read-rail {
+  min-width: 0;
+}
+
+.read-rail__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.read-rail__key {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.read-rail__value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.read-rail__section {
+  margin-top: var(--space-6);
+}
+
+.read-rail__link {
+  display: block;
+  text-decoration: none;
+}
+
+.read-rail__link:hover .read-rail__link-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.read-rail__link-title {
+  display: block;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.read-rail__link-date {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.read-rail__all {
+  display: inline-block;
+  margin-top: var(--space-4);
+  color: var(--text);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+}
+
+.read-rail__all:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* La temática cierra la nota publicada: es dato, no control. */
+.editor__category {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-7);
+  border-top: var(--border-width) solid var(--rule);
+  padding-top: var(--space-4);
+}
+
+.editor__category-label {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.editor__category-value {
+  font-size: var(--text-sm);
+  font-weight: 600;
 }
 
 /* ---- Documento ---- */
@@ -2535,6 +2804,18 @@ button {
    Responsive
    ============================================================ */
 
+/* Con el sidebar y el rail juntos, el texto baja de 50 caracteres:
+   la ficha pasa debajo del documento. */
+@media (max-width: 1150px) {
+  .editor__body--read {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .read-rail {
+    max-width: var(--measure-body);
+  }
+}
+
 @media (max-width: 1080px) {
   .hero__copy,
   .hero__demo,
@@ -2586,40 +2867,35 @@ button {
     overflow: visible;
   }
 
-  /* Apilado, el cuadrado achica: si no, se come el pie editorial. */
-  .auth__plane {
-    width: calc(var(--text-poster) * 2);
-  }
-
-  /* La barra del editor no entra en cuatro columnas con el sidebar
-     visible: la temática baja debajo del título. */
+  /* La barra del editor pierde ancho con el sidebar visible: el
+     título queda en su fila y la temática baja debajo. */
   .editor__bar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      'back title save'
-      'theme theme theme';
+      'back back'
+      'title save'
+      'theme theme';
     row-gap: var(--space-2);
   }
 
-  .editor__back {
-    grid-area: back;
-  }
-
-  .editor__title {
-    grid-area: title;
-  }
-
-  .editor__save {
-    grid-area: save;
+  /* Publicada no tiene temática ni estado: el título ocupa su fila
+     sin dejar filas vacías. */
+  .editor__bar--read {
+    grid-template-areas:
+      'back back'
+      'title title';
   }
 
   .editor__theme {
-    grid-area: theme;
     max-width: 320px;
   }
 }
 
 @media (max-width: 860px) {
+  .header__nav {
+    display: none;
+  }
+
   .steps {
     grid-template-columns: 1fr;
     gap: var(--space-6);
@@ -2704,8 +2980,18 @@ button {
 
   .row {
     flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .row__link {
+    flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
+  }
+
+  .row__tools {
+    justify-content: flex-start;
   }
 
   .row__meta {
@@ -2721,18 +3007,19 @@ button {
 }
 
 @media (max-width: 640px) {
-  .header__nav {
+  .checks__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+    padding: var(--space-3) 0;
+  }
+
+  .checks__head {
     display: none;
   }
 
-  .network {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-1);
-  }
-
-  .network__rule {
-    text-align: left;
+  .preview__meta-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
   }
 
   .auth__editorial,
@@ -2744,11 +3031,6 @@ button {
     margin-top: var(--space-7);
   }
 
-  .auth__editorial-foot {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
-
   /* La barra del editor apila: temática y estado bajan de línea. */
   .editor__bar {
     grid-template-columns: minmax(0, 1fr);
@@ -2758,6 +3040,12 @@ button {
       'theme'
       'save';
     gap: var(--space-2);
+  }
+
+  .editor__bar--read {
+    grid-template-areas:
+      'back'
+      'title';
   }
 
   .editor__theme {

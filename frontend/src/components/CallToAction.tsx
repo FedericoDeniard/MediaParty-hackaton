@@ -5,18 +5,19 @@ export default function CallToAction() {
     <section className="section section--inverted" id="empezar">
       <div className="section__inner cta">
         <div className="cta__copy">
-          <h2 className="cta__title">Empezá a publicar mejor hoy</h2>
+          <h2 className="cta__title">Sumá datos a tu próxima nota</h2>
           <p className="cta__body">
-            Probalo con una noticia real y mirá las ocho versiones que salen.
+            Probalo con una nota real: glosa te muestra qué puede respaldar y qué no.
+            La decisión sigue siendo tuya.
           </p>
         </div>
         <div className="cta__actions">
           <Link className="button button--solid" to="/registro">
             Crear cuenta
           </Link>
-          <a className="button button--ghost" href="#top">
-            Hablar con el equipo
-          </a>
+          <Link className="button button--ghost" to="/login">
+            Iniciar sesión
+          </Link>
         </div>
       </div>
     </section>

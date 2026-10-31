@@ -53,6 +53,8 @@ export interface Note {
   wordCount: number
   createdAt: string
   updatedAt: string
+  /** Una publicación archivada deja las listas sin borrar su contenido. */
+  archivedAt?: string
 }
 
 export interface Enrichment {

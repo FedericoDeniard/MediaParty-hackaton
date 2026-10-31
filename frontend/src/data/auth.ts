@@ -124,14 +124,8 @@ export const authErrorMessages: Record<string, string> = {
 /* El bloque editorial es el mismo en las dos pantallas: es la voz
    de la marca, no la del formulario. */
 export const authEditorial = {
-  meta: {
-    left: 'glosa · Plataforma editorial',
-    right: 'MediaParty 2026',
-  },
+  date: 'MediaParty 2026',
   kicker: 'Edición independiente',
-  poster: 'Sala de redacción',
-  lead: 'Un espacio de trabajo para procesar la noticia y publicarla en todas las redes.',
-  note: 'Tus borradores y exportaciones, organizados en un solo documento.',
 }
 
 export const authSidebar = {
