@@ -18,15 +18,46 @@ from verificador.graficos import armar_graficos  # noqa: E402
 from verificador.series import ClienteSeries  # noqa: E402
 from verificador.validar import validar_nota  # noqa: E402
 
-NOTAS = ("01", "02", "14")
+NOTAS = ("01", "02", "07", "13", "14", "17", "19")  # incluye las seis del banco de trabajo (n-01 a n-06) y la 14
 FECHA_CORPUS = date(2026, 10, 31)
 CABECERA = (
-    "/* Datos reales de ejemplo, generados por el verificador sobre las notas 01, 02 y 14 del corpus\n"
+    "/* Datos reales de ejemplo, generados por el verificador sobre notas del corpus (01, 02, 07, 13, 14, 17 y 19)\n"
     "   (`armar_graficos` con las series guardadas al 2026-10-31). No se editan a mano: se regeneran con\n"
     "   `verificador/scripts/generar_ejemplos_ui.py`. */\n"
+    "import type { FilasDeAnalisis } from '../components/graficos/pasos.ts'\n"
     "import type { GraficosNota } from '../components/graficos/types.ts'\n\n"
-    "export interface EjemploDeNota {\n  titulo: string\n  datos: GraficosNota\n}\n\n"
+    "export interface EjemploDeNota {\n"
+    "  titulo: string\n"
+    "  cuerpo: string\n"
+    "  /** Las filas del análisis tal como las escribe el backend, recortadas a lo que usa el recorrido. */\n"
+    "  filas: FilasDeAnalisis\n"
+    "  datos: GraficosNota\n"
+    "}\n\n"
 )
+
+
+def filas_de(por_tipo: dict, informe) -> dict:
+    """Las filas del análisis, recortadas a lo que usa el recorrido de la UI."""
+    return {
+        "claims": {"claims": [{"text": c["text"]} for c in por_tipo.get("claims", {}).get("claims", [])]},
+        "entities": {
+            "nodes": [{"name": n["name"], "mentions": n.get("mentions", 0)} for n in por_tipo.get("entities", {}).get("nodes", [])]
+        },
+        "timeline": {"events": [{"title": e["title"]} for e in por_tipo.get("timeline", {}).get("events", [])]},
+        "validation": {
+            "verificacion": {"resumen": informe.verificacion.resumen},
+            "tarjetas": [
+                {
+                    "tarjeta": {
+                        "dicho": {"texto": t.tarjeta.dicho.texto},
+                        "resultado": t.tarjeta.resultado,
+                        "serie": {"nombre": t.tarjeta.serie.nombre, "valor": t.tarjeta.serie.valor} if t.tarjeta.serie else None,
+                    }
+                }
+                for t in informe.tarjetas
+            ],
+        },
+    }
 
 
 def ejemplo_de(nota: str, cliente: ClienteSeries) -> dict:
@@ -37,7 +68,12 @@ def ejemplo_de(nota: str, cliente: ClienteSeries) -> dict:
     por_tipo = {e["kind"]: e["data"] for e in datos["enrichments"] if e["status"] == "done"}
     informe = validar_nota(cuerpo, por_tipo, cliente_series=cliente, fecha_referencia=FECHA_CORPUS)
     graficos = armar_graficos(informe, por_tipo, cliente)
-    return {"titulo": lineas[0].lstrip("# ").strip(), "datos": graficos.model_dump(mode="json")}
+    return {
+        "titulo": lineas[0].lstrip("# ").strip(),
+        "cuerpo": cuerpo,
+        "filas": filas_de(por_tipo, informe),
+        "datos": graficos.model_dump(mode="json"),
+    }
 
 
 def main() -> int:
