@@ -139,6 +139,11 @@
   animation: ctx-crecer 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+.ctx__barra--horizontal {
+  transform-origin: 0 50%;
+  animation-name: ctx-crecer-horizontal;
+}
+
 .ctx__barra--destacada {
   fill: var(--ctx-dato-fuerte);
 }
@@ -244,6 +249,12 @@
 @keyframes ctx-aparecer {
   to {
     opacity: 1;
+  }
+}
+
+@keyframes ctx-crecer-horizontal {
+  from {
+    transform: scaleX(0);
   }
 }
 

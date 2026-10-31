@@ -10968,7 +10968,83 @@ export const ejemplos: Record<string, EjemploDeNota> = {
           "avisos": []
         }
       ],
-      "contextos": [],
+      "contextos": [
+        {
+          "id": "tabla_anual",
+          "visual": "ranking",
+          "titulo": "Tabla Anual 2026 al 31 de octubre: Rosario Central 59, Boca Juniors 57 y Argentinos Juniors 57 puntos; del 1.º al 9.º hay 11 puntos de diferencia",
+          "unidad": "puntos de la Tabla Anual 2026 (Apertura + Clausura)",
+          "referencia": null,
+          "series": [],
+          "barras": [
+            {
+              "etiqueta": "1. Rosario Central",
+              "valor": 59.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "2. Boca Juniors",
+              "valor": 57.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "3. Argentinos Juniors",
+              "valor": 57.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "4. Vélez Sarsfield",
+              "valor": 55.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "5. Gimnasia y Esgrima La Plata",
+              "valor": 54.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "6. Instituto",
+              "valor": 53.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "7. Independiente Rivadavia",
+              "valor": 53.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "8. River Plate",
+              "valor": 52.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "9. Lanús",
+              "valor": 48.0,
+              "destacada": false
+            }
+          ],
+          "fuentes": [
+            {
+              "nombre": "Tabla general de la temporada 2026, Primera División",
+              "institucion": "Wikipedia en español (CC BY-SA 4.0)",
+              "id": "Campeonato de Primera División 2026 (Argentina)",
+              "enlace": "https://es.wikipedia.org/wiki/Campeonato_de_Primera_Divisi%C3%B3n_2026_%28Argentina%29",
+              "ultimo_dato": "2026-10",
+              "rezago_meses": 0,
+              "origen_datos": "guardado"
+            }
+          ],
+          "como_leerlo": "Cada barra son los puntos que suma el equipo entre el Apertura y el Clausura 2026, según la copia del 31 de octubre. Las barras oscuras son las tres primeras posiciones, que según la propia tabla clasifican a la Libertadores 2027; las siguientes, a la Sudamericana.",
+          "advertencias": [
+            "La tabla es una copia del 31 de octubre: si se jugaron partidos después de publicada la nota, los puntos pueden ser otros.",
+            "Los datos de Wikipedia los editan voluntarios: se citan como Wikipedia y no como dato oficial de la AFA.",
+            "No todos los equipos jugaron la misma cantidad de partidos."
+          ],
+          "motivos": [
+            "Tabla Anual (×6)"
+          ]
+        }
+      ],
       "avisos": [
         "línea de tiempo omitida: 0 evento(s) sostenidos por la nota, hacen falta 3"
       ]
@@ -11617,7 +11693,130 @@ export const ejemplos: Record<string, EjemploDeNota> = {
           "avisos": []
         }
       ],
-      "contextos": [],
+      "contextos": [
+        {
+          "id": "historial_superclasico",
+          "visual": "barras",
+          "titulo": "Superclásicos en Primera División: de 218 partidos, Boca ganó 80, River 73 y empataron 65",
+          "unidad": "partidos de Primera División",
+          "referencia": null,
+          "series": [],
+          "barras": [
+            {
+              "etiqueta": "Ganó Boca",
+              "valor": 80.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "Empates",
+              "valor": 65.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "Ganó River",
+              "valor": 73.0,
+              "destacada": false
+            }
+          ],
+          "fuentes": [
+            {
+              "nombre": "Historial estadístico del Superclásico, Primera División",
+              "institucion": "Wikipedia en español (CC BY-SA 4.0)",
+              "id": "Superclásico del fútbol argentino",
+              "enlace": "https://es.wikipedia.org/wiki/Supercl%C3%A1sico_del_f%C3%BAtbol_argentino",
+              "ultimo_dato": "2026-10",
+              "rezago_meses": 0,
+              "origen_datos": "guardado"
+            }
+          ],
+          "como_leerlo": "Cada barra cuenta los Superclásicos de Primera División hasta el 31 de octubre: los que ganó cada equipo y los que terminaron empatados.",
+          "advertencias": [
+            "Cuenta hasta el 31 de octubre: no incluye los partidos posteriores a esa copia.",
+            "Es solo Primera División: sumando copas nacionales, internacionales y amistosos las cifras cambian.",
+            "Los datos de Wikipedia los editan voluntarios: se citan como Wikipedia y no como dato oficial de la AFA."
+          ],
+          "motivos": [
+            "Superclásico (×1)",
+            "Boca (×7)",
+            "River (×7)"
+          ]
+        },
+        {
+          "id": "tabla_anual",
+          "visual": "ranking",
+          "titulo": "Tabla Anual 2026 al 31 de octubre: Rosario Central 59, Boca Juniors 57 y Argentinos Juniors 57 puntos; del 1.º al 9.º hay 11 puntos de diferencia",
+          "unidad": "puntos de la Tabla Anual 2026 (Apertura + Clausura)",
+          "referencia": null,
+          "series": [],
+          "barras": [
+            {
+              "etiqueta": "1. Rosario Central",
+              "valor": 59.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "2. Boca Juniors",
+              "valor": 57.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "3. Argentinos Juniors",
+              "valor": 57.0,
+              "destacada": true
+            },
+            {
+              "etiqueta": "4. Vélez Sarsfield",
+              "valor": 55.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "5. Gimnasia y Esgrima La Plata",
+              "valor": 54.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "6. Instituto",
+              "valor": 53.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "7. Independiente Rivadavia",
+              "valor": 53.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "8. River Plate",
+              "valor": 52.0,
+              "destacada": false
+            },
+            {
+              "etiqueta": "9. Lanús",
+              "valor": 48.0,
+              "destacada": false
+            }
+          ],
+          "fuentes": [
+            {
+              "nombre": "Tabla general de la temporada 2026, Primera División",
+              "institucion": "Wikipedia en español (CC BY-SA 4.0)",
+              "id": "Campeonato de Primera División 2026 (Argentina)",
+              "enlace": "https://es.wikipedia.org/wiki/Campeonato_de_Primera_Divisi%C3%B3n_2026_%28Argentina%29",
+              "ultimo_dato": "2026-10",
+              "rezago_meses": 0,
+              "origen_datos": "guardado"
+            }
+          ],
+          "como_leerlo": "Cada barra son los puntos que suma el equipo entre el Apertura y el Clausura 2026, según la copia del 31 de octubre. Las barras oscuras son las tres primeras posiciones, que según la propia tabla clasifican a la Libertadores 2027; las siguientes, a la Sudamericana.",
+          "advertencias": [
+            "La tabla es una copia del 31 de octubre: si se jugaron partidos después de publicada la nota, los puntos pueden ser otros.",
+            "Los datos de Wikipedia los editan voluntarios: se citan como Wikipedia y no como dato oficial de la AFA.",
+            "No todos los equipos jugaron la misma cantidad de partidos."
+          ],
+          "motivos": [
+            "Tabla Anual (×8)"
+          ]
+        }
+      ],
       "avisos": []
     }
   },

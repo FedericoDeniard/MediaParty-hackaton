@@ -1,6 +1,7 @@
 import { useState, type CSSProperties } from 'react'
 import { useEditorState, type Editor } from '@tiptap/react'
 import { Check, Plus, ShieldCheck, Sparkles } from 'lucide-react'
+import { etiquetaDeDatos } from './etiqueta.ts'
 import FlujoMotor from './FlujoMotor.tsx'
 import { pasosDeAnalisis, type FilasDeAnalisis } from './pasos.ts'
 import type { GraficoContexto } from './types.ts'
@@ -55,7 +56,7 @@ function Recomendacion({
 
   return (
     <li className={`pg__item pg__item--${estado}`} style={retraso}>
-      <p className="pg__tipo">Contexto · datos oficiales</p>
+      <p className="pg__tipo">{etiquetaDeDatos(grafico)}</p>
       <h3 className="pg__item-titulo">{grafico.titulo}</h3>
       {grafico.motivos.length > 0 ? (
         <p className="pg__motivo">Te lo sugerimos porque la nota menciona: {grafico.motivos.join(', ')}.</p>

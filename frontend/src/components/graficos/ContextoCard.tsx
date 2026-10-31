@@ -1,5 +1,6 @@
 import { useId, useMemo, type CSSProperties } from 'react'
 import type { BarraContexto, GraficoContexto, SerieContexto } from './types.ts'
+import { etiquetaDeDatos } from './etiqueta.ts'
 import './graficos.css'
 
 /* ============================================================
@@ -212,11 +213,54 @@ function Barras({ grafico }: { grafico: GraficoContexto }) {
   )
 }
 
+/* ---- ranking (barras horizontales: una posición por fila) ---- */
+
+const R = { ancho: 640, izq: 230, der: 64, fila: 34, grosor: 20, arriba: 8 }
+
+function Ranking({ grafico }: { grafico: GraficoContexto }) {
+  const maximo = Math.max(...grafico.barras.map((b) => b.valor))
+  const largo = (valor: number) => ((R.ancho - R.izq - R.der) * valor) / maximo
+  const alto = R.arriba * 2 + R.fila * grafico.barras.length
+
+  return (
+    <svg className="ctx__svg" viewBox={`0 0 ${R.ancho} ${alto}`} role="img" aria-label={grafico.titulo}>
+      <line className="ctx__base" x1={R.izq} x2={R.izq} y1={R.arriba} y2={alto - R.arriba} />
+      {grafico.barras.map((barra: BarraContexto, i) => {
+        const centro = R.arriba + R.fila * (i + 0.5)
+        return (
+          <g key={barra.etiqueta}>
+            <text
+              className={`ctx__eje${barra.destacada ? ' ctx__eje--fuerte' : ''}`}
+              x={R.izq - 12}
+              y={centro + 5}
+              textAnchor="end"
+            >
+              {barra.etiqueta}
+            </text>
+            <rect
+              className={`ctx__barra ctx__barra--horizontal${barra.destacada ? ' ctx__barra--destacada' : ''}`}
+              x={R.izq}
+              y={centro - R.grosor / 2}
+              width={largo(barra.valor)}
+              height={R.grosor}
+              rx={10}
+              style={retraso(i, 70)}
+            />
+            <text className="ctx__valor" x={R.izq + largo(barra.valor) + 10} y={centro + 5} style={retraso(i + 4, 70)}>
+              {numero.format(Math.round(barra.valor * 100) / 100)}
+            </text>
+          </g>
+        )
+      })}
+    </svg>
+  )
+}
+
 /* ---- tarjeta ---- */
 
 function Tabla({ grafico }: { grafico: GraficoContexto }) {
   const filas =
-    grafico.visual === 'barras'
+    grafico.visual !== 'lineas'
       ? grafico.barras.map((b) => [b.etiqueta, numero.format(Math.round(b.valor * 100) / 100), ''])
       : grafico.series.map((s) => {
           const primero = s.puntos[0]
@@ -227,7 +271,12 @@ function Tabla({ grafico }: { grafico: GraficoContexto }) {
             `${numero.format(Math.round(ultimo.y * 100) / 100)} (${mesCorto(ultimo.x)})`,
           ]
         })
-  const cabecera = grafico.visual === 'barras' ? ['Período', 'Valor', ''] : ['Serie', 'Primer mes', 'Último mes']
+  const cabecera =
+    grafico.visual === 'ranking'
+      ? ['Posición', 'Puntos', '']
+      : grafico.visual === 'barras'
+        ? ['Período', 'Valor', '']
+        : ['Serie', 'Primer mes', 'Último mes']
 
   return (
     <details className="ctx__tabla">
@@ -261,7 +310,7 @@ export default function ContextoCard({ grafico }: { grafico: GraficoContexto }) 
 
   return (
     <article className="ctx" aria-labelledby={idTitulo}>
-      <p className="ctx__sello">Contexto · datos oficiales</p>
+      <p className="ctx__sello">{etiquetaDeDatos(grafico)}</p>
       <h3 className="ctx__titulo" id={idTitulo}>
         {grafico.titulo}
       </h3>
@@ -270,7 +319,13 @@ export default function ContextoCard({ grafico }: { grafico: GraficoContexto }) 
         <p className="ctx__motivo">Te lo sugerimos porque la nota menciona: {grafico.motivos.join(', ')}</p>
       ) : null}
 
-      {grafico.visual === 'barras' ? <Barras grafico={grafico} /> : <Lineas grafico={grafico} />}
+      {grafico.visual === 'ranking' ? (
+        <Ranking grafico={grafico} />
+      ) : grafico.visual === 'barras' ? (
+        <Barras grafico={grafico} />
+      ) : (
+        <Lineas grafico={grafico} />
+      )}
 
       <details className="ctx__detalle">
         <summary>Fuentes y detalle</summary>

@@ -40,7 +40,7 @@ export interface FuenteContexto {
 /** Un gráfico de contexto horizontal: no repite la nota, la completa con datos oficiales. */
 export interface GraficoContexto {
   id: string
-  visual: 'lineas' | 'barras'
+  visual: 'lineas' | 'barras' | 'ranking'
   /** Lo arma el código con los números calculados: dice el hallazgo, sin veredicto. */
   titulo: string
   unidad: string
