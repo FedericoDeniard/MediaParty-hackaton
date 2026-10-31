@@ -21,19 +21,13 @@ export interface AuthFieldSpec {
   label: string
   type: AuthFieldType
   autoComplete: string
+  placeholder?: string
   rules?: AuthRule[]
   match?: string
   matchError?: string
 }
 
 export interface AuthModeSpec {
-  eyebrow: string
-  title: string
-  lead: string
-  formTitle: string
-  formNote: string
-  formLinkLabel: string
-  formLinkTo: string
   fields: AuthFieldSpec[]
   terms: boolean
   submit: string
@@ -42,47 +36,48 @@ export interface AuthModeSpec {
 
 export const authModes: Record<AuthMode, AuthModeSpec> = {
   login: {
-    eyebrow: 'Acceso',
-    title: 'Volvé a publicar.',
-    lead: 'Retomá el tablero y seguí con la noticia que dejaste a medias.',
-    formTitle: 'Iniciar sesión',
-    formNote: 'Todavía no tenés cuenta.',
-    formLinkLabel: 'Creá una',
-    formLinkTo: '/registro',
     fields: [
-      { name: 'email', label: 'Email', type: 'email', autoComplete: 'email' },
+      {
+        name: 'email',
+        label: 'Email',
+        type: 'email',
+        autoComplete: 'email',
+        placeholder: 'nombre@medio.com',
+      },
       {
         name: 'password',
         label: 'Contraseña',
         type: 'password',
         autoComplete: 'current-password',
+        placeholder: 'Mínimo 8 caracteres',
       },
     ],
     terms: false,
-    submit: 'Iniciar sesión',
+    submit: 'Ingresar',
     legal: 'Al entrar aceptás los términos y la política de privacidad.',
   },
   register: {
-    eyebrow: 'Nueva cuenta',
-    title: 'Empezá a publicar.',
-    lead: 'Creá tu cuenta y procesá tu primera noticia en un minuto.',
-    formTitle: 'Crear cuenta',
-    formNote: '¿Ya tenés cuenta?',
-    formLinkLabel: 'Iniciá sesión',
-    formLinkTo: '/login',
     fields: [
       {
         name: 'name',
         label: 'Nombre y apellido',
         type: 'text',
         autoComplete: 'name',
+        placeholder: 'Ada Lovelace',
       },
-      { name: 'email', label: 'Email', type: 'email', autoComplete: 'email' },
+      {
+        name: 'email',
+        label: 'Email',
+        type: 'email',
+        autoComplete: 'email',
+        placeholder: 'nombre@medio.com',
+      },
       {
         name: 'password',
         label: 'Contraseña',
         type: 'password',
         autoComplete: 'new-password',
+        placeholder: 'Mínimo 8 caracteres',
         rules: [
           { id: 'length', message: 'Se requieren 8 caracteres' },
           { id: 'uppercase', message: 'Se requiere una mayúscula' },
@@ -104,13 +99,31 @@ export const authModes: Record<AuthMode, AuthModeSpec> = {
   },
 }
 
-export interface AuthFact {
-  label: string
-  value: string
+/* El bloque editorial es el mismo en las dos pantallas: es la voz
+   de la marca, no la del formulario. */
+export const authEditorial = {
+  meta: {
+    left: 'Nexo · Plataforma editorial',
+    right: 'MediaParty 2026',
+  },
+  kicker: 'Edición independiente',
+  poster: 'Sala de redacción',
+  lead: 'Un espacio de trabajo para procesar la noticia y publicarla en todas las redes.',
+  note: 'Tus borradores y exportaciones, organizados en un solo documento.',
 }
 
-export const authFacts: AuthFact[] = [
-  { label: 'Documentos por noticia', value: '1' },
-  { label: 'Formatos por documento', value: '8' },
-  { label: 'Redes conectadas', value: '8' },
+export const authSidebar = {
+  eyebrow: 'Acceso a Nexo',
+  title: 'Entrá a tu mesa de trabajo.',
+}
+
+export interface AuthTab {
+  label: string
+  to: string
+  mode: AuthMode
+}
+
+export const authTabs: AuthTab[] = [
+  { label: 'Ingresar', to: '/login', mode: 'login' },
+  { label: 'Crear cuenta', to: '/registro', mode: 'register' },
 ]

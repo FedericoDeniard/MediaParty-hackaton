@@ -19,15 +19,17 @@
   --control: #6a6862;
 
   /* ---- Color · acento ----
-     TODO(brand): el acento de marca todavía no está definido.
-     Todo el sistema consume estos dos tokens, así que elegir el
-     color es cambiar una sola línea.                            */
-  --accent: var(--ink);
-  --accent-ink: var(--bone);
+     El acento de marca es un arena cálido. Va en los planos de
+     relleno —botones, tab activo, cuadrado del acceso— con la
+     tinta encima: nunca como texto. Los gráficos mantienen su
+     verde propio (`--chart`), que es un color de datos. */
+  --accent: #e6dfd1;
+  --accent-ink: var(--ink);
 
   /* ---- Color · gráficos ----
-     Verde de marca para el relleno de las barras y su línea de
-     base. Cambiar la paleta de datos no toca componentes.      */
+     Verde de datos para el relleno de las barras y su línea de
+     base. Es independiente del acento de marca (`--accent`).
+     Cambiar la paleta de datos no toca componentes. */
   --chart: #c7de58;
   --chart-baseline: #c7de58;
 
@@ -68,7 +70,6 @@
   --text-2xl: 36px;
   --text-3xl: 48px;
   --text-display: clamp(44px, 8vw, 96px);
-  --text-display-sm: clamp(36px, 5vw, 64px);
   --text-poster: clamp(56px, 12vw, 152px);
 
   --leading-body: 1.6;
@@ -248,15 +249,18 @@ button {
     border-color var(--duration-fast) var(--ease);
 }
 
+/* Primario: plano de acento con tinta encima. El hover invierte a
+   tinta plena, así el cambio de estado no depende del tono. */
 .button--solid {
-  background: var(--ink);
-  color: var(--bone);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 .button--solid:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bone);
 }
 
 .button--ghost {
@@ -468,6 +472,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.12em;
   cursor: pointer;
+  text-decoration: none;
   text-transform: uppercase;
   transition:
     border-color var(--duration-fast) var(--ease),
@@ -1004,183 +1009,165 @@ button {
 
 /* ============================================================
    Acceso · login / registro
-   Pantalla de producto: misma grilla de 12, mismo fondo --bg.
-   El panel editorial es un campo de contraste, no una card: se
-   separa del formulario por el tono y por el vacío, no por un
-   marco. Los campos llevan filete inferior porque son controles
-   reales, no bloques de contenido.
+   La composición viene del mock: editorial a la izquierda (70%)
+   y mesa de trabajo a la derecha (30%), con el titular en escala
+   póster y un cuadrado de acento rotado que lo cruza.
+   Los colores son los del sistema: `--accent` para el plano de
+   color, `--line-control` para los controles y `--ink` para los
+   filetes que dividen zonas.
    ============================================================ */
 
+/* Cada columna ocupa la ventana: la editorial queda fija y sólo
+   scrollea la mesa de trabajo. */
 .auth {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-
-.auth__bar {
-  border-bottom: var(--border-width) solid var(--line);
-}
-
-.auth__bar-inner {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-  width: min(var(--max-width), 100% - var(--gutter) * 2);
-  margin-inline: auto;
-  padding: var(--space-4) 0;
-}
-
-.auth__brand {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  text-decoration: none;
-}
-
-.auth__wordmark {
-  font-size: var(--text-lg);
-  font-weight: 800;
-  font-stretch: var(--font-stretch-condensed);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.auth__back {
-  position: relative;
-  margin-left: auto;
-  padding-block: var(--space-1);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.auth__back::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: var(--ink);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--duration-fast) var(--ease);
-}
-
-.auth__back:hover::after {
-  transform: scaleX(1);
-}
-
-.auth__layout {
-  flex: 1;
   display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  gap: var(--grid-gap);
-  width: min(var(--max-width), 100% - var(--gutter) * 2);
-  margin-inline: auto;
-  padding: var(--space-8) 0 var(--space-9);
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
-.auth__aside {
-  grid-column: 1 / span 6;
-  align-self: stretch;
+/* ---- Columna editorial ---- */
+
+.auth__editorial {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--surface-contrast);
-  padding: var(--space-6);
+  overflow: hidden;
+  border-right: var(--border-width) solid var(--line);
+  padding: var(--space-6) var(--gutter) var(--space-5);
+}
+
+.auth__meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.auth__kicker {
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-9);
+}
+
+.auth__poster-wrap {
+  position: relative;
+  margin-top: var(--space-4);
+}
+
+/* El plano de acento: un cuadrado rotado que cruza el titular.
+   Va por debajo del texto (z-index 0) y sus medidas siguen a la
+   escala del titular, así que se mueven con él. */
+.auth__plane {
+  position: absolute;
+  z-index: 0;
+  top: calc(var(--text-poster) * -0.6);
+  left: calc(var(--text-poster) * 3.1);
+  width: calc(var(--text-poster) * 2.78);
+  aspect-ratio: 1;
+  background: var(--accent);
+  transform: rotate(12deg);
+}
+
+.auth__poster {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  font-size: var(--text-poster);
+  font-weight: 850;
+  font-stretch: var(--font-stretch-condensed);
+  letter-spacing: -0.03em;
+  line-height: 0.78;
+  text-transform: uppercase;
+}
+
+.auth__editorial-foot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+  margin-top: auto;
+}
+
+.auth__editorial-lead {
+  max-width: 26ch;
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.auth__editorial-note {
+  max-width: 34ch;
+  color: var(--text-muted);
+  font-size: var(--text-base);
+  line-height: 1.45;
+}
+
+/* ---- Mesa de trabajo ---- */
+
+.auth__sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--space-6) var(--gutter) var(--space-5);
+}
+
+.auth__eyebrow {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .auth__title {
   margin-top: var(--space-5);
-  font-size: var(--text-display-sm);
+  font-size: var(--text-3xl);
   font-weight: 850;
   font-stretch: var(--font-stretch-condensed);
   letter-spacing: -0.02em;
-  line-height: 0.92;
+  line-height: 0.95;
   text-transform: uppercase;
 }
 
-.auth__lead {
-  margin-top: var(--space-4);
-  max-width: 34ch;
-  color: var(--text-muted);
-  font-size: var(--text-md);
-  line-height: 1.55;
-}
+/* ---- Pestañas ----
+   El estado activo se marca con el plano de acento y además con
+   el filete de 2px: el color nunca es la única señal. */
 
-/* Las cifras del producto son datos: nombre a la izquierda,
-   valor a la derecha, filete entre filas. */
-.auth__facts {
-  margin-top: var(--space-7);
-  margin-top: auto;
-  border-top: var(--border-width) solid var(--rule);
-}
-
-.auth__fact {
+.auth__tabs {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-5);
-  border-bottom: var(--border-width) solid var(--rule);
-  padding: var(--space-3) 0;
-  font-size: var(--text-sm);
+  border-bottom: var(--border-width) solid var(--ink);
 }
 
-.auth__fact:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.auth__fact dt {
-  color: var(--text-muted);
-}
-
-.auth__fact dd {
-  margin: 0;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
-/* El formulario arranca en el mismo pie que el panel editorial:
-   ambos tienen el mismo padding superior, así las columnas alinean. */
-.auth__main {
-  grid-column: 8 / -1;
-  min-width: 0;
-  padding-top: var(--space-6);
-}
-
-.auth__form-wrap {
-  width: 100%;
-}
-
-.auth__form-title {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.02;
-  text-transform: uppercase;
-}
-
-.auth__form-note {
-  margin-top: var(--space-3);
-  color: var(--text-muted);
-  font-size: var(--text-sm);
-}
-
-/* Nivel terciario: texto subrayado. */
-.auth__link {
+.auth__tab {
+  flex: 1;
+  padding: var(--space-4) var(--space-3);
   color: var(--text);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  transition: text-decoration-thickness var(--duration-fast) var(--ease);
+  font-size: var(--text-base);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease);
 }
 
-.auth__link:hover {
-  text-decoration-thickness: 2px;
+.auth__tab:hover {
+  background: var(--surface);
+}
+
+.auth__tab--active,
+.auth__tab--active:hover {
+  border-bottom: 2px solid var(--ink);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* ---- Campos ---- */
@@ -1191,22 +1178,21 @@ button {
 
 .field__label {
   display: block;
-  color: var(--text-muted);
-  font-size: var(--text-micro);
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-/* Solo filete inferior: el borde de un control es funcional. */
+/* El campo es un control real: su filete es funcional. */
 .field__input {
   display: block;
   width: 100%;
   min-height: 44px;
   margin-top: var(--space-2);
-  padding: 0;
+  padding: var(--space-2) 0;
   border: 0;
-  border-bottom: var(--border-width) solid var(--line-control);
+  border-bottom: var(--border-width) solid var(--ink);
   border-radius: var(--radius);
   background: transparent;
   color: var(--text);
@@ -1222,13 +1208,12 @@ button {
 }
 
 .field__input:hover {
-  border-bottom-color: var(--ink);
+  border-bottom-width: 2px;
 }
 
 .field__input:focus-visible {
   outline: var(--focus);
   outline-offset: 3px;
-  border-bottom-color: var(--ink);
   border-bottom-width: 2px;
 }
 
@@ -1239,7 +1224,6 @@ button {
 }
 
 .field__input[aria-invalid='true'] {
-  border-bottom-color: var(--ink);
   border-bottom-width: 2px;
 }
 
@@ -1296,7 +1280,7 @@ button {
   font-weight: 600;
 }
 
-/* ---- Casilla de términos: control real, borde perceptible ---- */
+/* ---- Casilla de términos ---- */
 
 .check {
   display: flex;
@@ -1314,22 +1298,19 @@ button {
   width: 20px;
   height: 20px;
   margin: 0;
-  border: var(--border-width) solid var(--line-control);
+  border: var(--border-width) solid var(--ink);
   border-radius: var(--radius);
   background: transparent;
   cursor: pointer;
-  transition:
-    background-color var(--duration-fast) var(--ease),
-    border-color var(--duration-fast) var(--ease);
+  transition: background-color var(--duration-fast) var(--ease);
 }
 
 .check__input:hover {
-  border-color: var(--ink);
+  border-color: var(--accent);
 }
 
 .check__input:checked {
   background: var(--ink);
-  border-color: var(--ink);
 }
 
 .check__input:checked::after {
@@ -1349,18 +1330,746 @@ button {
   cursor: pointer;
 }
 
+.auth__link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-thickness var(--duration-fast) var(--ease);
+}
+
+.auth__link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ---- Botón ----
+   Los colores salen de `.button--solid`; acá va sólo el tamaño y
+   la flecha. */
+
 .auth__submit {
   width: 100%;
+  min-height: 64px;
   margin-top: var(--space-6);
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+}
+
+.auth__submit-arrow {
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.auth__submit:hover .auth__submit-arrow {
+  transform: translateX(4px);
 }
 
 .auth__legal {
   margin-top: var(--space-4);
   color: var(--text-muted);
-  font-size: var(--text-micro);
-  letter-spacing: 0.14em;
-  line-height: 1.7;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Mesa de trabajo · /app
+
+   Rejilla de dos zonas: el sidebar es un campo sólido de
+   --surface-contrast y el contenido va sobre --bg. Los separa
+   un filete, no un marco.
+
+   El editor es el cuerpo de la nota, no una caja: el texto
+   vive sobre el fondo de la app y la toolbar se apoya con un
+   filete, como la regla que divide la barra del contenido.
+   ============================================================ */
+
+.shell {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* El contenido nunca estira la columna: `minmax(0, 1fr)` en vez de
+   `1fr`, que tomaría el min-content y rompería el reflow a 320px. */
+.shell__main {
+  min-width: 0;
+}
+
+/* ---- Sidebar ---- */
+
+/* Rejilla de cuatro áreas: marca, acción, navegación y pie.
+   En desktop es una columna; en mobile, dos filas. */
+.side {
+  display: grid;
+  grid-template-areas:
+    'brand'
+    'primary'
+    'nav'
+    'foot';
+  grid-template-rows: auto auto 1fr auto;
+  gap: var(--space-6);
+  min-width: 0;
+  background: var(--surface-contrast);
+  border-right: var(--border-width) solid var(--rule);
+  padding: var(--space-6) var(--space-5);
+}
+
+.side__brand {
+  grid-area: brand;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  text-decoration: none;
+}
+
+.side__wordmark {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  font-stretch: var(--font-stretch-condensed);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.side__primary {
+  grid-area: primary;
+  width: 100%;
+  padding-inline: var(--space-4);
+  font-size: var(--text-micro);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+/* El botón primario de la barra lateral lleva el plano de acento: es
+   el único de la pantalla. */
+.side__primary.button--solid {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.side__primary.button--solid:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bone);
+}
+
+.side__nav {
+  grid-area: nav;
+  min-width: 0;
+}
+
+.side__label {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.side__link {
+  display: block;
+  border-left: 2px solid transparent;
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
+}
+
+.side__link:hover {
+  color: var(--text);
+}
+
+.side__link--active {
+  border-left-color: var(--ink);
+  color: var(--text);
+}
+
+.side__foot {
+  grid-area: foot;
+  border-top: var(--border-width) solid var(--rule);
+  padding-top: var(--space-4);
+}
+
+.side__user {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.side__user-name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.side__user-mail {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.side__signout {
+  margin-top: var(--space-3);
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.side__signout:hover {
+  color: var(--text);
+}
+
+/* ---- Contenido ---- */
+
+.shell__main {
+  min-width: 0;
+}
+
+.page {
+  width: min(var(--max-width), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+  padding: var(--space-8) 0 var(--space-9);
+}
+
+.page__head {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: var(--space-7);
+}
+
+.page__index {
+  grid-column: 1 / span 3;
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page__content {
+  grid-column: 4 / -1;
+  min-width: 0;
+}
+
+.page__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.page__lead {
+  margin-top: var(--space-3);
+  max-width: 52ch;
+  color: var(--text-muted);
+  font-size: var(--text-md);
+  line-height: 1.55;
+}
+
+.page__empty {
+  border-top: var(--border-width) solid var(--rule);
+  padding-top: var(--space-5);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ---- Filas de datos ----
+   Las notas son elementos comparables: nombre a la izquierda,
+   valor a la derecha, filete entre filas. */
+
+.rows {
+  border-top: var(--border-width) solid var(--ink);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-5);
+  border-bottom: var(--border-width) solid var(--rule);
+  padding: var(--space-4) 0;
+}
+
+.row__main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  min-width: 0;
+  text-decoration: none;
+}
+
+.row__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}</path>
+
+.row__main:hover .row__title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.row__niche {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.row__meta {
+  display: flex;
+  flex: none;
+  align-items: baseline;
+  gap: var(--space-5);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.row__status {
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* El estado no se marca sólo con color: la etiqueta dice qué es.
+   La variante cambia el peso, no el tono. */
+.row__status--draft {
+  color: var(--text-muted);
+}
+
+.row__status--review {
+  color: var(--text);
+}
+
+.row__status--published {
+  border-bottom: 2px solid var(--ink);
+  color: var(--text);
+}
+
+.row__words {
+  min-width: 4ch;
+  text-align: right;
+}
+
+/* ============================================================
+   Editor
+   ============================================================ */
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.editor__bar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-5);
+  border-bottom: var(--border-width) solid var(--rule);
+  padding: var(--space-4) var(--gutter);
+}
+
+.editor__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.editor__back:hover {
+  color: var(--text);
+}
+
+.editor__title {
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  padding: var(--space-1) 0;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.editor__title::placeholder {
+  color: var(--text-muted);
+}
+
+.editor__title:hover {
+  border-bottom-color: var(--rule);
+}
+
+.editor__title:focus-visible {
+  outline: var(--focus);
+  outline-offset: 2px;
+  border-bottom-color: var(--ink);
+}
+
+.editor__save {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.editor__save--saving {
+  color: var(--text);
+}
+
+/* ---- Toolbar ---- */
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  border-bottom: var(--border-width) solid var(--rule);
+  padding: var(--space-2) var(--gutter);
+}
+
+.bar--empty {
+  min-height: 44px;
+}
+
+.bar__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Un control real: necesita borde propio para ser reconocible.
+   Flat, sin sombra y sin radio. */
+.tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease);
+}
+
+.tool__text {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.tool:hover:not(:disabled) {
+  border-color: var(--line-control);
+  color: var(--text);
+}
+
+/* El estado activo se marca con un plano de tinta, no con el verde:
+   el acento queda reservado para los datos del documento y nunca
+   es el único indicador de un estado. El `aria-pressed` del botón
+   cubre el mismo aviso para lectores de pantalla. */
+.tool--active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bone);
+}
+
+.tool:disabled {
+  color: var(--rule);
+  cursor: not-allowed;
+}
+
+.bar__count {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+/* ---- Cuerpo ---- */
+
+.editor__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  gap: var(--grid-gap);
+  align-items: start;
+  flex: 1;
+  padding: var(--space-7) var(--gutter) var(--space-8);
+}
+
+.editor__canvas {
+  min-width: 0;
+  max-width: var(--measure-body);
+}
+
+/* ---- Documento ---- */
+
+.ProseMirror {
+  min-height: 50vh;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  outline: none;
+}
+
+.ProseMirror > * + * {
+  margin-top: var(--space-4);
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.ProseMirror h1 {
+  font-size: var(--text-xl);
+}
+
+.ProseMirror h2 {
+  font-size: var(--text-lg);
+}
+
+.ProseMirror h3 {
+  font-size: var(--text-md);
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: var(--space-5);
+}
+
+.ProseMirror li + li {
+  margin-top: var(--space-2);
+}
+
+.ProseMirror blockquote {
+  border-left: 2px solid var(--ink);
+  padding-left: var(--space-4);
+  color: var(--text-muted);
+}
+
+.ProseMirror a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ProseMirror code {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* El pasaje citado por una pieza aprobada: se resalta con el verde
+   de datos. La tinta encima mantiene 11.96:1 contra ese fondo. */
+.ProseMirror .passage {
+  background: var(--chart);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.ProseMirror .is-empty::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* ---- Tablas ---- */
+
+.ProseMirror table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.ProseMirror th,
+.ProseMirror td {
+  border-bottom: var(--border-width) solid var(--rule);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ProseMirror th {
+  border-bottom-color: var(--ink);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ProseMirror .selectedCell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--surface-contrast);
+  pointer-events: none;
+}
+
+.ProseMirror .selectedCell {
+  position: relative;
+}
+
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+/* ---- Panel de enriquecimientos ---- */
+
+.panel {
+  background: var(--surface-contrast);
+  padding: var(--space-5);
+}
+
+.panel__title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.panel__empty {
+  margin-top: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.panel__list {
+  margin-top: var(--space-4);
+}
+
+.panel__list--resolved {
+  margin-top: var(--space-6);
+  border-top: var(--border-width) solid var(--rule);
+  padding-top: var(--space-4);
+}
+
+.piece {
+  border-top: var(--border-width) solid var(--rule);
+  padding: var(--space-4) 0;
+}
+
+.panel__list > .piece:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.piece__type {
+  color: var(--text-muted);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.piece__text {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.piece__citation {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.piece__citation--missing {
+  font-style: italic;
+}
+
+.piece__state {
+  margin-top: var(--space-2);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.piece__state--aprobada {
+  color: var(--text);
+}
+
+.piece__state--descartada {
+  color: var(--text-muted);
+}
+
+.piece--resolved .piece__text {
+  color: var(--text-muted);
+}
+
+.piece__actions {
+  display: flex;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+}
+
+/* Botón terciario: texto subrayado, sin marco. */
+.linkbutton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.linkbutton:hover {
+  color: var(--text);
+}
+
+.linkbutton--on {
+  color: var(--text);
+}
+
+.linkbutton--quiet {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-micro);
 }
 
 /* ============================================================
@@ -1396,15 +2105,31 @@ button {
     grid-template-columns: 1fr;
   }
 
-  /* El acceso colapsa a una columna: el panel editorial arriba,
-     el formulario abajo. */
-  .auth__aside,
-  .auth__main {
-    grid-column: 1 / span 12;
+  /* El acceso colapsa a una columna: la editorial arriba,
+     la mesa de trabajo abajo. */
+  .auth {
+    grid-template-columns: 1fr;
   }
 
-  .auth__main {
-    padding-top: 0;
+  .auth__editorial {
+    border-right: 0;
+    border-bottom: var(--border-width) solid var(--ink);
+  }
+
+  /* Apilado, vuelve el scroll de página: la editorial arriba y la
+     mesa de trabajo abajo. */
+  .auth {
+    height: auto;
+    overflow: visible;
+  }
+
+  .auth__sidebar {
+    overflow: visible;
+  }
+
+  /* Apilado, el cuadrado achica: si no, se come el pie editorial. */
+  .auth__plane {
+    width: calc(var(--text-poster) * 2);
   }
 }
 
@@ -1416,6 +2141,89 @@ button {
 
   .step {
     padding-right: 0;
+  }
+
+  /* El sidebar pasa a ser una banda superior de dos filas: marca y
+     acción arriba, navegación abajo. */
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side {
+    grid-template-areas:
+      'brand primary'
+      'nav nav'
+      'foot foot';
+    grid-template-rows: auto auto auto;
+    gap: var(--space-4);
+    border-right: 0;
+    border-bottom: var(--border-width) solid var(--rule);
+    padding: var(--space-4) var(--gutter);
+  }
+
+  .side__primary {
+    width: auto;
+    justify-self: end;
+  }
+
+  .side__label {
+    display: none;
+  }
+
+  .side__nav ul {
+    display: flex;
+    gap: var(--space-5);
+  }
+
+  .side__link {
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    padding: var(--space-2) 0;
+    white-space: nowrap;
+  }
+
+  .side__link--active {
+    border-left-color: transparent;
+    border-bottom-color: var(--ink);
+  }
+
+  .side__foot {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    border-top: var(--border-width) solid var(--rule);
+    padding-top: var(--space-3);
+  }
+
+  .side__user {
+    flex-direction: row;
+    gap: var(--space-3);
+  }
+
+  .page__index,
+  .page__content {
+    grid-column: 1 / span 12;
+  }
+
+  .page__content {
+    margin-top: var(--space-3);
+  }
+
+  /* El panel de enriquecimientos pasa debajo del documento. */
+  .editor__body {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .editor__canvas {
+    max-width: none;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
   }
 }
 
@@ -1434,16 +2242,38 @@ button {
     text-align: left;
   }
 
-  .auth__bar-inner {
-    gap: var(--space-4);
+  .auth__editorial,
+  .auth__sidebar {
+    padding: var(--space-5) var(--gutter);
   }
 
-  .auth__aside {
-    padding: var(--space-5);
+  .auth__kicker {
+    margin-top: var(--space-7);
   }
 
-  .auth__layout {
-    padding: var(--space-6) 0 var(--space-8);
+  .auth__editorial-foot {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  /* La barra del editor apila: el estado de guardado baja de línea. */
+  .editor__bar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .editor__save {
+    order: 3;
+  }
+
+  .bar {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .bar__count {
+    width: 100%;
+    margin-left: 0;
   }
 }
 

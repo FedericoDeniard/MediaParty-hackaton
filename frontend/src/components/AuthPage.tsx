@@ -1,46 +1,34 @@
-import { Link } from 'react-router-dom'
-import Logo from './Logo.tsx'
 import AuthForm from './AuthForm.tsx'
-import { authFacts, authModes, type AuthMode } from '../data/auth.ts'
+import { authEditorial, authSidebar, type AuthMode } from '../data/auth.ts'
 
 export default function AuthPage({ mode }: { mode: AuthMode }) {
-  const copy = authModes[mode]
-
   return (
     <div className="auth">
-      <header className="auth__bar">
-        <div className="auth__bar-inner">
-          <Link className="auth__brand" to="/">
-            <Logo size={32} />
-            <span className="auth__wordmark">Nexo</span>
-          </Link>
-
-          <Link className="auth__back" to="/">
-            Volver al sitio
-          </Link>
+      <section className="auth__editorial">
+        <div className="auth__meta">
+          <span>{authEditorial.meta.left}</span>
+          <span>{authEditorial.meta.right}</span>
         </div>
-      </header>
 
-      <main className="auth__layout">
-        <aside className="auth__aside">
-          <p className="eyebrow">{copy.eyebrow}</p>
-          <h1 className="auth__title">{copy.title}</h1>
-          <p className="auth__lead">{copy.lead}</p>
+        <p className="auth__kicker eyebrow">{authEditorial.kicker}</p>
 
-          <dl className="auth__facts">
-            {authFacts.map((fact) => (
-              <div className="auth__fact" key={fact.label}>
-                <dt>{fact.label}</dt>
-                <dd>{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
+        <div className="auth__poster-wrap">
+          <span className="auth__plane" aria-hidden="true" />
+          <h1 className="auth__poster">{authEditorial.poster}</h1>
+        </div>
 
-        <section className="auth__main">
-          <AuthForm mode={mode} />
-        </section>
-      </main>
+        <div className="auth__editorial-foot">
+          <p className="auth__editorial-lead">{authEditorial.lead}</p>
+          <p className="auth__editorial-note">{authEditorial.note}</p>
+        </div>
+      </section>
+
+      <section className="auth__sidebar">
+        <p className="auth__eyebrow">{authSidebar.eyebrow}</p>
+        <h2 className="auth__title">{authSidebar.title}</h2>
+
+        <AuthForm mode={mode} />
+      </section>
     </div>
   )
 }

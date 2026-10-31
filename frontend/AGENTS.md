@@ -44,8 +44,9 @@ public/
 `/login` y `/registro` comparten `AuthPage.tsx` y se diferencian por el `mode`
 (`login` | `register`), con el copy en `src/data/auth.ts`.
 
-- El panel editorial es un campo de `--surface-contrast`, sin marco. El formulario va en las columnas 8 a 12, sobre `--bg`.
-- Los campos son controles reales: llevan filete inferior de `1px` en `--line-control`, no un marco.
+- Dos columnas: la editorial (70%) con el titular en escala póster y un cuadrado de acento rotado por detrás, y la mesa de trabajo (30%) con el formulario.
+- El plano de acento (`--accent`) va **por debajo** del texto: nunca lo tapa. Es el único plano de color de la pantalla.
+- Los campos son controles reales: llevan filete inferior de 1px, no un marco.
 - Los requisitos de contraseña **no** son una lista: es una línea que va bajando de a un requisito mientras el usuario escribe (`field__rule`). El estado en vivo vive en `AuthField.tsx` y las reglas en `authRuleTests`.
 - El submit no hace nada todavía: `TODO(auth)` en `AuthForm.tsx` es el lugar de la llamada real a Supabase Auth.
 
@@ -62,7 +63,7 @@ Reglas que más se incumplen:
 - **Ningún bloque de contenido lleva marco.** Sin cards, sin celdas con borde, sin chips delineados, sin badges enmarcados. Una etiqueta es tipografía, no un objeto.
 - **La grilla alinea, no encuadra.** Nada de grillas de celdas iguales con borde: eso es bento grid. Usá spans desiguales, escalonamiento vertical y espacio.
 - **Las reglas dividen zonas o datos.** Filetes de tabla, baselines de gráficos, tab activo, bordes de control. `1px` para filetes, `2px` para foco y énfasis funcional.
-- **Un solo plano de acento por viewport.** Acento pendiente: `--accent` y `--accent-ink` resuelven a tinta/hueso hasta que se defina el color de marca. Cuando se defina, cambiá esos dos tokens y verificá el contraste del texto encima.
+- **Un solo plano de acento por viewport.** El acento de marca es el arena `#E6DFD1` (`--accent`) con tinta encima (`--accent-ink`). Sólo como plano de relleno, nunca como texto. Los gráficos van con su verde de datos (`--chart`), que es independiente. Para cambiarlo, tocá esos dos tokens y verificá el contraste de lo que va encima.
 - **Tres superficies, fijas entre páginas:** `--bg` es el fondo de la app (el tono de "01 — Flujo de trabajo"); `--surface-contrast` es el tono de contraste (el de "02 — Producto"), para bandas alternas, sidebars y paneles laterales; `--surface-inverse` es la banda invertida, reservada al CTA de cierre. No sumes un segundo tono de fondo: separá con espacio y reglas. Para un sidebar, `.layout` y `.panel` ya están implementados en `src/index.css`.
 - **Motion mínimo.** `120ms` para feedback, `180ms` estándar, easing `cubic-bezier(0.2, 0, 0, 1)`. Se anima estado y opacidad, no la lectura.
 

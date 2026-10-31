@@ -45,7 +45,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 - Sin sombras, sin gradientes, sin glass, `border-radius: 0`.
 - Color plano: fondo hueso `#F2F0EB`, tinta `#171717`, texto secundario `#5B5A55`, hairline `#C9C7C0`, borde de control `#6A6862`.
 - **Tres superficies y no cambian entre páginas:** `--bg` (fondo de la app, el tono de la sección "01 — Flujo de trabajo"), `--surface-contrast` (tono de contraste, el de la sección "02 — Producto": bandas alternas, sidebars, paneles laterales) y `--surface-inverse` (banda invertida, sólo el CTA de cierre). No inventes un segundo tono de fondo: para separar más usá espacio y reglas.
-- Un solo plano de acento por viewport. El acento de marca **todavía no está definido**: vive en `--accent` / `--accent-ink`, que hoy resuelven a tinta y hueso. Elegirlo es cambiar esos dos tokens.
+- Un solo plano de acento por viewport. El acento de marca es el arena `#E6DFD1` (`--accent`), con tinta encima (`--accent-ink`). Va en los planos de relleno —botones, tab activo, el cuadrado del acceso— y nunca como texto. Los gráficos mantienen su verde propio (`--chart`, `#C7DE58`): es un color de datos, no el acento.
 - Todo se controla por tokens semánticos en el `:root` de `frontend/src/index.css`. No hardcodees hex en componentes.
 - Accesibilidad: WCAG 2.2 AA. Foco visible de `2px`, contraste de texto `>= 4.5:1` y de bordes `>= 3:1`, targets de `44px`, `prefers-reduced-motion` respetado, reflow a `320px`.
 - Antes de cerrar trabajo de UI, revisá la página en mobile y desktop, probá el foco por teclado, verificá contraste y corré `pnpm run build`.

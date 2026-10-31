@@ -38,6 +38,11 @@ src/
 `/login` y `/registro` son rutas de la misma app y comparten `AuthPage.tsx`: el
 `mode` (`login` | `register`) elige el copy de `src/data/auth.ts`.
 
+La composición es de dos columnas: la editorial (70%) con el titular en escala
+póster y un cuadrado de acento rotado que lo cruza, y la mesa de trabajo (30%)
+con el formulario. Las pestañas "Ingresar" y "Crear cuenta" son links a las dos
+rutas.
+
 El diseño está completo; la lógica de autenticación todavía no. El submit no
 manda nada y `TODO(auth)` en `AuthForm.tsx` marca dónde entra la llamada real a
 Supabase Auth.
@@ -70,9 +75,11 @@ Hay tres superficies, y no cambian entre páginas:
 | `--surface-contrast` | Tono de contraste para bandas alternas, sidebars y paneles laterales ("02 — Producto"). |
 | `--surface-inverse` | Banda invertida, reservada para el CTA de cierre. |
 
-El acento de marca todavía no está definido: `--accent` y `--accent-ink`
-resuelven a tinta y hueso, así que el sitio funciona completo en monocromo.
-Cuando se elija el color, alcanza con cambiar esos dos tokens.
+El acento de marca es el arena `#E6DFD1` (`--accent`) con tinta encima
+(`--accent-ink`). Va en los planos de relleno: botones, tab activo y el
+cuadrado de las pantallas de acceso. Los gráficos mantienen su verde propio
+(`--chart`, `#C7DE58`), que es un color de datos y no el acento. Para
+cambiar el acento alcanza con modificar esos dos tokens.
 
 Las reglas completas y el checklist de QA están en
 `../.agents/skills/swiss/SKILL.md` y `../.agents/skills/swiss/DESIGN.md`.

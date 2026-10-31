@@ -8,8 +8,8 @@ colors:
   inkSoft: "#5B5A55"
   rule: "#C9C7C0"
   control: "#6A6862"
-  accent: "#171717"
-  accentInk: "#F2F0EB"
+  accent: "#E6DFD1"
+  accentInk: "#171717"
 surfaces:
   bg: "#F2F0EB"
   contrast: "#E7E5DC"
@@ -46,7 +46,7 @@ typography:
     fontSize: "11px"
     letterSpacing: "0.16em"
     textTransform: "uppercase"
-  sourceScale: "11/12/14/16/18/22/28/36/48 + display clamp + display-sm clamp"
+  sourceScale: "11/12/14/16/18/22/28/36/48 + display clamp + poster clamp"
   weights: "400, 500, 600, 700, 800, 850"
   axes: "wght 100-900, wdth 62-125"
 rounded:
@@ -83,7 +83,7 @@ Swiss / International Typographic Style, applied to a product landing page. One 
 - **Ink Soft (`#5B5A55`):** secondary text, `6.07:1` on bone.
 - **Rule (`#C9C7C0`):** decorative hairline only, `1.49:1`. Never the sole indicator of a control.
 - **Control (`#6A6862`):** borders that must be perceived as interactive, `4.89:1`.
-- **Accent / Accent Ink:** pending brand decision. Currently resolves to ink/bone so the system is complete in monochrome.
+- **Accent / Accent Ink:** a warm sand (`#E6DFD1`) with ink on top (`#171717`, `13.8:1`). It fills buttons, the active tab and the poster plane on the access screens. It is a tonal fill, not a colour signal: it never carries text as a colour, never works as a hairline, and never is the only indicator of a state. The charts keep their own data green.
 
 ### Surfaces
 
@@ -108,19 +108,21 @@ The set does not change between pages. Do not introduce a second background hue:
 | Ink / Bone Sunken | 14.20:1 | Text on the contrast tone |
 | Ink Soft / Bone Sunken | 5.48:1 | Secondary text on the contrast tone |
 | Control / Bone Sunken | 4.41:1 | Control borders on the contrast tone |
+| Ink / Accent Sand | 13.8:1 | Text on the accent plane |
+| Accent Sand / Bone | 1.16:1 | Tonal fill only: text identifies the control |
 
 ### Data colour
 
-The chart palette is the one place where the system carries a colour.
+The chart palette is the one place where the system carries a saturated colour. It is independent from the brand accent, which is a tonal sand.
 
 | Token | Value | Role |
 |---|---|---|
 | `--chart` | `#C7DE58` | Fill of the data bars. The brand's data colour. |
 | `--chart-baseline` | `#C7DE58` | Baseline rule under the bars. |
 
-The fill is a light green: `1.32:1` against bone and `1.19:1` against the contrast tone, below the `3:1` that WCAG 1.4.11 asks for graphics that carry information. It reads clearly on the inverted plane (`11.97:1`). The bars carry no stroke: a chart is flat, and the colour does the work.
+The fill is a light green: `1.32:1` against bone and `1.19:1` against the contrast tone, below the `3:1` that WCAG 1.4.11 asks for graphics that carry information. It reads clearly on the inverted plane (`11.97:1`) and carries ink over it (`12.2:1`). The bars carry no stroke: a chart is flat, and the colour does the work.
 
-On the inverted plane the chart flips: the fill and the baseline become the inverted ink.
+On the inverted plane the chart flips: the fill and the baseline become the inverted ink. On the accent plane it stays green against the green and the bars become ink.
 
 ## Typography
 
@@ -129,7 +131,7 @@ One family: **Archivo Variable**, self-hosted via `@fontsource-variable/archivo/
 | Role | Weight | Width | Size |
 |---|---|---|---|
 | Display | 850 | 75% | `clamp(44px, 8vw, 96px)`, line-height 0.88, uppercase |
-| Display small | 850 | 75% | `clamp(36px, 5vw, 64px)`, line-height 0.92, uppercase |
+| Poster | 850 | 75% | `clamp(56px, 12vw, 152px)`, line-height 0.78, uppercase |
 | Heading | 700 | 100% | 36px, line-height 1.02, uppercase |
 | Subheading | 600 | 100% | 22px |
 | Lead | 400 | 100% | 18px, max `65ch` |
