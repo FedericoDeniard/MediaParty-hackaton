@@ -105,6 +105,8 @@ export function graficosEnLaNota(editor: Editor): string[] {
 }
 
 const RESALTADO_MS = 1800
+const SALTO_FALLIDO_PX = 200
+const ESPERA_SALTO_MS = 1100
 const REINTENTOS = 12
 const ESPERA_REINTENTO_MS = 60
 
@@ -116,7 +118,13 @@ export function irAlGrafico(editor: Editor, id: string, intentos = REINTENTOS): 
     return
   }
   const sinAnimacion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  destino.scrollIntoView({ block: 'start', behavior: sinAnimacion ? 'auto' : 'smooth' })
+  destino.scrollIntoView({ block: 'start', behavior: sinAnimacion ? 'instant' : 'smooth' })
+  // Seguro: si la animación no llegó (pestaña en segundo plano, navegador sin cuadros), se salta directo.
+  window.setTimeout(() => {
+    if (Math.abs(destino.getBoundingClientRect().top) > SALTO_FALLIDO_PX) {
+      destino.scrollIntoView({ block: 'start', behavior: 'instant' })
+    }
+  }, ESPERA_SALTO_MS)
   destino.classList.remove('grafico-nota--reciente')
   void destino.offsetWidth // reinicia la animación si ya estaba resaltado
   destino.classList.add('grafico-nota--reciente')

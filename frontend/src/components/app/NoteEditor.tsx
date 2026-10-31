@@ -193,13 +193,13 @@ export default function NoteEditor() {
 
         {/* Los dos paneles flotan juntos al scrollear la nota. */}
         <aside className="editor__aside">
+          <PanelGraficosDeNota editor={editor} noteId={id} />
           <EnrichmentPanel
             items={enrichments}
             onApprove={(id) => setEnrichmentStatus(id, 'aprobada')}
             onDiscard={(id) => setEnrichmentStatus(id, 'descartada')}
             onRestore={(id) => setEnrichmentStatus(id, 'pendiente')}
           />
-          <PanelGraficosDeNota editor={editor} noteId={id} />
         </aside>
       </div>
     </div>
