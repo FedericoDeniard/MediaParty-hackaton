@@ -410,17 +410,17 @@ const handSeeds: Note[] = [
   },
 ]
 
-/* El resto del corpus entra como borrador, con el nicho de su sección
-   en `docs/corpus-prueba.md` y la fecha de publicación de la nota. */
-const corpusMeta: Record<string, [niche: string, date: string]> = {
-  '03': ['economía', '2026-10-28'],
-  '04': ['economía', '2026-10-26'],
-  '05': ['economía', '2026-10-29'],
-  '06': ['economía', '2026-10-29'],
-  '08': ['política', '2026-10-27'],
-  '09': ['política', '2026-10-27'],
-  '10': ['política', '2026-10-24'],
-  '11': ['política', '2026-10-31'],
+/* El resto del corpus entra como borrador, con la temática de su
+   sección en `docs/corpus-prueba.md` y la fecha de publicación. */
+const corpusMeta: Record<string, [theme: NoteTheme, date: string]> = {
+  '03': ['economia', '2026-10-28'],
+  '04': ['economia', '2026-10-26'],
+  '05': ['economia', '2026-10-29'],
+  '06': ['economia', '2026-10-29'],
+  '08': ['politica', '2026-10-27'],
+  '09': ['politica', '2026-10-27'],
+  '10': ['politica', '2026-10-24'],
+  '11': ['politica', '2026-10-31'],
   '12': ['sociedad', '2026-10-31'],
   '14': ['sociedad', '2026-10-28'],
   '15': ['sociedad', '2026-10-26'],
@@ -432,14 +432,14 @@ export const seedNotes: Note[] = [
   ...corpusNotes
     .filter((note) => note.number in corpusMeta)
     .map((note): Note => {
-      const [niche, date] = corpusMeta[note.number]
+      const [theme, date] = corpusMeta[note.number]
       const at = `${date}T12:00:00.000Z`
       return {
         id: `n-corpus-${note.number}`,
         title: note.title,
         doc: note.doc,
         status: 'draft',
-        niche,
+        theme,
         wordCount: 0,
         createdAt: at,
         updatedAt: at,

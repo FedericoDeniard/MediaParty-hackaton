@@ -107,7 +107,7 @@ export async function analyzeNote(
     body: JSON.stringify({
       title: note.title,
       body: plainText(note.doc),
-      niche: note.niche,
+      niche: note.theme,
       published_at: note.createdAt.slice(0, 10),
     }),
   })
