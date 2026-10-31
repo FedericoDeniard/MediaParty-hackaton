@@ -26,11 +26,10 @@
   --accent-ink: var(--bone);
 
   /* ---- Color · gráficos ----
-     El color de las barras y su línea de base viven acá para que
-     cambiar la paleta de datos no toque componentes.
-     PROBANDO: indigo #282072. Pendiente de confirmación.        */
-  --chart: #282072;
-  --chart-baseline: #282072;
+     Verde de marca para el relleno de las barras y su línea de
+     base. Cambiar la paleta de datos no toca componentes.      */
+  --chart: #c7de58;
+  --chart-baseline: #c7de58;
 
   /* ---- Color · superficies ----
      --bg               Fondo de la app. Es el tono de las secciones

@@ -5,10 +5,10 @@ import './index.css'
 import './chart-lab.css'
 
 const CANDIDATES = [
-  { id: 'ink', label: 'Tinta', value: '#171717', note: 'Referencia actual del sistema.' },
-  { id: 'blue', label: 'Azul', value: '#342783', note: 'Deep indigo.' },
-  { id: 'indigo', label: 'Indigo', value: '#282072', note: 'Indigo profundo.' },
-  { id: 'green', label: 'Verde', value: '#C7DE58', note: 'Verde lima.' },
+  { id: 'green', label: 'Verde', value: '#C7DE58', note: 'Decidido. Relleno de las barras.' },
+  { id: 'ink', label: 'Tinta', value: '#171717', note: 'Referencia anterior del sistema.' },
+  { id: 'blue', label: 'Azul', value: '#342783', note: 'Descartado.' },
+  { id: 'indigo', label: 'Indigo', value: '#282072', note: 'Descartado.' },
 ]
 
 const BARS = ['30%', '45%', '40%', '62%', '58%', '80%']
@@ -21,17 +21,20 @@ const SURFACES = [
 ]
 
 const RATIOS = [
+  { name: 'Verde', value: '#C7DE58', bone: '1.32:1', contrast: '1.19:1', inverse: '11.97:1' },
   { name: 'Tinta', value: '#171717', bone: '15.74:1', contrast: '14.20:1', inverse: '1.00:1' },
   { name: 'Azul', value: '#342783', bone: '10.45:1', contrast: '9.43:1', inverse: '1.51:1' },
   { name: 'Indigo', value: '#282072', bone: '11.97:1', contrast: '10.81:1', inverse: '1.31:1' },
-  { name: 'Verde', value: '#C7DE58', bone: '1.32:1', contrast: '1.19:1', inverse: '11.97:1' },
 ]
 
 function Chart({ bars, color }: { bars: string[]; color: string }) {
   return (
     <div
       className="cmp__chart"
-      style={{ ['--chart' as string]: color, ['--chart-baseline' as string]: color }}
+      style={{
+        ['--chart' as string]: color,
+        ['--chart-baseline' as string]: color,
+      }}
     >
       {bars.map((h, i) => (
         <span key={i} style={{ height: h }} />
@@ -47,9 +50,10 @@ function App() {
         <p className="eyebrow">Comparación de paleta de datos</p>
         <h1 className="cmp__title">Color de barras</h1>
         <p className="cmp__lead">
-          Cuatro candidatos sobre las tres superficies del sistema. Las barras usan
-          <code>--chart</code>; la línea de base usa <code>--chart-baseline</code>.
-          WCAG 1.4.11 pide 3:1 para gráficos que transmiten información.
+          Verde <code>#C7DE58</code> es el color de datos decidido. Las barras usan
+          <code>--chart</code> y la línea de base <code>--chart-baseline</code>. Sobre
+          superficies claras el contraste es bajo: <code>1.32:1</code> sobre hueso y
+          <code>1.19:1</code> sobre ceniza, por debajo del 3:1 de WCAG 1.4.11.
         </p>
       </header>
 
@@ -72,7 +76,10 @@ function App() {
             </div>
             {CANDIDATES.map((c) => (
               <div key={c.id} className={`cmp__cell ${surface.className}`}>
-                <Chart bars={surface.id === 'inverse' ? PREVIEW_BARS : BARS} color={c.value} />
+                <Chart
+                  bars={surface.id === 'inverse' ? PREVIEW_BARS : BARS}
+                  color={c.value}
+                />
               </div>
             ))}
           </div>
