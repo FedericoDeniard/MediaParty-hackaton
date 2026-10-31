@@ -15,7 +15,20 @@ async def test_graph_runs_all_nodes(monkeypatch):
             raise RuntimeError("boom")
         return schema.model_validate({k: [] for k in schema.model_fields} | ({"tone": "x", "framing": "y", "sentiment": 0} if node == "editorial" else {}))
 
+    seen: dict = {}
+
+    class Report:
+        version = "t"
+
+        def model_dump(self, mode):
+            return {"ok": True}
+
+    def fake_validar(body, done, usar_modelo):
+        seen.update(done)
+        return Report()
+
     monkeypatch.setattr(graph, "extract", fake_extract)
+    monkeypatch.setattr(graph, "validar_nota", fake_validar)
     monkeypatch.setattr(graph.db, "get_article", lambda _id: article)
     monkeypatch.setattr(graph.db, "update_article", lambda _id, **f: article.update(f))
     monkeypatch.setattr(
@@ -26,7 +39,9 @@ async def test_graph_runs_all_nodes(monkeypatch):
     await graph.run("a1")
 
     assert article["niche"] == "política"
-    assert set(rows) == set(NODES)
+    assert set(rows) == set(NODES) | {"validation"}
+    assert rows["validation"]["status"] == "done"
+    assert set(seen) == set(NODES) - {"timeline"}  # failed branch is not sent to validation
     assert rows["timeline"] == {"status": "error", "data": None, "error": "boom"}
     assert all(rows[k]["status"] == "done" for k in NODES if k != "timeline")
 
