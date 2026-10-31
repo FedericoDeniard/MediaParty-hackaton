@@ -16,6 +16,13 @@ import {
   type EnrichmentType,
 } from '../../data/notes.ts'
 import { enrichmentPanel } from '../../data/app.ts'
+import type { EnrichmentRow } from '../../lib/enrich.ts'
+
+export interface Analysis {
+  state: 'idle' | 'running' | 'error'
+  rows: EnrichmentRow[]
+  error?: string
+}
 
 const typeIcons: Record<EnrichmentType, typeof List> = {
   puntos_clave: List,
@@ -34,7 +41,12 @@ export default function EnrichmentPanel({
   onApprove,
   onDiscard,
   onRestore,
+  analysis,
+  onAnalyze,
 }: {
+  /** Sin `onAnalyze` (la vista previa) el panel no ofrece analizar. */
+  analysis?: Analysis
+  onAnalyze?: () => void
   items: Enrichment[]
   onApprove: (id: string) => void
   onDiscard: (id: string) => void
@@ -88,6 +100,43 @@ export default function EnrichmentPanel({
       <div className="assistant" id="asistente" hidden={!open}>
         <h2 className="assistant__title">{enrichmentPanel.title}</h2>
         <p className="assistant__lead">{enrichmentPanel.lead}</p>
+
+        {analysis && onAnalyze ? (
+          <div className="assistant__analyze">
+            <button
+              className="button button--ghost"
+              type="button"
+              disabled={analysis.state === 'running'}
+              aria-busy={analysis.state === 'running'}
+              onClick={onAnalyze}
+            >
+              {analysis.state === 'running'
+                ? enrichmentPanel.analyzing
+                : items.length > 0
+                  ? enrichmentPanel.reanalyze
+                  : enrichmentPanel.analyze}
+            </button>
+
+            {/* El estado se dice con texto, no sólo con color. */}
+            <div role="status" aria-live="polite">
+              {analysis.state === 'error' ? (
+                <p className="assistant__steps-error">
+                  {enrichmentPanel.analyzeError}: {analysis.error}
+                </p>
+              ) : null}
+              {analysis.state === 'running' || analysis.rows.some((row) => row.status === 'error') ? (
+                <ul className="assistant__steps">
+                  {analysis.rows.map((row) => (
+                    <li key={row.kind} className={`assistant__step assistant__step--${row.status}`}>
+                      <span>{enrichmentPanel.steps[row.kind] ?? row.kind}</span>
+                      <span>{enrichmentPanel.stepStatus[row.status]}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
 
         {items.length === 0 ? (
           <p className="assistant__empty">{enrichmentPanel.empty}</p>

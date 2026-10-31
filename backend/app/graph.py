@@ -1,7 +1,10 @@
 import asyncio
+import os
 from datetime import date
 
 from pydantic import BaseModel
+from verificador.graficos import armar_graficos
+from verificador.series import ClienteSeries
 from verificador.validar import validar_nota
 
 from . import db
@@ -44,13 +47,28 @@ def link_entities(outs: dict[str, dict]) -> None:
         ev["entity_ids"] = [ids[_key(e)] for e in ev.get("entities", []) if _key(e) in ids]
 
 
+# One client per process: it keeps the series it already read. "guardado" uses the saved
+# snapshots (no network); set VERIFICADOR_SERIES=auto or api for live data.
+series = ClienteSeries(modo=os.environ.get("VERIFICADOR_SERIES", "guardado"))
+
+
 async def validate(article_id: str, body: str, done: dict[str, dict], published: date | None) -> None:
+    """Writes the validation row, then the chart data built from it."""
     db.set_enrichment(article_id, "validation", "running")
     try:
-        report = await asyncio.to_thread(validar_nota, body, done, usar_modelo=True, fecha_referencia=published)
+        report = await asyncio.to_thread(
+            validar_nota, body, done, cliente_series=series, usar_modelo=True, fecha_referencia=published
+        )
         db.set_enrichment(article_id, "validation", "done", data=report.model_dump(mode="json"), model=f"verificador-{report.version}")
     except Exception as e:  # validation must not sink the enrichments already stored
         db.set_enrichment(article_id, "validation", "error", error=str(e))
+        db.set_enrichment(article_id, "graficos", "error", error="no validation report")
+        return
+    try:
+        charts = await asyncio.to_thread(armar_graficos, report, done, series)
+        db.set_enrichment(article_id, "graficos", "done", data=charts.model_dump(mode="json"), model=f"verificador-{report.version}")
+    except Exception as e:
+        db.set_enrichment(article_id, "graficos", "error", error=str(e))
 
 
 async def run(article_id: str) -> None:
