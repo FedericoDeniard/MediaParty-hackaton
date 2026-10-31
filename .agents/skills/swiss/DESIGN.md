@@ -8,7 +8,7 @@ colors:
   inkSoft: "#5B5A55"
   rule: "#C9C7C0"
   control: "#6A6862"
-  accent: "#E6DFD1"
+  accent: "#D8C7A9"
   accentInk: "#171717"
 surfaces:
   bg: "#F2F0EB"
@@ -83,7 +83,7 @@ Swiss / International Typographic Style, applied to a product landing page. One 
 - **Ink Soft (`#5B5A55`):** secondary text, `6.07:1` on bone.
 - **Rule (`#C9C7C0`):** decorative hairline only, `1.49:1`. Never the sole indicator of a control.
 - **Control (`#6A6862`):** borders that must be perceived as interactive, `4.89:1`.
-- **Accent / Accent Ink:** a warm sand (`#E6DFD1`) with ink on top (`#171717`, `13.8:1`). It fills buttons, the active tab and the poster plane on the access screens. It is a tonal fill, not a colour signal: it never carries text as a colour, never works as a hairline, and never is the only indicator of a state. The charts keep their own data green.
+- **Accent / Accent Ink:** a warm sand (`#D8C7A9`) with ink on top (`#171717`, `10.8:1`). It fills buttons, the active tab and the poster plane on the access screens. It is a tonal fill, not a colour signal: it never carries text as a colour, never works as a hairline, and never is the only indicator of a state. The charts keep their own data green.
 
 ### Surfaces
 

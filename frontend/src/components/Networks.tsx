@@ -9,7 +9,7 @@ export default function Networks() {
           <div className="section__content">
             <h2 className="section__title">Un clic, todas las redes</h2>
             <p className="section__lead">
-              Nexo conoce los límites de cada plataforma y ajusta el contenido para que
+              glosa conoce los límites de cada plataforma y ajusta el contenido para que
               entre completo. Si sumás un canal nuevo, el formato se actualiza solo.
             </p>
           </div>

@@ -1,11 +1,11 @@
 # Agent guidance
 
-Repo del hackatón **MediaParty**. El producto es **Nexo**: un portal que procesa noticias, suma gráficos y datos, y exporta el resultado a cada red social.
+Repo del hackatón **MediaParty**. El producto es **glosa**: un portal que procesa noticias, suma gráficos y datos, y exporta el resultado a cada red social.
 
 ## Estructura
 
 ```
-frontend/   Landing de Nexo (React 19 + Vite 8 + TypeScript 7)
+frontend/   Landing de glosa (React 19 + Vite 8 + TypeScript 7)
 backend/    API (vacío)
 supabase/   Base de datos local, migraciones, seeds y edge functions
 docs/       Documentación del proyecto
@@ -32,6 +32,7 @@ No hay scripts de lint ni de tests. `pnpm run build` es la verificación disponi
 - El sitio tiene tres partes: la landing en `/` (una sola página: `App.tsx` compone `Header`, `Hero`, `Steps`, `Features`, `Networks`, `CallToAction` y `Footer`), el acceso en `/login` y `/registro`, y la **mesa de trabajo** en `/app` (sidebar, lista de notas y editor).
 - `Hero.tsx` tiene un widget de tabs accesible (`role="tablist"`, navegación por flechas, `tabindex` rotatorio). Mantenelo así si lo tocás.
 - El editor de notas usa **Tiptap 3.32.2** con versiones exactas: los peers exigen la misma versión en todo el árbol. Guardá sólo el JSON de Tiptap; el texto plano se deriva.
+- El avatar del usuario en el sidebar se genera con **boring-avatars** a partir del nombre: variante `beam`, cuadrada y con la paleta de la app (verde, arena, hueso y gris cálido). Es decorativo; el nombre y el correo son la identidad real.
 - La capa de datos del frontend es un **store mock** sobre `localStorage` (`src/lib/noteStore.ts`). La auth ya corre contra Supabase Auth local: email y contraseña, sin usuarios anónimos, con guard sobre `/app/*`.
 - Agregá dependencias con `pnpm add <pkg>` desde `frontend/`. No edites `pnpm-lock.yaml` a mano.
 
@@ -47,7 +48,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 - Sin sombras, sin gradientes, sin glass, `border-radius: 0`.
 - Color plano: fondo hueso `#F2F0EB`, tinta `#171717`, texto secundario `#5B5A55`, hairline `#C9C7C0`, borde de control `#6A6862`.
 - **Tres superficies y no cambian entre páginas:** `--bg` (fondo de la app, el tono de la sección "01 — Flujo de trabajo"), `--surface-contrast` (tono de contraste, el de la sección "02 — Producto": bandas alternas, sidebars, paneles laterales) y `--surface-inverse` (banda invertida, sólo el CTA de cierre). No inventes un segundo tono de fondo: para separar más usá espacio y reglas.
-- Un solo plano de acento por viewport. El acento de marca es el arena `#E6DFD1` (`--accent`), con tinta encima (`--accent-ink`). Va en los planos de relleno —botones, tab activo, el cuadrado del acceso— y nunca como texto. Los gráficos mantienen su verde propio (`--chart`, `#C7DE58`): es un color de datos, no el acento.
+- Un solo plano de acento por viewport. El acento de marca es el arena `#D8C7A9` (`--accent`), con tinta encima (`--accent-ink`). Va en los planos de relleno —botones, tab activo, el cuadrado del acceso— y nunca como texto. Los gráficos mantienen su verde propio (`--chart`, `#C7DE58`): es un color de datos, no el acento.
 - Todo se controla por tokens semánticos en el `:root` de `frontend/src/index.css`. No hardcodees hex en componentes.
 - Accesibilidad: WCAG 2.2 AA. Foco visible de `2px`, contraste de texto `>= 4.5:1` y de bordes `>= 3:1`, targets de `44px`, `prefers-reduced-motion` respetado, reflow a `320px`.
 - Antes de cerrar trabajo de UI, revisá la página en mobile y desktop, probá el foco por teclado, verificá contraste y corré `pnpm run build`.
@@ -64,7 +65,7 @@ El sistema visual es **Swiss / International Typographic Style**. Antes de tocar
 | `grill-me` | Cuestionar un plan o diseño antes de implementarlo |
 | `supabase` | Cualquier tarea que toque Supabase: auth, RLS, edge functions, realtime, storage, CLI, migraciones |
 | `supabase-postgres-best-practices` | Antes de escribir o cambiar algo en Postgres: esquema, tipos, índices, RLS, locks, performance |
-| `db-modeling` | Modelar el schema de Nexo: derivar entidades, 1NF/2NF/3NF, decidir qué va en jsonb |
+| `db-modeling` | Modelar el schema de glosa: derivar entidades, 1NF/2NF/3NF, decidir qué va en jsonb |
 
 Los skills instalados desde GitHub se registran en `skills-lock.json`. Los hechos a mano (como `swiss`) no van ahí.
 

@@ -1,6 +1,6 @@
-# Nexo · frontend
+# glosa · frontend
 
-Landing de **Nexo**, un portal para procesar noticias, sumar gráficos y datos, y
+Landing de **glosa**, un portal para procesar noticias, sumar gráficos y datos, y
 exportar el resultado a cada red social. Incluye las pantallas de acceso y la
 mesa de trabajo con editor de notas.
 
@@ -12,6 +12,7 @@ mesa de trabajo con editor de notas.
 - React Router 7
 - Supabase Auth (`@supabase/supabase-js`, email y contraseña)
 - Tiptap 3.32.2 (editor de notas)
+- boring-avatars (avatar generado del usuario)
 - Archivo Variable (autoalojada con `@fontsource-variable/archivo`)
 
 ## Comandos
@@ -31,7 +32,7 @@ src/
   components/   Landing, Header, Hero, Steps, Features, Networks, CallToAction, Footer, Logo
   components/   AuthPage, AuthForm, AuthField, AuthCheckbox  (pantallas de acceso)
   components/   AuthProvider, RequireSession  (sesión de Supabase y guard)
-  components/app/  AppShell, Sidebar, NoteList, NoteRow, NoteEditor,
+  components/app/  AppShell, Sidebar, UserAvatar, NoteList, NoteRow, NoteEditor,
                     EditorToolbar, EnrichmentPanel  (mesa de trabajo)
   data/         content.ts con los textos y datos de la landing
                 auth.ts con los textos, campos, reglas y errores de login/registro
@@ -99,9 +100,24 @@ el usuario de prueba `user@test.com` / `password123`.
 `/app` es el área de trabajo: sidebar con la navegación, lista de notas y
 editor.
 
-- `/app/notas` — lista de notas en filas de datos.
+- `/app/borradores` — notas sin publicar: borradores y en revisión.
 - `/app/notas/:id` — editor de la nota.
-- `/app/publicadas` — notas ya publicadas.
+- `/app/publicados` — notas ya publicadas.
+
+Cada lista se puede buscar por nombre, filtrar por temática y ordenar por fecha.
+La temática es un dominio cerrado y se edita desde la barra del editor. La lista
+pagina de a 5 notas por página.
+
+Los datos de las notas salen de un store mock sobre `localStorage`, así que la
+mesa de trabajo anda sin backend una vez que hay sesión; el acceso necesita el
+stack local de Supabase. Los textos de `src/data/notes.ts` salen del corpus de
+pruebas (`../corpus/notas/`). Una nota nueva no se persiste hasta que se escribe
+el título o el cuerpo.
+
+El pie del sidebar muestra la sesión con un avatar generado por
+`boring-avatars` a partir del nombre (o del correo): variante `beam`,
+cuadrada, con la paleta de la app (verde, arena, hueso y gris cálido). Es
+decorativo; el nombre y el correo son la identidad real.
 
 El editor es headless: cada nodo y cada marca se estiliza desde `index.css`
 con los tokens del sistema, así que el documento se ve como el resto del
@@ -111,11 +127,6 @@ deriva el texto plano cuando hace falta.
 Al aprobar una pieza de enriquecimiento, el pasaje que la respalda se resalta
 en el cuerpo con el verde de datos. El resaltado es una decoración: el texto no
 cambia y se sigue pudiendo verificar contra la nota.
-
-Los datos de las notas salen de un store mock sobre `localStorage`, así que la
-mesa de trabajo anda sin backend una vez que hay sesión; el acceso necesita el
-stack local de Supabase. Los textos de `src/data/notes.ts` salen del corpus de
-pruebas (`../corpus/notas/`).
 
 ## Estilos
 
@@ -140,7 +151,7 @@ Hay tres superficies, y no cambian entre páginas:
 | `--surface-contrast` | Tono de contraste para bandas alternas, sidebars y paneles laterales ("02 — Producto"). |
 | `--surface-inverse` | Banda invertida, reservada para el CTA de cierre. |
 
-El acento de marca es el arena `#E6DFD1` (`--accent`) con tinta encima
+El acento de marca es el arena `#D8C7A9` (`--accent`) con tinta encima
 (`--accent-ink`). Va en los planos de relleno: botones, tab activo y el
 cuadrado de las pantallas de acceso. Los gráficos mantienen su verde propio
 (`--chart`, `#C7DE58`), que es un color de datos y no el acento. Para

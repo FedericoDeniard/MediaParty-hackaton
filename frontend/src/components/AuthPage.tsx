@@ -16,7 +16,7 @@ export default function AuthPage({ mode }: { mode: AuthMode }) {
     const destination =
       typeof from === 'string' && from.startsWith('/') && !from.startsWith('//')
         ? from
-        : '/app/notas'
+        : '/app/borradores'
 
     return <Navigate to={destination} replace />
   }

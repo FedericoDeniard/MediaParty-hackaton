@@ -1,5 +1,5 @@
 {
-  "name": "nexo-frontend",
+  "name": "glosa-frontend",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -21,6 +21,7 @@
     "@tiptap/pm": "3.32.2",
     "@tiptap/react": "3.32.2",
     "@tiptap/starter-kit": "3.32.2",
+    "boring-avatars": "^2.0.4",
     "lucide-react": "1.66.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

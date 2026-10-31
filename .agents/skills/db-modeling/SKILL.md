@@ -1,11 +1,11 @@
 ---
 name: db-modeling
-description: Modelar el schema de Nexo en Postgres/Supabase — derivar entidades, aplicar 1NF/2NF/3NF y decidir qué va en jsonb. Usar al crear o modificar migraciones, al revisar el schema, o cuando haya que decidir si algo es tabla, columna o jsonb.
+description: Modelar el schema de glosa en Postgres/Supabase — derivar entidades, aplicar 1NF/2NF/3NF y decidir qué va en jsonb. Usar al crear o modificar migraciones, al revisar el schema, o cuando haya que decidir si algo es tabla, columna o jsonb.
 ---
 
-# Modelado de base de datos (Nexo)
+# Modelado de base de datos (glosa)
 
-El schema de Nexo es chico: notas, párrafos, fichas, enriquecimientos. La tentación con un
+El schema de glosa es chico: notas, párrafos, fichas, enriquecimientos. La tentación con un
 modelo así es modelar de más — partir todo en tablas, inventar joins, duplicar datos que
 ya están en un `jsonb`. Esta skill es el criterio para no hacerlo, y para hacerlo bien
 cuando sí hace falta partir.
@@ -20,7 +20,7 @@ Antes de crear una tabla, derivar de los requisitos qué **hechos** existen y d�
 cada uno. Cada hecho vive en un solo lugar. Dos Copies del mismo hecho es una anomalía de
 actualización esperando.
 
-En Nexo el flujo es: nota → párrafos → ficha (el modelo la arma) → enriquecimientos (el
+En glosa el flujo es: nota → párrafos → ficha (el modelo la arma) → enriquecimientos (el
 código los arma) → aprobación. Cada paso tiene su tabla o su documento.
 
 ## Las 4 formas normales, aplicadas acá
@@ -36,7 +36,7 @@ create table notas (id uuid primary key, titulo text not null, tags text);
 create table notas_tags (nota_id uuid references notas(id) on delete cascade, tag text not null);
 ```
 
-**En Nexo no aplica.** No hay tags, no hay categorías, no hay M:N con lista. El único
+**En glosa no aplica.** No hay tags, no hay categorías, no hay M:N con lista. El único
 arreglo de valores que existe son los `items` de un enriquecimiento de tipo
 `puntos_clave`, y eso vive dentro de `contenido` jsonb — es un documento con forma
 definida por el tipo de enriquecimiento, no una lista en una columna.
@@ -63,7 +63,7 @@ Si aparece algo, ese nombre está mintiendo: es un grupo repetido disfrazado de 
 Cada columna no-clave depende de la clave **completa**. Sólo importa cuando la PK es
 compuesta.
 
-En Nexo las PK son de una columna (`id uuid`) salvo `fichas` (PK = `nota_id`). Con PK de
+En glosa las PK son de una columna (`id uuid`) salvo `fichas` (PK = `nota_id`). Con PK de
 una columna, la dependencia parcial no puede ocurrir: la única clave candidata es la PK
 entera. **2NF no aplica** y no hay nada que verificar.
 
@@ -105,7 +105,7 @@ create table articles (
 );
 ```
 
-**En Nexo esto importa en un solo lugar, y es el más importante.** La ficha tiene
+**En glosa esto importa en un solo lugar, y es el más importante.** La ficha tiene
 `hechos`, `cifras`, `citas_textuales` y `actores`, y los enriquecimientos referencian
 esos ítems por id (`usa: ["h1", "c2"]`). El `cifra_id` del `dato_oficial` apunta a una
 cifra de la ficha.
@@ -127,7 +127,7 @@ having count(distinct autor_nombre) = 1;
 Si devuelve filas, la columna redundante es alcanzable desde otra tabla y debería
 borrarse.
 
-> La tabla y las columnas del ejemplo son ilustrativas: `articulos` no existe en Nexo.
+> La tabla y las columnas del ejemplo son ilustrativas: `articulos` no existe en glosa.
 > Para correrla contra el schema real, cambiá los nombres. La query en sí funciona
 > contra cualquier tabla — es `count(distinct)` agrupado, sin dependencias del motor.
 
@@ -168,7 +168,7 @@ Desnormalizar es una decisión, no un descuido. Vale cuando:
   **y**
 - la razón queda escrita.
 
-En Nexo, `fichas.contenido` y `enriquecimientos.contenido` son jsonb **a propósito**: la
+En glosa, `fichas.contenido` y `enriquecimientos.contenido` son jsonb **a propósito**: la
 forma del documento depende del tipo de enriquecimiento y la define el modelo, no el
 schema. Eso no es denormalización — es no modelar lo que no tiene forma fija. La
 diferencia: un jsonb con esquema variable y estable, contra datos relacionales que
@@ -201,7 +201,7 @@ El test es de **estabilidad de la forma**, no de tamaño ni de conveniencia.
 | Se valida en la aplicación, no por el schema | Tiene invariantes que el schema debe garantizar |
 | Es un documento (la ficha, un enriquecimiento) | Es un registro que se referencia (una serie, un autor) |
 
-Aplicado a Nexo:
+Aplicado a glosa:
 
 - `fichas.contenido` → jsonb. Es la salida del modelo, versionada, se lee entera.
 - `enriquecimientos.contenido` → jsonb. La forma depende de `tipo`.

@@ -118,7 +118,7 @@ export default function AuthForm({ mode }: { mode: AuthMode }) {
         password,
         options: {
           data: { name },
-          emailRedirectTo: `${window.location.origin}/app/notas`,
+          emailRedirectTo: `${window.location.origin}/app/borradores`,
         },
       })
 

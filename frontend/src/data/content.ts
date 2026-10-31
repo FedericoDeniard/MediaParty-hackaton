@@ -39,7 +39,7 @@ export const steps: Step[] = [
   {
     n: '01',
     title: 'Traé la noticia',
-    body: 'Pegá el link de la fuente o escribí el texto. Nexo arma el borrador con titular, bajada, fuente, fecha y datos clave.',
+    body: 'Pegá el link de la fuente o escribí el texto. glosa arma el borrador con titular, bajada, fuente, fecha y datos clave.',
     aside: 'URL, texto o archivo',
   },
   {
@@ -51,7 +51,7 @@ export const steps: Step[] = [
   {
     n: '03',
     title: 'Exportá',
-    body: 'Marcá las redes y Nexo genera una versión para cada una, con el formato, la extensión y el tono que esa plataforma pide.',
+    body: 'Marcá las redes y glosa genera una versión para cada una, con el formato, la extensión y el tono que esa plataforma pide.',
     aside: 'Una publicación, muchas redes',
   },
 ]
@@ -82,7 +82,7 @@ export const features: Feature[] = [
   {
     n: '02',
     title: 'Contexto, no solo el titular',
-    body: 'Nexo conserva el documento fuente, las notas y las citas, así el equipo edita sobre datos y no sobre suposiciones.',
+    body: 'glosa conserva el documento fuente, las notas y las citas, así el equipo edita sobre datos y no sobre suposiciones.',
     tone: 'base',
     kind: 'quote',
     col: 8,
