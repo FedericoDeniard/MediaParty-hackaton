@@ -20,8 +20,9 @@ import {
    estas funciones y no las pantallas.
    ============================================================ */
 
-const NOTES_KEY = 'nexo.notes.v1'
-const ENRICHMENTS_KEY = 'nexo.enrichments.v1'
+/* v2: las semillas pasaron a ser las notas completas del corpus. */
+const NOTES_KEY = 'nexo.notes.v2'
+const ENRICHMENTS_KEY = 'nexo.enrichments.v2'
 
 function read<T>(key: string, fallback: T): T {
   if (typeof localStorage === 'undefined') return fallback
@@ -159,6 +160,22 @@ export function listEnrichments(noteId: string): Enrichment[] {
   const items = enrichments.filter((item) => item.noteId === noteId)
   enrichmentCache.set(noteId, items)
   return items
+}
+
+/* Un análisis nuevo reemplaza las piezas sin decidir. Lo que la
+   autora ya aprobó o descartó se queda: es su decisión, no la del
+   modelo. */
+export function replaceEnrichments(noteId: string, items: Enrichment[]) {
+  const decided = enrichments.filter(
+    (item) => item.noteId === noteId && item.status !== 'pendiente',
+  )
+  const decidedTexts = new Set(decided.map((item) => item.text))
+  enrichments = [
+    ...enrichments.filter((item) => item.noteId !== noteId),
+    ...decided,
+    ...items.filter((item) => !decidedTexts.has(item.text)),
+  ]
+  persist()
 }
 
 export function setEnrichmentStatus(id: string, status: EnrichmentStatus) {

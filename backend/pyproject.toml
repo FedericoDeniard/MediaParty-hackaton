@@ -9,6 +9,7 @@ dependencies = [
     "pydantic",
     "supabase",
     "python-dotenv",
+    "verificador",
 ]
 
 [dependency-groups]
@@ -17,3 +18,6 @@ dev = ["pytest", "pytest-asyncio"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 pythonpath = ["."]
+
+[tool.uv.sources]
+verificador = { path = "../verificador", editable = true }

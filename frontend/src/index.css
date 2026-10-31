@@ -2215,6 +2215,46 @@ button {
   line-height: 1.5;
 }
 
+/* ---- Análisis en curso ----
+   Una fila por agente del backend: nombre a la izquierda, estado a
+   la derecha, filete entre filas. Es dato, no un bloque. */
+
+.assistant__analyze {
+  margin-top: var(--space-5);
+}
+
+.assistant__steps {
+  margin-top: var(--space-4);
+  border-top: var(--border-width) solid var(--rule);
+  font-size: var(--text-sm);
+}
+
+.assistant__step {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: var(--border-width) solid var(--rule);
+  color: var(--text-muted);
+}
+
+.assistant__step--running,
+.assistant__step--done {
+  color: var(--text);
+}
+
+.assistant__step--running span:last-child,
+.assistant__step--error span:last-child {
+  font-weight: 600;
+}
+
+.assistant__steps-error {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .assistant__list {
   margin-top: var(--space-5);
   border-top: var(--border-width) solid var(--rule);

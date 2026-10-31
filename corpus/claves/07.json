@@ -1,0 +1,44 @@
+{
+  "nota": "07",
+  "archivo": "07-con-cambios-el-senado-aprobo-y-giro-a-diputados-la.md",
+  "parrafos_total": 23,
+  "cifras": [
+    { "texto": "42 votos a favor", "parrafo": 3, "indicador": "votos afirmativos en el Senado", "periodo": "sesión de la reforma, madrugada posterior al debate", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo de votos legislativos; no existe serie en el catálogo." },
+    { "texto": "21 en contra", "parrafo": 3, "indicador": "votos negativos en el Senado", "periodo": "sesión de la reforma, madrugada posterior al debate", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Conteo de votos legislativos; no existe serie en el catálogo." },
+    { "texto": "180 días", "parrafo": 17, "indicador": "duración a partir de la cual una internación se considera prolongada", "periodo": "según el dictamen en discusión", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo previsto en el texto del proyecto, no un dato estadístico." },
+    { "texto": "dos profesionales", "parrafo": 18, "indicador": "profesionales que deben firmar una internación involuntaria", "periodo": "según el dictamen en discusión", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Requisito del proyecto, sin serie asociada." },
+    { "texto": "24 horas", "parrafo": 19, "indicador": "plazo máximo para notificar la internación al juez y al órgano de revisión", "periodo": "según el dictamen en discusión", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo legal del proyecto, sin serie asociada." },
+    { "texto": "tres días", "parrafo": 19, "indicador": "plazo del juez para convalidar la medida, pedir peritajes o disponer la externación", "periodo": "según el dictamen en discusión", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Plazo legal del proyecto, sin serie asociada." }
+  ],
+  "puntos_clave": [
+    { "texto": "El Senado aprobó la reforma de la ley de salud mental con modificaciones pactadas en el recinto y la giró a Diputados.", "parrafos": [2, 3, 4] },
+    { "texto": "Pese al proyecto original del Ejecutivo, se mantienen la prohibición de crear manicomios y el carácter excepcional de la internación.", "parrafos": [5, 16, 20] },
+    { "texto": "Senadores dialoguistas reclamaron financiamiento nacional para las provincias, mientras Bullrich defendió el cambio con el caso de un policía asesinado.", "parrafos": [6, 8, 9, 10, 11] },
+    { "texto": "Las internaciones involuntarias exigen riesgo grave, dos firmas profesionales y aviso rápido al juez; la internación prolongada se define a los 180 días.", "parrafos": [17, 18, 19] },
+    { "texto": "Nación asistirá a las provincias mediante convenios bilaterales y se autorizan teleconsultas de psiquiatras donde no haya presencia física.", "parrafos": [15, 23] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿Cuántos votos obtuvo la reforma en el Senado?", "tipo": "con_respuesta", "parrafos": [3], "ancla": "La iniciativa fue aprobada poco antes de la 1" },
+    { "pregunta": "¿Qué quedó en pie del proyecto original del Gobierno respecto de los manicomios?", "tipo": "con_respuesta", "parrafos": [5], "ancla": "Por lo pronto, el proyecto que pasará en revisión a la Cámara" },
+    { "pregunta": "¿Desde cuándo se considera prolongada una internación?", "tipo": "con_respuesta", "parrafos": [17], "ancla": "Para evitar la institucionalización indefinida, se estipula que desde el" },
+    { "pregunta": "¿Cómo se financiará la aplicación de la reforma en las provincias?", "tipo": "con_respuesta", "parrafos": [23], "ancla": "Por último, el proyecto incorpora un esquema de financiamiento federal" },
+    { "pregunta": "¿Cuánto dinero aportará el Estado nacional a las provincias para aplicar la reforma?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Senado de la Nación", "rol": "Cámara que aprobó y giró la reforma", "parrafo": 2 },
+    { "nombre": "Poder Ejecutivo", "rol": "Autor del proyecto original", "parrafo": 2 },
+    { "nombre": "Cámara de Diputados", "rol": "Cámara de revisión que recibe el proyecto", "parrafo": 2 },
+    { "nombre": "Patricia Bullrich", "rol": "Jefa del bloque oficialista; defendió la iniciativa al cierre del debate", "parrafo": 9 },
+    { "nombre": "Guillermo Andrada", "rol": "Senador peronista disidente (Catamarca); pidió garantías de financiamiento", "parrafo": 6 },
+    { "nombre": "Carlos Arce", "rol": "Senador misionero; apoyó el pedido de financiamiento a las provincias", "parrafo": 8 },
+    { "nombre": "Kirchnerismo", "rol": "Bloque que votó en contra", "parrafo": 3 },
+    { "nombre": "Juan Pablo Roldán", "rol": "Policía de la Ciudad asesinado, caso citado por Bullrich", "parrafo": 9 },
+    { "nombre": "Rodrigo Roza", "rol": "Autor del asesinato de Roldán, con esquizofrenia", "parrafo": 9 },
+    { "nombre": "COFESA", "rol": "Consejo Federal de Salud; coordina los recursos a las provincias", "parrafo": 23 }
+  ],
+  "fechas": [
+    { "texto": "poco antes de la 1 de la madrugada", "parrafo": 3 },
+    { "texto": "hace dos semanas", "parrafo": 4 },
+    { "texto": "2010", "parrafo": 5 }
+  ]
+}
