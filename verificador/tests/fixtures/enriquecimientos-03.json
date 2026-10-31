@@ -1,0 +1,336 @@
+{
+ "claims": {
+  "claims": [
+   {
+    "text": "El BCRA no intervino en el mercado cambiario durante tres días consecutivos, algo inédito desde que inició su plan de acumulación de reservas el 3 de enero de 2025.",
+    "paragraph_index": 1,
+    "type": "event",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "BCRA compras de reservas mercado cambiario días sin intervención enero 2025",
+    "confidence": 0.4
+   },
+   {
+    "text": "El BCRA, que conduce Santiago Bausili, cerró las operaciones del lunes sin intervenir, cuando el dólar mayorista abrió con una suba cercana al 1%.",
+    "paragraph_index": 2,
+    "type": "event",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "dólar mayorista suba 1% lunes BCRA sin intervención real Brasil Lula",
+    "confidence": 0.5
+   },
+   {
+    "text": "El Tesoro Nacional vendió unos US$100 millones de sus ahorros en el mercado para contener la cotización del dólar durante la jornada del lunes.",
+    "paragraph_index": 3,
+    "type": "event",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "Tesoro Nacional venta US$100 millones dólares mercado cambiario lunes",
+    "confidence": 0.3
+   },
+   {
+    "text": "El Tesoro compró US$44 millones en el mercado cambiario cuando el dólar mayorista tocó un piso intradiario de $1536, con un precio promedio cercano a $1541.",
+    "paragraph_index": 5,
+    "type": "event",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "Tesoro compra US$44 millones dólar mayorista piso $1536 precio promedio $1541",
+    "confidence": 0.5
+   },
+   {
+    "text": "El BCRA debe pagar US$877 millones en concepto de intereses al Fondo Monetario Internacional en una semana, además de US$60 millones a otros organismos internacionales.",
+    "paragraph_index": 6,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "vencimientos FMI intereses US$877 millones BCRA semana pago organismos internacionales",
+    "confidence": 0.6
+   },
+   {
+    "text": "El BCRA tendría en su cuenta US$869 millones disponibles para afrontar esos pagos, según estimó la consultora PPI.",
+    "paragraph_index": 6,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "BCRA reservas disponibles US$869 millones cuenta PPI",
+    "confidence": 0.7
+   },
+   {
+    "text": "El dólar mayorista vendedor cerró el día con una suba de $4 (+0,26%), en $1542 según el operador de ABC Mercado de Cambios.",
+    "paragraph_index": 8,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "dólar mayorista cierre suba $4 0,26% $1542 ABC Mercado de Cambios",
+    "confidence": 0.8
+   },
+   {
+    "text": "El monto total de operaciones de contado en el mercado cambiario aumentó 46% y alcanzó US$628 millones durante la jornada.",
+    "paragraph_index": 9,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "monto operaciones contado mercado cambiario US$628 millones 46% rueda",
+    "confidence": 0.5
+   },
+   {
+    "text": "El FMI y distintos bancos de inversión internacionales recomendaron públicamente que el BCRA siguiera acumulando divisas.",
+    "paragraph_index": 10,
+    "type": "attribution",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "FMI recomendación BCRA seguir comprando reservas bancos de inversión 2025",
+    "confidence": 0.3
+   },
+   {
+    "text": "El BCRA acumuló US$1252 millones en compras de divisas durante el mes en curso y US$15820 millones en lo que va del año.",
+    "paragraph_index": 11,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "BCRA compras reservas US$15.820 millones acumuladas año US$1252 millones mes",
+    "confidence": 0.6
+   },
+   {
+    "text": "El Gobierno decidió discontinuar la emisión del Bonar 2029 (AO29) en el mercado local y todavía quedan unos US$800 millones por colocar.",
+    "paragraph_index": 11,
+    "type": "event",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "Gobierno discontinúa emisión Bonar 2029 AO29 mercado local US$800 millones por colocar",
+    "confidence": 0.3
+   },
+   {
+    "text": "Sin nuevas colocaciones ni compras del Tesoro, los depósitos en moneda extranjera del BCRA terminarían cerca de US$1800 millones, por debajo de los US$3700 millones previstos en el programa financiero de mitad de año.",
+    "paragraph_index": 12,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "depósitos moneda extranjera BCRA US$1800 millones proyección programa financiero US$3700 millones",
+    "confidence": 0.7
+   },
+   {
+    "text": "El Gobierno no revisó el programa financiero de mitad de año ni explicó de dónde obtendría los recursos faltantes.",
+    "paragraph_index": 13,
+    "type": "event",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "Gobierno revisión programa financiero 2025 recursos faltantes explicación",
+    "confidence": 0.2
+   },
+   {
+    "text": "El Gobierno difundió distintas cifras, muy diferentes entre sí, sobre la liquidez total a la que podría acceder para enfrentar corridas en 2026.",
+    "paragraph_index": 13,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "Gobierno cifras liquidez total acceso corridas 2026 declaraciones distintas",
+    "confidence": 0.2
+   }
+  ]
+ },
+ "entities": {
+  "nodes": [
+   {
+    "id": "banco-central",
+    "name": "Banco Central de la República Argentina (BCRA)",
+    "type": "org",
+    "mentions": 9,
+    "description": "Entidad monetaria que se abstuvo de comprar reservas en el mercado cambiario por tres días consecutivos, lo que genera inquietud sobre su plan de acumulación."
+   },
+   {
+    "id": "santiago-bausili",
+    "name": "Santiago Bausili",
+    "type": "person",
+    "mentions": 1,
+    "description": "Titular del Banco Central que conduce la entidad monetaria."
+   },
+   {
+    "id": "tesoro-nacional",
+    "name": "Tesoro Nacional",
+    "type": "org",
+    "mentions": 5,
+    "description": "Organismo del Gobierno que vendió US$100 millones de sus ahorros y luego compró US$44 millones para recuperar parte de lo vendido."
+   },
+   {
+    "id": "luiz-inacio-lula-da-silva",
+    "name": "Luiz Inácio Lula da Silva",
+    "type": "person",
+    "mentions": 1,
+    "description": "Presidente de Brasil reelecto, cuyo proceso electoral provocó una fuerte devaluación del real."
+   },
+   {
+    "id": "real-brasil",
+    "name": "Real (Brasil)",
+    "type": "event",
+    "mentions": 1,
+    "description": "Moneda brasileña que sufrió una fuerte devaluación tras la reelección de Lula, provocando una suba del dólar local."
+   },
+   {
+    "id": "fondo-monetario-internacional",
+    "name": "Fondo Monetario Internacional (FMI)",
+    "type": "org",
+    "mentions": 3,
+    "description": "Organismo al que el BCRA debe pagar US$877 millones en intereses y cuyas recomendaciones pidieron seguir acumulando divisas."
+   },
+   {
+    "id": "portfolio-personal-inversiones",
+    "name": "Portfolio Personal Inversiones (PPI)",
+    "type": "org",
+    "mentions": 2,
+    "description": "Consultora financiera que advirtió sobre la caída de depósitos en moneda extranjera del BCRA y los vencimientos a pagar."
+   },
+   {
+    "id": "abc-mercado-de-cambios",
+    "name": "ABC Mercado de Cambios",
+    "type": "org",
+    "mentions": 1,
+    "description": "Mesa de cambios de la que es operador Francisco Díaz Mayer, citado para describir la evolución del dólar mayorista."
+   },
+   {
+    "id": "francisco-diaz-mayer",
+    "name": "Francisco Díaz Mayer",
+    "type": "person",
+    "mentions": 1,
+    "description": "Operador de ABC Mercado de Cambios que describió la dinámica de la cotización del dólar mayorista."
+   },
+   {
+    "id": "letra-ajustable-por-dolar",
+    "name": "Letra ajustable por dólar",
+    "type": "event",
+    "mentions": 1,
+    "description": "Instrumento que vence a fin de mes y marcaría el precio de referencia, sumando demanda al mercado spot."
+   },
+   {
+    "id": "bonar-2029-ao29",
+    "name": "Bonar 2029 (AO29)",
+    "type": "event",
+    "mentions": 1,
+    "description": "Bono cuya emisión en el mercado local el Gobierno discontinuó para hacerse de divisas."
+   },
+   {
+    "id": "plan-de-acumulacion",
+    "name": "Plan de acumulación de reservas del BCRA",
+    "type": "event",
+    "mentions": 2,
+    "description": "Programa de compra de reservas iniciado el 3 de enero que el BCRA venía aplicando y que ahora muestra una pausa."
+   }
+  ],
+  "edges": [
+   {
+    "source": "banco-central",
+    "target": "santiago-bausili",
+    "relation": "es conducido por",
+    "evidence": "La entidad que conduce Santiago Bausili reportó nuevamente"
+   },
+   {
+    "source": "tesoro-nacional",
+    "target": "banco-central",
+    "relation": "opera en el mercado junto a",
+    "evidence": "la presencia oficial detectada en el mercado correspondía al Tesoro"
+   },
+   {
+    "source": "tesoro-nacional",
+    "target": "abc-mercado-de-cambios",
+    "relation": "operó en el mercado a través de",
+    "evidence": "el Tesoro, que había salido a comprar divisas cuando el billete tocó un piso intradiario de $1536"
+   },
+   {
+    "source": "banco-central",
+    "target": "real-brasil",
+    "relation": "reaccionó a la devaluación de",
+    "evidence": "cuando el billete había abierto con un alza cercana al 1% en respuesta a la fuerte devaluación que registraba ese día el real en Brasil"
+   },
+   {
+    "source": "real-brasil",
+    "target": "luiz-inacio-lula-da-silva",
+    "relation": "se devaluó tras la reelección de",
+    "evidence": "luego de definirse el proceso electoral a favor de una nueva reelección de Luiz Inácio Lula da Silva"
+   },
+   {
+    "source": "banco-central",
+    "target": "fondo-monetario-internacional",
+    "relation": "debe pagar intereses a",
+    "evidence": "debe pagar US$877 millones en concepto de intereses al Fondo Monetario Internacional (FMI)"
+   },
+   {
+    "source": "fondo-monetario-internacional",
+    "target": "plan-de-acumulacion",
+    "relation": "recomendó seguir",
+    "evidence": "fueron públicas las recomendaciones del FMI y de distintos bancos de inversión internacionales para que la entidad siguiera acumulando divisas"
+   },
+   {
+    "source": "portfolio-personal-inversiones",
+    "target": "banco-central",
+    "relation": "advirtió sobre depósitos del",
+    "evidence": "terminaría con depósitos en moneda extranjera en el BCRA por unos US$1800 millones"
+   },
+   {
+    "source": "francisco-diaz-mayer",
+    "target": "abc-mercado-de-cambios",
+    "relation": "trabaja en",
+    "evidence": "reseñó el operador Francisco Díaz Mayer, de ABC Mercado de Cambios"
+   },
+   {
+    "source": "letra-ajustable-por-dolar",
+    "target": "banco-central",
+    "relation": "suma demanda en el mercado afectando la intervención del",
+    "evidence": "la Letra ajustable por dólar que vence a fin de mes marcaría el precio de referencia, lo que suma demanda al mercado spot"
+   },
+   {
+    "source": "banco-central",
+    "target": "bonar-2029-ao29",
+    "relation": "se vincula con la discontinuación de la emisión de",
+    "evidence": "la importancia de estas compras aumentó, además, luego de que el Gobierno decidiera discontinuar la emisión del Bonar 2029 (AO29)"
+   },
+   {
+    "source": "banco-central",
+    "target": "plan-de-acumulacion",
+    "relation": "aplica",
+    "evidence": "desde que comenzó a aplicar su plan de acumulación el 3 de enero pasado"
+   }
+  ]
+ },
+ "timeline": {
+  "events": [
+   {
+    "date": "2027",
+    "precision": "year",
+    "title": "Año electoral 2027 como horizonte de reservas",
+    "description": "El artículo señala que acumular reservas daría al Gobierno munición para enfrentar el año electoral 2027. Es la única referencia temporal que puede fecharse con seguridad, porque el resto del texto usa términos relativos como 'enero pasado' o 'a mitad de año' sin indicar el año.",
+    "paragraph_index": 12
+   }
+  ]
+ },
+ "editorial": {
+  "tone": "informativo",
+  "framing": "Presenta la pausa de compras del BCRA como una decisión inusual que genera inquietud sobre la capacidad del Gobierno para pagar vencimientos, con el Tesoro y el BCRA como actores centrales y el mercado cambiario como escenario; el Gobierno aparece como responsable de no explicar sus fuentes de financiamiento.",
+  "sentiment": -0.4,
+  "missing_angles": [
+   "La voz oficial del BCRA o del Ministerio de Economía que explique los motivos de la pausa, ya que la lectura se basa en inferencias de operadores y consultoras",
+   "La posición de analistas económicos independientes o de economistas con visiones distintas sobre la estrategia de acumulación de reservas",
+   "Comparación histórica de los niveles de reservas netas y de compras del BCRA en gestiones anteriores",
+   "Datos sobre el costo fiscal de las ventas del Tesoro (US$100 millones) y su impacto en las cuentas públicas",
+   "Contexto sobre el impacto real de la suba del dólar en la inflación y en los precios internos",
+   "Explicación más detallada sobre el mecanismo de la Letra ajustable por dólar y cómo afecta la demanda",
+   "Qué efecto tendría la pausa en la credibilidad del programa financiero frente a inversores externos"
+  ],
+  "follow_up_questions": [
+   "¿Cuál es la razón oficial del BCRA para no intervenir durante tres días consecutivos y se coordinó esa decisión con el Tesoro?",
+   "¿Qué composición tienen las reservas brutas y netas hoy, y cuánto del total es efectivamente disponible?",
+   "¿Qué diferencia hay entre las proyecciones de depósitos en dólares citadas por PPI y las metas del programa financiero presentado a mitad de año?",
+   "¿Qué cronograma de vencimientos de deuda externa tiene el Gobierno para el resto del año y cómo planea cubrirlos?",
+   "¿Cuánto costó al Tesoro en términos de tasas la colocación del Bonar 2029 y por qué se decidió discontinuarla?",
+   "¿Qué cifras de liquidez disponible para 2027 informó el Gobierno y cuáles son las diferencias entre ellas?"
+  ],
+  "sources_cited": [
+   "Banco Central de la República Argentina (BCRA)",
+   "Santiago Bausili",
+   "Tesoro Nacional",
+   "Fondo Monetario Internacional (FMI)",
+   "Portfolio Personal Inversiones (PPI)",
+   "Francisco Díaz Mayer, operador de ABC Mercado de Cambios",
+   "Informe diario de PPI"
+  ]
+ }
+}
