@@ -2812,6 +2812,11 @@ button {
 }
 
 @media (max-width: 1080px) {
+  .header__inner,
+  .header__nav {
+    gap: var(--space-4);
+  }
+
   .hero__copy,
   .hero__demo,
   .section__index,
