@@ -1,0 +1,667 @@
+{
+  "niche": "política",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2023",
+            "title": "Revocan sobreseimiento de Cristina Kirchner en ruta del dinero K",
+            "precision": "year",
+            "description": "A fines de 2023, Llorens y Bertuzzi revocaron el sobreseimiento de la expresidenta tras aceptar como querellante a Bases Republicanas, con una interpretación amplia sobre quién puede ser querellante.",
+            "paragraph_index": 8
+          },
+          {
+            "date": "2025",
+            "title": "Barroetaveña revisa entrevistas y Bertuzzi sube al sexto lugar",
+            "precision": "year",
+            "description": "El consejero Diego Barroetaveña volvió a analizar las entrevistas del concurso del Consejo de la Magistratura y Bertuzzi pasó del puesto 16° al sexto, ingresando en la terna.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2025-07",
+            "title": "Milei nombra a Ana Juan jueza federal de Hurlingham",
+            "precision": "month",
+            "description": "Dos meses antes de la designación de Bertuzzi, Milei nombró a Ana Juan, esposa del juez Martínez de Giorgi, como magistrada federal de Hurlingham.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2025-09-02",
+            "title": "Milei nombra a Pablo Bertuzzi camarista federal",
+            "precision": "day",
+            "description": "El Presidente designó a Bertuzzi como juez de la Sala I de la Cámara Federal, tras su ascenso en el concurso.",
+            "paragraph_index": 7
+          },
+          {
+            "date": "2025-09-04",
+            "title": "Cámara Federal confirma exclusión de querellantes en $LIBRA",
+            "precision": "day",
+            "description": "En su primer día con los nuevos jueces, la Sala I, con firmas de Llorens y Bertuzzi, confirmó el apartamiento de cinco inversores que pedían ser querellantes, dejando al fiscal Taiano como único acusador.",
+            "paragraph_index": 4
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "analítico con tono de denuncia",
+        "framing": "La nota encuadra el cierre del caso $LIBRA como resultado de una 'ingeniería judicial y política' en la que jueces y fiscales con vínculos con el Gobierno (Martínez de Giorgi, Llorens, Bertuzzi, Taiano) convergen para dejar la causa sin acusador; los Milei aparecen como beneficiarios y los inversores excluidos como víctimas sin voz procesal, con la PIA como actor relegado.",
+        "sentiment": -0.7,
+        "sources_cited": [
+          "Fallo del juez Marcelo Martínez de Giorgi",
+          "Sala I de la Cámara Federal (fallo de Mariano Llorens y Pablo Bertuzzi)",
+          "Dictamen del fiscal Eduardo Taiano",
+          "Experimentado funcionario de Comodoro Py (anónimo)",
+          "Consejo de la Magistratura (concurso, dictamen de comisión, revisión del consejero Diego Barroetaveña)",
+          "Entrevistas del concurso publicadas en YouTube",
+          "Fallo de Llorens y Bertuzzi en la causa Ruta del dinero K y declaración de Llorens",
+          "Asociación Civil Bases Republicanas",
+          "Procuraduría de Investigaciones Administrativas (PIA)",
+          "Corte Suprema (caso Skanska)",
+          "Fuentes del Ministerio Público (anónimas)",
+          "Fuentes de la Cámara Federal de Casación Penal (anónimas)",
+          "Fuentes judiciales (anónimas)"
+        ],
+        "missing_angles": [
+          "Descargo o respuesta de los actores señalados: Martínez de Giorgi, Llorens, Bertuzzi, Taiano, Barroetaveña y el entorno de los Milei o sus defensas.",
+          "Fundamentos concretos del dictamen reservado de Taiano y del fallo de sobreseimiento: qué pruebas evaluaron y por qué concluyeron que no hubo delito.",
+          "Voz de los inversores excluidos o de sus abogados sobre la estrategia ante Casación y la eventual apelación antes del jueves.",
+          "Explicación de Barroetaveña sobre los criterios de su revisión de las entrevistas y si otros concursantes también cambiaron de posición; postura del resto del Consejo de la Magistratura.",
+          "Detalles del proceso de designación de Ana Juan y si hubo planteos de excusación o recusación de Martínez de Giorgi por ese vínculo.",
+          "Cifras del caso: cuántos inversores fueron afectados, montos perdidos y volumen de la operación con la criptomoneda.",
+          "Estado de investigaciones paralelas: comisión investigadora del Congreso, causas o demandas en Estados Unidos u otros países, actuaciones de la Oficina Anticorrupción.",
+          "Opinión de especialistas independientes en derecho procesal penal sobre la exigencia de acreditar la condición de víctima y sobre la facultad de la PIA para intervenir.",
+          "Por qué Taiano no dio intervención a la PIA y qué ocurrió con el expediente administrativo que esta había abierto.",
+          "Contraste con otros casos donde se denegó la condición de querellante con criterios similares, para matizar la comparación con el caso Ruta del dinero K."
+        ],
+        "follow_up_questions": [
+          "¿Qué argumentos y pruebas sostiene el dictamen reservado de Taiano y cuándo fue presentado exactamente?",
+          "¿Presentarán las presuntas víctimas una apelación antes del vencimiento del plazo y con qué fundamentos?",
+          "¿Cuándo resolverá la sala de Casación integrada por Slokar, Ledesma y Yacobucci la queja, y qué posturas tienen sus integrantes?",
+          "¿Qué ocurrió con el expediente que la PIA abrió sobre $LIBRA antes de la judicialización? ¿Sergio Rodríguez evalúa alguna acción?",
+          "¿Cuántos otros concursantes modificaron su posición tras la revisión de Barroetaveña y quiénes fueron desplazados de la terna por el ascenso de Bertuzzi?",
+          "¿Hubo pedidos de recusación de Martínez de Giorgi tras la designación de su esposa y cómo se resolvieron?",
+          "¿Qué medidas de prueba se produjeron efectivamente en la causa antes del sobreseimiento (peritajes, informes de exchanges, declaraciones)?",
+          "¿Avanzan acciones judiciales en el exterior que puedan aportar información o contradecir la conclusión local?",
+          "¿Puede el sobreseimiento quedar firme frente a una eventual reposición de los querellantes por Casación, o existen antecedentes de reapertura en esas condiciones?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El juez federal Marcelo Martínez de Giorgi sobreseyó a Javier Milei y Karina Milei en la causa $LIBRA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Martínez de Giorgi sobreseimiento Javier Milei Karina Milei causa $LIBRA CIJ"
+          },
+          {
+            "text": "El 4 de septiembre, la Sala I de la Cámara Federal, en su primer día con nuevos jueces nombrados por Milei, confirmó el apartamiento de cinco inversores que pedían ser querellantes en la causa $LIBRA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Sala I Cámara Federal 4 de septiembre $LIBRA querellantes excluidos cinco inversores"
+          },
+          {
+            "text": "El fiscal Eduardo Taiano promovió el sobreseimiento de todos los imputados en la causa $LIBRA en un dictamen que se mantuvo en reserva.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "Taiano dictamen sobreseimiento imputados $LIBRA reservado"
+          },
+          {
+            "text": "Un experimentado funcionario de Comodoro Py dijo que \"la causa ya está herida de muerte\".",
+            "type": "quote",
+            "checkable": false,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "\"herida de muerte\" causa $LIBRA Comodoro Py"
+          },
+          {
+            "text": "El fallo de la Cámara Federal que validó la exclusión de los querellantes en $LIBRA fue firmado por los camaristas Mariano Llorens y Pablo Bertuzzi.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "fallo Llorens Bertuzzi exclusión querellantes $LIBRA Cámara Federal"
+          },
+          {
+            "text": "En el concurso del Consejo de la Magistratura, Bertuzzi quedó en el puesto 21° tras exámenes escritos y antecedentes.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Consejo de la Magistratura concurso Cámara Federal orden de mérito Bertuzzi puesto 21"
+          },
+          {
+            "text": "Tras la entrevista personal, el dictamen de mayoría de la comisión ubicó a Bertuzzi en el puesto 16°, cuando debía estar entre los seis primeros para integrar las ternas.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "dictamen comisión de selección Consejo de la Magistratura Bertuzzi puesto 16 terna"
+          },
+          {
+            "text": "El consejero Diego Barroetaveña revisó las entrevistas de todos los postulantes y, tras esa revisión, Bertuzzi pasó al sexto lugar.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Barroetaveña revisión entrevistas concurso Bertuzzi sexto lugar Consejo de la Magistratura"
+          },
+          {
+            "text": "Milei nombró a Pablo Bertuzzi como juez de la Cámara Federal el 2 de septiembre.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Boletín Oficial decreto designación Pablo Bertuzzi Cámara Federal septiembre"
+          },
+          {
+            "text": "Milei designó a Ana Juan, esposa de Martínez de Giorgi, como jueza federal de Hurlingham, dos meses antes del nombramiento de Bertuzzi.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Boletín Oficial designación Ana Juan jueza federal Hurlingham"
+          },
+          {
+            "text": "A fines de 2023, Llorens y Bertuzzi revocaron un sobreseimiento de Cristina Kirchner en la causa de la ruta del dinero K.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Cámara Federal Llorens Bertuzzi revocan sobreseimiento Cristina Kirchner ruta del dinero K 2023"
+          },
+          {
+            "text": "La Asociación Civil Bases Republicanas, ONG cercana al PRO, pidió ser querellante en la ruta del dinero K y reclamó la reapertura del caso.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Bases Republicanas querellante ruta del dinero K Cristina Kirchner reapertura"
+          },
+          {
+            "text": "Llorens sostuvo que los argumentos de Bases Republicanas resultaban \"suficientes como para advertir la necesidad de despejar por completo la incertidumbre que presenta conocer la verdad de los hechos y la participación de la imputada\".",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 8,
+            "verification_query": "voto Llorens Bases Republicanas \"despejar por completo la incertidumbre\" ruta del dinero K"
+          },
+          {
+            "text": "En $LIBRA, Llorens y Bertuzzi sostuvieron que los damnificados no probaron su condición de víctimas ni la existencia de un engaño que los hiciera invertir.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 9,
+            "verification_query": "fallo Cámara Federal $LIBRA querellantes no acreditaron engaño víctimas"
+          },
+          {
+            "text": "La Procuraduría de Investigaciones Administrativas no intervino en la causa $LIBRA porque Taiano no le dio intervención, pese a que había abierto un expediente previo sobre $LIBRA.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 10,
+            "verification_query": "PIA Procuraduría de Investigaciones Administrativas expediente $LIBRA Taiano intervención"
+          },
+          {
+            "text": "La PIA, dirigida por Sergio Rodríguez, logró la reapertura del caso Skanska luego de que la Corte Suprema validara como prueba una grabación interna de la empresa.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 11,
+            "verification_query": "Corte Suprema Skanska grabación PIA Sergio Rodríguez reapertura"
+          },
+          {
+            "text": "La PIA reclamó en soledad la reapertura de la causa del Vacunatorio VIP y la Cámara Federal ordenó reabrir la investigación.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "Cámara Federal reapertura Vacunatorio VIP PIA Taiano"
+          },
+          {
+            "text": "Según fuentes del Ministerio Público, la PIA no fue notificada en $LIBRA y no tendría margen para intervenir en contra de lo sostenido por el fiscal.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "PIA no notificada sobreseimiento $LIBRA Ministerio Público"
+          },
+          {
+            "text": "Las presuntas víctimas excluidas presentaron un recurso de casación que Bertuzzi y Llorens no concedieron, y luego recurrieron en queja ante la Cámara Federal de Casación.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 13,
+            "verification_query": "recurso de queja Cámara Federal de Casación querellantes $LIBRA"
+          },
+          {
+            "text": "El plazo para apelar los sobreseimientos de la causa $LIBRA vencería el jueves próximo.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "plazo apelación sobreseimiento Milei $LIBRA vence"
+          },
+          {
+            "text": "La sala de Casación que debe resolver la queja está integrada por Alejandro Slokar, Ángela Ledesma y Guillermo Yacobucci.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "Casación sala Slokar Ledesma Yacobucci queja $LIBRA"
+          },
+          {
+            "text": "Según fuentes judiciales, los camaristas de Casación aún no tienen una decisión consensuada sobre la queja en $LIBRA.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 14,
+            "verification_query": "Casación decisión queja querellantes $LIBRA Slokar Ledesma Yacobucci"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "javier-milei",
+            "evidence": "sobreseyó a Javier y Karina Milei en el caso $LIBRA",
+            "relation": "sobreseyó a"
+          },
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "karina-milei",
+            "evidence": "sobreseyó a Javier y Karina Milei en el caso $LIBRA",
+            "relation": "sobreseyó a"
+          },
+          {
+            "source": "javier-milei",
+            "target": "caso-libra",
+            "evidence": "la criptomoneda que promocionó el Presidente",
+            "relation": "imputado en"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "caso-libra",
+            "evidence": "quedaba como único acusador el fiscal Eduardo Taiano",
+            "relation": "fiscal de"
+          },
+          {
+            "source": "javier-milei",
+            "target": "pablo-bertuzzi",
+            "evidence": "El 2 de septiembre Milei lo nombró",
+            "relation": "nombró a"
+          },
+          {
+            "source": "pablo-bertuzzi",
+            "target": "camara-federal",
+            "evidence": "la Sala I de la Cámara Federal, en su primer día con los nuevos jueces nombrados por el propio Milei",
+            "relation": "integra"
+          },
+          {
+            "source": "mariano-llorens",
+            "target": "camara-federal",
+            "evidence": "Lo firmaron Mariano Llorens y Pablo Bertuzzi.",
+            "relation": "integra"
+          },
+          {
+            "source": "diego-barroetavena",
+            "target": "pablo-bertuzzi",
+            "evidence": "tras esa revisión, Bertuzzi pasó al sexto lugar",
+            "relation": "favoreció en concurso"
+          },
+          {
+            "source": "diego-barroetavena",
+            "target": "consejo-de-la-magistratura",
+            "evidence": "el consejero juez Diego Barroetaveña",
+            "relation": "es consejero de"
+          },
+          {
+            "source": "ana-juan",
+            "target": "marcelo-martinez-de-giorgi",
+            "evidence": "la mujer de Martínez de Giorgi, Ana Juan",
+            "relation": "es esposa de"
+          },
+          {
+            "source": "javier-milei",
+            "target": "ana-juan",
+            "evidence": "designaciones de jueces de Milei, que incluyeron el nombramiento de la mujer de Martínez de Giorgi, Ana Juan",
+            "relation": "nombró a"
+          },
+          {
+            "source": "ana-juan",
+            "target": "hurlingham",
+            "evidence": "como magistrada federal de Hurlingham",
+            "relation": "magistrada en"
+          },
+          {
+            "source": "mariano-llorens",
+            "target": "cristina-kirchner",
+            "evidence": "Llorens y Bertuzzi ... habían revocado un sobreseimiento de la expresidenta Cristina Kirchner",
+            "relation": "revocó sobreseimiento de"
+          },
+          {
+            "source": "cristina-kirchner",
+            "target": "ruta-del-dinero-k",
+            "evidence": "en el caso de la ruta del dinero K",
+            "relation": "imputada en"
+          },
+          {
+            "source": "bases-republicanas",
+            "target": "pro",
+            "evidence": "una ONG cercana a Pro",
+            "relation": "cercana a"
+          },
+          {
+            "source": "bases-republicanas",
+            "target": "ruta-del-dinero-k",
+            "evidence": "pidió ser aceptada como querellante",
+            "relation": "pidió ser querellante en"
+          },
+          {
+            "source": "sergio-rodriguez",
+            "target": "pia",
+            "evidence": "Esta Procuraduría, dirigida por el fiscal Sergio Rodríguez",
+            "relation": "dirige"
+          },
+          {
+            "source": "pia",
+            "target": "ministerio-publico",
+            "evidence": "organismo del Ministerio Público",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "pia",
+            "target": "caso-skanska",
+            "evidence": "como consiguió la reapertura del caso Skanska",
+            "relation": "consiguió reapertura de"
+          },
+          {
+            "source": "corte-suprema",
+            "target": "pia",
+            "evidence": "la Corte Suprema finalmente validó su planteo",
+            "relation": "validó planteo de"
+          },
+          {
+            "source": "pia",
+            "target": "vacunatorio-vip",
+            "evidence": "la PIA reclamó en soledad la reapertura de la causa",
+            "relation": "reclamó reapertura de"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "pia",
+            "evidence": "Taiano no le dio intervención",
+            "relation": "no dio intervención a"
+          },
+          {
+            "source": "alejandro-slokar",
+            "target": "camara-federal-de-casacion",
+            "evidence": "La sala ... está integrada por Alejandro Slokar, Ángela Ledesma y Guillermo Yacobucci",
+            "relation": "integra"
+          },
+          {
+            "source": "angela-ledesma",
+            "target": "camara-federal-de-casacion",
+            "evidence": "está integrada por Alejandro Slokar, Ángela Ledesma y Guillermo Yacobucci",
+            "relation": "integra"
+          },
+          {
+            "source": "guillermo-yacobucci",
+            "target": "camara-federal-de-casacion",
+            "evidence": "está integrada por Alejandro Slokar, Ángela Ledesma y Guillermo Yacobucci",
+            "relation": "integra"
+          },
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "caso-libra",
+            "evidence": "El fallo del juez Marcelo Martínez de Giorgi",
+            "relation": "juez de"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "caso-libra",
+            "name": "Caso $LIBRA",
+            "type": "event",
+            "mentions": 9,
+            "description": "Causa judicial por la promoción de la criptomoneda $LIBRA que terminó con el sobreseimiento de los imputados."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 7,
+            "description": "Presidente sobreseído en el caso $LIBRA que promocionó la criptomoneda y nombró a jueces de la Cámara Federal."
+          },
+          {
+            "id": "karina-milei",
+            "name": "Karina Milei",
+            "type": "person",
+            "mentions": 1,
+            "description": "Sobreseída junto a su hermano en el caso $LIBRA."
+          },
+          {
+            "id": "marcelo-martinez-de-giorgi",
+            "name": "Marcelo Martínez de Giorgi",
+            "type": "person",
+            "mentions": 6,
+            "description": "Juez que sobreseyó a los Milei y excluyó a los querellantes del caso $LIBRA."
+          },
+          {
+            "id": "camara-federal",
+            "name": "Cámara Federal",
+            "type": "org",
+            "mentions": 5,
+            "description": "Tribunal cuya Sala I confirmó la exclusión de los querellantes en el caso $LIBRA."
+          },
+          {
+            "id": "eduardo-taiano",
+            "name": "Eduardo Taiano",
+            "type": "person",
+            "mentions": 6,
+            "description": "Fiscal y único acusador del caso $LIBRA que promovió el sobreseimiento de todos los imputados."
+          },
+          {
+            "id": "mariano-llorens",
+            "name": "Mariano Llorens",
+            "type": "person",
+            "mentions": 6,
+            "description": "Camarista que firmó el fallo que validó la exclusión de los querellantes."
+          },
+          {
+            "id": "pablo-bertuzzi",
+            "name": "Pablo Bertuzzi",
+            "type": "person",
+            "mentions": 9,
+            "description": "Camarista nombrado por Milei que firmó el fallo que confirmó la exclusión de los querellantes."
+          },
+          {
+            "id": "consejo-de-la-magistratura",
+            "name": "Consejo de la Magistratura",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organismo cuyo concurso permitió a Bertuzzi entrar en la terna de candidatos."
+          },
+          {
+            "id": "diego-barroetavena",
+            "name": "Diego Barroetaveña",
+            "type": "person",
+            "mentions": 1,
+            "description": "Consejero juez que reanalizó las entrevistas y llevó a Bertuzzi al sexto lugar."
+          },
+          {
+            "id": "ana-juan",
+            "name": "Ana Juan",
+            "type": "person",
+            "mentions": 1,
+            "description": "Esposa de Martínez de Giorgi, nombrada por Milei magistrada federal de Hurlingham."
+          },
+          {
+            "id": "hurlingham",
+            "name": "Hurlingham",
+            "type": "place",
+            "mentions": 1,
+            "description": "Jurisdicción donde Ana Juan fue designada magistrada federal."
+          },
+          {
+            "id": "cristina-kirchner",
+            "name": "Cristina Kirchner",
+            "type": "person",
+            "mentions": 3,
+            "description": "Expresidenta cuyo sobreseimiento en la ruta del dinero K fue revocado por Llorens y Bertuzzi."
+          },
+          {
+            "id": "ruta-del-dinero-k",
+            "name": "Ruta del dinero K",
+            "type": "event",
+            "mentions": 1,
+            "description": "Causa en la que se revocó el sobreseimiento de Cristina Kirchner."
+          },
+          {
+            "id": "bases-republicanas",
+            "name": "Asociación Civil Bases Republicanas",
+            "type": "org",
+            "mentions": 3,
+            "description": "ONG cercana a Pro que pidió ser querellante y reabrir la causa ruta del dinero K."
+          },
+          {
+            "id": "pro",
+            "name": "Pro",
+            "type": "org",
+            "mentions": 1,
+            "description": "Partido político al que es cercana Bases Republicanas."
+          },
+          {
+            "id": "pia",
+            "name": "Procuraduría de Investigaciones Administrativas",
+            "type": "org",
+            "mentions": 7,
+            "description": "Organismo del Ministerio Público que no fue convocado a intervenir en el caso $LIBRA."
+          },
+          {
+            "id": "ministerio-publico",
+            "name": "Ministerio Público",
+            "type": "org",
+            "mentions": 2,
+            "description": "Organismo del que depende la PIA y cuyas fuentes hablaron con LA NACION."
+          },
+          {
+            "id": "sergio-rodriguez",
+            "name": "Sergio Rodríguez",
+            "type": "person",
+            "mentions": 1,
+            "description": "Fiscal que dirige la PIA."
+          },
+          {
+            "id": "caso-skanska",
+            "name": "Caso Skanska",
+            "type": "event",
+            "mentions": 1,
+            "description": "Causa reabierta gracias a la insistencia de la PIA."
+          },
+          {
+            "id": "corte-suprema",
+            "name": "Corte Suprema",
+            "type": "org",
+            "mentions": 1,
+            "description": "Tribunal que validó el planteo de la PIA en el caso Skanska."
+          },
+          {
+            "id": "vacunatorio-vip",
+            "name": "Vacunatorio VIP",
+            "type": "event",
+            "mentions": 1,
+            "description": "Causa por desvío de vacunas reabierta tras reclamo de la PIA."
+          },
+          {
+            "id": "camara-federal-de-casacion",
+            "name": "Cámara Federal de Casación",
+            "type": "org",
+            "mentions": 5,
+            "description": "Tribunal superior ante el cual los querellantes excluidos presentaron una queja."
+          },
+          {
+            "id": "alejandro-slokar",
+            "name": "Alejandro Slokar",
+            "type": "person",
+            "mentions": 1,
+            "description": "Integrante de la sala de Casación que debe resolver la queja."
+          },
+          {
+            "id": "angela-ledesma",
+            "name": "Ángela Ledesma",
+            "type": "person",
+            "mentions": 1,
+            "description": "Integrante de la sala de Casación que debe resolver la queja."
+          },
+          {
+            "id": "guillermo-yacobucci",
+            "name": "Guillermo Yacobucci",
+            "type": "person",
+            "mentions": 1,
+            "description": "Integrante de la sala de Casación que debe resolver la queja."
+          },
+          {
+            "id": "comodoro-py",
+            "name": "Comodoro Py",
+            "type": "place",
+            "mentions": 2,
+            "description": "Sede de los tribunales federales donde se especula sobre la causa."
+          },
+          {
+            "id": "la-nacion",
+            "name": "LA NACION",
+            "type": "org",
+            "mentions": 2,
+            "description": "Medio que recogió las fuentes del Ministerio Público y judiciales."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,630 @@
+{
+  "niche": "política",
+  "enrichments": [
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2025-03-20",
+            "title": "Inversores reconocidos como querellantes en el caso $LIBRA",
+            "precision": "day",
+            "description": "Desde esta fecha, las presuntas víctimas del caso tenían la condición de querellantes (acusadores particulares) en la causa.",
+            "paragraph_index": 5
+          },
+          {
+            "date": "2025-07-03",
+            "title": "Martínez de Giorgi quita la condición de querellantes",
+            "precision": "day",
+            "description": "El juez Martínez de Giorgi les quitó a las presuntas víctimas la condición de querellantes, lo que dejó al fiscal Taiano como único impulsor de la investigación. El año se infiere del contexto.",
+            "paragraph_index": 5
+          },
+          {
+            "date": "2025-09-04",
+            "title": "Cámara Federal confirma el desplazamiento de los querellantes",
+            "precision": "day",
+            "description": "La Sala I de la Cámara Federal, en su primer día con los nuevos jueces nombrados por Milei, confirmó la decisión de quitarles a los inversores la condición de querellantes. El año se infiere del contexto.",
+            "paragraph_index": 5
+          }
+        ]
+      }
+    },
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "analítico-crítico",
+        "framing": "La nota se encuadra desde la celeridad sospechosa del cierre judicial: el juez Martínez de Giorgi y el fiscal Taiano aparecen como actores cuya actuación coordinada y veloz favorece a los Milei, mientras los inversores desplazados (Marchetto, con Grabois) ocupan el lugar de víctimas sin voz procesal. El Presidente y su hermana quedan como beneficiarios de un proceso que se apoya en informes de organismos que dependen del propio Ejecutivo.",
+        "sentiment": -0.5,
+        "sources_cited": [
+          "Dictamen del fiscal Eduardo Taiano (al que accedió LA NACION)",
+          "Sentencia del juez federal Marcelo Martínez de Giorgi",
+          "Fuentes oficiales (ratificación de la fecha de presentación)",
+          "Fuentes del juzgado",
+          "Sala I de la Cámara Federal (resolución del 4 de septiembre)",
+          "Juan Patricio Marchetto (inversor, presentación judicial)",
+          "Abogados Juan Grabois y Nicolás Rechanik (patrocinantes)",
+          "Informes de la UFECI",
+          "Departamento de Cibercrimen de la Policía Federal Argentina",
+          "DATIP",
+          "Oficina Anticorrupción (resolución en expediente SISA 22.632)",
+          "Secretaría de Legal y Técnica de la Presidencia",
+          "Dirección de Asuntos Presidenciales de la Secretaría General de Presidencia"
+        ],
+        "missing_angles": [
+          "Descargo o respuesta on the record del fiscal Taiano sobre por qué presentó el dictamen de forma espontánea y sin esperar las medidas de prueba pendientes que él mismo había ordenado.",
+          "Voz del juez Martínez de Giorgi o del juzgado identificada, más allá de 'fuentes del juzgado' y la explicación del viaje programado.",
+          "Postura de la defensa de Javier y Karina Milei y del resto de los sobreseídos (Hayden Davis, Julian Peh, etc.), que no aparecen citados.",
+          "Comparación con tiempos habituales: cuánto suele demorar un juez federal en resolver sobreseimientos tras un dictamen fiscal de extensión similar.",
+          "Explicación jurídica de si el juez estaba obligado a sobreseer ante la falta de impulso fiscal o si podía optar por otra vía (y opinión de especialistas en derecho procesal penal).",
+          "Contexto sobre la independencia de la Oficina Anticorrupción y de las secretarías de Presidencia cuyos informes sirvieron de base, incluido quién dirige la OA y su vínculo con el Gobierno.",
+          "Estado de las investigaciones paralelas sobre $LIBRA en el exterior (por ejemplo, en Estados Unidos) y de la comisión investigadora del Congreso, y si sus hallazgos contradicen el dictamen.",
+          "Cifras del perjuicio: cuántos inversores perdieron dinero, montos totales y cuánto ganaron los creadores del token.",
+          "Antecedentes del juez y del fiscal en causas sensibles para el poder político.",
+          "Detalle sobre la integración de la Sala I con jueces nombrados por Milei: quiénes son y si correspondía algún planteo de recusación."
+        ],
+        "follow_up_questions": [
+          "¿Hubo comunicaciones formales o informales entre Taiano y Martínez de Giorgi antes del dictamen, y qué dicen los registros del sistema Lex100 sobre el borrador de la sentencia?",
+          "¿Qué resultados arrojaron, si ya se completaron, los peritajes sobre los dispositivos de Orlando Mellino y Camilo Rodríguez Blanco?",
+          "¿Quién ordenó y quién financió los cinco millones de dólares que Hayden Davis transfirió a Mellino y Rodríguez Blanco, y con qué fin?",
+          "¿Cuál era el viaje programado del juez y desde cuándo estaba agendado?",
+          "¿Qué plazos maneja la Cámara de Casación para resolver la queja de los inversores y quiénes integran la sala que la tratará?",
+          "¿Existe algún antecedente en que la Procuración General haya revisado o cuestionado dictámenes de Taiano en causas de alto impacto político?",
+          "¿Qué pruebas valoró la Oficina Anticorrupción en el expediente SISA 22.632 y qué grado de independencia tuvo su titular?",
+          "¿Los informes de UFECI, Cibercrimen de la PFA y DATIP concluyeron que no había vínculo o simplemente que no pudieron establecerlo con la información disponible?",
+          "¿Qué otras personas vinculadas a los hechos relevantes nunca fueron citadas a declarar, según la presentación de Marchetto?",
+          "¿Cómo avanzan las causas civiles o penales sobre $LIBRA en tribunales de Estados Unidos?"
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "El juez federal Marcelo Martínez de Giorgi cerró el caso $LIBRA el viernes pasado y sobreseyó a Javier Milei, Karina Milei y al resto de los acusados.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.9,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "sobreseimiento Javier Milei Karina Milei causa $LIBRA juez Martínez de Giorgi CIJ"
+          },
+          {
+            "text": "El fallo de sobreseimiento de Martínez de Giorgi tiene 60 hojas y se basa fundamentalmente en un dictamen del fiscal Eduardo Taiano.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "fallo Martínez de Giorgi $LIBRA 60 hojas dictamen Taiano"
+          },
+          {
+            "text": "El dictamen del fiscal Taiano está firmado el día anterior a la sentencia de sobreseimiento.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 2,
+            "verification_query": "fecha dictamen fiscal Taiano $LIBRA sobreseimiento"
+          },
+          {
+            "text": "LA NACION accedió al dictamen de Taiano y ratificó su fecha de presentación con fuentes oficiales.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "La Nación dictamen Taiano $LIBRA fuentes oficiales"
+          },
+          {
+            "text": "El dictamen de Taiano fue una presentación espontánea que no dice responder a consulta alguna.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "dictamen Taiano $LIBRA presentación espontánea texto completo"
+          },
+          {
+            "text": "El dictamen fiscal de Taiano tiene 58 hojas y el juez tuvo lista la sentencia en 26 horas.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 4,
+            "verification_query": "dictamen Taiano 58 páginas $LIBRA sentencia 26 horas"
+          },
+          {
+            "text": "Taiano firmó su dictamen a las 11:32 del jueves y Martínez de Giorgi firmó su fallo a las 14:29 del viernes.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "firma digital dictamen Taiano 11:32 fallo Martínez de Giorgi 14:29 $LIBRA"
+          },
+          {
+            "text": "El secretario de la causa firmó la sentencia a las 13:30 del viernes.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "secretario juzgado federal Martínez de Giorgi firma sentencia $LIBRA 13:30"
+          },
+          {
+            "text": "Según fuentes del juzgado, Taiano había avisado a Martínez de Giorgi que presentaría su dictamen y el juez quiso firmar la sentencia el viernes porque tenía un viaje programado.",
+            "type": "attribution",
+            "checkable": false,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 6,
+            "verification_query": "Martínez de Giorgi viaje programado sentencia $LIBRA"
+          },
+          {
+            "text": "El 3 de julio el juez Martínez de Giorgi quitó a las presuntas víctimas del caso $LIBRA la condición de querellantes que tenían desde el 20 de marzo de 2025.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Martínez de Giorgi aparta querellantes $LIBRA 3 de julio"
+          },
+          {
+            "text": "La Sala I de la Cámara Federal confirmó el 4 de septiembre el apartamiento de los querellantes, en su primer día de integración con jueces nombrados por Milei.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 7,
+            "verification_query": "Sala I Cámara Federal 4 de septiembre confirma querellantes $LIBRA nuevos jueces"
+          },
+          {
+            "text": "Cinco inversores fueron desplazados de la causa y recurrieron en queja ante la Cámara Federal de Casación porque la Cámara Federal no les concedió el recurso.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "recurso de queja Casación querellantes $LIBRA inversores"
+          },
+          {
+            "text": "Juan Patricio Marchetto, patrocinado por Juan Grabois y Nicolás Rechanik, presentó un pronto despacho ante Casación y apeló el cierre de la causa.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": true,
+            "paragraph_index": 8,
+            "verification_query": "Marchetto Grabois apelación sobreseimiento $LIBRA pronto despacho Casación"
+          },
+          {
+            "text": "Taiano concluyó en su dictamen que no había \"sustento fáctico alguno\" para continuar con la investigación.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 9,
+            "verification_query": "dictamen Taiano \"sustento fáctico alguno\" $LIBRA"
+          },
+          {
+            "text": "Marchetto afirmó que al momento del sobreseimiento existían medidas ordenadas en curso, peritajes pendientes y personas vinculadas que no habían sido escuchadas.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 10,
+            "verification_query": "Marchetto apelación sobreseimiento $LIBRA medidas en curso peritajes pendientes"
+          },
+          {
+            "text": "Orlando Mellino y Camilo Rodríguez Blanco recibieron cinco millones de dólares de Hayden Davis.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": true,
+            "paragraph_index": 12,
+            "verification_query": "Mellino Rodríguez Blanco cinco millones de dólares Hayden Davis $LIBRA"
+          },
+          {
+            "text": "Una prueba pendiente ordenada por el fiscal era la ampliación del análisis de los dispositivos de Orlando Mellino y Camilo Rodríguez Blanco.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.65,
+            "needs_source": false,
+            "paragraph_index": 12,
+            "verification_query": "peritaje dispositivos Mellino Rodríguez Blanco $LIBRA fiscal Taiano"
+          },
+          {
+            "text": "Taiano dedicó 40 páginas de su dictamen a repasar las pruebas reunidas en la causa.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.75,
+            "needs_source": false,
+            "paragraph_index": 13,
+            "verification_query": "dictamen Taiano $LIBRA análisis de pruebas"
+          },
+          {
+            "text": "Taiano sostuvo que no fue factible acreditar que Karina Milei recibiera dinero para facilitar reuniones del Presidente con Hayden Davis, Julian Peh y Bartosz Lipinski.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 14,
+            "verification_query": "dictamen Taiano Karina Milei Hayden Davis Julian Peh Lipinski"
+          },
+          {
+            "text": "Taiano afirmó que no se pudo probar un intercambio indebido entre un beneficio ofrecido y una actuación funcional concreta.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 15,
+            "verification_query": "Taiano \"intercambio indebido\" $LIBRA dictamen"
+          },
+          {
+            "text": "Taiano sostuvo que no se configuró estafa porque el proyecto existía, el token fue lanzado y la operatoria fue pública y trazable en blockchain.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 16,
+            "verification_query": "Taiano estafa $LIBRA \"el token fue efectivamente lanzado\""
+          },
+          {
+            "text": "Taiano afirmó que los informes de la UFECI, de Cibercrimen de la PFA y de la DATIP no permitieron vincular a Rodríguez Blanco y Mellino con las maniobras denunciadas.",
+            "type": "quote",
+            "checkable": true,
+            "confidence": 0.85,
+            "needs_source": false,
+            "paragraph_index": 19,
+            "verification_query": "UFECI DATIP Cibercrimen PFA Mellino Rodríguez Blanco $LIBRA"
+          },
+          {
+            "text": "La Oficina Anticorrupción, en el expediente SISA 22.632, concluyó que Milei no infringió la ley 25.188 de Ética Pública.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 21,
+            "verification_query": "Oficina Anticorrupción expediente SISA 22.632 Milei ley 25.188 $LIBRA"
+          },
+          {
+            "text": "La Secretaría Legal y Técnica y la Secretaría General de Presidencia informaron que no hay registros de un acuerdo confidencial entre Hayden Davis y Javier Milei sobre blockchain y criptomonedas.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.8,
+            "needs_source": false,
+            "paragraph_index": 22,
+            "verification_query": "Secretaría Legal y Técnica acuerdo confidencial Hayden Davis Milei registros"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "caso-libra",
+            "evidence": "El juez federal Marcelo Martínez de Giorgi cerró el caso $LIBRA el viernes pasado.",
+            "relation": "cerró"
+          },
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "javier-milei",
+            "evidence": "Sobreseyó a Javier y a Karina Milei",
+            "relation": "sobreseyó a"
+          },
+          {
+            "source": "marcelo-martinez-de-giorgi",
+            "target": "karina-milei",
+            "evidence": "Sobreseyó a Javier y a Karina Milei",
+            "relation": "sobreseyó a"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "caso-libra",
+            "evidence": "un dictamen del fiscal del caso, Eduardo Taiano",
+            "relation": "es fiscal de"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "marcelo-martinez-de-giorgi",
+            "evidence": "Taiano ya le había avisado a Martínez de Giorgi que iba a presentar su dictamen",
+            "relation": "avisó previamente a"
+          },
+          {
+            "source": "la-nacion",
+            "target": "eduardo-taiano",
+            "evidence": "LA NACION accedió al dictamen de Taiano",
+            "relation": "accedió al dictamen de"
+          },
+          {
+            "source": "camara-federal",
+            "target": "marcelo-martinez-de-giorgi",
+            "evidence": "Esa decisión fue confirmada el 4 de septiembre pasado por la Sala I de la Cámara Federal",
+            "relation": "confirmó decisión de"
+          },
+          {
+            "source": "javier-milei",
+            "target": "camara-federal",
+            "evidence": "con los nuevos jueces nombrados por el propio Milei",
+            "relation": "nombró jueces de"
+          },
+          {
+            "source": "juan-patricio-marchetto",
+            "target": "camara-federal-de-casacion",
+            "evidence": "Juan Patricio Marchetto, uno de los inversores, presentó un “pronto despacho” para apurar esa decisión del tribunal",
+            "relation": "presentó pronto despacho ante"
+          },
+          {
+            "source": "juan-grabois",
+            "target": "juan-patricio-marchetto",
+            "evidence": "Marchetto -patrocinado por los abogados Juan Grabois y Nicolás Rechanik-",
+            "relation": "patrocina a"
+          },
+          {
+            "source": "nicolas-rechanik",
+            "target": "juan-patricio-marchetto",
+            "evidence": "Marchetto -patrocinado por los abogados Juan Grabois y Nicolás Rechanik-",
+            "relation": "patrocina a"
+          },
+          {
+            "source": "juan-patricio-marchetto",
+            "target": "eduardo-taiano",
+            "evidence": "se quejó de que Taiano no hubiera esperado siquiera pruebas que él mismo había ordenado",
+            "relation": "criticó"
+          },
+          {
+            "source": "hayden-davis",
+            "target": "orlando-mellino",
+            "evidence": "un jubilado argentino y un trader colombiana que recibieron cinco millones de dólares de Hayden Davis",
+            "relation": "transfirió dinero a"
+          },
+          {
+            "source": "hayden-davis",
+            "target": "camilo-rodriguez-blanco",
+            "evidence": "un jubilado argentino y un trader colombiana que recibieron cinco millones de dólares de Hayden Davis",
+            "relation": "transfirió dinero a"
+          },
+          {
+            "source": "javier-milei",
+            "target": "hayden-davis",
+            "evidence": "facilitar las reuniones del Presidente de la Nación con los empresarios extranjeros Hayden Davis, Julian Peh y Bartosz Lipinski",
+            "relation": "se habría reunido con"
+          },
+          {
+            "source": "javier-milei",
+            "target": "julian-peh",
+            "evidence": "reuniones del Presidente de la Nación con los empresarios extranjeros Hayden Davis, Julian Peh y Bartosz Lipinski",
+            "relation": "se habría reunido con"
+          },
+          {
+            "source": "javier-milei",
+            "target": "bartosz-lipinski",
+            "evidence": "reuniones del Presidente de la Nación con los empresarios extranjeros Hayden Davis, Julian Peh y Bartosz Lipinski",
+            "relation": "se habría reunido con"
+          },
+          {
+            "source": "karina-milei",
+            "target": "javier-milei",
+            "evidence": "al Presidente, a su hermana y al resto de los acusados",
+            "relation": "es hermana de"
+          },
+          {
+            "source": "karina-milei",
+            "target": "secretaria-general-de-presidencia",
+            "evidence": "[secretaría cuya titular es Karina Milei]",
+            "relation": "es titular de"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "oficina-anticorrupcion",
+            "evidence": "las conclusiones arribadas por la Oficina Anticorrupción ... me eximen de efectuar mayores consideraciones",
+            "relation": "se apoyó en"
+          },
+          {
+            "source": "oficina-anticorrupcion",
+            "target": "javier-milei",
+            "evidence": "concluyó que el nombrado [Milei] no había cometido infracción alguna a la ley 25.188",
+            "relation": "concluyó que no infringió la ley"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "ufeci",
+            "evidence": "de los informes de la UFECI",
+            "relation": "se apoyó en informes de"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "policia-federal-argentina",
+            "evidence": "del análisis de trazabilidad efectuado por el Departamento de Cibercrimen de la Policía Federal Argentina",
+            "relation": "se apoyó en análisis de"
+          },
+          {
+            "source": "eduardo-taiano",
+            "target": "datip",
+            "evidence": "del análisis producido por la DATIP",
+            "relation": "se apoyó en análisis de"
+          },
+          {
+            "source": "secretaria-legal-y-tecnica",
+            "target": "hayden-davis",
+            "evidence": "no constan registros sobre un acuerdo confidencial entre Hayden Davis y el presidente de la nación Javier Milei",
+            "relation": "informó sin registros de acuerdo con"
+          },
+          {
+            "source": "hayden-davis",
+            "target": "caso-libra",
+            "evidence": "se detectaron movimientos de dinero ... días antes del lanzamiento de $LIBRA",
+            "relation": "involucrado en"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "marcelo-martinez-de-giorgi",
+            "name": "Marcelo Martínez de Giorgi",
+            "type": "person",
+            "mentions": 14,
+            "description": "Juez federal que cerró el caso $LIBRA y sobreseyó a todos los acusados un día después del dictamen fiscal."
+          },
+          {
+            "id": "eduardo-taiano",
+            "name": "Eduardo Taiano",
+            "type": "person",
+            "mentions": 16,
+            "description": "Fiscal del caso $LIBRA cuyo dictamen pidió no seguir con la investigación y fue base del fallo."
+          },
+          {
+            "id": "caso-libra",
+            "name": "Caso $LIBRA",
+            "type": "event",
+            "mentions": 8,
+            "description": "Causa judicial por el lanzamiento del token $LIBRA, cerrada con sobreseimientos."
+          },
+          {
+            "id": "javier-milei",
+            "name": "Javier Milei",
+            "type": "person",
+            "mentions": 9,
+            "description": "Presidente de la Nación, sobreseído en el caso $LIBRA."
+          },
+          {
+            "id": "karina-milei",
+            "name": "Karina Milei",
+            "type": "person",
+            "mentions": 5,
+            "description": "Hermana del Presidente y secretaria general de la Presidencia, sobreseída en la causa."
+          },
+          {
+            "id": "la-nacion",
+            "name": "LA NACION",
+            "type": "org",
+            "mentions": 4,
+            "description": "Diario que accedió al dictamen de Taiano y verificó su fecha."
+          },
+          {
+            "id": "camara-federal",
+            "name": "Cámara Federal",
+            "type": "org",
+            "mentions": 3,
+            "description": "Tribunal cuya Sala I confirmó el desplazamiento de los querellantes y no les concedió el recurso."
+          },
+          {
+            "id": "camara-federal-de-casacion",
+            "name": "Cámara Federal de Casación",
+            "type": "org",
+            "mentions": 3,
+            "description": "Tribunal al que los inversores recurrieron en queja para ser repuestos como querellantes."
+          },
+          {
+            "id": "juan-patricio-marchetto",
+            "name": "Juan Patricio Marchetto",
+            "type": "person",
+            "mentions": 7,
+            "description": "Inversor desplazado que presentó un pronto despacho y apeló el cierre de la causa."
+          },
+          {
+            "id": "juan-grabois",
+            "name": "Juan Grabois",
+            "type": "person",
+            "mentions": 1,
+            "description": "Abogado patrocinante de Marchetto."
+          },
+          {
+            "id": "nicolas-rechanik",
+            "name": "Nicolás Rechanik",
+            "type": "person",
+            "mentions": 1,
+            "description": "Abogado patrocinante de Marchetto."
+          },
+          {
+            "id": "orlando-mellino",
+            "name": "Orlando Mellino",
+            "type": "person",
+            "mentions": 3,
+            "description": "Jubilado argentino que recibió dinero de Hayden Davis días antes del lanzamiento de $LIBRA."
+          },
+          {
+            "id": "camilo-rodriguez-blanco",
+            "name": "Flavio Camilo Rodríguez Blanco",
+            "type": "person",
+            "mentions": 3,
+            "description": "Trader colombiano que recibió dinero de Hayden Davis días antes del lanzamiento de $LIBRA."
+          },
+          {
+            "id": "hayden-davis",
+            "name": "Hayden Davis",
+            "type": "person",
+            "mentions": 5,
+            "description": "Empresario extranjero vinculado al token $LIBRA que transfirió millones a Mellino y Rodríguez Blanco."
+          },
+          {
+            "id": "julian-peh",
+            "name": "Julian Peh",
+            "type": "person",
+            "mentions": 1,
+            "description": "Empresario extranjero que se habría reunido con el Presidente."
+          },
+          {
+            "id": "bartosz-lipinski",
+            "name": "Bartosz Lipinski",
+            "type": "person",
+            "mentions": 1,
+            "description": "Empresario extranjero que se habría reunido con el Presidente."
+          },
+          {
+            "id": "ufeci",
+            "name": "UFECI",
+            "type": "org",
+            "mentions": 1,
+            "description": "Unidad fiscal cuyos informes no relacionaron a Mellino y Rodríguez Blanco con las maniobras."
+          },
+          {
+            "id": "policia-federal-argentina",
+            "name": "Policía Federal Argentina",
+            "type": "org",
+            "mentions": 1,
+            "description": "Su Departamento de Cibercrimen hizo un análisis de trazabilidad en la causa."
+          },
+          {
+            "id": "datip",
+            "name": "DATIP",
+            "type": "org",
+            "mentions": 1,
+            "description": "Organismo que produjo un análisis citado por el fiscal."
+          },
+          {
+            "id": "oficina-anticorrupcion",
+            "name": "Oficina Anticorrupción",
+            "type": "org",
+            "mentions": 2,
+            "description": "Organismo que concluyó que Milei no infringió la ley de Ética Pública."
+          },
+          {
+            "id": "secretaria-legal-y-tecnica",
+            "name": "Secretaría de Legal y Técnica de la Presidencia de la Nación",
+            "type": "org",
+            "mentions": 1,
+            "description": "Informó que no había registros de un acuerdo entre Davis y Milei."
+          },
+          {
+            "id": "secretaria-general-de-presidencia",
+            "name": "Secretaría General de Presidencia",
+            "type": "org",
+            "mentions": 1,
+            "description": "Secretaría a cargo de Karina Milei que informó no constar registros del acuerdo."
+          }
+        ]
+      }
+    }
+  ]
+}

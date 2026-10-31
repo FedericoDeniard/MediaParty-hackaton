@@ -1,0 +1,313 @@
+{
+  "niche": "economía",
+  "enrichments": [
+    {
+      "kind": "editorial",
+      "status": "done",
+      "error": null,
+      "data": {
+        "tone": "informativo, analítico",
+        "framing": "Nota de mercado de granos contada casi íntegramente desde la mirada de un único analista académico (Dante Romano, Universidad Austral), con el productor argentino como protagonista que retiene ventas frente a factores externos (cosecha estadounidense, Brasil, China, Rusia-Ucrania, fondos) que operan como fuerzas de presión bajista.",
+        "sentiment": -0.2,
+        "sources_cited": [
+          "Dante Romano, profesor e investigador del Centro de Agronegocios y Alimentos de la Universidad Austral",
+          "Estimaciones privadas (no identificadas) sobre la producción de trigo"
+        ],
+        "missing_angles": [
+          "Precios concretos: no se menciona ninguna cotización (FOB, disponible, futuros en Chicago o Matba-Rofex) ni su variación reciente, lo que deja sin sustento la idea de 'presión bajista'.",
+          "Contexto macroeconómico y tributario local: retenciones, esquemas temporales de derechos de exportación cero, tipo de cambio y expectativas cambiarias, que suelen explicar la retención de soja más que los precios internacionales.",
+          "Origen de los datos: no se aclara de dónde salen los porcentajes de siembra, ventas con precio y originación (Bolsa de Cereales de Buenos Aires, Bolsa de Comercio de Rosario, SAGyP/SIO Granos) ni qué estimaciones privadas sitúan el trigo en 22-23,8 Mt.",
+          "Voces de productores, acopiadores, exportadores o industria aceitera sobre las razones de la retención y la capacidad de almacenamiento.",
+          "Comparación interanual y en volumen absoluto: tonelaje total vendido y producción estimada de maíz y soja 2025/26.",
+          "Contradicción no explicada en trigo: caída de condición buena/excelente del 88% al 61,7% sin impacto en la producción estimada; falta fundamentar por qué.",
+          "Aclaración de conceptos técnicos como 'originación' y 'negocios con precio' para el lector no especializado.",
+          "Inconsistencia de campaña: se habla de soja 2025/26 al 14 de octubre con 50% vendido, cuando la siembra recién empieza; conviene precisar si se trata de la campaña 2024/25 o de ventas anticipadas.",
+          "Impacto en la logística y el transporte por el cuello de botella de almacenaje para trigo (silobolsas, puertos)."
+        ],
+        "follow_up_questions": [
+          "¿A qué precios se están cerrando hoy los negocios de soja, maíz y trigo, y cuánto cayeron en el último mes en Chicago y en el mercado local?",
+          "¿Qué peso tienen las expectativas cambiarias y la política de retenciones en la decisión de los productores de no vender soja?",
+          "¿Qué pasará con los 4-5 millones de toneladas de trigo viejo sin vender cuando entre la nueva cosecha y cuál será el efecto sobre los precios de cosecha?",
+          "¿Cuáles son las zonas más afectadas por las heladas en trigo y por qué las estimaciones de producción no bajan pese al deterioro de la condición?",
+          "¿Cuánto trigo argentino podría absorber Brasil esta campaña y en qué condiciones de precio frente a competidores como Rusia?",
+          "¿Cómo impactan las compras chinas de soja a EE.UU., en el marco de la disputa comercial, sobre la demanda de poroto y harina argentinos?",
+          "¿Qué dicen acopiadores y exportadores sobre la capacidad de almacenamiento disponible y los costos logísticos para la nueva cosecha?",
+          "¿Cómo afectarán las lluvias pronosticadas y las emergencias desparejas por frío al rinde potencial del maíz temprano?"
+        ]
+      }
+    },
+    {
+      "kind": "timeline",
+      "status": "done",
+      "error": null,
+      "data": {
+        "events": [
+          {
+            "date": "2024-10",
+            "title": "Trigo en condición buena o excelente alcanzaba 88%",
+            "precision": "month",
+            "description": "Un año atrás, el 88% de los cultivos de trigo estaba en condición buena o excelente, frente al 61,7% actual tras el impacto de las heladas.",
+            "paragraph_index": 3
+          },
+          {
+            "date": "2025-10-14",
+            "title": "Ventas semanales de soja 2025/26 sumaban 211.000 toneladas",
+            "precision": "day",
+            "description": "Al 14 de octubre, las operaciones con precio de soja de la campaña 2025/26 sumaban 211.000 toneladas semanales, por debajo del promedio de más de 350.000 toneladas. Las ventas con precio cubren el 50% de la producción.",
+            "paragraph_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "kind": "entities",
+      "status": "done",
+      "error": null,
+      "data": {
+        "edges": [
+          {
+            "source": "dante-romano",
+            "target": "centro-de-agronegocios-y-alimentos",
+            "evidence": "Dante Romano, profesor e investigador del Centro de Agronegocios y Alimentos",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "dante-romano",
+            "target": "universidad-austral",
+            "evidence": "profesor e investigador del Centro de Agronegocios y Alimentos de la Universidad Austral",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "centro-de-agronegocios-y-alimentos",
+            "target": "universidad-austral",
+            "evidence": "Centro de Agronegocios y Alimentos de la Universidad Austral",
+            "relation": "pertenece a"
+          },
+          {
+            "source": "mato-grosso",
+            "target": "brasil",
+            "evidence": "el avance de la siembra brasileña —que en Mato Grosso ya alcanzó el 76% del área prevista—",
+            "relation": "ubicado en"
+          },
+          {
+            "source": "rusia",
+            "target": "ucrania",
+            "evidence": "expectativas de una posible reanudación de las negociaciones entre Rusia y Ucrania",
+            "relation": "posible negociación con"
+          },
+          {
+            "source": "rusia",
+            "target": "mar-negro",
+            "evidence": "las restricciones logísticas rusas en el mar Negro",
+            "relation": "tiene restricciones logísticas en"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "dante-romano",
+            "name": "Dante Romano",
+            "type": "person",
+            "mentions": 4,
+            "description": "Profesor e investigador de la Universidad Austral que analiza el mercado de granos."
+          },
+          {
+            "id": "centro-de-agronegocios-y-alimentos",
+            "name": "Centro de Agronegocios y Alimentos",
+            "type": "org",
+            "mentions": 2,
+            "description": "Centro de la Universidad Austral al que pertenece Dante Romano."
+          },
+          {
+            "id": "universidad-austral",
+            "name": "Universidad Austral",
+            "type": "org",
+            "mentions": 2,
+            "description": "Universidad de la que depende el Centro de Agronegocios y Alimentos."
+          },
+          {
+            "id": "argentina",
+            "name": "Argentina",
+            "type": "place",
+            "mentions": 4,
+            "description": "País cuyos productores postergan ventas de granos a la espera de mejores precios."
+          },
+          {
+            "id": "estados-unidos",
+            "name": "Estados Unidos",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cuya cosecha y mayores stocks presionan los precios del maíz."
+          },
+          {
+            "id": "china",
+            "name": "China",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cuyas compras sostienen parte de la demanda internacional de soja."
+          },
+          {
+            "id": "brasil",
+            "name": "Brasil",
+            "type": "place",
+            "mentions": 3,
+            "description": "País cuyo avance de siembra de soja y demanda de trigo influyen en el mercado."
+          },
+          {
+            "id": "mato-grosso",
+            "name": "Mato Grosso",
+            "type": "place",
+            "mentions": 1,
+            "description": "Estado brasileño donde la siembra de soja alcanzó el 76% del área prevista."
+          },
+          {
+            "id": "rusia",
+            "name": "Rusia",
+            "type": "place",
+            "mentions": 2,
+            "description": "País cuyas posibles negociaciones con Ucrania y restricciones logísticas afectan al trigo."
+          },
+          {
+            "id": "ucrania",
+            "name": "Ucrania",
+            "type": "place",
+            "mentions": 1,
+            "description": "País en posible reanudación de negociaciones con Rusia."
+          },
+          {
+            "id": "mar-negro",
+            "name": "Mar Negro",
+            "type": "place",
+            "mentions": 1,
+            "description": "Zona donde existen restricciones logísticas rusas para el trigo."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "claims",
+      "status": "done",
+      "error": null,
+      "data": {
+        "claims": [
+          {
+            "text": "Las ventas con precio de maíz representan el 65% de la producción y las de soja el 50%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.6,
+            "needs_source": false,
+            "paragraph_index": 0,
+            "verification_query": "comercialización maíz 65% soja 50% producción ventas con precio octubre 2025"
+          },
+          {
+            "text": "Dante Romano es profesor e investigador del Centro de Agronegocios y Alimentos de la Universidad Austral.",
+            "type": "event",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": true,
+            "paragraph_index": 1,
+            "verification_query": "Dante Romano Centro de Agronegocios y Alimentos Universidad Austral"
+          },
+          {
+            "text": "Según Dante Romano, el maíz conserva un desempeño comercial relativamente sólido mientras que la soja muestra un ritmo de ventas más lento.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.7,
+            "needs_source": false,
+            "paragraph_index": 1,
+            "verification_query": "Dante Romano maíz soja ritmo de ventas Universidad Austral"
+          },
+          {
+            "text": "La siembra temprana de maíz cubre el 39,8% de las 8,4 millones de hectáreas previstas, con un avance semanal de cinco puntos porcentuales.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "siembra maíz 39,8% 8,4 millones de hectáreas avance semanal"
+          },
+          {
+            "text": "El avance de la siembra de maíz está seis puntos por encima del registro de la campaña anterior.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "avance siembra maíz comparación campaña anterior octubre 2025 Bolsa de Cereales"
+          },
+          {
+            "text": "En maíz, la originación alcanza el 75% de la producción, y los negocios con precio (65%) y la originación están nueve y ocho puntos por encima de sus promedios históricos.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 2,
+            "verification_query": "maíz originación 75% ventas con precio 65% promedio histórico"
+          },
+          {
+            "text": "Al 14 de octubre, las operaciones con precio de soja de la campaña 2025/26 sumaban 211.000 toneladas semanales, frente a un promedio superior a 350.000 toneladas para esta época.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "soja 2025/26 ventas con precio 211.000 toneladas semanales 14 de octubre"
+          },
+          {
+            "text": "En soja, las ventas con precio cubren el 50% de la producción y la originación llega al 62%, ambos tres puntos por debajo de los registros históricos.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "soja originación 62% ventas con precio 50% promedio histórico"
+          },
+          {
+            "text": "La siembra de soja en Mato Grosso, Brasil, ya alcanzó el 76% del área prevista.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 3,
+            "verification_query": "Imea siembra soja Mato Grosso 76% octubre 2025"
+          },
+          {
+            "text": "Las estimaciones privadas sitúan la producción argentina de trigo entre 22 y 23,8 millones de toneladas.",
+            "type": "attribution",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "estimación producción trigo Argentina 2025/26 22 23,8 millones de toneladas"
+          },
+          {
+            "text": "La proporción de trigo en condición buena o excelente cayó al 61,7%, frente al 88% de un año atrás, por el impacto de las heladas.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.5,
+            "needs_source": true,
+            "paragraph_index": 4,
+            "verification_query": "trigo condición buena excelente 61,7% heladas Bolsa de Cereales"
+          },
+          {
+            "text": "A unos 15 días del ingreso de la nueva cosecha, quedan entre cuatro y cinco millones de toneladas de trigo de la campaña anterior sin comercializar.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "trigo campaña anterior sin vender 4 5 millones de toneladas"
+          },
+          {
+            "text": "El espacio disponible para recibir la nueva cosecha de trigo equivale al 21% de la cosecha estimada, por debajo del promedio histórico del 28%.",
+            "type": "statistic",
+            "checkable": true,
+            "confidence": 0.4,
+            "needs_source": true,
+            "paragraph_index": 5,
+            "verification_query": "trigo espacio disponible 21% cosecha estimada promedio histórico 28%"
+          }
+        ]
+      }
+    }
+  ]
+}
