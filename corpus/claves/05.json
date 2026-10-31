@@ -1,0 +1,72 @@
+{
+  "nota": "05",
+  "archivo": "05-segun-un-estudio-privado-la-ia-podria-aportar-usd.md",
+  "parrafos_total": 21,
+  "cifras": [
+    {"texto": "USD 17.714 millones", "parrafo": 1, "indicador": "impacto económico potencial de la IA con adopción acelerada", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección de un estudio privado; sin serie."},
+    {"texto": "2,13% del PBI", "parrafo": 1, "indicador": "impacto de la IA como porcentaje del PBI proyectado", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."},
+    {"texto": "USD 12.708 millones", "parrafo": 2, "indicador": "impacto de la IA sin aplicar recomendaciones", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Escenario base del estudio."},
+    {"texto": "1,5% del PBI", "parrafo": 2, "indicador": "impacto de la IA en el escenario base", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Escenario base."},
+    {"texto": "USD 5.006 millones", "parrafo": 2, "indicador": "diferencia atribuida a la estrategia de competitividad", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Diferencia entre escenarios."},
+    {"texto": "11,2% de 2025", "parrafo": 3, "indicador": "adopción empresarial de IA", "periodo": "2025", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato del estudio."},
+    {"texto": "16,5% en 2030", "parrafo": 3, "indicador": "adopción empresarial de IA proyectada (nivel de Uruguay)", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."},
+    {"texto": "USD 3.539 millones", "parrafo": 3, "indicador": "gasto anual en IA proyectado con la estrategia", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."},
+    {"texto": "USD 2.763 millones", "parrafo": 3, "indicador": "gasto anual en IA en el escenario sin cambios", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Escenario base."},
+    {"texto": "USD 4.316 millones", "parrafo": 4, "indicador": "aporte actual de la IA a la economía", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "0,6% del PBI", "parrafo": 4, "indicador": "aporte actual de la IA como porcentaje del PBI", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "USD 798 millones", "parrafo": 4, "indicador": "gasto en IA", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "0,12% del producto", "parrafo": 4, "indicador": "gasto en IA como porcentaje del PBI", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "0,22%", "parrafo": 4, "indicador": "gasto en IA promedio de América Latina como porcentaje del PBI", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato regional del estudio."},
+    {"texto": "34,7%", "parrafo": 6, "indicador": "grandes empresas que adoptaron alguna aplicación de IA", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "4.000 grandes empresas", "parrafo": 6, "indicador": "cantidad aproximada de grandes empresas del país", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato aproximado."},
+    {"texto": "30 compañías", "parrafo": 6, "indicador": "empresas entrevistadas", "periodo": "trabajo de campo del estudio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Tamaño de la muestra."},
+    {"texto": "42,5%", "parrafo": 6, "indicador": "encuestados con estrategia de IA estructurada y comunicada", "periodo": "trabajo de campo del estudio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de encuesta."},
+    {"texto": "17,6%", "parrafo": 6, "indicador": "encuestados que exigen caso de negocio con retorno financiero", "periodo": "trabajo de campo del estudio", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato de encuesta."},
+    {"texto": "16% entre las medianas", "parrafo": 8, "indicador": "adopción de IA en pymes medianas", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "8,5% entre las pequeñas", "parrafo": 8, "indicador": "adopción de IA en pymes pequeñas", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "85,4%", "parrafo": 11, "indicador": "pymes de software y TI que usan IA", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato sectorial."},
+    {"texto": "30,5 por ciento", "parrafo": 11, "indicador": "pymes de finanzas y seguros que usan IA", "periodo": "actual (2026)", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato sectorial."},
+    {"texto": "USD 171 millones", "parrafo": 12, "indicador": "gasto en IA de servicios financieros", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato sectorial."},
+    {"texto": "USD 75 millones", "parrafo": 12, "indicador": "gasto en IA del sector salud", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato sectorial."},
+    {"texto": "3,9% del PBI", "parrafo": 12, "indicador": "peso de los servicios financieros en el PBI", "periodo": "actual", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Participación sectorial."},
+    {"texto": "42 empresas argentinas de IA", "parrafo": 16, "indicador": "empresas argentinas de IA que recibieron fondos", "periodo": "desde 2022", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparado con 350 de Brasil."},
+    {"texto": "350 en Brasil", "parrafo": 16, "indicador": "empresas brasileñas de IA que recibieron fondos", "periodo": "desde 2022", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comparativo."},
+    {"texto": "cuatro centros de datos", "parrafo": 17, "indicador": "centros de datos de hiperescaladores en Argentina", "periodo": "actual", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Comparado con 29 de Brasil."},
+    {"texto": "29 de Brasil", "parrafo": 17, "indicador": "centros de datos de hiperescaladores en Brasil", "periodo": "actual", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato comparativo."},
+    {"texto": "36.000 trabajadores", "parrafo": 18, "indicador": "trabajadores especializados en IA", "periodo": "2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Estimación del estudio."},
+    {"texto": "94.000", "parrafo": 18, "indicador": "trabajadores especializados en IA proyectados", "periodo": "2029", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."},
+    {"texto": "177.525 estudiantes", "parrafo": 18, "indicador": "matrícula de informática", "periodo": "2023", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato educativo."},
+    {"texto": "3.883 egresados", "parrafo": 18, "indicador": "egresados de informática", "periodo": "2023", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato educativo."},
+    {"texto": "25.000 puestos", "parrafo": 18, "indicador": "brecha de talento en el escenario más restrictivo", "periodo": "2029", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."},
+    {"texto": "entre 212.000 y 416.000 puestos", "parrafo": 20, "indicador": "puestos que podrían desaparecer en empresas que adopten IA", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección; depende del criterio de exposición."},
+    {"texto": "160.000", "parrafo": 20, "indicador": "demanda de trabajadores especializados en IA", "periodo": "2030", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Proyección."}
+  ],
+  "puntos_clave": [
+    {"texto": "Un estudio de UdeSA estima que la IA podría sumar cerca de USD 17.700 millones en 2030, si se acelera su adopción.", "parrafos": [1, 2, 3]},
+    {"texto": "La adopción en grandes empresas es amplia pero superficial, con mucho uso informal y pocas áreas involucradas.", "parrafos": [6, 7]},
+    {"texto": "Las pymes empezaron hace poco; software y finanzas lideran, y el cuello de botella es integrar la IA al negocio.", "parrafos": [8, 9, 11]},
+    {"texto": "Para capturar el potencial faltan instituciones que ejecuten, financiamiento, infraestructura y talento especializado.", "parrafos": [14, 15, 16, 17, 18]},
+    {"texto": "El estudio calcula que podrían perderse entre 212.000 y 416.000 puestos en 2030, aunque lo presenta como presión de transición.", "parrafos": [20, 21]}
+  ],
+  "preguntas": [
+    {"pregunta": "¿Cuánto podría aportar la IA a la economía argentina en 2030?", "tipo": "con_respuesta", "parrafos": [1], "ancla": "podría generar un impacto económico de USD 17.714 millones"},
+    {"pregunta": "¿Qué parte de las grandes empresas ya usa IA?", "tipo": "con_respuesta", "parrafos": [6], "ancla": "el 34,7% de las aproximadamente 4.000 grandes empresas del país"},
+    {"pregunta": "¿Qué sectores de pymes lideran la adopción?", "tipo": "con_respuesta", "parrafos": [11], "ancla": "software y las tecnologías de la información lideran la adopción"},
+    {"pregunta": "¿Cuántos puestos de trabajo podrían desaparecer por la IA?", "tipo": "con_respuesta", "parrafos": [20, 21], "ancla": "podrían desaparecer entre 212.000 y 416.000 puestos en 2030"},
+    {"pregunta": "¿Cuánto costaría implementar las recomendaciones que propone el estudio?", "tipo": "sin_respuesta", "parrafos": [], "ancla": ""}
+  ],
+  "actores": [
+    {"nombre": "Universidad de San Andrés (UdeSA)", "rol": "autora del estudio sobre IA", "parrafo": 1},
+    {"nombre": "Uruguay", "rol": "líder latinoamericano en adopción empresarial de IA", "parrafo": 3},
+    {"nombre": "Brasil", "rol": "país de comparación en financiamiento y centros de datos", "parrafo": 16}
+  ],
+  "fechas": [
+    {"texto": "2030", "parrafo": 1},
+    {"texto": "2025", "parrafo": 3},
+    {"texto": "2026", "parrafo": 4},
+    {"texto": "desde 2017", "parrafo": 14},
+    {"texto": "desde 2022", "parrafo": 16},
+    {"texto": "2023", "parrafo": 18},
+    {"texto": "2029", "parrafo": 18}
+  ]
+}

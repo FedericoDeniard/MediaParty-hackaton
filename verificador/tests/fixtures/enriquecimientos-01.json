@@ -1,0 +1,296 @@
+{
+ "claims": {
+  "claims": [
+   {
+    "text": "La inflación de septiembre de 2026 fue de 1,9% mensual, frente al 1,7% de agosto.",
+    "paragraph_index": 0,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "INDEC inflación septiembre 2026 variación mensual IPC",
+    "confidence": 0.2
+   },
+   {
+    "text": "Las estimaciones privadas ubican la inflación de octubre de 2026 en 1,8% mensual, una desaceleración de 0,1 puntos porcentuales respecto de septiembre.",
+    "paragraph_index": 1,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "estimaciones privadas inflación octubre 2026 1,8% consultoras",
+    "confidence": 0.35
+   },
+   {
+    "text": "Octubre de 2026 podría convertirse en el segundo dato mensual más bajo de 2026 y de los últimos doce meses.",
+    "paragraph_index": 5,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "inflación mensual Argentina 2026 ranking más bajo últimos doce meses INDEC",
+    "confidence": 0.25
+   },
+   {
+    "text": "LCG informó que el segmento de alimentos y bebidas aumentó 0,5% durante la tercera semana de octubre de 2026, la séptima semana consecutiva con incrementos.",
+    "paragraph_index": 8,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "LCG alimentos y bebidas tercera semana octubre 2026 relevamiento semanal",
+    "confidence": 0.75
+   },
+   {
+    "text": "LCG ubicó la inflación promedio de las últimas cuatro semanas en 3,8%, con un avance de 0,6 puntos porcentuales frente a la semana anterior.",
+    "paragraph_index": 9,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "LCG inflación promedio móvil cuatro semanas octubre 2026 3,8%",
+    "confidence": 0.7
+   },
+   {
+    "text": "Eco Go registró una variación semanal de 0,59% en alimentos durante la tercera semana de octubre de 2026 y proyectó una suba mensual de 1,8% en su Relevamiento de Precios Minoristas.",
+    "paragraph_index": 11,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "Eco Go relevamiento precios minoristas octubre 2026 alimentos 1,8%",
+    "confidence": 0.7
+   },
+   {
+    "text": "Invecq informó que los precios aumentaron 0,9% durante la tercera semana de octubre de 2026, con una inflación promedio móvil de cuatro semanas de 1,8%.",
+    "paragraph_index": 13,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "Invecq inflación semanal tercera semana octubre 2026 0,9% promedio móvil",
+    "confidence": 0.7
+   },
+   {
+    "text": "Javier Milei afirmó que el ritmo al que baja la inflación es más lento, en una entrevista con Radio Rivadavia.",
+    "paragraph_index": 15,
+    "type": "quote",
+    "checkable": true,
+    "needs_source": false,
+    "verification_query": "Milei Radio Rivadavia ritmo inflación más lento entrevista octubre 2026",
+    "confidence": 0.8
+   },
+   {
+    "text": "El riesgo país de Argentina superó los 700 puntos básicos.",
+    "paragraph_index": 16,
+    "type": "statistic",
+    "checkable": true,
+    "needs_source": true,
+    "verification_query": "riesgo país Argentina 700 puntos básicos octubre 2026 JP Morgan EMBI",
+    "confidence": 0.3
+   }
+  ]
+ },
+ "entities": {
+  "nodes": [
+   {
+    "id": "inflacion",
+    "name": "Inflación",
+    "type": "event",
+    "mentions": 5,
+    "description": "Variación mensual de precios que el artículo analiza para septiembre y las estimaciones de octubre."
+   },
+   {
+    "id": "lcg",
+    "name": "LCG",
+    "type": "org",
+    "mentions": 3,
+    "description": "Consultora que informó una suba de 0,5% en alimentos y bebidas durante la tercera semana de octubre."
+   },
+   {
+    "id": "invecq",
+    "name": "Invecq",
+    "type": "org",
+    "mentions": 2,
+    "description": "Consultora dirigida por Esteban Domecq que midió un aumento de 0,9% semanal en precios."
+   },
+   {
+    "id": "eco-go",
+    "name": "Eco Go",
+    "type": "org",
+    "mentions": 3,
+    "description": "Consultora que relevó una variación semanal de 0,59% en alimentos y proyectó 1,8% mensual para octubre."
+   },
+   {
+    "id": "gobierno",
+    "name": "Gobierno",
+    "type": "org",
+    "mentions": 4,
+    "description": "Gobierno nacional que tiene como expectativa oficial una inflación en cero y podría mostrar una desaceleración en octubre."
+   },
+   {
+    "id": "javier-milei",
+    "name": "Javier Milei",
+    "type": "person",
+    "mentions": 3,
+    "description": "Presidente que admitió en Radio Rivadavia que la inflación baja más lento y atribuyó la situación al escenario mundial."
+   },
+   {
+    "id": "esteban-domecq",
+    "name": "Esteban Domecq",
+    "type": "person",
+    "mentions": 1,
+    "description": "Director de la consultora Invecq."
+   },
+   {
+    "id": "radio-rivadavia",
+    "name": "Radio Rivadavia",
+    "type": "org",
+    "mentions": 1,
+    "description": "Medio en el que Milei realizó la entrevista donde explicó la evolución de los precios."
+   },
+   {
+    "id": "riesgo-pais",
+    "name": "Riesgo país",
+    "type": "event",
+    "mentions": 1,
+    "description": "Indicador que, según Milei, superó los 700 puntos básicos y se ve afectado por los acontecimientos internacionales."
+   }
+  ],
+  "edges": [
+   {
+    "source": "lcg",
+    "target": "inflacion",
+    "relation": "midió la variación de precios de octubre",
+    "evidence": "LCG informó que el segmento de alimentos y bebidas aumentó 0,5% durante la tercera semana de octubre."
+   },
+   {
+    "source": "eco-go",
+    "target": "inflacion",
+    "relation": "proyectó la inflación mensual de octubre",
+    "evidence": "Para el mes completo, proyectó que su Relevamiento de Precios Minoristas marcaría una suba de 1,8 por ciento."
+   },
+   {
+    "source": "invecq",
+    "target": "inflacion",
+    "relation": "midió la variación de precios de octubre",
+    "evidence": "Para la consultora dirigida por Esteban Domecq, los precios aumentaron 0,9% durante la tercera semana de octubre"
+   },
+   {
+    "source": "esteban-domecq",
+    "target": "invecq",
+    "relation": "dirige",
+    "evidence": "Para la consultora dirigida por Esteban Domecq"
+   },
+   {
+    "source": "javier-milei",
+    "target": "gobierno",
+    "relation": "es presidente del",
+    "evidence": "el presidente Javier Milei admitió que “el ritmo al que baja la inflación es más lento”"
+   },
+   {
+    "source": "javier-milei",
+    "target": "radio-rivadavia",
+    "relation": "habló con",
+    "evidence": "El mandatario habló con Radio Rivadavia"
+   },
+   {
+    "source": "javier-milei",
+    "target": "riesgo-pais",
+    "relation": "señaló que el riesgo país superó los 700 puntos básicos",
+    "evidence": "señaló que el indicador superó los 700 puntos básicos (p.b.)"
+   },
+   {
+    "source": "javier-milei",
+    "target": "inflacion",
+    "relation": "explicó la desaceleración lenta de la inflación",
+    "evidence": "el ritmo al que baja la inflación es menor"
+   }
+  ]
+ },
+ "timeline": {
+  "events": [
+   {
+    "date": "2026",
+    "precision": "year",
+    "title": "Expectativa oficial de inflación mensual en cero",
+    "description": "El Gobierno espera que la inflación mensual llegue a cero en algún mes de 2026, según el artículo.",
+    "paragraph_index": 1
+   },
+   {
+    "date": "2026-08",
+    "precision": "month",
+    "title": "Inflación de agosto de 1,7%",
+    "description": "La inflación mensual de agosto fue de 1,7%, base de comparación para el salto de septiembre.",
+    "paragraph_index": 0
+   },
+   {
+    "date": "2026-09",
+    "precision": "month",
+    "title": "Inflación de septiembre de 1,9%",
+    "description": "La inflación subió a 1,9% en septiembre, interrumpiendo la tendencia descendente.",
+    "paragraph_index": 0
+   },
+   {
+    "date": "2026-10",
+    "precision": "month",
+    "title": "Estimación privada de 1,8% para octubre",
+    "description": "Las estimaciones privadas ubican la inflación de octubre en 1,8%, una leve desaceleración respecto de septiembre.",
+    "paragraph_index": 1
+   },
+   {
+    "date": "2026-10",
+    "precision": "month",
+    "title": "LCG registra alimentos con suba de 0,5%",
+    "description": "LCG informó un aumento semanal de 0,5% en alimentos y bebidas en la tercera semana de octubre, la séptima consecutiva con subas.",
+    "paragraph_index": 8
+   },
+   {
+    "date": "2026-10",
+    "precision": "month",
+    "title": "EcoGo registra alimentos con suba de 0,59%",
+    "description": "EcoGo informó una variación semanal de 0,59% en alimentos durante la tercera semana de octubre.",
+    "paragraph_index": 11
+   },
+   {
+    "date": "2026-10",
+    "precision": "month",
+    "title": "Invecq registra suba semanal de 0,9%",
+    "description": "Invecq informó un aumento de precios de 0,9% en la tercera semana de octubre, con una inflación móvil de cuatro semanas de 1,8%.",
+    "paragraph_index": 13
+   },
+   {
+    "date": "2026-10",
+    "precision": "month",
+    "title": "Milei admite que la inflación baja más lento",
+    "description": "La semana pasada, el presidente Javier Milei reconoció que el ritmo de baja de la inflación es más lento y lo atribuyó al escenario mundial.",
+    "paragraph_index": 15
+   }
+  ]
+ },
+ "editorial": {
+  "tone": "informativo",
+  "framing": "Presenta la inflación de octubre como una desaceleración leve y aún insuficiente, centrada en las estimaciones privadas de consultoras y en la justificación oficial de Milei, que atribuye la lentitud al contexto internacional y al crecimiento económico por debajo de lo previsto. El Gobierno aparece como protagonista que busca capitalizar un dato moderadamente favorable, mientras las consultoras actúan como fuentes de proyección.",
+  "sentiment": -0.2,
+  "missing_angles": [
+   "La voz del INDEC o de economistas independientes que cuestionen o validen las proyecciones privadas",
+   "Comparación con las metas oficiales de inflación y con el dato de octubre del año anterior para dimensionar la desaceleración",
+   "Impacto concreto en salarios, jubilaciones y poder adquisitivo frente a la suba de precios",
+   "Explicación metodológica de las diferencias entre relevamientos semanales y el índice oficial mensual",
+   "Posición de la oposición, sindicatos o representantes de consumidores sobre el dato y la política económica",
+   "Detalle de los factores externos mencionados por Milei (riesgo país, contexto mundial) con datos verificables",
+   "Lectura de sectores productivos y comerciantes sobre la evolución de precios y la demanda",
+   "Análisis de por qué la inflación de septiembre subió respecto de agosto y qué medidas la explicaron"
+  ],
+  "follow_up_questions": [
+   "¿Cuál fue la metodología de LCG, Invecq y EcoGo y en qué difieren de la del INDEC?",
+   "¿Qué explica la baja de 1,75% en prendas y se sostendrá en las próximas semanas?",
+   "¿Cómo se relaciona la menor demanda de dinero que menciona Milei con la velocidad de desaceleración de la inflación?",
+   "¿Qué tan significativo es el nivel de riesgo país por encima de 700 p.b. para el traslado a precios?",
+   "¿Qué variables explican el salto de septiembre frente a agosto y cuánto de eso fue estacional?",
+   "¿Cuál es el sendero de inflación que proyectan los analistas para los próximos meses hasta llegar a cero?",
+   "¿Cómo impactan los aumentos de carnes y bebidas en el presupuesto de los hogares de menores ingresos?"
+  ],
+  "sources_cited": [
+   "LCG",
+   "Invecq",
+   "Eco Go",
+   "Esteban Domecq",
+   "Javier Milei",
+   "Radio Rivadavia"
+  ]
+ }
+}

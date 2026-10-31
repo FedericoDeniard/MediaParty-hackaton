@@ -1,0 +1,46 @@
+{
+  "nota": "12",
+  "archivo": "12-la-visita-del-papa-leon-xiv-actos-en-caba-y-provin.md",
+  "parrafos_total": 21,
+  "cifras": [
+    { "texto": "poco más de dos kilómetros", "parrafo": 3, "indicador": "longitud del trayecto en papamóvil por la avenida del Libertador", "periodo": "lunes 9 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato logístico del operativo; no existe serie oficial en el catálogo." },
+    { "texto": "cuatro accesos principales", "parrafo": 7, "indicador": "cantidad de accesos para el público a la misa", "periodo": "lunes 9 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad declarada por el organizador; sin serie verificable." },
+    { "texto": "entre 15 y 35 años", "parrafo": 11, "indicador": "rango etario con prioridad de acceso a la vigilia", "periodo": "martes 10 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Criterio de acceso, no una estadística." },
+    { "texto": "decenas de miles", "parrafo": 12, "indicador": "jóvenes acreditados para la vigilia", "periodo": "martes 10 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Cantidad aproximada dicha por Pizarro; sin dato oficial exacto." },
+    { "texto": "dos papamóviles", "parrafo": 20, "indicador": "cantidad de papamóviles de la visita", "periodo": "visita del 8 al 11 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Dato logístico sin serie." },
+    { "texto": "unos cinco kilómetros", "parrafo": 21, "indicador": "distancia a pie desde el estacionamiento hasta el santuario de Luján", "periodo": "miércoles 11 de noviembre de 2026", "serie_catalogo": null, "resultado_esperado": "sin_serie", "comentario": "Distancia estimada por el obispo; sin serie." }
+  ],
+  "puntos_clave": [
+    { "texto": "León XIV hará recorridos en papamóvil por la avenida del Libertador, con sectores vallados, accesos delimitados y voluntarios que guiarán a los asistentes.", "parrafos": [1, 5, 6, 7] },
+    { "texto": "El lunes 9, tras visitar Claypole, el Papa cambia al papamóvil en el túnel del Libertador y celebra la misa central en Palermo.", "parrafos": [2, 3, 8] },
+    { "texto": "En la vigilia del martes 10 los jóvenes de 15 a 35 años con acreditación previa ocuparán los lugares más cercanos al escenario.", "parrafos": [10, 11, 12] },
+    { "texto": "La seguridad tendrá la última palabra sobre recorridos y accesos, y el operativo involucra al Gobierno, la Iglesia, la Nunciatura y equipos vaticanos.", "parrafos": [18, 19, 20] },
+    { "texto": "La agenda incluye llegada el domingo 8 y reunión con Milei, actividades del lunes en la UCA y la Catedral, y misa en Luján el miércoles 11.", "parrafos": [14, 15, 16, 21] }
+  ],
+  "preguntas": [
+    { "pregunta": "¿A qué hora es la misa del lunes 9 en Palermo?", "tipo": "con_respuesta", "parrafos": [8], "ancla": "Allí se preparará para la misa, prevista para las 11.30" },
+    { "pregunta": "¿Quiénes tienen prioridad para ubicarse cerca del escenario en la vigilia del martes?", "tipo": "con_respuesta", "parrafos": [11, 12], "ancla": "quienes tengan entre 15 y 35 años y cuenten con" },
+    { "pregunta": "¿Qué deberán hacer los fieles que vayan a Luján con sus autos?", "tipo": "con_respuesta", "parrafos": [21], "ancla": "los fieles deberán estacionar a unos cinco kilómetros del santuario" },
+    { "pregunta": "¿Quién decide finalmente los recorridos y las modalidades de acceso?", "tipo": "con_respuesta", "parrafos": [19], "ancla": "los equipos de seguridad tienen la última palabra sobre recorridos" },
+    { "pregunta": "¿Cuánto costará el operativo de seguridad y quién lo pagará?", "tipo": "sin_respuesta", "parrafos": [], "ancla": "" }
+  ],
+  "actores": [
+    { "nombre": "Raúl Pizarro", "rol": "obispo auxiliar de San Isidro y secretario general de la Conferencia Episcopal Argentina; coordina la preparación eclesial del viaje", "parrafo": 1 },
+    { "nombre": "León XIV", "rol": "papa; protagonista de la visita", "parrafo": 1 },
+    { "nombre": "Javier Milei", "rol": "presidente de la Nación; recibe al Papa en la Casa Rosada", "parrafo": 14 },
+    { "nombre": "Conferencia Episcopal Argentina", "rol": "organizadora eclesial de la visita", "parrafo": 18 },
+    { "nombre": "Juan Pablo II", "rol": "papa de la última visita a la Argentina, referencia histórica", "parrafo": 18 }
+  ],
+  "fechas": [
+    { "texto": "lunes 9 de noviembre: jornada de mayor convocatoria, visita a Claypole por la mañana y misa en Palermo", "parrafo": 2 },
+    { "texto": "lunes 9 de noviembre, 11.30: misa en el Monumento de los Españoles", "parrafo": 8 },
+    { "texto": "martes 10 de noviembre: vigilia con jóvenes tras el regreso desde Córdoba", "parrafo": 10 },
+    { "texto": "martes 10, 20.15: inicio de la vigilia (el predio abre desde el mediodía y hay propuestas artísticas desde las 16)", "parrafo": 10 },
+    { "texto": "8 de noviembre: llegada del Papa a Aeroparque, visita al Monumento a San Martín y recepción de Milei en la Casa Rosada", "parrafo": 14 },
+    { "texto": "lunes 9: encuentro en la UCA, reunión interreligiosa y vísperas con los obispos en la Catedral Metropolitana", "parrafo": 16 },
+    { "texto": "1987: última visita de Juan Pablo II, usada como punto de comparación", "parrafo": 18 },
+    { "texto": "miércoles 11: visita al Complejo Penitenciario Federal de Devoto y misa en la basílica de Luján", "parrafo": 21 }
+  ],
+  "no_enriquecer": false,
+  "motivo_no_enriquecer": ""
+}

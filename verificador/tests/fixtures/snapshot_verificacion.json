@@ -1,0 +1,18 @@
+{
+ "01": {"estados": {"ok": 31, "parafraseada": 9}, "hay_bloqueos": false},
+ "02": {"estados": {"ok": 40, "parafraseada": 21}, "hay_bloqueos": false},
+ "03": {"estados": {"evidencia_no_encontrada": 1, "fuente_parcial": 1, "ok": 30, "parafraseada": 14}, "hay_bloqueos": true},
+ "04": {"estados": {"fecha_inferida": 2, "ok": 25, "parafraseada": 16}, "hay_bloqueos": false},
+ "05": {"estados": {"fuente_parcial": 1, "ok": 29, "parafraseada": 19}, "hay_bloqueos": false},
+ "06": {"estados": {"evidencia_no_encontrada": 1, "fecha_inferida": 1, "fuente_parcial": 2, "ok": 30, "parafraseada": 16}, "hay_bloqueos": true},
+ "07": {"estados": {"ok": 38, "parafraseada": 17}, "hay_bloqueos": false},
+ "08": {"estados": {"evidencia_no_encontrada": 1, "fecha_inferida": 1, "nombre_parcial": 1, "ok": 35, "parafraseada": 14}, "hay_bloqueos": true},
+ "09": {"estados": {"ok": 63, "parafraseada": 17}, "hay_bloqueos": false},
+ "10": {"estados": {"evidencia_no_encontrada": 3, "fecha_inferida": 3, "fuente_parcial": 1, "ok": 54, "parafraseada": 17}, "hay_bloqueos": true},
+ "11": {"estados": {"fecha_inferida": 2, "ok": 56, "parafraseada": 20}, "hay_bloqueos": false},
+ "12": {"estados": {"fecha_inferida": 5, "ok": 51, "parafraseada": 13}, "hay_bloqueos": false},
+ "13": {"estados": {"evidencia_no_encontrada": 2, "fecha_inferida": 2, "ok": 69, "parafraseada": 16}, "hay_bloqueos": true},
+ "14": {"estados": {"evidencia_no_encontrada": 1, "fecha_inferida": 8, "nombre_parcial": 1, "ok": 37, "parafraseada": 11}, "hay_bloqueos": true},
+ "15": {"estados": {"ok": 61, "parafraseada": 14}, "hay_bloqueos": false},
+ "19": {"estados": {"ok": 32, "parafraseada": 12}, "hay_bloqueos": false}
+}
